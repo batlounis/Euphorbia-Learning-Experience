@@ -1,12 +1,10 @@
 body{
-	height: 4000px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	background-position: top center;
-}
-
-body.fisherman{
-	background-image: url(fisherman/background.jpg);
+	font: 140% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
 
 body.fisherman #character{
@@ -21,5 +19,60 @@ body.fisherman #character{
 	background-image: url(fisherman/character.png);
 	background-repeat: no-repeat;
 	background-position: center center;
-
+	z-index: 100;
 }
+
+body.fisherman #setting{
+	background-image: url(fisherman/background.jpg);
+	width: 100%;
+	overflow: auto;
+	background-position: top center;
+	position: relative;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	transition: top 2s;
+	-webkit-transition: top 3s;
+}
+
+.screen{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.question, .choices a, .response, .continue a{
+	background-color: white;
+	border: 1px solid #E2E2E2;
+	border-radius: 1em;
+	padding: .5em;
+	margin: 0 auto;
+	display: table;
+}
+
+.question{
+	position: relative;
+	width: 30em;
+	top: 5%;
+}
+
+.choices, .continue{
+	position: absolute;
+	bottom: 5%;
+	width: 100%;
+}
+
+.response{
+	display: none;
+	width: 30em;
+	margin: 5% auto;
+	position: relative;
+	position: relative;
+	z-index: 200;
+}
+
+.continue{
+	display: none;
+}
+
+
