@@ -1,0 +1,148 @@
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font: 140% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+body.fisherman #character{
+/*	fisherman, farmer, tourist
+	displays story character in center of screen
+	stays fixed while scrolling	*/
+	position: fixed;
+	top: 20%;
+	width: 100%;
+	height: 346px;
+	display: block;
+	background-image: url(../resources/fisherman/character.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 100;
+}
+
+body.fisherman #setting{
+	background-image: url(../resources/fisherman/background.jpg);
+	width: 100%;
+	overflow: auto;
+	background-position: top center;
+	position: relative;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	transition: top 2s;
+	-webkit-transition: top 3s;
+}
+
+.screen{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.question, .choices .choice, .response, .continue a{
+	background-color: white;
+	border: 1px solid #E2E2E2;
+	border-radius: 1em;
+	padding: .5em;
+	margin: 0 auto;
+	display: table;
+}
+
+.choices .choice{
+	float: left;
+	width: 33.3%;
+}
+
+.question{
+	position: relative;
+	width: 30em;
+	top: 5%;
+}
+
+.choices, .continue{
+	position: absolute;
+	bottom: 5%;
+}
+
+.continue{
+	width: 100%;
+}
+
+.choices{
+	float: none;
+	clear: both;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	left: 25%;
+}
+
+.response{
+	display: none;
+	width: 30em;
+	margin: 5% auto;
+	position: relative;
+	position: relative;
+	z-index: 200;
+}
+
+.continue{
+	display: none;
+}
+
+/*fisherman control styling*/
+#control{
+	position: absolute;
+	bottom: 0;
+}
+
+#line{
+	background-image: url('../resources/fisherman/line.svg');
+	width: 14px;
+	height: 266px;
+	display: block;
+	position: absolute;
+	left: 200px;
+	bottom: 50px;
+	-webkit-transition: -webkit-transform 1s;
+	-webkit-transform-origin: 0 0;
+}
+
+#line.answer-1{
+	-webkit-transform: rotate(-40deg) scale(1.1);
+}
+
+#line.answer-2{
+	-webkit-transform: rotate(-60deg) scale(1.8);
+}
+
+#line.answer-3{
+	-webkit-transform: rotate(-70deg) scale(2.5);
+}
+
+
+.fisherman #arrow{
+	background-image: url('../resources/fisherman/arrow.png');
+	position: absolute;
+	left: 50px;
+	bottom: 50px;	
+	width: 196px;
+	height: 75px;
+	display: block;
+	-webkit-transform-origin: 0 50%;
+	-webkit-animation: swing 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-direction: alternate;
+	z-index: 400;
+}
+
+@-webkit-keyframes swing{
+	0%{ -webkit-transform: rotate(0.1deg); }
+	100%{ -webkit-transform: rotate(-90deg); }
+}
+
+
