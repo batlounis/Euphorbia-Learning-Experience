@@ -43,15 +43,7 @@ $(document).ready(function(){
 		return angle;
 		
 	}
-	
-	// selecting an answer by clicking the control
-	selectAnswer = function(){
-		var rotation = -getRotation('arrow');
-		var answer_range = 90/num_answers;
-		var selection = Math.ceil(rotation/answer_range);
-		$('#line').addClass('answer-'+selection);
-		return false;
-	}
+
 	
 	// shows fisherman control to first question (TODO: current question)
 	$('.screen:first').append('<div id="control-wrap"></div>')
@@ -73,4 +65,57 @@ $(document).ready(function(){
 		screen.find('.question, .choices, .response, .continue').toggle();
 		return false;
 	})
+	
+	
+	  //
+	  // View Model
+	  //
+	  var ViewModel = function () {
+	     var self = this;
+	     var offset = 0;
+	     this.x = ko.observable(0);
+	     this.y = ko.observable(0);
+	     this.t = ko.observable(0);
+	     this.vx = ko.observable(6);
+	     this.vy = ko.observable(6);
+	     this.g = ko.observable(200);
+	     var handle;
+	     this.trails = ko.observableArray([]);
+
+	     // Trajectory motion formula
+	     // x = vx.t;
+	     // y = vy.t - 1/2.(g.t^2)
+	     this.update = function () {
+	         self.t(self.t() + 0.01);
+	         self.x(self.x() + self.vx() * self.t());
+	         self.y(self.y() + (self.vy() * self.t()) - (0.5 * self.g()) * Math.pow(self.t(), 2));
+
+	         this.trails.push({ x: self.x(), y: self.y() });
+
+	         if (self.y() < 0) {
+	             clearInterval(handle);
+	         }
+	     }
+	}
+	
+
+	
+	
+	// selecting an answer by clicking the control
+	selectAnswer = function(){
+		var rotation = -getRotation('arrow');
+		var answer_range = 90/num_answers;
+		var selection = Math.ceil(rotation/answer_range);
+		$('#line').addClass('answer-'+selection);
+		$('#arrow').addClass('stop');
+		var viewModel = new ViewModel();
+		viewModel.vx(40);
+		// viewModel.vy(25);
+		viewModel.vy(Math.tan(rotation*Math.PI/180)*viewModel.vx());
+		ko.applyBindings(viewModel);
+		setInterval(function() { viewModel.update() }, 10);
+		
+		return false;
+	}
+
 })
