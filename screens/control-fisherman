@@ -1,7 +1,7 @@
 <div id="control">
 	<a href="#" id="arrow"></a>
 	<div id="line"></div>
-	<svg style="position: absolute; width: 1000px; height: 500px; bottom: 88; left: 50;" id="trajectory" 
+	<svg id="trajectory" 
 	              xmlns="http://www.w3.org/2000/svg" 
 	              xmlns:xlink="http://www.w3.org/1999/xlink">
 	    <!-- the initial velocity vector -->
@@ -10,11 +10,11 @@
 
 	    <!-- the trails of the trajectory motion -->
 	    <!-- ko foreach:trails -->
-	    <circle r="1" data-bind="attr: {cx:x,cy:(500-y)}"></circle>    
+	    <circle r="1" data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}"></circle>    
 	    <!-- /ko -->
 
 	    <!-- the simulation object -->
-	    <circle r="4" data-bind="attr: {cx:x,cy:(500-y())}"></circle>
+	    <circle r="4" data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}"></circle>
 	</svg>
 </div>
 

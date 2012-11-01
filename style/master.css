@@ -33,6 +33,7 @@ body.fisherman #setting{
 	padding: 0;
 	transition: top 2s;
 	-webkit-transition: top 3s;
+	-webkit-transition-timing-function: ease-in-out;
 }
 
 .screen{
@@ -47,12 +48,15 @@ body.fisherman #setting{
 	border-radius: 1em;
 	padding: .5em;
 	margin: 0 auto;
+}
+
+.question, .response, .continue a{
 	display: table;
 }
 
+
 .choices .choice{
-	float: left;
-	width: 33.3%;
+	display: table-cell;
 }
 
 .question{
@@ -76,7 +80,7 @@ body.fisherman #setting{
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 75%;
 	left: 25%;
 }
 
@@ -97,13 +101,15 @@ body.fisherman #setting{
 #control{
 	position: absolute;
 	bottom: 0;
+	width: 100%;
+	height: 100%;
 }
 
 #line{
 	background-image: url('../resources/fisherman/line.svg');
 	width: 14px;
 	height: 266px;
-	display: block;
+	display: none;
 	position: absolute;
 	left: 200px;
 	bottom: 50px;
@@ -126,11 +132,11 @@ body.fisherman #setting{
 
 .fisherman #arrow{
 	background-image: url('../resources/fisherman/arrow.png');
+	background-repeat: no-repeat;
 	position: absolute;
-	left: 50px;
 	bottom: 50px;	
-	width: 196px;
-	height: 75px;
+	width: 100px;
+	height: 38px;
 	display: block;
 	-webkit-transform-origin: 0 50%;
 	-webkit-animation: swing 1s;
@@ -145,14 +151,17 @@ body.fisherman #setting{
 }
 
 @-webkit-keyframes swing{
-	0%{ -webkit-transform: rotate(-30deg); }
-	100%{ -webkit-transform: rotate(-48deg); }
+/*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
+	0%{ -webkit-transform: rotate(-52deg); }
+	100%{ -webkit-transform: rotate(-15deg); }
 }
 
 #trajectory{
 	position: absolute;
-	width: 1000px;
-	height: 500px;
-	bottom: 88px;
-	left: 50px;
+	width: 100%;
+	height: 100%;
+	bottom: 50px;
+	margin-bottom: 19px;
+	left: 0;
+	z-index: 50;
 }

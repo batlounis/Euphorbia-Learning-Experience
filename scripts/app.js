@@ -67,29 +67,34 @@ $(document).ready(function(){
 	})
 	
 	
+		var handle;	// this is related to the below, has to move...
 	  //
 	  // View Model
 	  //
 	  var ViewModel = function () {
-	     var self = this;
-	     var offset = 0;
-	     this.x = ko.observable(0);
+		// code from http://www.codeproject.com/Articles/439427/Trajectory-Motion-Simulator-with-HTML5-SVG-Knockou
+	     var self;
+	     var offset;
+
+
+			self = this
+			offset = 0;
+			this.x = ko.observable(0);
 	     this.y = ko.observable(0);
 	     this.t = ko.observable(0);
-	     this.vx = ko.observable(6);
-	     this.vy = ko.observable(6);
-	     this.g = ko.observable(200);
-	     var handle;
+	     this.vx = ko.observable(20);
+	     this.vy = ko.observable(18);
+	     this.g = ko.observable(10);
+
 	     this.trails = ko.observableArray([]);
 
 	     // Trajectory motion formula
 	     // x = vx.t;
 	     // y = vy.t - 1/2.(g.t^2)
 	     this.update = function () {
-	         self.t(self.t() + 0.01);
-	         self.x(self.x() + self.vx() * self.t());
-	         self.y(self.y() + (self.vy() * self.t()) - (0.5 * self.g()) * Math.pow(self.t(), 2));
-
+	         self.t(self.t() + 0.04);
+	         self.x(self.vx() * self.t());
+	         self.y((self.vy() * self.t()) - (0.5 * self.g()) * Math.pow(self.t(), 2));
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
@@ -102,6 +107,8 @@ $(document).ready(function(){
 	
 	
 	// selecting an answer by clicking the control
+	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
+	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
 		var rotation = -getRotation('arrow');
 		var answer_range = 90/num_answers;
@@ -109,11 +116,12 @@ $(document).ready(function(){
 		$('#line').addClass('answer-'+selection);
 		$('#arrow').addClass('stop');
 		var viewModel = new ViewModel();
-		viewModel.vx(40);
-		// viewModel.vy(25);
-		viewModel.vy(Math.tan(rotation*Math.PI/180)*viewModel.vx());
+		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
+		viewModel.vy(vy);
 		ko.applyBindings(viewModel);
-		setInterval(function() { viewModel.update() }, 10);
+		
+		clearInterval(handle); // stops a previous event
+		handle = setInterval(function() { viewModel.update() }, .01);
 		
 		return false;
 	}
