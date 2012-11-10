@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	
-	num_answers = 3; // specifies number of answers for current question
+	var num_answers = 3; // specifies number of answers for current question
+	var current_screen = null;
+	var viewModel;
+	var handle;	// used in drawn path by knockout js
+	
+	// --- ONLOAD ---
 	
 	// set every screen div to take the whole screen
 	fillScreen = function(){
@@ -10,64 +15,45 @@ $(document).ready(function(){
 	fillScreen();
 	$(window).resize(function(){fillScreen()});
 	
+	current_screen = $('.screen:first');
 	
-	// get value of rotation
-	// code from: http://css-tricks.com/get-value-of-css-rotation-through-javascript/
-	getRotation = function(element_id){
-		var el = document.getElementById(element_id);
-		var st = window.getComputedStyle(el, null);
-		var tr = st.getPropertyValue("-webkit-transform") ||
-		         st.getPropertyValue("-moz-transform") ||
-		         st.getPropertyValue("-ms-transform") ||
-		         st.getPropertyValue("-o-transform") ||
-		         st.getPropertyValue("transform") ||
-		         "fail...";
-
-		// With rotate(30deg)...
-		// matrix(0.866025, 0.5, -0.5, 0.866025, 0px, 0px)
-		console.log('Matrix: ' + tr);
-
-		// rotation matrix - http://en.wikipedia.org/wiki/Rotation_matrix
-
-		var values = tr.split('(')[1];
-		    values = values.split(')')[0];
-		    values = values.split(',');
-		var a = values[0];
-		var b = values[1];
-		var c = values[2];
-		var d = values[3];
-
-		var scale = Math.sqrt(a*a + b*b);
-		var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-		
-		return angle;
-		
-	}
-
+	$('.arrow').click(function(){return selectAnswer();});
 	
-	// shows fisherman control to first question (TODO: current question)
-	$('.screen:first').append('<div id="control-wrap"></div>')
-	$('#control-wrap').load('screens/control-fisherman', function(){
-		$('#arrow').click(function(){return selectAnswer();})		
-	});
+	// --- --- --- ---
 	
-	// shifts the screen up one whole screen each time the boat is clicked
-	var step = 1;
-	$('#character, .continue a').click(function(){
-		$('#setting').css('top', '-'+(step*200)+'%');
-		step++;
-		return false;
-	});
-	
+	// shows control for current question
+	// TODO: remove
+	showControl = function(){
+		current_screen.append('<div class="control-wrap"></div>')
+		$('.control-wrap').load('screens/control-fisherman', function(){
+			$('.arrow').click(function(){return selectAnswer();})		
+		});
+	}	
+
+
 	// hides question and answers, and shows response when a response is clicked
+	// TODO: remove
 	$('.choices a').click(function(){
 		var screen = $(this).closest('.screen');
-		screen.find('.question, .choices, .response, .continue').toggle();
+		screen.find('.question, .choices, .consequence, .continue').toggle();
 		return false;
 	})
 	
+	// shifts the screen up one whole screen each time the boat is clicked
+	var step = 1;
+	$('#continue_journey_button').click(function(){
+		$('#consequence').hide();
+		$('#consequence .content').html('');
+		
+		$('#setting').css('top', '-'+(step*200)+'%');
+		step++;
+		current_screen = current_screen.next();
+		viewModel.reset();
+		$('.arrow:first').removeClass('stop');
+		return false;
+	});
 	
-		var handle;	// this is related to the below, has to move...
+
 	  //
 	  // View Model
 	  //
@@ -87,6 +73,13 @@ $(document).ready(function(){
 	     this.g = ko.observable(10);
 
 	     this.trails = ko.observableArray([]);
+	
+		this.reset = function(){
+				this.t(0);
+				this.x(0);
+				this.y(0);
+				this.trails.removeAll();
+			}
 
 	     // Trajectory motion formula
 	     // x = vx.t;
@@ -98,24 +91,43 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-	             clearInterval(handle);
+				var selected_choice = findSelectedChoice(self.x());
+				$('#consequence .content').html(selected_choice.find('.consequence'));
+				$('#consequence').show()
+	            clearInterval(handle);
 	         }
 	     }
 	}
 	
-
+	// find which choice was selected based on the x of the path's end point. returns choice div
+	findSelectedChoice = function(x_percent){
+		var width = $('.trajectory:first').width();
+		var x = x_percent*width/100;
+		var left, right;
+		var choices = current_screen.find('.choices .choice');
+		var choice;
+		for(var i = 0; i < choices.length ; i++){
+			var choice = $(choices[i]);
+			left = choice.offset().left;
+			right = left+choice.width();
+			// alert(x+', '+left+', '+right);
+			if( x >= left && x <= right){
+				return choice;
+			}
+		}
+	}
 	
 	
 	// selecting an answer by clicking the control
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
-		var rotation = -getRotation('arrow');
+		var rotation = -getRotation($('.arrow:first'));
 		var answer_range = 90/num_answers;
 		var selection = Math.ceil(rotation/answer_range);
-		$('#line').addClass('answer-'+selection);
-		$('#arrow').addClass('stop');
-		var viewModel = new ViewModel();
+		$('.line').addClass('answer-'+selection);
+		$('.arrow').addClass('stop');
+		viewModel = new ViewModel();
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);
 		ko.applyBindings(viewModel);

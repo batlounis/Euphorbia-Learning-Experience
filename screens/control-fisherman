@@ -1,7 +1,7 @@
-<div id="control">
-	<a href="#" id="arrow"></a>
-	<div id="line"></div>
-	<svg id="trajectory" 
+<div class="control">
+	<a href="#" class="arrow"></a>
+	<div class="line"></div>
+	<svg class="trajectory" 
 	              xmlns="http://www.w3.org/2000/svg" 
 	              xmlns:xlink="http://www.w3.org/1999/xlink">
 	    <!-- the initial velocity vector -->
@@ -17,4 +17,3 @@
 	    <circle r="4" data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}"></circle>
 	</svg>
 </div>
-

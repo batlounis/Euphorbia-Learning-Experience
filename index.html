@@ -7,94 +7,176 @@
 	<link rel="stylesheet" href="style/master.css" type="text/css" media="screen" charset="utf-8">
 	<script src="resources/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="resources/knockout-2.2.0.js" type='text/javascript'></script>
+	<script src="scripts/library.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/app.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body class="fisherman">
 	
-	<a href="#" id="character"></a>
+
+	<div id="character"></div>
+	
+	<div id="consequence">
+		<div class="content">
+			
+		</div>
+	  	<button id="continue_journey_button">Continue</button>
+	</div>
+	
+	<div class="control">
+		<a href="#" class="arrow"></a>
+		<div class="line"></div>
+		<svg class="trajectory" 
+		              xmlns="http://www.w3.org/2000/svg" 
+		              xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <!-- the initial velocity vector -->
+		    <line x1="0" y1="480" 
+		       data-bind="attr: {y2:(480-4*vy()),x2:4*vx()}"></line>
+
+		    <!-- the trails of the trajectory motion -->
+		    <!-- ko foreach:trails -->
+		    <circle r="1" data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}"></circle>    
+		    <!-- /ko -->
+
+		    <!-- the simulation object -->
+		    <circle r="4" data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}"></circle>
+		</svg>
+	</div>
+
 	
 	<div id="setting">
 		
 		<div class="screen">
 			<div class="question">
-				Fred the fisherman is going to fish in the ocean. He has to decide where he wants to go and fish.
+				Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
 			</div>
 						
 			<div class="choices">
-				<div class="choice">Response 1</div>
-				<div class="choice">Response 2</div>
-				<div class="choice">Response 3</div>
+				<div class="choice">
+					<div class="title">Junto a uma Reserva Natural</div>
+					<div class="consequence">
+						As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.
+						Ganhou 5 pontos-peixe mas como está a afectar o aumento da quantidade de peixes disponíveis no futuro, perde 15 pontos-peixe na próxima jogada
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Em local onde existem peixes jovens</div>
+					<div class="consequence">
+						Se pescar peixes muito jovens está a impedi-los de atingir a idade de reprodução e por isso a sua quantidade no futuro será cada vez menor.
+						Embora os peixes geralmente produzam imensos ovos, só uma pequena percentagem atinge a idade adulta.
+						Ganhou 5 pontos-peixe mas como está a afectar o no de peixes que se poderão reproduzir, perde 10 pontos-peixe na próxima jogada
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Em local onde existem peixes adultos</div>
+					<div class="consequence">
+						É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.
+						Também deve sempre lembrar-se que:
+						• não deve pescar peixes durante o período de reprodução,
+						￼￼￼￼
+						• não deve pescar peixes jovens que ainda não atingiram a idade para se reproduzirem,
+						• não deve pescar espécies em perigo de extinção.
+						Como o Manuel, teve em atenção todos estes factores: ganha 15 pontos-peixe e
+						15 pontos-moeda
+					</div>
+				</div>
 			</div>
-			
-			<div class="response">
-				The reserves are essential in order to help regenerate the fish population that has been significantly depleted by overfishing and destructive fishing practices. It is important that we protect these areas in order to increase breeding and grow the fish population.
-				Although it is legal to fish near the reserve, it is important that fishermen support the reserve’s mission and leave enough space for the fish to breed and grow in order to sustain the fishing industry.
-				You earn 5 fish but since you are preventing the fish population from growing you loose 15 fish on the next round
-			</div>
-			
-			<div class="continue">
-				<a href="#">Continue</a>				
-			</div>
+
 		</div>
 		
 		<div class="screen">
 			<div class="question">
-				Fred the fisherman is going to fish in the ocean. He has to decide where he wants to go and fish.
+				O Manel, já escolheu o local, e tem de decidir que técnica utilizar para pescar
 			</div>
 						
 			<div class="choices">
-				<a href="#">Choose response</a>
+				<div class="choice">
+					<div class="title">Usa uma rede de arrasto</div>
+					<div class="consequence">
+						Ao usar redes de arrasto uma grande parte do que é recolhido do mar pode não ser aproveitada. Acabou de pescar grande quantidade de lixo e peixes sem valor comercial, além de ter destruído todo o local por onde passou a rede.
+						É economicamente mais rentável e melhor para o ambiente utilizar técnicas de pesca seletivas.
+						Como pescou lixo e peixes sem valor comercial perde 10 pontos-moedas e ganha 5 pontos-peixe
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Joga bombas</div>
+					<div class="consequence">
+						As bombas matam os peixes de uma forma violenta, assim como todas as restantes espécies marinhas, animais e vegetais, que se encontrem por perto.
+						O uso de explosivos destrói o fundo do mar, resultando numa diminuição drástica da quantidade de peixes. Do ponto de vista comercial o peixe vale menos dinheiro, devido ao aspeto com que fica resultante da explosão.
+						Os locais destruídos pelos rebentamentos necessitam de vários anos para que haja novamente vida marinha.
+						Esta técnica é ilegal.
+						Destruiu o ecossistema, irá perder 20 pontos-peixe na próxima jogada
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Utiliza técnicas de pesca seletivas (ex: cana de pesca, linha de anzois, etc)</div>
+					<div class="consequence">
+						As técnicas seletivas são mais indicadas pois reduzem a pesca acidental e contribuem positivamente para manter as populações de peixes, garantindo o futuro da atividade piscatória.
+						￼￼￼￼￼
+						A seleção correta de isco, do tamanho do anzol e da profundidade de pesca, permitem diminuir a captura de espécies indesejáveis e de menor valor comercial.
+						Ganhou 15 pontos-peixe, e dinheiro ?
+					</div>
+				</div>
 			</div>
+
 			
-			<div class="response">
-				The reserves are essential in order to help regenerate the fish population that has been significantly depleted by overfishing and destructive fishing practices. It is important that we protect these areas in order to increase breeding and grow the fish population.
-				Although it is legal to fish near the reserve, it is important that fishermen support the reserve’s mission and leave enough space for the fish to breed and grow in order to sustain the fishing industry.
-				You earn 5 fish but since you are preventing the fish population from growing you loose 15 fish on the next round
-			</div>
-			
-			<div class="continue">
-				<a href="#">Continue</a>				
-			</div>
 		</div>
 
 		<div class="screen">
 			<div class="question">
-				Fred the fisherman is going to fish in the ocean. He has to decide where he wants to go and fish.
+				O Manel vai à pesca durante o período de desova de alguns peixes. O
+				Manel decide...
 			</div>
 						
 			<div class="choices">
-				<a href="#">Choose response</a>
+				<div class="choice">
+					<div class="title">Pesca-os a todos</div>
+					<div class="consequence">
+						Pescar as espécies durante o período de reprodução impede a população de crescer e recuperar da pesca. Ao pescar peixes com ovos, está a diminuir drasticamente o no de peixes que vão nascer, levando à diminuição da rentabilidade da atividade piscatória, no futuro.
+						Ganhou 5 pontos-peixe e 5 pontos-moeda por vender estes peixes, no entanto por estar a impedir o aumento do no de peixes disponíveis perde 10 pontos-peixe na próxima jogada
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Escolhe outra época para pescar esta espécie que está em desova</div>
+					<div class="consequence">
+						Ao escolher outra época para pescar não está a prejudicar a espécie em reprodução e contribui para o aumento do número de peixes que vai pescar no futuro.
+						Ganhou 5 pontos-peixe
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Escolhe outro local para pescar</div>
+					<div class="consequence">
+						Escolhendo outro local, onde sabe que não irá capturar espécies em reprodução, contribuirá para o aumento da quantidade de peixes no futuro.
+						Ganhou 15 pontos-peixe e irá ganhar mais 15 pontos-peixe na próxima jogada
+					</div>
+				</div>
 			</div>
-			
-			<div class="response">
-				The reserves are essential in order to help regenerate the fish population that has been significantly depleted by overfishing and destructive fishing practices. It is important that we protect these areas in order to increase breeding and grow the fish population.
-				Although it is legal to fish near the reserve, it is important that fishermen support the reserve’s mission and leave enough space for the fish to breed and grow in order to sustain the fishing industry.
-				You earn 5 fish but since you are preventing the fish population from growing you loose 15 fish on the next round
-			</div>
-			
-			<div class="continue">
-				<a href="#">Continue</a>				
-			</div>
+
 		</div>
 	
 		<div class="screen">
 			<div class="question">
-				Fred the fisherman is going to fish in the ocean. He has to decide where he wants to go and fish.
+				Enquanto pesca o Manel está a almoçar. Quando acaba de comer pega nos restos e ...
 			</div>
 						
 			<div class="choices">
-				<a href="#">Choose response</a>
+				<div class="choice">
+					<div class="title">Joga à água</div>
+					<div class="consequence">
+						O lixo orgânico, como restos de comida, decompõe-se facilmente no mar. Contudo ao atirá-lo à água enquanto pesca, está a atrair outros peixes e outros
+						￼￼￼￼
+						animais, como aves marinhas, que irão interferir na sua pescaria e poderão ser pescados acidentalmente. Mantenha o lixo orgânico longe das áreas de pesca.
+						Irá perder 5 pontos-peixe na próxima jogada pois poderá estar a pôr em causa a vida de outros animais que não são o objetivo da sua pescaria.
+					</div>
+				</div>
+				<div class="choice">
+					<div class="title">Mantem os restos no barco</div>
+					<div class="consequence">
+						Ao manter o lixo orgânico no barco não está a atrair aves nem mamíferos para o local onde está a pescar. Assim, estes animais não irão incomodar a sua pesca, nem serão capturados acidentalmente.
+						Ganhou 10 pontos-peixe
+					</div>
+				</div>
 			</div>
-			
-			<div class="response">
-				The reserves are essential in order to help regenerate the fish population that has been significantly depleted by overfishing and destructive fishing practices. It is important that we protect these areas in order to increase breeding and grow the fish population.
-				Although it is legal to fish near the reserve, it is important that fishermen support the reserve’s mission and leave enough space for the fish to breed and grow in order to sustain the fishing industry.
-				You earn 5 fish but since you are preventing the fish population from growing you loose 15 fish on the next round
-			</div>
-			
-			<div class="continue">
-				<a href="#">Continue</a>				
-			</div>
+
 		</div>
 
 	</div>	
