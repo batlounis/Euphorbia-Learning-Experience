@@ -49,6 +49,14 @@ body.fisherman #setting{
 	overflow: hidden;
 }
 
+.screen:last-child #continue_journey_button{
+	display: none;
+}
+
+
+#continue_journey_button{
+	font-size: 1.5em;
+}
 
 .fisherman .arrow, .trajectory, .choices, .continue{
 	position: absolute;
@@ -182,8 +190,3 @@ body.fisherman #setting{
 	left: 0;
 	z-index: 50;
 }
-
-#continue_journey_button{
-	font-size: 1.5em;
-}
-
