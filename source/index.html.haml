@@ -6,27 +6,25 @@ bodyClass: fisherman
 #character
 #consequence
 	.content
-	%button#continue_journey_button Continue
-
-#control
-	%a.arrow{:href=>'#'}
-	.line
-	%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
-		/ the initial velocity vector
-		%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
-		
-		/ the trails of the trajectory motion
-		/ ko foreach:trails
-		%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
-		/ /ko
-
-		/ the simulation object
-		%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
-	
+	%button#continue_journey_button Continue	
 
 	
 #setting
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
 		.choices
 			.choice
@@ -52,6 +50,20 @@ bodyClass: fisherman
 					Como o Manuel, teve em atenção todos estes factores: ganha 15 pontos-peixe e
 					15 pontos-moeda
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question O Manel, já escolheu o local, e tem de decidir que técnica utilizar para pescar
 		.choices
 			.choice
@@ -75,6 +87,20 @@ bodyClass: fisherman
 					%p A seleção correta de isco, do tamanho do anzol e da profundidade de pesca, permitem diminuir a captura de espécies indesejáveis e de menor valor comercial.
 					%p Ganhou 15 pontos-peixe, e dinheiro ?
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question O Manel vai à pesca durante o período de desova de alguns peixes. O Manel decide...
 		.choices
 			.choice
@@ -93,6 +119,20 @@ bodyClass: fisherman
 					%p Escolhendo outro local, onde sabe que não irá capturar espécies em reprodução, contribuirá para o aumento da quantidade de peixes no futuro.
 					%p Ganhou 15 pontos-peixe e irá ganhar mais 15 pontos-peixe na próxima jogada
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question Enquanto pesca o Manel está a almoçar. Quando acaba de comer pega nos restos e ...
 		.choices
 			.choice
@@ -106,6 +146,20 @@ bodyClass: fisherman
 					%p Ao manter o lixo orgânico no barco não está a atrair aves nem mamíferos para o local onde está a pescar. Assim, estes animais não irão incomodar a sua pesca, nem serão capturados acidentalmente.
 					%p Ganhou 10 pontos-peixe
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question O Manel está a pescar e vê um lobo-marinho a nadar ali perto...
 		.choices
 			.choice
@@ -124,6 +178,20 @@ bodyClass: fisherman
 					%p Por ter decidido pescar junto ao lobo-marinho, apenas ganhará 5 pontos-peixe.
 					%p Mas, porque ajudou na proteção desta espécie, irá receber 5 pontos-peixe na￼próxima jogada.
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável...
 		.choices
 			.choice
@@ -140,6 +208,20 @@ bodyClass: fisherman
 					%p Existem limites mínimos para o tamanho dos peixes que podem ser capturados e consequentemente vendidos. Lembre-se que não deve retirar do oceano animais que ainda não atingiram a idade de reprodução. Quando detectar que o pescado não cumpre os requisitos para ter valor comercial, é importante que os lance ao mar imediatamente para que possam recuperar e crescer.
 					%p Ganha 10 pontos-peixe
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question O Manel apercebe-se que a rede está danificada, e...
 		.choices
 			.choice
@@ -160,6 +242,20 @@ bodyClass: fisherman
 					%p Quando as redes já não podem ser reutilizadas devem ser trazidas para terra e colocadas no lixo. Mesmo que os aparelhos de pesca se encontrem presos no fundo deverá tentar recuperá-los a todo o custo. O abandono de artes de pesca no oceano causa a morte a um grande número de animais e estragos em muitos barcos. Não só o lixo que é produzido no barco deve ser trazido para terra como também todo o lixo que seja encontrado no oceano.
 					%p Como o lixo ocupa espaço no barco perde 2 pontos-espaço, mas por estar a promover o aumento do no de animais marinhos, ganha 15 pontos-peixe na próxima jogada.
 	.screen
+		.control
+			%a.arrow{:href=>'#'}
+			.line
+			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
+				/ the initial velocity vector
+				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
+
+				/ the trails of the trajectory motion
+				/ ko foreach:trails
+				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				/ /ko
+
+				/ the simulation object
+				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question Este é o fim do dia de pesca do Manel e existe lixo no barco. O Manel não sabe o que fazer com o lixo...
 		.choices
 			.choice

@@ -70,6 +70,16 @@ body{
 	margin: 0 auto;
 }
 
+.question, .choices, .control{
+	-webkit-transition: opacity 2s;
+	-webkit-transition-delay: 1s;
+	
+	&.fade{
+		opacity: 0
+	}
+}
+
+
 .choices .choice .title{
 	text-align: center;
 	vertical-align: top;
@@ -121,7 +131,7 @@ body{
 }
 
 .consequence{
-	font-size: .6em;
+	font-size: .8em;
 }
 
 .continue{
