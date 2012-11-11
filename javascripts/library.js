@@ -31,3 +31,4 @@ getRotation = function(element){
 	return angle;
 	
 }
+;
