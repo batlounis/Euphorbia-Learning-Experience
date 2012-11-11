@@ -62,32 +62,40 @@ body {
   margin: 0 auto; }
 
 /* line 73, master.css.scss */
+.question, .choices, .control {
+  -webkit-transition: opacity 2s;
+  -webkit-transition-delay: 1s; }
+  /* line 77, master.css.scss */
+  .question.fade, .choices.fade, .control.fade {
+    opacity: 0; }
+
+/* line 83, master.css.scss */
 .choices .choice .title {
   text-align: center;
   vertical-align: top; }
 
-/* line 78, master.css.scss */
+/* line 88, master.css.scss */
 .question, .continue a {
   display: table;
   table-layout: fixed; }
 
-/* line 84, master.css.scss */
+/* line 94, master.css.scss */
 .choices .choice {
   display: table-cell;
   width: 2%;
   /*used to force fixed table layout*/ }
 
-/* line 89, master.css.scss */
+/* line 99, master.css.scss */
 .question {
   position: relative;
   width: 30em;
   top: 5%; }
 
-/* line 96, master.css.scss */
+/* line 106, master.css.scss */
 .continue {
   width: 100%; }
 
-/* line 100, master.css.scss */
+/* line 110, master.css.scss */
 .choices {
   float: none;
   clear: both;
@@ -97,7 +105,7 @@ body {
   width: 75%;
   left: 25%; }
 
-/* line 110, master.css.scss */
+/* line 120, master.css.scss */
 #consequence {
   width: 50%;
   left: 25%;
@@ -106,27 +114,27 @@ body {
   display: none;
   z-index: 500; }
 
-/* line 119, master.css.scss */
+/* line 129, master.css.scss */
 .choices .choice .consequence {
   display: none; }
 
-/* line 123, master.css.scss */
+/* line 133, master.css.scss */
 .consequence {
-  font-size: .6em; }
+  font-size: .8em; }
 
-/* line 127, master.css.scss */
+/* line 137, master.css.scss */
 .continue {
   display: none; }
 
 /*fisherman control styling*/
-/* line 132, master.css.scss */
+/* line 142, master.css.scss */
 .control {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%; }
 
-/* line 139, master.css.scss */
+/* line 149, master.css.scss */
 .line {
   background-image: url("/images/fisherman/line.svg");
   width: 14px;
@@ -138,19 +146,19 @@ body {
   -webkit-transition: -webkit-transform 1s;
   -webkit-transform-origin: 0 0; }
 
-/* line 151, master.css.scss */
+/* line 161, master.css.scss */
 #line.answer-1 {
   -webkit-transform: rotate(-40deg) scale(1.1); }
 
-/* line 155, master.css.scss */
+/* line 165, master.css.scss */
 #line.answer-2 {
   -webkit-transform: rotate(-60deg) scale(1.8); }
 
-/* line 159, master.css.scss */
+/* line 169, master.css.scss */
 #line.answer-3 {
   -webkit-transform: rotate(-70deg) scale(2.5); }
 
-/* line 164, master.css.scss */
+/* line 174, master.css.scss */
 .fisherman .arrow {
   background-image: url("/images/fisherman/arrow.png");
   background-repeat: no-repeat;
@@ -164,21 +172,21 @@ body {
   -webkit-animation-direction: alternate;
   z-index: 400; }
 
-/* line 178, master.css.scss */
+/* line 188, master.css.scss */
 .fisherman .arrow.stop {
   -webkit-animation-play-state: paused; }
 
 @-webkit-keyframes swing {
   /*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
-  /* line 184, master.css.scss */
+  /* line 194, master.css.scss */
   0% {
     -webkit-transform: rotate(-52deg); }
 
-  /* line 185, master.css.scss */
+  /* line 195, master.css.scss */
   100% {
     -webkit-transform: rotate(-15deg); } }
 
-/* line 188, master.css.scss */
+/* line 198, master.css.scss */
 .trajectory {
   width: 100%;
   height: 100%;

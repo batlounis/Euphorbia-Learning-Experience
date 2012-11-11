@@ -49,7 +49,7 @@ $(document).ready(function(){
 		step++;
 		current_screen = current_screen.next();
 		viewModel.reset();
-		$('.arrow:first').removeClass('stop');
+		current_screen.find('.control').show();
 		return false;
 	});
 	
@@ -91,9 +91,7 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-				var selected_choice = findSelectedChoice(self.x());
-				$('#consequence .content').html(selected_choice.find('.consequence'));
-				$('#consequence').show()
+				findSelectedChoice(self.x());				
 	            clearInterval(handle);
 	         }
 	     }
@@ -106,15 +104,20 @@ $(document).ready(function(){
 		var left, right;
 		var choices = current_screen.find('.choices .choice');
 		var choice;
-		for(var i = 0; i < choices.length ; i++){
-			var choice = $(choices[i]);
+		var found = false;
+		for(var i = 0; !found && i < choices.length ; i++){
+			choice = $(choices[i]);
 			left = choice.offset().left;
 			right = left+choice.width();
 			// alert(x+', '+left+', '+right);
 			if( x >= left && x <= right){
-				return choice;
+				found = true;
 			}
 		}
+		
+		$('#consequence .content').html(choice.find('.consequence'));
+		current_screen.find('.question, .choices, .control').addClass('fade');
+		$('#consequence').show()
 	}
 	
 	
@@ -122,11 +125,11 @@ $(document).ready(function(){
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
-		var rotation = -getRotation($('.arrow:first'));
+		var rotation = -getRotation(current_screen.find('.arrow'));
 		var answer_range = 90/num_answers;
 		var selection = Math.ceil(rotation/answer_range);
 		$('.line').addClass('answer-'+selection);
-		$('.arrow').addClass('stop');
+		current_screen.find('.arrow').addClass('stop');
 		viewModel = new ViewModel();
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);
