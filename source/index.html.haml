@@ -13,7 +13,6 @@ bodyClass: fisherman
 	.screen
 		.control
 			%a.arrow{:href=>'#'}
-			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
 				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}

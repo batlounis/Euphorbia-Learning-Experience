@@ -4,7 +4,7 @@
 	}
 }
 
-
+// --- ENVIRONMENT ---
 body{
 	width: 100%;
 	height: 100%;
@@ -45,7 +45,6 @@ body{
 	
 }
 
-
 .screen{
 	width: 100%;
 	position: relative;
@@ -53,16 +52,9 @@ body{
 }
 
 
-#continue_journey_button{
-	font-size: 1.5em;
-}
-
-.fisherman .arrow, .trajectory, .choices, .continue{
-	position: absolute;
-	bottom: 10%;
-}
-
+// --- ELEMENT DESIGN ---
 .question, .choices .choice .title, .consequence, .continue a{
+	// cute box design
 	background-color: white;
 	border: 1px solid #E2E2E2;
 	border-radius: 1em;
@@ -70,43 +62,18 @@ body{
 	margin: 0 auto;
 }
 
-.question, .choices, .control{
-	-webkit-transition: opacity 2s;
-	-webkit-transition-delay: 1s;
-	
-	&.fade{
-		opacity: 0
-	}
-}
 
-
-.choices .choice .title{
-	text-align: center;
-	vertical-align: top;
-}
-
-.question, .continue a{
+ // --- HEADER ---
+.question{
 	display: table;
 	table-layout: fixed;
-}
-
-
-.choices .choice{
-	display: table-cell;
-	width: 2%; /*used to force fixed table layout*/
-}
-
-.question{
 	position: relative;
 	width: 30em;
 	top: 5%;
 }
 
 
-.continue{
-	width: 100%;
-}
-
+ // --- FOOTER ---
 .choices{
 	float: none;
 	clear: both;
@@ -115,8 +82,31 @@ body{
 	margin-right: auto;
 	width: 75%;
 	left: 25%;
+	
+	.choice{
+		display: table-cell;
+		width: 2%; /*used to force fixed table layout*/
+
+		.title{
+			text-align: center;
+			vertical-align: top;
+		}
+		
+		.consequence{
+			display: none;
+			font-size: .8em;
+		}
+		
+	}
 }
 
+.fisherman .arrow, .trajectory, .choices, .continue{
+	position: absolute;
+	bottom: 10%;
+}
+
+
+ // --- CONSEQUENCE ---
 #consequence{
 	width: 50%;
 	left: 25%;
@@ -126,50 +116,19 @@ body{
 	z-index: 500;
 }
 
-.choices .choice .consequence{
-	display: none;
+#continue_journey_button{
+	font-size: 1.5em;
 }
 
-.consequence{
-	font-size: .8em;
-}
 
-.continue{
-	display: none;
-}
 
-/*fisherman control styling*/
+// --- CONTROL ---
 .control{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 100%;
 }
-
-.line{
-	background-image: url('/images/fisherman/line.svg');
-	width: 14px;
-	height: 266px;
-	display: none;
-	position: absolute;
-	left: 200px;
-	bottom: 50px;
-	-webkit-transition: -webkit-transform 1s;
-	-webkit-transform-origin: 0 0;
-}
-
-#line.answer-1{
-	-webkit-transform: rotate(-40deg) scale(1.1);
-}
-
-#line.answer-2{
-	-webkit-transform: rotate(-60deg) scale(1.8);
-}
-
-#line.answer-3{
-	-webkit-transform: rotate(-70deg) scale(2.5);
-}
-
 
 .fisherman .arrow{
 	background-image: url('/images/fisherman/arrow.png');
@@ -183,10 +142,10 @@ body{
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-direction: alternate;
 	z-index: 400;
-}
-
-.fisherman .arrow.stop{
-	-webkit-animation-play-state: paused;
+	
+	&.stop{
+		-webkit-animation-play-state: paused;		
+	}
 }
 
 @-webkit-keyframes swing{
@@ -196,10 +155,23 @@ body{
 }
 
 .trajectory{
-
 	width: 100%;
 	height: 100%;
 	margin-bottom: 19px;
 	left: 0;
 	z-index: 50;
 }
+
+
+// --- SIMPLE ANIMATIONS ---
+.question, .choices, .control{
+	-webkit-transition: opacity 2s;
+	-webkit-transition-delay: 1s;
+	
+	&.fade{
+		opacity: 0
+	}
+}
+
+
+
