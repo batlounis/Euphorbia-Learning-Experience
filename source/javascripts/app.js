@@ -17,7 +17,7 @@ $(document).ready(function(){
 	
 	current_screen = $('.screen:first');
 	
-	$('.arrow').click(function(){return selectAnswer();});
+	$('#throw_button').click(function(){return selectAnswer();});
 	
 	// --- --- --- ---
 	
@@ -30,26 +30,19 @@ $(document).ready(function(){
 		});
 	}	
 
-
-	// hides question and answers, and shows response when a response is clicked
-	// TODO: remove
-	$('.choices a').click(function(){
-		var screen = $(this).closest('.screen');
-		screen.find('.question, .choices, .consequence, .continue').toggle();
-		return false;
-	})
 	
 	// shifts the screen up one whole screen each time the boat is clicked
 	var step = 1;
 	$('#continue_journey_button').click(function(){
+		$('#continue_journey_button').hide();
 		$('#consequence').hide();
 		$('#consequence .content').html('');
-		
 		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
 		current_screen = current_screen.next();
 		viewModel.reset();
 		current_screen.find('.control').show();
+		$('#throw_button').removeClass('fade');
 		return false;
 	});
 	
@@ -117,7 +110,9 @@ $(document).ready(function(){
 		
 		$('#consequence .content').html(choice.find('.consequence'));
 		current_screen.find('.question, .choices, .control').addClass('fade');
-		$('#consequence').show()
+		$('#throw_button').addClass('fade');
+		$('#consequence').show();
+		$('#continue_journey_button').show();
 	}
 	
 	

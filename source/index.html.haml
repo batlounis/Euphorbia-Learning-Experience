@@ -6,13 +6,14 @@ bodyClass: fisherman
 #character
 #consequence
 	.content
-	%button#continue_journey_button Continue	
+#continue_journey_button
+#throw_button
 
-	
+
 #setting
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
 				%line{:x1=>'0', :y1=>'480', 'data-bind'=>'attr: {y2:(480-4*vy()),x2:4*vx()}'}
@@ -50,7 +51,7 @@ bodyClass: fisherman
 					15 pontos-moeda
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -87,7 +88,7 @@ bodyClass: fisherman
 					%p Ganhou 15 pontos-peixe, e dinheiro ?
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -119,7 +120,7 @@ bodyClass: fisherman
 					%p Ganhou 15 pontos-peixe e irá ganhar mais 15 pontos-peixe na próxima jogada
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -146,7 +147,7 @@ bodyClass: fisherman
 					%p Ganhou 10 pontos-peixe
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -178,7 +179,7 @@ bodyClass: fisherman
 					%p Mas, porque ajudou na proteção desta espécie, irá receber 5 pontos-peixe na￼próxima jogada.
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -208,7 +209,7 @@ bodyClass: fisherman
 					%p Ganha 10 pontos-peixe
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -242,7 +243,7 @@ bodyClass: fisherman
 					%p Como o lixo ocupa espaço no barco perde 2 pontos-espaço, mas por estar a promover o aumento do no de animais marinhos, ganha 15 pontos-peixe na próxima jogada.
 	.screen
 		.control
-			%a.arrow{:href=>'#'}
+			.arrow{:href=>'#'}
 			.line
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
