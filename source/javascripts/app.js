@@ -37,12 +37,14 @@ $(document).ready(function(){
 		// $('#consequence').addClass('leave');
 		$('#consequence').removeClass('come');
 		$('#continue_journey_button').removeClass('come');
+		current_screen.find('.arrow').removeClass('swing');
 		// $('#consequence .content').html('');
 		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
 		current_screen = current_screen.next();
 		viewModel.reset();
 		current_screen.find('.control, .choices').addClass('come');
+		current_screen.find('.arrow').addClass('swing');
 		$('#throw_button').removeClass('leave');
 		return false;
 	});

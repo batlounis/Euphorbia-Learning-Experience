@@ -13,26 +13,26 @@
     <div id='character'></div>
 <div id='consequence'>
   <div class='content'></div>
-  <button id='continue_journey_button'>Continue</button>
 </div>
+<div id='continue_journey_button'></div>
+<div id='throw_button'></div>
 <div id='setting'>
   <div class='screen'>
-    <div class='control'>
-      <a class='arrow' href='#'></a>
-      <div class='line'></div>
+    <div class='control come'>
+      <div class='arrow swing first' href='#'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
         <line data-bind='attr: {y2:(480-4*vy()),x2:4*vx()}' x1='0' y1='480'></line>
         <!-- the trails of the trajectory motion -->
         <!-- ko foreach:trails -->
-        <circle data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}" r='1'></circle>
+        <circle data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}" r='1' style='stroke: white;'></circle>
         <!-- /ko -->
         <!-- the simulation object -->
-        <circle data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}" r='4'></circle>
+        <circle data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}" r='4' style='stroke: white;'></circle>
       </svg>
     </div>
     <div class='question'>Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.</div>
-    <div class='choices'>
+    <div class='choices come'>
       <div class='choice'>
         <div class='title'>Junto a uma Reserva Natural</div>
         <div class='consequence'>
@@ -65,7 +65,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -110,7 +110,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -150,7 +150,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -183,7 +183,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -223,7 +223,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -259,7 +259,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->
@@ -301,7 +301,7 @@
   </div>
   <div class='screen'>
     <div class='control'>
-      <a class='arrow' href='#'></a>
+      <div class='arrow' href='#'></div>
       <div class='line'></div>
       <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
         <!-- the initial velocity vector -->

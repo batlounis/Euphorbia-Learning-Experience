@@ -184,22 +184,14 @@ footer{
 }
 
 .fisherman .arrow{
-	background-image: url('/images/fisherman/arrow.png');
+	background-image: url('/images/fisherman/fishing_rod.png');
 	background-repeat: no-repeat;
-	width: 100px;
-	height: 38px;
-	display: block;
-	-webkit-transform-origin: 0 50%;
-	// -webkit-animation: swing 1s;
-	-webkit-transform: rotate(-20deg); // TODO: REMOVE
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-direction: alternate;
-	z-index: 400;
-	
-	&.stop{
-		-webkit-animation-play-state: paused;		
-	}
+	width: 25%;
+	height: 20%;
+	bottom: -5%;
+	background-size: contain;
+	display: none;
+	z-index: 400;	
 }
 
 @-webkit-keyframes swing{
@@ -290,6 +282,29 @@ $c_transition: 3s;
 	&.come{
 		right: 0;
 		-webkit-transition: right $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay + $sc_choices_go_down + $sc_continue_button_delay);
+	}
+}
+
+.fisherman .arrow{
+	&.swing{
+		display: block;
+		-webkit-transition: block;
+		-webkit-transition-delay: $c_delay + $c_transition;
+		-webkit-transform-origin: 0 50%;
+		
+		-webkit-animation: swing 1s;
+		-webkit-transform: rotate(-20deg); // TODO: REMOVE
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-direction: alternate;
+		
+		&.first{
+			-webkit-animation-delay: 0;
+		}
+
+		&.stop{
+			-webkit-animation-play-state: paused;		
+		}
 	}
 }
 
