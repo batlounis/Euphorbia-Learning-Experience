@@ -34,15 +34,16 @@ $(document).ready(function(){
 	// shifts the screen up one whole screen each time the boat is clicked
 	var step = 1;
 	$('#continue_journey_button').click(function(){
-		$('#continue_journey_button').hide();
-		$('#consequence').hide();
-		$('#consequence .content').html('');
+		// $('#consequence').addClass('leave');
+		$('#consequence').removeClass('come');
+		$('#continue_journey_button').removeClass('come');
+		// $('#consequence .content').html('');
 		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
 		current_screen = current_screen.next();
 		viewModel.reset();
-		current_screen.find('.control').show();
-		$('#throw_button').removeClass('fade');
+		current_screen.find('.control, .choices').addClass('come');
+		$('#throw_button').removeClass('leave');
 		return false;
 	});
 	
@@ -109,10 +110,13 @@ $(document).ready(function(){
 		}
 		
 		$('#consequence .content').html(choice.find('.consequence'));
-		current_screen.find('.question, .choices, .control').addClass('fade');
-		$('#throw_button').addClass('fade');
-		$('#consequence').show();
-		$('#continue_journey_button').show();
+		current_screen.find('.choices').removeClass('come');
+		current_screen.find('.question').addClass('leave');
+		current_screen.find('.control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		// $('#consequence').show();
+		$('#consequence').addClass('come');
+		$('#continue_journey_button').addClass('come');
 	}
 	
 	

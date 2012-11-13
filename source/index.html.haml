@@ -12,7 +12,7 @@ bodyClass: fisherman
 
 #setting
 	.screen
-		.control
+		.control.come
 			.arrow{:href=>'#'}
 			%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 				/ the initial velocity vector
@@ -20,13 +20,13 @@ bodyClass: fisherman
 
 				/ the trails of the trajectory motion
 				/ ko foreach:trails
-				%circle{:r=>'1', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
+				%circle{:r=>'1', 'style'=>'stroke: white;', 'data-bind'=>"attr: {cx:x+'%',cy:(100-y)+'%'}"}
 				/ /ko
 
 				/ the simulation object
-				%circle{:r=>'4', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
+				%circle{:r=>'4', 'style'=>'stroke: white;', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
-		.choices
+		.choices.come
 			.choice
 				.title Junto a uma Reserva Natural
 				.consequence

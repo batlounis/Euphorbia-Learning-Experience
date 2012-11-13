@@ -1,3 +1,13 @@
+@font-face{
+	font-family: ABeeZee-Regular;
+	src: url('ABeeZee-Regular.ttf');
+}
+
+@font-face{
+	font-family: ABeeZee-Italic;
+	src: url('ABeeZee-Italic.ttf');
+}
+
 @media only screen and (max-width: 600px), only screen and (max-height: 400px){
 	body{
 		font-size: 100% !important;
@@ -11,7 +21,7 @@ body{
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 	font-size: 140%;
 	
 	&.fisherman #setting{
@@ -25,9 +35,6 @@ body{
 		top: 0;
 		margin: 0;
 		padding: 0;
-		transition: top 2s;
-		-webkit-transition: top 3s;
-		-webkit-transition-timing-function: ease-in-out;
 	}
 	
 	&.fisherman #character{
@@ -52,14 +59,15 @@ body{
 
 
 // --- ELEMENT DESIGN ---
-.question, .choices .choice .title, .consequence{
+.question, .consequence{
 	// cute box design
 	background-color: white;
 	border: 1px solid #E2E2E2;
 	border-radius: 1em;
 	padding: .5em;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
+
 
 
  // --- HEADER ---
@@ -89,7 +97,7 @@ footer{
 .choices{
 	background-image: url(/images/fisherman/sea_of_choices.png);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	background-position: top left;
 	width: 75%;
 	padding-left: 25%;
@@ -102,6 +110,10 @@ footer{
 	.choice{
 		display: table-cell;
 		width: 2%; /*used to force fixed table layout*/
+		padding: .5em;
+		margin: 0 auto;
+		background-color: none;
+		color: white;
 
 		.title{
 			text-align: center;
@@ -126,20 +138,19 @@ footer{
 #consequence{
 	width: 50%;
 	left: 25%;
-	top: 25%;
+	// top: 25%;
 	position: fixed;
-	display: none;
+	// display: none;
 	z-index: 500;
 }
 
 #continue_journey_button{
-	display: none;
 	background: url(/images/fisherman/continue_button.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: right bottom;
 	position: fixed;
-	bottom: 0;
+	// bottom: 0;
 	right: 0;
 	width: 40%;
 	height: 100%;
@@ -179,7 +190,8 @@ footer{
 	height: 38px;
 	display: block;
 	-webkit-transform-origin: 0 50%;
-	-webkit-animation: swing 1s;
+	// -webkit-animation: swing 1s;
+	-webkit-transform: rotate(-20deg); // TODO: REMOVE
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-direction: alternate;
@@ -205,15 +217,85 @@ footer{
 }
 
 
+
+// --- SIMPLE ANIMATIONS VARIABLES ---
+// ** Select choice
+$sc_freeze: 2s;
+$sc_choices_go_down: 2s;
+$sc_control_goes_left: 2s;
+$sc_delay: -1s;
+$sc_show_response: 1s;
+$sc_continue_button_delay: 2s;
+
+// ** Continue
+$c_delay: 1s;
+$c_transition: 3s;
+
+
+
 // --- SIMPLE ANIMATIONS ---
-.question, .choices, .control, #throw_button{
-	-webkit-transition: opacity 1s;
-	-webkit-transition-delay: .5s;
+
+// ** New screen & Select choice
+.choices{
+	-webkit-transition: bottom $sc_choices_go_down $sc_freeze;
+	bottom: -100%;
 	
-	&.fade{
-		opacity: 0
+	&.come{
+		-webkit-transition: bottom $sc_control_goes_left ($c_delay + $c_transition);
+		bottom: 0;
 	}
 }
 
+#throw_button{
+	-webkit-transition: left $sc_control_goes_left ($c_delay + $c_transition);
+	
+	&.leave{
+		-webkit-transition: left $sc_control_goes_left $sc_freeze;
+		left: -100%;
+	}	
+}
+
+.control{
+	-webkit-transition: left $sc_control_goes_left $sc_freeze;
+	left: -100%;
+	
+	&.come{
+		-webkit-transition: left $sc_control_goes_left ($c_delay + $c_transition);
+		left: 0;
+	}
+}
+
+.question{
+	
+	&.leave{
+		-webkit-transition: top $sc_control_goes_left $sc_freeze;
+		top: -100%;
+	}
+}
+
+#consequence{
+	-webkit-transition: top $sc_show_response 0;
+	top: -100%;
+	
+	&.come{
+		-webkit-transition: top $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay);
+		top: 15%;
+	}
+}
+
+#continue_journey_button{
+	-webkit-transition: right $sc_show_response 0;
+	right: -100%;
+	
+	&.come{
+		right: 0;
+		-webkit-transition: right $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay + $sc_choices_go_down + $sc_continue_button_delay);
+	}
+}
+
+// ** Continue
+#setting{
+	-webkit-transition: top $c_transition ease-in-out $c_delay;
+}
 
 
