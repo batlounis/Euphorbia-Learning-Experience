@@ -31,3 +31,14 @@ getRotation = function(element){
 	return angle;
 	
 }
+
+// used as such:
+// playIn(function(){ code_goes_here }, in_seconds)
+playIn = function(func, in_seconds){
+	setTimeout(func, in_seconds*1000);
+}
+
+
+
+
+

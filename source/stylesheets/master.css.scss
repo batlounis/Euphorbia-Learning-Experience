@@ -57,9 +57,15 @@ body{
 	overflow: hidden;
 }
 
+// --- UNDERWATER ---
+.underwater.screen{
+	background-image: url(/images/fisherman/background_underwater.png);
+	background-size: cover;
+}
+
 
 // --- ELEMENT DESIGN ---
-.question, .consequence{
+.question, .consequence p{
 	// cute box design
 	background-color: white;
 	border: 1px solid #E2E2E2;
@@ -221,7 +227,7 @@ $sc_continue_button_delay: 2s;
 
 // ** Continue
 $c_delay: 1s;
-$c_transition: 3s;
+$c_transition: 3s; // if you change this, change javascript also
 
 
 
@@ -312,5 +318,241 @@ $c_transition: 3s;
 #setting{
 	-webkit-transition: top $c_transition ease-in-out $c_delay;
 }
+
+// ** Underwater
+#setting.underwater{
+	-webkit-transition: top $c_transition ease-in-out ($sc_freeze + $sc_choices_go_down);
+}
+
+body.fisherman #character{ // had to keep all the tags for precedence (top is also applied on it before)
+	-webkit-transition: top $c_transition ease-in-out 1s;
+
+	&.underwater{
+		top: -25%;
+		-webkit-transition: top $c_transition ease-in-out ($sc_freeze + $sc_choices_go_down);
+	}
+}
+
+// ** Bomb animation
+	$bomb_animation_start: $sc_freeze + $sc_choices_go_down + $c_transition;
+	
+	#a1-bomb{
+		width: 80%;
+		height: 100%;
+		left: 10%;
+		top: -40%;
+		position: absolute;
+		display: none;
+		background-image: url(/images/fisherman/animation_bomb/bomb.png);
+		background-size: 20%;
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-transition: top 3s ease-in-out;
+					
+		&.drop{
+			top: 20%;
+		}
+		
+		&.bomb-1{
+			background-size: contain;
+			background-image: url(/images/fisherman/animation_bomb/blast_1.png);
+			background-repeat: no-repeat;
+		}
+		
+		
+		&.bomb-2{
+			background-size: contain;
+			background-image: url(/images/fisherman/animation_bomb/blast_2.png);
+			background-repeat: no-repeat;
+		}
+	}
+	
+	#a1-fish-1{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish1.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 60%;
+		-webkit-transition: left 8s;
+
+		left: 80%;
+		
+		&.swim{
+			left: 10%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-2{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish2.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 80%;
+		-webkit-transition: left 8s;
+
+		left: 90%;
+		
+		&.swim{
+			left: 10%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+		
+	}
+	
+	#a1-fish-3{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish3.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 90%;
+		-webkit-transition: left 8s;
+
+		left: 10%;
+		
+		&.swim{
+			left: 70%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-4{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish4.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 50%;
+		-webkit-transition: left 8s;
+
+		left: 30%;
+		
+		&.swim{
+			left: 90%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-5{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish5.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 60%;
+		-webkit-transition: left 8s;
+
+		left: 20%;
+		
+		&.swim{
+			left: 70%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-6{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish6.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 40%;
+		-webkit-transition: left 8s;
+
+		left: 50%;
+		
+		&.swim{
+			left: 10%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-7{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish7.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 80%;
+		-webkit-transition: left 8s;
+
+		left: 60%;
+		
+		&.swim{
+			left: 100%;
+		}
+		
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+	#a1-fish-8{
+		width: 5%;
+		height: 5%;
+		background-size: contain;
+		background-image: url(/images/fisherman/animation_bomb/fish8.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 90%;
+		-webkit-transition: left 8s;
+
+		left: 40%;
+		
+		&.swim{
+			left: 0%;
+		}
+		
+		&.die{
+			-webkit-transition: top 1s;
+			top: 20%;
+		}
+	}
+	
+
+
+
 
 

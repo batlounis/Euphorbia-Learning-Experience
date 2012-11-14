@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
 	var viewModel;
 	var handle;	// used in drawn path by knockout js
+	var c_transition = 3; // if you change this, change css also
 	
 	// --- ONLOAD ---
 	
@@ -111,14 +111,38 @@ $(document).ready(function(){
 			}
 		}
 		
-		$('#consequence .content').html(choice.find('.consequence'));
+		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
+		
 		current_screen.find('.choices').removeClass('come');
 		current_screen.find('.question').addClass('leave');
 		current_screen.find('.control').removeClass('come');
 		$('#throw_button').addClass('leave');
-		// $('#consequence').show();
-		$('#consequence').addClass('come');
+		
+		if(consequence.hasClass('underwater')){
+			consequence.find('.screen').insertAfter(current_screen);
+			current_screen.css('margin-bottom', '0px'); // TODO: return margin to previous value once animation done
+			$('#setting').addClass('underwater'); // TODO: remove underwater class once animation done
+			$('#character').addClass('underwater');
+			$('#setting').css('top', '-'+(step*100)+'%'); // this is 100 not 200
+			setTimeout(function(){bomb_animation()}, 7000);
+		}else{
+			$('#consequence .content').html(consequence);
+			$('#consequence').addClass('come');
+			$('#continue_journey_button').addClass('come');
+		}
+
+	}
+	
+	goAboveWater = function(){
+		$('#setting').css('top', '-'+((step-1)*200)+'%');
+		$('#setting').removeClass('underwater');
+		$('#character').removeClass('underwater');
 		$('#continue_journey_button').addClass('come');
+		playIn(function(){ // wait until screen goes up, then remove
+			current_screen.next('.screen').remove();
+			$('.screen').css('margin-bottom', window.innerHeight+'px');			
+		}, c_transition);
+
 	}
 	
 	
