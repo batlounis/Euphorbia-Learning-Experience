@@ -6,7 +6,9 @@
     <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/knockout-2.2.0.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/jsAnim.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/library.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/animations.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/app.js' type='text/javascript'></script>
   </head>
   <body class='fisherman'>
@@ -35,9 +37,20 @@
     <div class='choices come'>
       <div class='choice'>
         <div class='title'>Junto a uma Reserva Natural</div>
-        <div class='consequence'>
-          <p>As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.</p>
-          <p>Ganhou 5 pontos-peixe mas como está a afectar o aumento da quantidade de peixes disponíveis no futuro, perde 15 pontos-peixe na próxima jogada</p>
+        <div class='consequence underwater'>
+          <div class='screen underwater'>
+            <div id='a1-bomb'></div>
+            <div id='a1-fish-1'></div>
+            <div id='a1-fish-2'></div>
+            <div id='a1-fish-3'></div>
+            <div id='a1-fish-4'></div>
+            <div id='a1-fish-5'></div>
+            <div id='a1-fish-6'></div>
+            <div id='a1-fish-7'></div>
+            <div id='a1-fish-8'></div>
+          </div>
+          <!-- %p As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade. -->
+          <!-- %p Ganhou 5 pontos-peixe mas como está a afectar o aumento da quantidade de peixes disponíveis no futuro, perde 15 pontos-peixe na próxima jogada -->
         </div>
       </div>
       <div class='choice'>
@@ -52,7 +65,7 @@
         <div class='title'>Em local onde existem peixes adultos</div>
         <div class='consequence'>
           <p>É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.</p>
-          Também deve sempre lembrar-se que:
+          <p>Também deve sempre lembrar-se que:</p>
           • não deve pescar peixes durante o período de reprodução,
           ￼￼￼￼
           • não deve pescar peixes jovens que ainda não atingiram a idade para se reproduzirem,
