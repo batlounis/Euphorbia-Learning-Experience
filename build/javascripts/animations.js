@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	bomb_animation = function(){
+	bomb_animation = function(consequence){
 		// var manager = new jsAnimManager();
 		// 		manager.registerPosition('a1-bomb', true);
 		// 		var anim = manager.createAnimObject('a1-bomb');
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		playIn(function(){ $('#a1-fish-7').addClass('die') }, 5.2);
 		playIn(function(){ $('#a1-fish-8').addClass('die') }, 5.2);
 				
-		playIn(function(){goAboveWater()}, 6);
+		playIn(function(){goAboveWater(consequence)}, 6);
 
 	}
 	

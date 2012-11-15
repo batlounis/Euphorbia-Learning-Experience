@@ -72,6 +72,7 @@ body{
 	border-radius: 1em;
 	padding: .5em;
 	margin: 0 auto;	
+	font-size: .9em;
 }
 
 
@@ -83,6 +84,20 @@ body{
 	position: relative;
 	width: 30em;
 	top: 5%;
+}
+
+#score{
+	background-color: rgba(255, 255, 255, .5);
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	margin: 0;
+	display: table;
+	width: 8%;
+	font-size: 1.5em;
+	text-align: center;
+	padding: .5em;
+	z-index: 500;
 }
 
 
@@ -137,6 +152,8 @@ footer{
 .fisherman .arrow, .trajectory{
 	position: absolute;
 	bottom: 10%;
+	// -webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
 }
 
 
@@ -167,7 +184,7 @@ footer{
 
 
 // --- CONTROL ---
-.control{
+#control{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -253,7 +270,7 @@ $c_transition: 3s; // if you change this, change javascript also
 	}	
 }
 
-.control{
+#control{
 	-webkit-transition: left $sc_control_goes_left $sc_freeze;
 	left: -100%;
 	
@@ -294,24 +311,22 @@ $c_transition: 3s; // if you change this, change javascript also
 .fisherman .arrow{
 	&.swing{
 		display: block;
-		-webkit-transition: block;
-		-webkit-transition-delay: $c_delay + $c_transition;
-		-webkit-transform-origin: 0 50%;
-		
+		-webkit-transform-origin: 0 50%;		
 		-webkit-animation: swing 1s;
 		-webkit-transform: rotate(-20deg); // TODO: REMOVE
 		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-timing-function: linear;
 		-webkit-animation-direction: alternate;
+		// -webkit-animation-delay: $c_delay + $c_transition;
 		
-		&.first{
-			-webkit-animation-delay: 0;
-		}
-
 		&.stop{
 			-webkit-animation-play-state: paused;		
 		}
 	}
+}
+
+.screen:first .arrow.first{ // TODO: doesnt look like this is having an effect now
+	-webkit-animation-delay: 0;
 }
 
 // ** Continue

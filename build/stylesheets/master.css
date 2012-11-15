@@ -56,7 +56,7 @@ body {
   background-size: cover; }
 
 /* line 68, master.css.scss */
-.question, .consequence p {
+.question, #consequence p {
   background-color: white;
   border: 1px solid #E2E2E2;
   border-radius: 1em;

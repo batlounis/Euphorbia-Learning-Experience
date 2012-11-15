@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	bomb_animation = function(){
+	bomb_animation = function(consequence){
 		// var manager = new jsAnimManager();
 		// 		manager.registerPosition('a1-bomb', true);
 		// 		var anim = manager.createAnimObject('a1-bomb');
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		playIn(function(){ $('#a1-fish-7').addClass('die') }, 5.2);
 		playIn(function(){ $('#a1-fish-8').addClass('die') }, 5.2);
 				
-		playIn(function(){goAboveWater()}, 6);
+		playIn(function(){goAboveWater(consequence)}, 6);
 
 	}
 	
@@ -132,6 +132,28 @@ $(document).ready(function(){
 	     }
 	}
 	
+	
+	goAboveWater = function(consequence){
+		$('#setting').css('top', '-'+((step-1)*200)+'%');
+		$('#setting').removeClass('underwater');
+		$('#character').removeClass('underwater');
+		$('#continue_journey_button').addClass('come');
+		playIn(function(){
+			// wait until screen goes up, then remove and show consequence text
+			current_screen.next('.screen').remove();
+			$('.screen').css('margin-bottom', window.innerHeight+'px');
+			// show consequence
+			showConsequence(consequence);
+		}, c_transition);
+
+	}
+	
+	showConsequence = function(consequence){
+		$('#consequence .content').html(consequence.find('.content'));
+		$('#consequence').addClass('come');
+		$('#continue_journey_button').addClass('come');	
+	}
+	
 	// find which choice was selected based on the x of the path's end point. returns choice div
 	findSelectedChoice = function(x_percent){
 		var width = $('.trajectory:first').width();
@@ -151,7 +173,7 @@ $(document).ready(function(){
 		}
 		
 		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
-		
+
 		current_screen.find('.choices').removeClass('come');
 		current_screen.find('.question').addClass('leave');
 		current_screen.find('.control').removeClass('come');
@@ -159,30 +181,17 @@ $(document).ready(function(){
 		
 		if(consequence.hasClass('underwater')){
 			consequence.find('.screen').insertAfter(current_screen);
-			current_screen.css('margin-bottom', '0px'); // TODO: return margin to previous value once animation done
-			$('#setting').addClass('underwater'); // TODO: remove underwater class once animation done
+			current_screen.css('margin-bottom', '0px');
+			$('#setting').addClass('underwater');
 			$('#character').addClass('underwater');
-			$('#setting').css('top', '-'+(step*100)+'%'); // this is 100 not 200
-			setTimeout(function(){bomb_animation()}, 7000);
+			$('#setting').css('top', '-'+((step-1)*200+100)+'%');
+			setTimeout(function(){bomb_animation(consequence)}, 7000);
 		}else{
-			$('#consequence .content').html(consequence);
-			$('#consequence').addClass('come');
-			$('#continue_journey_button').addClass('come');
+			showConsequence(consequence);
 		}
 
 	}
-	
-	goAboveWater = function(){
-		$('#setting').css('top', '-'+((step-1)*200)+'%');
-		$('#setting').removeClass('underwater');
-		$('#character').removeClass('underwater');
-		$('#continue_journey_button').addClass('come');
-		playIn(function(){ // wait until screen goes up, then remove
-			current_screen.next('.screen').remove();
-			$('.screen').css('margin-bottom', window.innerHeight+'px');			
-		}, c_transition);
 
-	}
 	
 	
 	// selecting an answer by clicking the control
