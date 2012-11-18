@@ -17,6 +17,10 @@ $url: '../images';
 }
 
 // --- ENVIRONMENT ---
+*{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 body{
 	width: 100%;
 	height: 100%;
@@ -155,7 +159,7 @@ footer{
 		&.selected{
 			&:after{
 				background-color: green;
-				box-shadow: 0 -1em 1em .5em white;
+				box-shadow: 0 0 .5em .5em rgba(255, 255, 255, .5);
 			}
 		}
 
