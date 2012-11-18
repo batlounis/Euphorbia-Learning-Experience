@@ -144,8 +144,7 @@ $(document).ready(function(){
 			choice = $(choices[i]);
 			left = choice.offset().left;
 			right = left+choice.width();
-			// alert(x+', '+left+', '+right);
-			if( x >= left && x <= right){
+			if( x < right){
 				found = true;
 			}
 		}
