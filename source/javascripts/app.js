@@ -112,7 +112,7 @@ $(document).ready(function(){
 	
 	
 	goAboveWater = function(consequence){
-		$('#setting').css('top', '-'+((step-1)*200)+'%');
+		$('#setting').css('top', '-'+((step)*2*screen_height)+'px');
 		$('#setting').removeClass('underwater');
 		$('#character').removeClass('underwater');
 		$('#continue_journey_button').addClass('come');
@@ -164,7 +164,7 @@ $(document).ready(function(){
 			current_screen.css('margin-bottom', '0px');
 			$('#setting').addClass('underwater');
 			$('#character').addClass('underwater');
-			$('#setting').css('top', '-'+((step-1)*200+100)+'%');
+			$('#setting').css('top', '-'+((step)*2*screen_height+screen_height)+'px');
 			setTimeout(function(){bomb_animation(consequence)}, 7000);
 		}else{
 			showConsequence(consequence);
