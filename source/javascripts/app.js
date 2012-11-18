@@ -10,16 +10,20 @@ $(document).ready(function(){
 	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
+	var screen_height;
 	var viewModel;
 	var handle;	// used in drawn path by knockout js
 	var c_transition = 3; // if you change this, change css also
+	var step = 0;
 	
 	// --- ONLOAD ---
 	
 	// set every screen div to take the whole screen
-	fillScreen = function(){
+	fillScreen = function(){ // TODO: this should be made in knockout
 		$('.screen').css('height', window.innerHeight+'px');
 		$('.screen').css('margin-bottom', window.innerHeight+'px');
+		screen_height = window.innerHeight;
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px');
 	};
 	fillScreen();
 	$(window).resize(function(){fillScreen()});
@@ -32,12 +36,12 @@ $(document).ready(function(){
 
 	
 	// shifts the screen up one whole screen each time the boat is clicked
-	var step = 1;
 	$('#continue_journey_button').click(function(){
+		step++;
 		$('#consequence').removeClass('come');
 		$('#continue_journey_button').removeClass('come');
-		$('#setting').css('top', '-'+(step*200)+'%');
-		step++;
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
+
 		current_screen = current_screen.next();
 		viewModel.reset();
 		
