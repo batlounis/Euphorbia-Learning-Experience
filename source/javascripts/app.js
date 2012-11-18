@@ -103,9 +103,10 @@ $(document).ready(function(){
 	viewModel = new ViewModel();
 	ko.applyBindings(viewModel);
 	
-	
+	// Triggered on a selected choice
 	$('.choice').bind('select',function(e){
 		viewModel.score(viewModel.score()+parseInt($(this).attr('score')));
+		$(this).addClass('selected');
 	});
 	
 	

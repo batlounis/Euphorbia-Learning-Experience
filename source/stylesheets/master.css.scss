@@ -131,11 +131,31 @@ footer{
 	
 	.choice{
 		display: table-cell;
-		width: 2%; /*used to force fixed table layout*/
+		width: 2%; // used to force fixed table layout
 		padding: .5em;
 		margin: 0 auto;
-		background-color: none;
 		color: white;
+		position: relative;
+
+		// visual bar below each choice
+		&:after{
+			content: '';
+			background-color: white;
+			width: 90%;
+			margin-left: 5%;
+			height: .5em;
+			position: absolute;
+			bottom: 0;
+			display: block;
+		}
+		
+		// visual bar once it's selected
+		&.selected{
+			&:after{
+				background-color: green;
+				box-shadow: 0 -1em 1em .5em white;
+			}
+		}
 
 		.title{
 			text-align: center;
