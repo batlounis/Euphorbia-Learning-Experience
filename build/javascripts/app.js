@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	// prevent scrolling on iOS
+	$(document).bind(
+	  'touchmove',
+	  function(e) {
+	    e.preventDefault();
+	  }
+	);
+	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
 	var viewModel;
@@ -20,31 +29,23 @@ $(document).ready(function(){
 	$('#throw_button').click(function(){return selectAnswer();});
 	
 	// --- --- --- ---
-	
-	// shows control for current question
-	// TODO: remove
-	showControl = function(){
-		current_screen.append('<div class="control-wrap"></div>')
-		$('.control-wrap').load('screens/control-fisherman', function(){
-			$('.arrow').click(function(){return selectAnswer();})		
-		});
-	}	
 
 	
 	// shifts the screen up one whole screen each time the boat is clicked
 	var step = 1;
 	$('#continue_journey_button').click(function(){
-		// $('#consequence').addClass('leave');
 		$('#consequence').removeClass('come');
 		$('#continue_journey_button').removeClass('come');
-		current_screen.find('.arrow').removeClass('swing');
-		// $('#consequence .content').html('');
 		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
 		current_screen = current_screen.next();
 		viewModel.reset();
-		current_screen.find('.control, .choices').addClass('come');
-		current_screen.find('.arrow').addClass('swing');
+		
+		$('#control .arrow').removeClass('stop');
+		$('#control .arrow').addClass('swing');
+		current_screen.find('.choices').addClass('come');
+		$('#control').addClass('come');
+
 		$('#throw_button').removeClass('leave');
 		return false;
 	});
@@ -67,6 +68,8 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+			this.score = ko.observable(0);
 
 	     this.trails = ko.observableArray([]);
 	
@@ -92,6 +95,15 @@ $(document).ready(function(){
 	         }
 	     }
 	}
+	
+	viewModel = new ViewModel();
+	ko.applyBindings(viewModel);
+	
+	
+	$('.choice').bind('select',function(e){
+		viewModel.score(viewModel.score()+parseInt($(this).attr('score')));
+	});
+	
 	
 	
 	goAboveWater = function(consequence){
@@ -133,11 +145,13 @@ $(document).ready(function(){
 			}
 		}
 		
+		choice.trigger('select');
+		
 		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
 
 		current_screen.find('.choices').removeClass('come');
 		current_screen.find('.question').addClass('leave');
-		current_screen.find('.control').removeClass('come');
+		$('#control').removeClass('come');
 		$('#throw_button').addClass('leave');
 		
 		if(consequence.hasClass('underwater')){
@@ -159,15 +173,13 @@ $(document).ready(function(){
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
-		var rotation = -getRotation(current_screen.find('.arrow'));
+		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
 		var selection = Math.ceil(rotation/answer_range);
-		$('.line').addClass('answer-'+selection);
-		current_screen.find('.arrow').addClass('stop');
-		viewModel = new ViewModel();
+		$('#control .arrow').addClass('stop');
+
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);
-		ko.applyBindings(viewModel);
 		
 		clearInterval(handle); // stops a previous event
 		handle = setInterval(function() { viewModel.update() }, .01);

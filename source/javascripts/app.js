@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	// prevent scrolling on iOS
+	$(document).bind(
+	  'touchmove',
+	  function(e) {
+	    e.preventDefault();
+	  }
+	);
+	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
 	var viewModel;
