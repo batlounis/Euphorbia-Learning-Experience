@@ -11,6 +11,10 @@
   body {
     font-size: 100% !important; } }
 /* line 20, master.css.scss */
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+/* line 24, master.css.scss */
 body {
   width: 100%;
   height: 100%;
@@ -19,7 +23,7 @@ body {
   padding: 0;
   font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   font-size: 140%; }
-  /* line 29, master.css.scss */
+  /* line 33, master.css.scss */
   body.fisherman #setting {
     z-index: 0;
     background-image: url(../images/fisherman/background.jpg);
@@ -27,11 +31,12 @@ body {
     width: 100%;
     overflow: auto;
     background-position: top center;
+    background-repeat: repeat;
     position: relative;
     top: 0;
     margin: 0;
     padding: 0; }
-  /* line 42, master.css.scss */
+  /* line 47, master.css.scss */
   body.fisherman #character {
     z-index: 100;
     background-image: url(../images/fisherman/character.png);
@@ -44,18 +49,19 @@ body {
     width: 100%;
     display: block; }
 
-/* line 56, master.css.scss */
+/* line 61, master.css.scss */
 .screen {
   width: 100%;
   position: relative;
   overflow: hidden; }
 
-/* line 63, master.css.scss */
+/* line 68, master.css.scss */
 .underwater.screen {
   background-image: url(../images/fisherman/background_underwater.png);
-  background-size: cover; }
+  background-size: cover;
+  background-position: 100%; }
 
-/* line 70, master.css.scss */
+/* line 76, master.css.scss */
 .question, #consequence p {
   background-color: white;
   border: 1px solid #E2E2E2;
@@ -63,7 +69,7 @@ body {
   margin: 0 auto;
   font-size: .9em; }
 
-/* line 82, master.css.scss */
+/* line 88, master.css.scss */
 .question {
   display: table;
   table-layout: fixed;
@@ -71,7 +77,7 @@ body {
   width: 30em;
   top: 5%; }
 
-/* line 90, master.css.scss */
+/* line 96, master.css.scss */
 #score {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -85,7 +91,7 @@ body {
   padding: .5em;
   z-index: 500; }
 
-/* line 107, master.css.scss */
+/* line 113, master.css.scss */
 footer {
   background-image: url(../images/fisherman/sea_of_choices.png);
   background-repeat: no-repeat;
@@ -97,7 +103,7 @@ footer {
   position: absolute;
   bottom: 0; }
 
-/* line 119, master.css.scss */
+/* line 125, master.css.scss */
 .choices {
   background-image: url(../images/fisherman/sea_of_choices.png);
   background-repeat: no-repeat;
@@ -110,38 +116,51 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0; }
-  /* line 132, master.css.scss */
+  /* line 138, master.css.scss */
   .choices .choice {
     display: table-cell;
     width: 2%;
-    /*used to force fixed table layout*/
     padding: .5em;
     margin: 0 auto;
-    background-color: none;
-    color: white; }
-    /* line 140, master.css.scss */
+    color: white;
+    position: relative; }
+    /* line 147, master.css.scss */
+    .choices .choice:after {
+      content: '';
+      background-color: white;
+      width: 90%;
+      margin-left: 5%;
+      height: .5em;
+      position: absolute;
+      bottom: 0;
+      display: block; }
+    /* line 160, master.css.scss */
+    .choices .choice.selected:after {
+      background-color: green;
+      box-shadow: 0 0 0.5em 0.5em rgba(255, 255, 255, 0.5); }
+    /* line 166, master.css.scss */
     .choices .choice .title {
       text-align: center;
       vertical-align: top; }
-    /* line 145, master.css.scss */
+    /* line 171, master.css.scss */
     .choices .choice .consequence {
       display: none;
       font-size: .8em; }
 
-/* line 153, master.css.scss */
+/* line 179, master.css.scss */
 .fisherman .arrow, .trajectory {
   position: absolute;
   bottom: 10%;
   -webkit-backface-visibility: hidden; }
 
-/* line 162, master.css.scss */
+/* line 188, master.css.scss */
 #consequence {
   width: 50%;
   left: 25%;
   position: fixed;
   z-index: 500; }
 
-/* line 171, master.css.scss */
+/* line 197, master.css.scss */
 #continue_journey_button {
   background: url(../images/fisherman/continue_button.png);
   background-repeat: no-repeat;
@@ -154,14 +173,14 @@ footer {
   z-index: 500;
   cursor: pointer; }
 
-/* line 188, master.css.scss */
+/* line 214, master.css.scss */
 #control {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%; }
 
-/* line 195, master.css.scss */
+/* line 221, master.css.scss */
 #throw_button {
   display: block;
   background: url(../images/fisherman/throw_button.png);
@@ -176,7 +195,7 @@ footer {
   z-index: 500;
   cursor: pointer; }
 
-/* line 210, master.css.scss */
+/* line 236, master.css.scss */
 .fisherman .arrow {
   background-image: url(../images/fisherman/fishing_rod.png);
   background-repeat: no-repeat;
@@ -189,15 +208,15 @@ footer {
 
 @-webkit-keyframes swing {
   /*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
-  /* line 223, master.css.scss */
+  /* line 249, master.css.scss */
   0% {
     -webkit-transform: rotate(-52deg); }
 
-  /* line 224, master.css.scss */
+  /* line 250, master.css.scss */
   100% {
     -webkit-transform: rotate(-15deg); } }
 
-/* line 227, master.css.scss */
+/* line 253, master.css.scss */
 .trajectory {
   width: 100%;
   height: 100%;
@@ -205,56 +224,56 @@ footer {
   left: 0;
   z-index: 50; }
 
-/* line 255, master.css.scss */
+/* line 281, master.css.scss */
 .choices {
-  -webkit-transition: bottom 2s 2s;
+  -webkit-transition: bottom 2s 4s;
   bottom: -100%; }
-  /* line 259, master.css.scss */
+  /* line 285, master.css.scss */
   .choices.come {
     -webkit-transition: bottom 2s 4s;
     bottom: 0; }
 
-/* line 265, master.css.scss */
+/* line 291, master.css.scss */
 #throw_button {
   -webkit-transition: left 2s 4s; }
-  /* line 268, master.css.scss */
+  /* line 294, master.css.scss */
   #throw_button.leave {
-    -webkit-transition: left 2s 2s;
+    -webkit-transition: left 2s 4s;
     left: -100%; }
 
-/* line 274, master.css.scss */
+/* line 300, master.css.scss */
 #control {
-  -webkit-transition: left 2s 2s;
+  -webkit-transition: left 2s 4s;
   left: -100%; }
-  /* line 278, master.css.scss */
+  /* line 304, master.css.scss */
   #control.come {
     -webkit-transition: left 2s 4s;
     left: 0; }
 
-/* line 286, master.css.scss */
+/* line 312, master.css.scss */
 .question.leave {
-  -webkit-transition: top 2s 2s;
+  -webkit-transition: top 2s 4s;
   top: -100%; }
 
-/* line 292, master.css.scss */
+/* line 318, master.css.scss */
 #consequence {
   -webkit-transition: top 1s 0;
   top: -100%; }
-  /* line 296, master.css.scss */
+  /* line 322, master.css.scss */
   #consequence.come {
-    -webkit-transition: top 1s 3s;
+    -webkit-transition: top 1s 5s;
     top: 15%; }
 
-/* line 302, master.css.scss */
+/* line 328, master.css.scss */
 #continue_journey_button {
   -webkit-transition: right 1s 0;
   right: -100%; }
-  /* line 306, master.css.scss */
+  /* line 332, master.css.scss */
   #continue_journey_button.come {
     right: 0;
-    -webkit-transition: right 1s 7s; }
+    -webkit-transition: right 1s 9s; }
 
-/* line 313, master.css.scss */
+/* line 339, master.css.scss */
 .fisherman .arrow.swing {
   display: block;
   -webkit-transform-origin: 0 50%;
@@ -263,36 +282,36 @@ footer {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-direction: alternate; }
-  /* line 323, master.css.scss */
+  /* line 349, master.css.scss */
   .fisherman .arrow.swing.stop {
     -webkit-animation-play-state: paused; }
 
-/* line 329, master.css.scss */
+/* line 355, master.css.scss */
 .screen:first .arrow.first {
   -webkit-animation-delay: 0; }
 
-/* line 334, master.css.scss */
+/* line 360, master.css.scss */
 #setting {
   -webkit-transition: top 3s ease-in-out 1s; }
 
-/* line 339, master.css.scss */
+/* line 365, master.css.scss */
 #setting.underwater {
-  -webkit-transition: top 3s ease-in-out 4s; }
+  -webkit-transition: top 3s ease-in-out 6s; }
 
-/* line 343, master.css.scss */
+/* line 369, master.css.scss */
 #q21 {
   background-image: url(../images/fisherman/question_2_option_a.png);
   background-size: cover; }
 
-/* line 348, master.css.scss */
+/* line 374, master.css.scss */
 body.fisherman #character {
   -webkit-transition: top 3s ease-in-out 1s; }
-  /* line 351, master.css.scss */
+  /* line 377, master.css.scss */
   body.fisherman #character.underwater {
     top: -25%;
-    -webkit-transition: top 3s ease-in-out 4s; }
+    -webkit-transition: top 3s ease-in-out 6s; }
 
-/* line 360, master.css.scss */
+/* line 386, master.css.scss */
 #a1-bomb {
   width: 80%;
   height: 100%;
@@ -305,21 +324,21 @@ body.fisherman #character {
   background-position: center;
   background-repeat: no-repeat;
   -webkit-transition: top 3s ease-in-out; }
-  /* line 373, master.css.scss */
+  /* line 399, master.css.scss */
   #a1-bomb.drop {
     top: 20%; }
-  /* line 377, master.css.scss */
+  /* line 403, master.css.scss */
   #a1-bomb.bomb-1 {
     background-size: contain;
     background-image: url(../images/fisherman/animation_bomb/blast_1.png);
     background-repeat: no-repeat; }
-  /* line 384, master.css.scss */
+  /* line 410, master.css.scss */
   #a1-bomb.bomb-2 {
     background-size: contain;
     background-image: url(../images/fisherman/animation_bomb/blast_2.png);
     background-repeat: no-repeat; }
 
-/* line 391, master.css.scss */
+/* line 417, master.css.scss */
 #a1-fish-1 {
   width: 5%;
   height: 5%;
@@ -330,15 +349,15 @@ body.fisherman #character {
   top: 60%;
   -webkit-transition: left 8s;
   left: 80%; }
-  /* line 403, master.css.scss */
+  /* line 429, master.css.scss */
   #a1-fish-1.swim {
     left: 10%; }
-  /* line 408, master.css.scss */
+  /* line 434, master.css.scss */
   #a1-fish-1.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 414, master.css.scss */
+/* line 440, master.css.scss */
 #a1-fish-2 {
   width: 5%;
   height: 5%;
@@ -349,15 +368,15 @@ body.fisherman #character {
   top: 80%;
   -webkit-transition: left 8s;
   left: 90%; }
-  /* line 426, master.css.scss */
+  /* line 452, master.css.scss */
   #a1-fish-2.swim {
     left: 10%; }
-  /* line 431, master.css.scss */
+  /* line 457, master.css.scss */
   #a1-fish-2.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 438, master.css.scss */
+/* line 464, master.css.scss */
 #a1-fish-3 {
   width: 5%;
   height: 5%;
@@ -368,15 +387,15 @@ body.fisherman #character {
   top: 90%;
   -webkit-transition: left 8s;
   left: 10%; }
-  /* line 450, master.css.scss */
+  /* line 476, master.css.scss */
   #a1-fish-3.swim {
     left: 70%; }
-  /* line 455, master.css.scss */
+  /* line 481, master.css.scss */
   #a1-fish-3.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 461, master.css.scss */
+/* line 487, master.css.scss */
 #a1-fish-4 {
   width: 5%;
   height: 5%;
@@ -387,15 +406,15 @@ body.fisherman #character {
   top: 50%;
   -webkit-transition: left 8s;
   left: 30%; }
-  /* line 473, master.css.scss */
+  /* line 499, master.css.scss */
   #a1-fish-4.swim {
     left: 90%; }
-  /* line 478, master.css.scss */
+  /* line 504, master.css.scss */
   #a1-fish-4.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 484, master.css.scss */
+/* line 510, master.css.scss */
 #a1-fish-5 {
   width: 5%;
   height: 5%;
@@ -406,15 +425,15 @@ body.fisherman #character {
   top: 60%;
   -webkit-transition: left 8s;
   left: 20%; }
-  /* line 496, master.css.scss */
+  /* line 522, master.css.scss */
   #a1-fish-5.swim {
     left: 70%; }
-  /* line 501, master.css.scss */
+  /* line 527, master.css.scss */
   #a1-fish-5.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 507, master.css.scss */
+/* line 533, master.css.scss */
 #a1-fish-6 {
   width: 5%;
   height: 5%;
@@ -425,15 +444,15 @@ body.fisherman #character {
   top: 40%;
   -webkit-transition: left 8s;
   left: 50%; }
-  /* line 519, master.css.scss */
+  /* line 545, master.css.scss */
   #a1-fish-6.swim {
     left: 10%; }
-  /* line 524, master.css.scss */
+  /* line 550, master.css.scss */
   #a1-fish-6.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 530, master.css.scss */
+/* line 556, master.css.scss */
 #a1-fish-7 {
   width: 5%;
   height: 5%;
@@ -444,15 +463,15 @@ body.fisherman #character {
   top: 80%;
   -webkit-transition: left 8s;
   left: 60%; }
-  /* line 542, master.css.scss */
+  /* line 568, master.css.scss */
   #a1-fish-7.swim {
     left: 100%; }
-  /* line 547, master.css.scss */
+  /* line 573, master.css.scss */
   #a1-fish-7.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 553, master.css.scss */
+/* line 579, master.css.scss */
 #a1-fish-8 {
   width: 5%;
   height: 5%;
@@ -463,10 +482,10 @@ body.fisherman #character {
   top: 90%;
   -webkit-transition: left 8s;
   left: 40%; }
-  /* line 565, master.css.scss */
+  /* line 591, master.css.scss */
   #a1-fish-8.swim {
     left: 0%; }
-  /* line 569, master.css.scss */
+  /* line 595, master.css.scss */
   #a1-fish-8.die {
     -webkit-transition: top 1s;
     top: 20%; }
