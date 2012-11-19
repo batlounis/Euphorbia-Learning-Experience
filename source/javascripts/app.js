@@ -94,7 +94,7 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-				findSelectedChoice(self.x());				
+							findSelectedChoice(self.x());				
 	            clearInterval(handle);
 	         }
 	     }
@@ -122,7 +122,7 @@ $(document).ready(function(){
 			$('.screen').css('margin-bottom', window.innerHeight+'px');
 			// show consequence
 			showConsequence(consequence);
-		}, c_transition);
+		}, c_transition+.5);
 
 	}
 	
@@ -149,7 +149,7 @@ $(document).ready(function(){
 			}
 		}
 		
-		choice.trigger('select');
+		$(choice).trigger('select');
 		
 		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
 
@@ -159,12 +159,20 @@ $(document).ready(function(){
 		$('#throw_button').addClass('leave');
 		
 		if(consequence.hasClass('underwater')){
-			consequence.find('.screen').insertAfter(current_screen);
+			var sub_screen = consequence.find('.screen')
+			sub_screen.insertAfter(current_screen);
 			current_screen.css('margin-bottom', '0px');
 			$('#setting').addClass('underwater');
 			$('#character').addClass('underwater');
 			$('#setting').css('top', '-'+((step)*2*screen_height+screen_height)+'px');
-			setTimeout(function(){bomb_animation(consequence)}, 7000);
+			
+			// setTimeout(function(){bomb_animation(consequence, sub_screen)}, 7000);
+			
+			var pattern = /animation_/;
+			var animation_id = sub_screen.attr('id');
+			if(pattern.exec(animation_id)){
+				setTimeout(function(){eval(animation_id+'(consequence, sub_screen)');}, 7000);
+			}
 		}else{
 			showConsequence(consequence);
 		}
