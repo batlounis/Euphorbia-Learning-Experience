@@ -183,12 +183,11 @@ $(document).ready(function(){
 	}
 	
 	animation_7_a = function(consequence, sub_screen){
-		playIn(function(){$('#character').addClass('sideways')}, 0);
-		playIn(function(){sub_screen.find('.shredded-net').addClass('throw')}, 0);
-		playIn(function(){sub_screen.find('.tangled-fish').addClass('show')}, 1);
-		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 1);
-		playIn(function(){sub_screen.find('.shredded-net').hide()}, 1);
-		playIn(function(){showConsequence(consequence)}, 3);
+		playIn(function(){sub_screen.find('.tangled-fish').addClass('pass')}, 1);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 5);
+		playIn(function(){sub_screen.find('.passing-boat').addClass('drive')}, 6);
+		playIn(function(){sub_screen.find('.shredded-net').addClass('tangle')}, 6);
+		playIn(function(){showConsequence(consequence)}, 10);
 	}
 	
 	animation_7_b = function(consequence, sub_screen){

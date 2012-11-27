@@ -4,6 +4,7 @@
 	
 	.shredded-net{
 		background-image: url(#{$photos}/shredded-net.png);
+		display: block;
 		width: 40%;
 		height: 80%;
 		background-repeat: no-repeat;
@@ -11,12 +12,12 @@
 		z-index: 1000;
 		background-position: bottom left;
 		position: absolute;
-		top: -100%;
-		left: 10%;
-		-webkit-transition: top 1s;
+		top: 50%;
+		left: 20%;
+		-webkit-transition: top 4s;
 		
-		&.throw{
-			top: 10%;
+		&.tangle{
+			top: 0%;
 		}
 	}
 	
@@ -64,11 +65,29 @@
 		background-position: bottom center;
 		position: absolute;
 		top: 0%;
-		left: 0%;
-		opacity: 0;
+		right: -100%;
+		-webkit-transition: right 10s;
 		
-		&.show{
-			opacity: 1;
+		&.pass{
+			right: 100%;
+		}
+	}
+	
+	.passing-boat{
+		background-image: url(#{$photos}/passing-boat.png);
+		width: 30%;
+		height: 40%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom left;
+		position: absolute;
+		top: 0%;
+		-webkit-transition: left 5s;
+		left: -100%;
+		z-index: 2000;
+		
+		&.drive{
+			left: 20%;
 		}
 	}
 

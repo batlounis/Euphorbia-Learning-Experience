@@ -29,9 +29,3 @@ $photos: '#{$url}/fisherman/common';
 	background-image: url(#{$photos}/setting.png);
 }
 
-body.fisherman #character.sideways{
-	background-image: url(#{$photos}/fisherman-sideways.png);
-	background-position: bottom left;
-	top: -15%;
-	-webkit-transition: none;
-}
