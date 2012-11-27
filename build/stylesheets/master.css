@@ -247,56 +247,56 @@ footer {
   left: 0;
   z-index: 50; }
 
-/* line 309, master.css.scss */
+/* line 311, master.css.scss */
 .choices {
   -webkit-transition: bottom 2s 0.5s;
   bottom: -100%; }
-  /* line 313, master.css.scss */
+  /* line 315, master.css.scss */
   .choices.come {
     -webkit-transition: bottom 2s 4s;
     bottom: 0; }
 
-/* line 319, master.css.scss */
+/* line 321, master.css.scss */
 #throw_button {
   -webkit-transition: left 2s 4s; }
-  /* line 322, master.css.scss */
+  /* line 324, master.css.scss */
   #throw_button.leave {
     -webkit-transition: left 2s 0.5s;
     left: -100%; }
 
-/* line 328, master.css.scss */
+/* line 330, master.css.scss */
 #control {
   -webkit-transition: left 2s 0.5s;
   left: -100%; }
-  /* line 332, master.css.scss */
+  /* line 334, master.css.scss */
   #control.come {
     -webkit-transition: left 2s 4s;
     left: 0; }
 
-/* line 340, master.css.scss */
+/* line 342, master.css.scss */
 .question.leave {
   -webkit-transition: top 2s 0.5s;
   top: -100%; }
 
-/* line 346, master.css.scss */
+/* line 348, master.css.scss */
 #consequence {
   -webkit-transition: top 1s 0;
   top: -100%; }
-  /* line 350, master.css.scss */
+  /* line 352, master.css.scss */
   #consequence.come {
     -webkit-transition: top 1s 1.5s;
     top: 15%; }
 
-/* line 356, master.css.scss */
+/* line 358, master.css.scss */
 #continue_journey_button {
   -webkit-transition: right 1s 0;
   right: -100%; }
-  /* line 360, master.css.scss */
+  /* line 362, master.css.scss */
   #continue_journey_button.come {
     right: 0;
     -webkit-transition: right 1s 4s; }
 
-/* line 367, master.css.scss */
+/* line 369, master.css.scss */
 .fisherman .arrow.swing {
   display: block;
   -webkit-transform-origin: 0 50%;
@@ -305,46 +305,85 @@ footer {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-direction: alternate; }
-  /* line 377, master.css.scss */
+  /* line 379, master.css.scss */
   .fisherman .arrow.swing.stop {
     -webkit-animation-play-state: paused; }
 
-/* line 383, master.css.scss */
+/* line 385, master.css.scss */
 .screen:first .arrow.first {
   -webkit-animation-delay: 0; }
 
-/* line 388, master.css.scss */
+/* line 390, master.css.scss */
 #setting {
   -webkit-transition: top 3s ease-in-out 1s; }
 
-/* line 393, master.css.scss */
+/* line 395, master.css.scss */
 #setting.underwater {
   -webkit-transition: top 3s ease-in-out 2.5s; }
 
-/* line 397, master.css.scss */
+/* line 399, master.css.scss */
 body.fisherman #character {
   -webkit-transition: top 3s ease-in-out 1s; }
-  /* line 400, master.css.scss */
+  /* line 402, master.css.scss */
   body.fisherman #character.underwater {
     top: -25%;
     -webkit-transition: top 3s ease-in-out 2.5s; }
 
 /* line 5, animations/1-a-reserva.css.scss */
-#animation_1_a .environment {
+#animation_1_a .buoy {
+  background-image: url(../images/fisherman/1-a-reserva/buoy.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/1-a-reserva.css.scss */
+#animation_1_a .fish-left, #animation_1_a .fish-right {
   width: 100%;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom; }
-  /* line 13, animations/1-a-reserva.css.scss */
-  #animation_1_a .environment.first {
-    background-image: url(../images/fisherman/1-a-reserva/reserva.png); }
-  /* line 17, animations/1-a-reserva.css.scss */
-  #animation_1_a .environment.later {
-    background-image: url(../images/fisherman/1-a-reserva/reserva_future_1.png); }
-  /* line 21, animations/1-a-reserva.css.scss */
-  #animation_1_a .environment.and-later {
-    background-image: url(../images/fisherman/1-a-reserva/reserva_future_2.png); }
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 28, animations/1-a-reserva.css.scss */
+#animation_1_a .fish-left {
+  background-image: url(../images/fisherman/1-a-reserva/fish-left.png);
+  -webkit-animation: goright 8s 5.5s; }
+  /* line 32, animations/1-a-reserva.css.scss */
+  #animation_1_a .fish-left.future {
+    background-image: url(../images/fisherman/1-a-reserva/fish-left-future.png); }
+/* line 37, animations/1-a-reserva.css.scss */
+#animation_1_a .fish-right {
+  background-image: url(../images/fisherman/1-a-reserva/fish-right.png);
+  -webkit-animation: goleft 8s 5.5s; }
+  /* line 41, animations/1-a-reserva.css.scss */
+  #animation_1_a .fish-right.future {
+    background-image: url(../images/fisherman/1-a-reserva/fish-right-future.png); }
+
+@-webkit-keyframes goleft {
+  /* line 48, animations/1-a-reserva.css.scss */
+  100% {
+    right: 20%; } }
+
+@-webkit-keyframes goright {
+  /* line 52, animations/1-a-reserva.css.scss */
+  100% {
+    left: 20%; } }
+
+@-webkit-keyframes fade {
+  /* line 56, animations/1-a-reserva.css.scss */
+  50% {
+    margin-top: 2%; } }
+
+@-webkit-keyframes fade2 {
+  /* line 60, animations/1-a-reserva.css.scss */
+  50% {
+    margin-top: 2%; } }
 
 /* line 5, animations/1-b-young-fish.css.scss */
 #animation_1_b .environment {
@@ -386,7 +425,7 @@ body.fisherman #character {
   background-image: url(../images/fisherman/2-a-net/arrasto.png); }
 
 /* line 4, animations/2-b-bomb.css.scss */
-#a1-bomb {
+#a1-bomb, .bomb {
   width: 80%;
   height: 100%;
   left: 10%;
@@ -397,22 +436,23 @@ body.fisherman #character {
   background-size: 20%;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: top 3s ease-in-out; }
-  /* line 17, animations/2-b-bomb.css.scss */
-  #a1-bomb.drop {
+  -webkit-transition: top 3s ease-in-out;
+  z-index: 2000; }
+  /* line 18, animations/2-b-bomb.css.scss */
+  #a1-bomb.drop, .bomb.drop {
     top: 20%; }
-  /* line 21, animations/2-b-bomb.css.scss */
-  #a1-bomb.bomb-1 {
+  /* line 22, animations/2-b-bomb.css.scss */
+  #a1-bomb.bomb-1, .bomb.bomb-1 {
     background-size: contain;
     background-image: url(../images/fisherman/animation_bomb/blast_1.png);
     background-repeat: no-repeat; }
-  /* line 28, animations/2-b-bomb.css.scss */
-  #a1-bomb.bomb-2 {
+  /* line 29, animations/2-b-bomb.css.scss */
+  #a1-bomb.bomb-2, .bomb.bomb-2 {
     background-size: contain;
     background-image: url(../images/fisherman/animation_bomb/blast_2.png);
     background-repeat: no-repeat; }
 
-/* line 35, animations/2-b-bomb.css.scss */
+/* line 36, animations/2-b-bomb.css.scss */
 #a1-fish-1 {
   width: 5%;
   height: 5%;
@@ -423,15 +463,15 @@ body.fisherman #character {
   top: 60%;
   -webkit-transition: left 8s;
   left: 80%; }
-  /* line 47, animations/2-b-bomb.css.scss */
+  /* line 48, animations/2-b-bomb.css.scss */
   #a1-fish-1.swim {
     left: 10%; }
-  /* line 52, animations/2-b-bomb.css.scss */
+  /* line 53, animations/2-b-bomb.css.scss */
   #a1-fish-1.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 58, animations/2-b-bomb.css.scss */
+/* line 59, animations/2-b-bomb.css.scss */
 #a1-fish-2 {
   width: 5%;
   height: 5%;
@@ -442,15 +482,15 @@ body.fisherman #character {
   top: 80%;
   -webkit-transition: left 8s;
   left: 90%; }
-  /* line 70, animations/2-b-bomb.css.scss */
+  /* line 71, animations/2-b-bomb.css.scss */
   #a1-fish-2.swim {
     left: 10%; }
-  /* line 75, animations/2-b-bomb.css.scss */
+  /* line 76, animations/2-b-bomb.css.scss */
   #a1-fish-2.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 82, animations/2-b-bomb.css.scss */
+/* line 83, animations/2-b-bomb.css.scss */
 #a1-fish-3 {
   width: 5%;
   height: 5%;
@@ -461,15 +501,15 @@ body.fisherman #character {
   top: 90%;
   -webkit-transition: left 8s;
   left: 10%; }
-  /* line 94, animations/2-b-bomb.css.scss */
+  /* line 95, animations/2-b-bomb.css.scss */
   #a1-fish-3.swim {
     left: 70%; }
-  /* line 99, animations/2-b-bomb.css.scss */
+  /* line 100, animations/2-b-bomb.css.scss */
   #a1-fish-3.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 105, animations/2-b-bomb.css.scss */
+/* line 106, animations/2-b-bomb.css.scss */
 #a1-fish-4 {
   width: 5%;
   height: 5%;
@@ -480,15 +520,15 @@ body.fisherman #character {
   top: 50%;
   -webkit-transition: left 8s;
   left: 30%; }
-  /* line 117, animations/2-b-bomb.css.scss */
+  /* line 118, animations/2-b-bomb.css.scss */
   #a1-fish-4.swim {
     left: 90%; }
-  /* line 122, animations/2-b-bomb.css.scss */
+  /* line 123, animations/2-b-bomb.css.scss */
   #a1-fish-4.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 128, animations/2-b-bomb.css.scss */
+/* line 129, animations/2-b-bomb.css.scss */
 #a1-fish-5 {
   width: 5%;
   height: 5%;
@@ -499,15 +539,15 @@ body.fisherman #character {
   top: 60%;
   -webkit-transition: left 8s;
   left: 20%; }
-  /* line 140, animations/2-b-bomb.css.scss */
+  /* line 141, animations/2-b-bomb.css.scss */
   #a1-fish-5.swim {
     left: 70%; }
-  /* line 145, animations/2-b-bomb.css.scss */
+  /* line 146, animations/2-b-bomb.css.scss */
   #a1-fish-5.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 151, animations/2-b-bomb.css.scss */
+/* line 152, animations/2-b-bomb.css.scss */
 #a1-fish-6 {
   width: 5%;
   height: 5%;
@@ -518,15 +558,15 @@ body.fisherman #character {
   top: 40%;
   -webkit-transition: left 8s;
   left: 50%; }
-  /* line 163, animations/2-b-bomb.css.scss */
+  /* line 164, animations/2-b-bomb.css.scss */
   #a1-fish-6.swim {
     left: 10%; }
-  /* line 168, animations/2-b-bomb.css.scss */
+  /* line 169, animations/2-b-bomb.css.scss */
   #a1-fish-6.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 174, animations/2-b-bomb.css.scss */
+/* line 175, animations/2-b-bomb.css.scss */
 #a1-fish-7 {
   width: 5%;
   height: 5%;
@@ -537,15 +577,15 @@ body.fisherman #character {
   top: 80%;
   -webkit-transition: left 8s;
   left: 60%; }
-  /* line 186, animations/2-b-bomb.css.scss */
+  /* line 187, animations/2-b-bomb.css.scss */
   #a1-fish-7.swim {
     left: 100%; }
-  /* line 191, animations/2-b-bomb.css.scss */
+  /* line 192, animations/2-b-bomb.css.scss */
   #a1-fish-7.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 197, animations/2-b-bomb.css.scss */
+/* line 198, animations/2-b-bomb.css.scss */
 #a1-fish-8 {
   width: 5%;
   height: 5%;
@@ -556,15 +596,15 @@ body.fisherman #character {
   top: 90%;
   -webkit-transition: left 8s;
   left: 40%; }
-  /* line 209, animations/2-b-bomb.css.scss */
+  /* line 210, animations/2-b-bomb.css.scss */
   #a1-fish-8.swim {
     left: 0%; }
-  /* line 213, animations/2-b-bomb.css.scss */
+  /* line 214, animations/2-b-bomb.css.scss */
   #a1-fish-8.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
-/* line 219, animations/2-b-bomb.css.scss */
+/* line 220, animations/2-b-bomb.css.scss */
 #a1-after-fish-1 {
   width: 5%;
   height: 5%;
@@ -575,7 +615,7 @@ body.fisherman #character {
   top: 70%;
   -webkit-transition: left 3s linear 4s;
   left: 100%; }
-  /* line 231, animations/2-b-bomb.css.scss */
+  /* line 232, animations/2-b-bomb.css.scss */
   #a1-after-fish-1.swim {
     left: 0%; }
 
@@ -651,6 +691,79 @@ body.fisherman #character {
   #animation_3_c .environment.future {
     background-image: url(../images/fisherman/3-b-other-time/future.png); }
 
+/* line 5, animations/4-a-organic-water.scss */
+#animation_4_a .fish-left {
+  background-image: url(../images/fisherman/4-a-organic-water/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/4-a-organic-water.scss */
+#animation_4_a .fish-right {
+  background-image: url(../images/fisherman/4-a-organic-water/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 31, animations/4-a-organic-water.scss */
+#animation_4_a .birds-left {
+  background-image: url(../images/fisherman/4-a-organic-water/birds-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: top left;
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  -webkit-transition: left 3s; }
+  /* line 44, animations/4-a-organic-water.scss */
+  #animation_4_a .birds-left.come {
+    left: 0; }
+/* line 49, animations/4-a-organic-water.scss */
+#animation_4_a .birds-right {
+  background-image: url(../images/fisherman/4-a-organic-water/birds-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: top right;
+  position: absolute;
+  top: 0%;
+  right: -100%;
+  -webkit-transition: right 3s; }
+  /* line 62, animations/4-a-organic-water.scss */
+  #animation_4_a .birds-right.come {
+    right: 0; }
+/* line 67, animations/4-a-organic-water.scss */
+#animation_4_a .organic {
+  background-image: url(../images/fisherman/4-a-organic-water/organic.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 3s; }
+  /* line 80, animations/4-a-organic-water.scss */
+  #animation_4_a .organic.throw {
+    top: 0%; }
+
 /* line 5, animations/4-b-keep-leftovers.css.scss */
 #animation_4_b .environment {
   width: 100%;
@@ -662,6 +775,34 @@ body.fisherman #character {
   bottom: 0;
   z-index: 1000;
   background-image: url(../images/fisherman/4-b-keep-leftovers/environment.png); }
+
+/* line 5, animations/5-a-seal-bomb.scss */
+#animation_5_a .fish {
+  background-image: url(../images/fisherman/5-a-seal-bomb/fish.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/5-a-seal-bomb.scss */
+#animation_5_a .monk-seal {
+  background-image: url(../images/fisherman/5-a-seal-bomb/monk-seal.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 30, animations/5-a-seal-bomb.scss */
+  #animation_5_a .monk-seal.scared {
+    background-image: url(../images/fisherman/5-a-seal-bomb/monk-seal-scared.png); }
 
 /* line 5, animations/5-b-seal-fish-elsewhere.scss */
 #animation_5_b .monk-seal, #animation_5_c .monk-seal {
@@ -787,6 +928,470 @@ body.fisherman #character {
   #animation_6_a .money.and-less {
     background-image: url(../images/fisherman/6-a-fish-non-profitable/money-3.png); }
 
+/* line 5, animations/6-b-throw-non-profitable.scss */
+#animation_6_b .net {
+  left: 0%;
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/net-1.png);
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background-repeat: no-repeat; }
+  /* line 13, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .net.throw {
+    top: 0; }
+  /* line 17, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .net.net-2 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/net-2.png); }
+  /* line 21, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .net.net-3 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/net-3.png);
+    background-size: contain;
+    background-position: bottom left; }
+/* line 28, animations/6-b-throw-non-profitable.scss */
+#animation_6_b .fish-left {
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 40, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-left.future {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-left-future.png); }
+/* line 45, animations/6-b-throw-non-profitable.scss */
+#animation_6_b .fish-right {
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 57, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-right.future {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-right-future.png); }
+/* line 62, animations/6-b-throw-non-profitable.scss */
+#animation_6_b .fish-group {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+  position: absolute;
+  left: 25%;
+  top: 20%; }
+  /* line 72, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group.net-2 {
+    left: 25%;
+    top: 30%; }
+  /* line 77, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group.net-3 {
+    top: 10%;
+    left: 0; }
+  /* line 82, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group * {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; }
+  /* line 90, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num1 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-1.png); }
+  /* line 94, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num2 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-2.png); }
+  /* line 98, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num3 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-3.png); }
+  /* line 102, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num4 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-4.png); }
+  /* line 106, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num5 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-5.png); }
+  /* line 110, animations/6-b-throw-non-profitable.scss */
+  #animation_6_b .fish-group .num6 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-6.png); }
+
+/* line 5, animations/7-a-throw-net.scss */
+#animation_7_a .shredded-net {
+  background-image: url(../images/fisherman/7-a-throw-net/shredded-net.png);
+  width: 40%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: -100%;
+  left: 10%;
+  -webkit-transition: top 1s; }
+  /* line 18, animations/7-a-throw-net.scss */
+  #animation_7_a .shredded-net.throw {
+    top: 10%; }
+/* line 23, animations/7-a-throw-net.scss */
+#animation_7_a .fish-left {
+  background-image: url(../images/fisherman/7-a-throw-net/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/7-a-throw-net.scss */
+  #animation_7_a .fish-left.future {
+    background-image: url(../images/fisherman/7-a-throw-net/fish-left-future.png); }
+/* line 40, animations/7-a-throw-net.scss */
+#animation_7_a .fish-right {
+  background-image: url(../images/fisherman/7-a-throw-net/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 52, animations/7-a-throw-net.scss */
+  #animation_7_a .fish-right.future {
+    background-image: url(../images/fisherman/7-a-throw-net/fish-right-future.png); }
+/* line 57, animations/7-a-throw-net.scss */
+#animation_7_a .tangled-fish {
+  background-image: url(../images/fisherman/7-a-throw-net/tangled-fish.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0; }
+  /* line 70, animations/7-a-throw-net.scss */
+  #animation_7_a .tangled-fish.show {
+    opacity: 1; }
+
+/* line 5, animations/7-b-fix-net.scss */
+#animation_7_b .fish-left {
+  background-image: url(../images/fisherman/7-b-fix-net/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/7-b-fix-net.scss */
+#animation_7_b .fish-right {
+  background-image: url(../images/fisherman/7-b-fix-net/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 31, animations/7-b-fix-net.scss */
+#animation_7_b .broken-net {
+  background-image: url(../images/fisherman/7-b-fix-net/broken-net.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 44, animations/7-b-fix-net.scss */
+  #animation_7_b .broken-net.show {
+    top: 0; }
+/* line 49, animations/7-b-fix-net.scss */
+#animation_7_b .thought-bubble {
+  background-image: url(../images/fisherman/7-b-fix-net/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 62, animations/7-b-fix-net.scss */
+  #animation_7_b .thought-bubble.show {
+    top: 0; }
+
+/* line 5, animations/7-c-net-trashcan.scss */
+#animation_7_c .fish-left {
+  background-image: url(../images/fisherman/7-c-net-trashcan/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/7-c-net-trashcan.scss */
+#animation_7_c .fish-right {
+  background-image: url(../images/fisherman/7-c-net-trashcan/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 31, animations/7-c-net-trashcan.scss */
+#animation_7_c .broken-net {
+  background-image: url(../images/fisherman/7-c-net-trashcan/broken-net.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 44, animations/7-c-net-trashcan.scss */
+  #animation_7_c .broken-net.show {
+    top: 0; }
+/* line 49, animations/7-c-net-trashcan.scss */
+#animation_7_c .thought-bubble {
+  background-image: url(../images/fisherman/7-c-net-trashcan/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 62, animations/7-c-net-trashcan.scss */
+  #animation_7_c .thought-bubble.show {
+    top: 0; }
+/* line 67, animations/7-c-net-trashcan.scss */
+#animation_7_c .trashcan {
+  background-image: url(../images/fisherman/7-c-net-trashcan/trashcan.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 80, animations/7-c-net-trashcan.scss */
+  #animation_7_c .trashcan.show {
+    top: 0; }
+/* line 85, animations/7-c-net-trashcan.scss */
+#animation_7_c .trashcan-lid {
+  background-image: url(../images/fisherman/7-c-net-trashcan/trashcan-lid.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 98, animations/7-c-net-trashcan.scss */
+  #animation_7_c .trashcan-lid.show {
+    top: 0; }
+
+/* line 5, animations/8-a-trash-ocean.scss */
+#animation_8_a .fish-left {
+  background-image: url(../images/fisherman/8-a-trash-ocean/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/8-a-trash-ocean.scss */
+#animation_8_a .fish-right {
+  background-image: url(../images/fisherman/8-a-trash-ocean/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 32, animations/8-a-trash-ocean.scss */
+#animation_8_a .trash {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 44, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.show {
+    top: 0; }
+  /* line 48, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.num1 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-1.png); }
+  /* line 52, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.num2 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-2.png); }
+  /* line 56, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.num3 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-3.png); }
+  /* line 60, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.num4 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-4.png); }
+  /* line 64, animations/8-a-trash-ocean.scss */
+  #animation_8_a .trash.num5 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-5.png); }
+
+/* line 5, animations/8-b-trash-recycling.scss */
+#animation_8_b .fish-left {
+  background-image: url(../images/fisherman/8-b-trash-recycling/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/8-b-trash-recycling.scss */
+#animation_8_b .fish-right {
+  background-image: url(../images/fisherman/8-b-trash-recycling/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 31, animations/8-b-trash-recycling.scss */
+#animation_8_b .thought-bubble {
+  background-image: url(../images/fisherman/8-b-trash-recycling/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 44, animations/8-b-trash-recycling.scss */
+  #animation_8_b .thought-bubble.show {
+    top: 0; }
+
+/* line 5, animations/8-c-throw-batteries.scss */
+#animation_8_c .fish-left {
+  background-image: url(../images/fisherman/8-c-throw-batteries/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 18, animations/8-c-throw-batteries.scss */
+#animation_8_c .fish-right {
+  background-image: url(../images/fisherman/8-c-throw-batteries/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 31, animations/8-c-throw-batteries.scss */
+#animation_8_c .chemicals {
+  background-image: url(../images/fisherman/8-c-throw-batteries/chemicals.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: middle center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  -webkit-transition: opacity 1s; }
+  /* line 45, animations/8-c-throw-batteries.scss */
+  #animation_8_c .chemicals.show {
+    opacity: 1; }
+/* line 51, animations/8-c-throw-batteries.scss */
+#animation_8_c .battery {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 63, animations/8-c-throw-batteries.scss */
+  #animation_8_c .battery.show {
+    top: 0; }
+  /* line 67, animations/8-c-throw-batteries.scss */
+  #animation_8_c .battery.num1 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-1.png); }
+  /* line 71, animations/8-c-throw-batteries.scss */
+  #animation_8_c .battery.num2 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-2.png); }
+  /* line 75, animations/8-c-throw-batteries.scss */
+  #animation_8_c .battery.num3 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-3.png); }
+
 /* line 3, animations/0-common.css.scss */
 .net {
   width: 50%;
@@ -819,4 +1424,5 @@ body.fisherman #character {
 body.fisherman #character.sideways {
   background-image: url(../images/fisherman/common/fisherman-sideways.png);
   background-position: bottom left;
-  top: -15%; }
+  top: -15%;
+  -webkit-transition: none; }

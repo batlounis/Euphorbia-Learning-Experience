@@ -36,14 +36,9 @@ $(document).ready(function(){
 		playIn(function(){ future_count(2030, 5, sub_screen) }, 1);
 		
 		playIn(function(){
-			sub_screen.find('.environment').removeClass('first');
-			sub_screen.find('.environment').addClass('later');
+			sub_screen.find('.fish-left, .fish-right').addClass('future');
 		}, 3);
 		
-		playIn(function(){
-			sub_screen.find('.environment').removeClass('later');
-			sub_screen.find('.environment').addClass('and-later');
-		}, 5);
 		
 		playIn(function(){showConsequence(consequence)}, 5);
 		
@@ -130,8 +125,30 @@ $(document).ready(function(){
 		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
+	animation_4_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.organic').addClass('throw'); }, 0);
+		playIn(function(){ sub_screen.find('.birds-left').addClass('come'); }, 1);
+		playIn(function(){ sub_screen.find('.birds-right').addClass('come'); }, 1.5);
+		
+		playIn(function(){showConsequence(consequence)}, 3);
+	}
+
 	animation_4_b = function(consequence, sub_screen){
 		playIn(function(){showConsequence(consequence)}, 2);
+	}
+	
+	animation_5_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.bomb').show(); }, 1.5);
+		
+		playIn(function(){ sub_screen.find('.bomb').addClass('drop'); }, 2);
+		playIn(function(){ sub_screen.find('.bomb').addClass('bomb-1'); }, 5);
+		playIn(function(){ sub_screen.find('.bomb').addClass('bomb-2'); }, 5.2);
+		
+		playIn(function(){ sub_screen.find('.monk-seal').addClass('scared'); }, 5.2);
+		
+		playIn(function(){ $('#5a-bomb').hide(); }, 6);
+		
+		playIn(function(){showConsequence(consequence)}, 7);
 	}
 	
 	animation_5_b = function(consequence, sub_screen){
@@ -148,16 +165,65 @@ $(document).ready(function(){
 	
 	animation_6_a = function(consequence, sub_screen){
 		playIn(function(){$('.net').addClass('throw')}, 1);
-		playIn(function(){$('.money').addClass('show');}, 2);
-		playIn(function(){$('.fish-non-profitable').addClass('future')}, 2);
-		playIn(function(){$('.money').addClass('less');}, 2);
-		playIn(function(){$('.money').removeClass('less'); $('.money').addClass('and-less');}, 3);
-		playIn(function(){showConsequence(consequence)}, 4);
+		playIn(function(){$('.money').addClass('show');}, 3);
+		playIn(function(){$('.fish-non-profitable').addClass('future')}, 3);
+		playIn(function(){$('.money').addClass('less');}, 4);
+		playIn(function(){$('.money').removeClass('less'); $('.money').addClass('and-less');}, 5);
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_6_b = function(consequence, sub_screen){
+		playIn(function(){$('.net').addClass('throw')}, 1);
+		playIn(function(){$('.net, .fish-group').addClass('net-2')}, 2);
+		playIn(function(){$('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);
+		playIn(function(){future_count(2020, 2, sub_screen);}, 3);		
+		playIn(function(){$('.fish-left, .fish-right').addClass('future')},5);
+		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
 	animation_7_a = function(consequence, sub_screen){
-		playIn(function(){$('#character').addClass('sideways')}, 1);
-		playIn(function(){showConsequence(consequence)}, 2);
+		playIn(function(){$('#character').addClass('sideways')}, 0);
+		playIn(function(){sub_screen.find('.shredded-net').addClass('throw')}, 0);
+		playIn(function(){sub_screen.find('.tangled-fish').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 1);
+		playIn(function(){sub_screen.find('.shredded-net').hide()}, 1);
+		playIn(function(){showConsequence(consequence)}, 3);
+	}
+	
+	animation_7_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
+		playIn(function(){showConsequence(consequence)}, 4);
+	}
+	
+	animation_7_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.trashcan').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.trashcan-lid').addClass('show')}, 4);
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_8_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.trash.num1').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.trash.num2').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.trash.num3').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.trash.num4').addClass('show')}, 4);
+		playIn(function(){sub_screen.find('.trash.num5').addClass('show')}, 5);
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_8_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 1);
+		playIn(function(){showConsequence(consequence)}, 3);
+	}
+	
+	animation_8_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.battery.num1').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.battery.num2').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.battery.num3').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.chemicals').addClass('show')}, 4);
+		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 });

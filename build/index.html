@@ -39,9 +39,12 @@
         <div class='title'>Junto a uma Reserva Natural</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_1_a'>
-            <div class='environment first'></div>
+            <div class='nature'></div>
             <div class='net'></div>
             <div class='clock'></div>
+            <div class='buoy'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
           </div>
           <div class='content'>
             <p>As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.</p>
@@ -186,10 +189,17 @@
   </div>
   <div class='screen'>
     <div class='question'>Enquanto pesca o Manel está a almoçar. Quando acaba de comer pega nos restos e ...</div>
-    <div class='choices come'>
+    <div class='choices'>
       <div class='choice' score='-5'>
         <div class='title'>Joga à água</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_a'>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='birds-left'></div>
+            <div class='birds-right'></div>
+            <div class='organic'></div>
+          </div>
           <div class='content'>
             <p>O lixo orgânico, como restos de comida, decompõe-se facilmente no mar. Contudo ao atirá-lo à água enquanto pesca, está a atrair outros peixes e outros animais, como aves marinhas, que irão interferir na sua pescaria e poderão ser pescados acidentalmente. Mantenha o lixo orgânico longe das áreas de pesca.</p>
             <p>Perde 5 pontos</p>
@@ -215,7 +225,12 @@
     <div class='choices'>
       <div class='choice' score='-10'>
         <div class='title'>Atira uma bomba para assustar o lobo-marinho</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_a'>
+            <div class='bomb'></div>
+            <div class='fish'></div>
+            <div class='monk-seal'></div>
+          </div>
           <div class='content'>
             <p>Atirar uma bomba para o lobo-marinho não é uma atitude sensata pois poderá feri-lo ou matá-lo. Este é um animal que está ameaçado de extinção, pelo que deverá protegê-lo.</p>
             <p>Perde 10 pontos</p>
@@ -263,17 +278,17 @@
     </div>
   </div>
   <div class='screen'>
-    <div class='question'>O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável...</div>
+    <div class='question'>O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…</div>
     <div class='choices'>
       <div class='choice' score='-10'>
         <div class='title'>Guarda todos os peixes mesmo os sem valor comercial</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_6_a'>
             <div class='nature'></div>
-            <div class='net'></div>
-            <div class='fish-non-profitable'></div>
             <div class='fish-profitable'></div>
+            <div class='fish-non-profitable'></div>
             <div class='money'></div>
+            <div class='net'></div>
           </div>
           <div class='content'>
             <p>Ao guardar os peixes que não possuem o tamanho mínimo de captura estabelecido por lei, estará a impedir que estes se reproduzam e por isso a diminuir a sua quantidade para o futuro.</p>
@@ -286,7 +301,22 @@
       </div>
       <div class='choice' score='10'>
         <div class='title'>Lança ao mar os peixes jovens</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_6_b'>
+            <div class='nature'></div>
+            <div class='net'></div>
+            <div class='clock'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='fish-group'>
+              <div class='num1'></div>
+              <div class='num2'></div>
+              <div class='num3'></div>
+              <div class='num4'></div>
+              <div class='num5'></div>
+              <div class='num6'></div>
+            </div>
+          </div>
           <div class='content'>
             <p>Existem limites mínimos para o tamanho dos peixes que podem ser capturados e consequentemente vendidos. Lembre-se que não deve retirar do oceano animais que ainda não atingiram a idade de reprodução. Quando detectar que o pescado não cumpre os requisitos para ter valor comercial, é importante que os lance ao mar imediatamente para que possam recuperar e crescer.</p>
             <p>Ganha 10 pontos</p>
@@ -297,12 +327,16 @@
   </div>
   <div class='screen'>
     <div class='question'>O Manel apercebe-se que a rede está danificada, e...</div>
-    <div class='choices come'>
+    <div class='choices'>
       <div class='choice' score='-10'>
         <div class='title'>Lança a rede no mar</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_7_a'>
             <div class='nature'></div>
+            <div class='shredded-net'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='tangled-fish'></div>
           </div>
           <div class='content'>
             <p>Linhas e redes de pesca permanecem no mar por muitos anos após terem sido abandonadas, aprisionando, magoando e por vezes levando à morte, muitos animais marinhos. Lobos-marinhos, golfinhos, tartarugas, baleias e aves são exemplos de animais que são prejudicados por esta má prática.</p>
@@ -313,7 +347,14 @@
       </div>
       <div class='choice' score='10'>
         <div class='title'>Recolhe a rede e remenda-a em terra</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_7_b'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='broken-net'></div>
+            <div class='thought-bubble'></div>
+          </div>
           <div class='content'>
             <p>Quando terminar a pescaria, deve trazer para terra todo o material de pesca. A opção mais correta é remendar a rede e depois reutilizá-la, assim também não está a contribuir para o aumento do lixo em terra.</p>
             <p>Deixar redes danificadas no oceano irá destruir a vida marinha, o que compromete o futuro da atividade piscatória. Ao abandonar redes e covos no oceano, estes continuam a pescar sozinhos e provocam a morte de muitos peixes e outras espécies de animais.</p>
@@ -323,7 +364,16 @@
       </div>
       <div class='choice' score='5'>
         <div class='title'>Traz a rede para terra e deita-a no lixo.</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_7_c'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='broken-net'></div>
+            <div class='thought-bubble'></div>
+            <div class='trashcan'></div>
+            <div class='trashcan-lid'></div>
+          </div>
           <div class='content'>
             <p>Quando as redes já não podem ser reutilizadas devem ser trazidas para terra e colocadas no lixo. Mesmo que os aparelhos de pesca se encontrem presos no fundo deverá tentar recuperá-los a todo o custo. O abandono de artes de pesca no oceano causa a morte a um grande número de animais e estragos em muitos barcos. Não só o lixo que é produzido no barco deve ser trazido para terra como também todo o lixo que seja encontrado no oceano.</p>
             <p>Ganha 5 pontos</p>
@@ -337,7 +387,17 @@
     <div class='choices'>
       <div class='choice' score='-20'>
         <div class='title'>Atira todo o lixo ao mar</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_a'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='trash num1'></div>
+            <div class='trash num2'></div>
+            <div class='trash num3'></div>
+            <div class='trash num4'></div>
+            <div class='trash num5'></div>
+          </div>
           <div class='content'>
             <p>O lixo é um dos principais factores para a diminuição da qualidade da água e da vida dos oceanos.</p>
             <p>O plástico constitui 90% do lixo que se encontra no oceano e afeta a vida marinha e o oceano da seguinte forma: • Existem animais marinhos que confundem o plástico com o seu alimento natural (é o caso das tartarugas, baleias, muitos peixes e aves marinhas) o que pode provocar asfixia, bloqueio do sistema digestivo e morte. O plástico também contém substâncias tóxicas que passam para a água dos oceanos e para todos os seres marinhos.</p>
@@ -347,11 +407,39 @@
       </div>
       <div class='choice' score='25'>
         <div class='title'>Leva o lixo para terra e coloca nos contentores para reciclagem</div>
-        <div class='consequence'>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_b'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='thought-bubble'></div>
+          </div>
           <div class='content'>
             <p>Um barco de pesca da Madeira gasta por dia, em media, 2 garrafas de plástico; 8 sacos de plástico; 4 garrafas de vidro; 29 embalagens de cartão e papel (incluindo embalagens de tabaco) e 12 pilhas. Agora multiplique esta quantidade pelo número de barcos que pescam na ilha e pelo número de dias do ano e verá a quantidade de lixo que é produzida no mar!</p>
             <p>É importante que traga todo o lixo para terra e o deposite os contentores para reciclagem. Assim, está a garantir o futuro das espécies e da atividades piscatória.</p>
             <p>Ganha 25 pontos</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-20'>
+        <div class='title'>Atirar as pilhas ao mar</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_c'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='battery num1'></div>
+            <div class='battery num2'></div>
+            <div class='battery num3'></div>
+            <div class='chemicals'></div>
+          </div>
+          <div class='content'>
+            <p>As pilhas contêm mercúrio e chumbo.</p>
+            <p>A concentração do mercúrio aumenta com a profundidade. Os peixes que estão no mar que está contaminado com mercúrio, eles absorvem o mercúrio que posteriormente é processado muito lentamente (entre 1 a 3 anos dependendo do tamanho e idade do peixe)</p>
+            Quando as pessoas ingerem estes peixes, o mercúrio é absorvido pelo organismo e entra na sua corrente sanguínea, contaminando os tecidos dos rins, fígado, medula óssea, cérebro. No longo prazo, as pessoas que ingerem mercúrio durante muito tempo, podem desenvolver doenças como: hipertensão, doenças de rins, problemas digestivos, anemia, doenças de boca, gengivas e dentes...
+            <p>O peixe espada preto encontra-se em águas profundas, com uma natural concentração de mercúrio. Ao contaminar a água com mais mercúrio, está a aumentar a quantidade de mercúrio desta espécie, aumentando assim a probabilidade de transmissão de doenças aos humanos.</p>
+            <p>O chumbo que é libertado pelas pilhas no mar, afecta o pH da água e a sua salinidade alterando e destruindo parte da vida marinha existente no local. Os peixes que se encontram nestas água também ingerem este composto que se acumula no fígado, rins e ovas destes peixes. As pessoas que consomem estes peixes e/ou as ovas, podem desenvolver doenças, tais como paralisia motora, dores de articulações e musculares, fraqueza muscular, comportamentos maníacos e doenças do foro mental, dores abdominais, insónias, etc</p>
+            <p>Perde 20 pontos</p>
           </div>
         </div>
       </div>

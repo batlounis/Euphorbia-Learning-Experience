@@ -5,11 +5,11 @@ Syntax error: Undefined variable: "$url".
 1: 
 2: #animation_1_a{
 3: 	$photos: '#{$url}/fisherman/1-a-reserva';
-4: 			
-5: 	.environment{
-6: 		width: 100%;
-7: 		height: 100%;
-8: 		background-size: contain;
+4: 	
+5: 	.buoy{
+6: 		background-image: url(#{$photos}/buoy.png);
+7: 		width: 100%;
+8: 		height: 100%;
 
 Backtrace:
 /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/1-a-reserva.css.scss:3
@@ -103,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/1-a-reserva.css.scss\A \A 1: \A 2: #animation_1_a{\A 3: 	$photos: '#{$url}/fisherman/1-a-reserva';\A 4: 			\A 5: 	.environment{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: contain;"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/1-a-reserva.css.scss\A \A 1: \A 2: #animation_1_a{\A 3: 	$photos: '#{$url}/fisherman/1-a-reserva';\A 4: 	\A 5: 	.buoy{\A 6: 		background-image: url(#{$photos}/buoy.png);\A 7: 		width: 100%;\A 8: 		height: 100%;"; }

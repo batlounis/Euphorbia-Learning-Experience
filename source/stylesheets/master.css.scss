@@ -162,6 +162,7 @@ footer{
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	counter-reset: choice;
 	
 	.choice{
 		display: table-cell;
@@ -194,6 +195,12 @@ footer{
 		.title{
 			text-align: center;
 			vertical-align: top;
+			
+			&:before{
+				content: counter(choice)'.';
+				counter-increment: choice;
+				margin-right: .5em;
+			}
 		}
 		
 		.consequence{

@@ -5,7 +5,7 @@ Syntax error: Undefined variable: "$sc_freeze".
 1: // ** Bomb animation
 2: 	$bomb_animation_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 3: 	
-4: #a1-bomb{
+4: #a1-bomb, .bomb{
 5: 	width: 80%;
 6: 	height: 100%;
 7: 	left: 10%;
@@ -94,4 +94,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$sc_freeze\".\A         on line 2 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-b-bomb.css.scss\A \A 1: // ** Bomb animation\A 2: 	$bomb_animation_start: $sc_freeze + $sc_choices_go_down + $c_transition;\A 3: 	\A 4: #a1-bomb{\A 5: 	width: 80%;\A 6: 	height: 100%;\A 7: 	left: 10%;"; }
+  content: "Syntax error: Undefined variable: \"$sc_freeze\".\A         on line 2 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-b-bomb.css.scss\A \A 1: // ** Bomb animation\A 2: 	$bomb_animation_start: $sc_freeze + $sc_choices_go_down + $c_transition;\A 3: 	\A 4: #a1-bomb, .bomb{\A 5: 	width: 80%;\A 6: 	height: 100%;\A 7: 	left: 10%;"; }
