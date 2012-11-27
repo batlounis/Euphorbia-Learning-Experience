@@ -1,7 +1,7 @@
 // ** Bomb animation
 	$bomb_animation_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 	
-#a1-bomb{
+#a1-bomb, .bomb{
 	width: 80%;
 	height: 100%;
 	left: 10%;
@@ -13,6 +13,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-transition: top 3s ease-in-out;
+	z-index: 2000;
 				
 	&.drop{
 		top: 20%;

@@ -62,8 +62,9 @@ body{
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	-webkit-transition: top 1.5s;
 	
-	.future{
+	.clock{
 		$width_0: 475;
 		$height_0: 174;
 		$width: 40%;
@@ -77,7 +78,7 @@ body{
 		padding-left: 7%;
 		z-index: 500;
 		position: absolute;
-		right: 10%;
+		left: 10%;
 		bottom: -100%;
 		-webkit-transition: bottom 1s;
 		vertical-align: bottom;
@@ -296,10 +297,12 @@ $sc_delay: -1s;
 $sc_show_response: 1s;
 $sc_continue_button_delay: .5s; // PRODUCTION: 2s
 
+
 // ** Continue
 $c_delay: 1s;
 $c_transition: 3s; // if you change this, change javascript also
 
+$sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 
 
 // --- SIMPLE ANIMATIONS ---
@@ -393,11 +396,6 @@ $c_transition: 3s; // if you change this, change javascript also
 	-webkit-transition: top $c_transition ease-in-out ($sc_freeze + $sc_choices_go_down);
 }
 
-#q21{
-	background-image: url(#{$url}/fisherman/question_2_option_a.png);
-	background-size: cover;
-}
-
 body.fisherman #character{ // had to keep all the tags for precedence (top is also applied on it before)
 	-webkit-transition: top $c_transition ease-in-out 1s;
 
@@ -407,10 +405,37 @@ body.fisherman #character{ // had to keep all the tags for precedence (top is al
 	}
 }
 
+
 @import "animations/1-a-reserva";
+@import "animations/1-b-young-fish";
+@import "animations/1-c-grown-fish";
+
+@import "animations/2-a-net";
 @import "animations/2-b-bomb";
+@import "animations/2-c-selective";
+
+@import "animations/3-a-breeding-fish";
+@import "animations/3-b-other-time";
+@import "animations/3-c-other-location";
+
+@import "animations/4-a-organic-water";
+@import "animations/4-b-keep-leftovers";
+
+@import "animations/5-a-seal-bomb";
+@import "animations/5-b-seal-fish-elsewhere";
+// 5-c-continue-fishing same as 5-b
+
+@import "animations/6-a-fish-non-profitable";
+@import "animations/6-b-throw-non-profitable";
+
+@import "animations/7-a-throw-net";
+@import "animations/7-b-fix-net";
+@import "animations/7-c-net-trashcan";
+
+@import "animations/8-a-trash-ocean";
+@import "animations/8-b-trash-recycling";
+@import "animations/8-c-throw-batteries";
 
 
-
-
+@import "animations/0-common";
 

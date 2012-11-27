@@ -37,6 +37,23 @@ $(document).ready(function(){
 	
 	// shifts the screen up one whole screen each time the boat is clicked
 	$('#continue_journey_button').click(function(){
+		if(current_screen.next('.screen').hasClass('underwater')){
+			var underwater_screen = current_screen.next('.screen')
+			$('#character').removeClass('underwater');
+			underwater_screen.css('top', screen_height);
+			
+			playIn(function(){
+				$('.screen').css('margin-bottom', window.innerHeight+'px');
+				underwater_screen.remove();
+				$('#setting').removeClass('underwater');
+				continue_journey();
+			}, .5);
+		}else{
+			continue_journey();
+		}
+	});
+	
+	continue_journey = function(){
 		step++;
 		$('#consequence').removeClass('come');
 		$('#continue_journey_button').removeClass('come');
@@ -52,7 +69,7 @@ $(document).ready(function(){
 
 		$('#throw_button').removeClass('leave');
 		return false;
-	});
+	}
 	
 
 	  //
@@ -94,7 +111,7 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-				findSelectedChoice(self.x());				
+							findSelectedChoice(self.x());				
 	            clearInterval(handle);
 	         }
 	     }
@@ -112,18 +129,20 @@ $(document).ready(function(){
 	
 	
 	goAboveWater = function(consequence){
-		$('#setting').css('top', '-'+((step)*2*screen_height)+'px');
-		$('#setting').removeClass('underwater');
+		var underwater_screen = current_screen.next('.screen')
 		$('#character').removeClass('underwater');
-		$('#continue_journey_button').addClass('come');
+		
+		// underwater goes down
+		underwater_screen.css('top', screen_height);
+		
+		
 		playIn(function(){
-			// wait until screen goes up, then remove and show consequence text
-			current_screen.next('.screen').remove();
 			$('.screen').css('margin-bottom', window.innerHeight+'px');
-			// show consequence
-			showConsequence(consequence);
-		}, c_transition);
-
+			underwater_screen.remove();
+			$('#setting').removeClass('underwater');
+			
+			$('#continue_journey_button').trigger('click');
+		}, .5);
 	}
 	
 	showConsequence = function(consequence){
@@ -149,7 +168,7 @@ $(document).ready(function(){
 			}
 		}
 		
-		choice.trigger('select');
+		$(choice).trigger('select');
 		
 		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
 
@@ -159,12 +178,20 @@ $(document).ready(function(){
 		$('#throw_button').addClass('leave');
 		
 		if(consequence.hasClass('underwater')){
-			consequence.find('.screen').insertAfter(current_screen);
+			var sub_screen = consequence.find('.screen')
+			sub_screen.insertAfter(current_screen);
 			current_screen.css('margin-bottom', '0px');
 			$('#setting').addClass('underwater');
 			$('#character').addClass('underwater');
 			$('#setting').css('top', '-'+((step)*2*screen_height+screen_height)+'px');
-			setTimeout(function(){bomb_animation(consequence)}, 7000);
+			
+			// setTimeout(function(){bomb_animation(consequence, sub_screen)}, 7000);
+			
+			var pattern = /animation_/;
+			var animation_id = sub_screen.attr('id');
+			if(pattern.exec(animation_id)){
+				setTimeout(function(){eval(animation_id+'(consequence, sub_screen)');}, 7000);
+			}
 		}else{
 			showConsequence(consequence);
 		}

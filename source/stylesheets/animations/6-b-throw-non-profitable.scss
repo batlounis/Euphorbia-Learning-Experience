@@ -1,0 +1,117 @@
+
+#animation_6_b{
+	$photos: '#{$url}/fisherman/6-b-throw-non-profitable';
+	
+	.net{
+		left: 0%;
+		background-image: url(#{$photos}/net-1.png);
+		width: 100%;
+		height: 100%; 
+		z-index: 500;
+		background-repeat: no-repeat;
+		
+		&.throw{
+			top: 0;
+		}
+		
+		&.net-2{
+			background-image: url(#{$photos}/net-2.png);
+		}
+		
+		&.net-3{
+			background-image: url(#{$photos}/net-3.png);
+			background-size: contain;
+			background-position: bottom left;
+		}
+	}
+	
+	.fish-left{
+		background-image: url(#{$photos}/fish-left.png);
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: bottom left;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		
+		&.future{
+			background-image: url(#{$photos}/fish-left-future.png);
+		}
+	}
+	
+	.fish-right{
+		background-image: url(#{$photos}/fish-right.png);
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: bottom right;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		
+		&.future{
+			background-image: url(#{$photos}/fish-right-future.png);
+		}
+	}
+	
+	.fish-group{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: 100;
+		position: absolute;
+		left: 25%;
+		top: 20%;
+		
+		&.net-2{
+			left: 25%;
+			top: 30%;
+		}
+		
+		&.net-3{
+			top: 10%;
+			left: 0;
+		}
+		
+		*{
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		
+		.num1{
+			background-image: url(#{$photos}/fish-1.png);
+		}
+		
+		.num2{
+			background-image: url(#{$photos}/fish-2.png);
+		}
+		
+		.num3{
+			background-image: url(#{$photos}/fish-3.png);
+		}
+		
+		.num4{
+			background-image: url(#{$photos}/fish-4.png);		
+		}
+		
+		.num5{
+			background-image: url(#{$photos}/fish-5.png);		
+		}
+		
+		.num6{
+			background-image: url(#{$photos}/fish-6.png);		
+		}
+	}
+	
+	
+
+}
