@@ -4,6 +4,7 @@ $(document).ready(function(){
 	// useful function to count years on screen
 	future_count = function(to_year, in_seconds, screen){
 		var appear_time = 1;
+		screen.addClass('future');
 		var elem = screen.find('.clock');
 		var from_year = new Date().getFullYear();
 		elem.html(from_year);

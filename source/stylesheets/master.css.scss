@@ -97,6 +97,11 @@ body{
 	background-image: url(#{$url}/fisherman/background_underwater.png);
 	background-size: cover;
 	background-position: top;
+	-webkit-transition: box-shadow 1s;
+	
+	&.future{
+		box-shadow: 0 0 7em 3em white inset;		
+	}
 }
 
 
