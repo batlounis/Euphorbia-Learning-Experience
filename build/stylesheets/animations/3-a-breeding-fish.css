@@ -6,10 +6,10 @@ Syntax error: Undefined variable: "$url".
 2: #animation_3_a{
 3: 	$photos: '#{$url}/fisherman/3-a-breeding-fish';
 4: 	
-5: 	.environment{
-6: 		width: 100%;
-7: 		height: 100%;
-8: 		background-size: 100%;
+5: 	.nature.special{
+6: 		background-image: url(#{$photos}/nature.png);
+7: 		
+8: 		&.future{
 
 Backtrace:
 /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/3-a-breeding-fish.css.scss:3
@@ -103,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/3-a-breeding-fish.css.scss\A \A 1: \A 2: #animation_3_a{\A 3: 	$photos: '#{$url}/fisherman/3-a-breeding-fish';\A 4: 	\A 5: 	.environment{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: 100%;"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/3-a-breeding-fish.css.scss\A \A 1: \A 2: #animation_3_a{\A 3: 	$photos: '#{$url}/fisherman/3-a-breeding-fish';\A 4: 	\A 5: 	.nature.special{\A 6: 		background-image: url(#{$photos}/nature.png);\A 7: 		\A 8: 		&.future{"; }

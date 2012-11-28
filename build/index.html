@@ -25,10 +25,10 @@
     <line data-bind='attr: {y2:(480-4*vy()),x2:4*vx()}' x1='0' y1='480'></line>
     <!-- the trails of the trajectory motion -->
     <!-- ko foreach:trails -->
-    <circle data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}" r='1' style='stroke: white;'></circle>
+    <circle data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}" r='4' style='stroke: white;'></circle>
     <!-- /ko -->
     <!-- the simulation object -->
-    <circle data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}" r='4' style='stroke: white;'></circle>
+    <circle data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}" r='8' style='stroke: white;'></circle>
   </svg>
 </div>
 <div id='setting'>
@@ -57,7 +57,8 @@
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_1_b'>
             <div class='nature'></div>
-            <div class='environment first'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
             <div class='net'></div>
             <div class='clock'></div>
           </div>
@@ -73,7 +74,8 @@
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_1_c'>
             <div class='nature'></div>
-            <div class='environment'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
           </div>
           <div class='content'>
             <p>É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.</p>
@@ -94,7 +96,10 @@
         <div class='title'>Usa uma rede de arrasto</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_2_a'>
-            <div class='environment'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='arrasto'></div>
           </div>
           <div class='content'>
             <p>Ao usar redes de arrasto uma grande parte do que é recolhido do mar pode não ser aproveitada. Acabou de pescar grande quantidade de lixo e peixes sem valor comercial, além de ter destruído todo o local por onde passou a rede.</p>
@@ -107,6 +112,7 @@
         <div class='title'>Joga bombas</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_2_b'>
+            <div class='nature special'></div>
             <div id='a1-bomb'></div>
             <div id='a1-fish-1'></div>
             <div id='a1-fish-2'></div>
@@ -131,8 +137,12 @@
         <div class='title'>Utiliza técnicas de pesca seletivas (ex: cana de pesca, linha de anzois, etc)</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_2_c'>
-            <div class='environment'></div>
+            <div class='nature special'></div>
             <div class='hooks'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='fished-1'></div>
+            <div class='fished-2'></div>
           </div>
           <div class='content'>
             <p>As técnicas seletivas são mais indicadas pois reduzem a pesca acidental e contribuem positivamente para manter as populações de peixes, garantindo o futuro da atividade piscatória.</p>
@@ -150,8 +160,10 @@
         <div class='title'>Pesca-os a todos</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_3_a'>
-            <div class='environment'></div>
             <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish'></div>
+            <div class='egg'></div>
           </div>
           <div class='content'>
             <p>Pescar as espécies durante o período de reprodução impede a população de crescer e recuperar da pesca. Ao pescar peixes com ovos, está a diminuir drasticamente o no de peixes que vão nascer, levando à diminuição da rentabilidade da atividade piscatória, no futuro.</p>
@@ -163,8 +175,11 @@
         <div class='title'>Escolhe outra época para pescar esta espécie que está em desova</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_3_b'>
-            <div class='environment'></div>
             <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='calendar'></div>
           </div>
           <div class='content'>
             <p>Ao escolher outra época para pescar não está a prejudicar a espécie em reprodução e contribui para o aumento do número de peixes que vai pescar no futuro.</p>
@@ -176,8 +191,11 @@
         <div class='title'>Escolhe outro local para pescar</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_3_c'>
-            <div class='environment'></div>
             <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='calendar'></div>
           </div>
           <div class='content'>
             <p>Escolhendo outro local, onde sabe que não irá capturar espécies em reprodução, contribuirá para o aumento da quantidade de peixes no futuro.</p>
@@ -194,6 +212,7 @@
         <div class='title'>Joga à água</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_4_a'>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='birds-left'></div>
@@ -210,7 +229,9 @@
         <div class='title'>Mantem os restos no barco</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_4_b'>
-            <div class='environment'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
           </div>
           <div class='content'>
             <p>Ao manter o lixo orgânico no barco não está a atrair aves nem mamíferos para o local onde está a pescar. Assim, estes animais não irão incomodar a sua pesca, nem serão capturados acidentalmente.</p>
@@ -332,11 +353,12 @@
         <div class='title'>Lança a rede no mar</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_7_a'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='shredded-net'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='tangled-fish'></div>
+            <div class='passing-boat'></div>
           </div>
           <div class='content'>
             <p>Linhas e redes de pesca permanecem no mar por muitos anos após terem sido abandonadas, aprisionando, magoando e por vezes levando à morte, muitos animais marinhos. Lobos-marinhos, golfinhos, tartarugas, baleias e aves são exemplos de animais que são prejudicados por esta má prática.</p>
@@ -349,7 +371,7 @@
         <div class='title'>Recolhe a rede e remenda-a em terra</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_7_b'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='broken-net'></div>
@@ -366,7 +388,7 @@
         <div class='title'>Traz a rede para terra e deita-a no lixo.</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_7_c'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='broken-net'></div>
@@ -389,7 +411,7 @@
         <div class='title'>Atira todo o lixo ao mar</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_8_a'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='trash num1'></div>
@@ -409,7 +431,7 @@
         <div class='title'>Leva o lixo para terra e coloca nos contentores para reciclagem</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_8_b'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='thought-bubble'></div>
@@ -425,7 +447,7 @@
         <div class='title'>Atirar as pilhas ao mar</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_8_c'>
-            <div class='nature'></div>
+            <div class='nature special'></div>
             <div class='fish-left'></div>
             <div class='fish-right'></div>
             <div class='battery num1'></div>
@@ -436,7 +458,7 @@
           <div class='content'>
             <p>As pilhas contêm mercúrio e chumbo.</p>
             <p>A concentração do mercúrio aumenta com a profundidade. Os peixes que estão no mar que está contaminado com mercúrio, eles absorvem o mercúrio que posteriormente é processado muito lentamente (entre 1 a 3 anos dependendo do tamanho e idade do peixe)</p>
-            Quando as pessoas ingerem estes peixes, o mercúrio é absorvido pelo organismo e entra na sua corrente sanguínea, contaminando os tecidos dos rins, fígado, medula óssea, cérebro. No longo prazo, as pessoas que ingerem mercúrio durante muito tempo, podem desenvolver doenças como: hipertensão, doenças de rins, problemas digestivos, anemia, doenças de boca, gengivas e dentes...
+            <p>Quando as pessoas ingerem estes peixes, o mercúrio é absorvido pelo organismo e entra na sua corrente sanguínea, contaminando os tecidos dos rins, fígado, medula óssea, cérebro. No longo prazo, as pessoas que ingerem mercúrio durante muito tempo, podem desenvolver doenças como: hipertensão, doenças de rins, problemas digestivos, anemia, doenças de boca, gengivas e dentes...</p>
             <p>O peixe espada preto encontra-se em águas profundas, com uma natural concentração de mercúrio. Ao contaminar a água com mais mercúrio, está a aumentar a quantidade de mercúrio desta espécie, aumentando assim a probabilidade de transmissão de doenças aos humanos.</p>
             <p>O chumbo que é libertado pelas pilhas no mar, afecta o pH da água e a sua salinidade alterando e destruindo parte da vida marinha existente no local. Os peixes que se encontram nestas água também ingerem este composto que se acumula no fígado, rins e ovas destes peixes. As pessoas que consomem estes peixes e/ou as ovas, podem desenvolver doenças, tais como paralisia motora, dores de articulações e musculares, fraqueza muscular, comportamentos maníacos e doenças do foro mental, dores abdominais, insónias, etc</p>
             <p>Perde 20 pontos</p>

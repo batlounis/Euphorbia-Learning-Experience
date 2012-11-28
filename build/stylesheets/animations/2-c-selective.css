@@ -6,10 +6,10 @@ Syntax error: Undefined variable: "$url".
 2: #animation_2_c{
 3: 	$photos: '#{$url}/fisherman/2-c-selective';
 4: 	
-5: 	.environment{
-6: 		width: 100%;
-7: 		height: 100%;
-8: 		background-size: cover;
+5: 	.nature.special{
+6: 		background-image: url(#{$photos}/nature.png);
+7: 	}
+8: 	
 
 Backtrace:
 /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-c-selective.css.scss:3
@@ -103,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-c-selective.css.scss\A \A 1: \A 2: #animation_2_c{\A 3: 	$photos: '#{$url}/fisherman/2-c-selective';\A 4: 	\A 5: 	.environment{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: cover;"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-c-selective.css.scss\A \A 1: \A 2: #animation_2_c{\A 3: 	$photos: '#{$url}/fisherman/2-c-selective';\A 4: 	\A 5: 	.nature.special{\A 6: 		background-image: url(#{$photos}/nature.png);\A 7: 	}\A 8: 	"; }

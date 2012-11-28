@@ -5,8 +5,8 @@ Syntax error: Undefined variable: "$url".
 1: 
 2: #animation_1_c{
 3: 	$photos: '#{$url}/fisherman/1-c-grown-fish';
-4: 			
-5: 	.environment{
+4: 		
+5: 	.fish-left, .fish-right{
 6: 		width: 100%;
 7: 		height: 100%;
 8: 		background-size: contain;
@@ -103,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/1-c-grown-fish.css.scss\A \A 1: \A 2: #animation_1_c{\A 3: 	$photos: '#{$url}/fisherman/1-c-grown-fish';\A 4: 			\A 5: 	.environment{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: contain;"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/1-c-grown-fish.css.scss\A \A 1: \A 2: #animation_1_c{\A 3: 	$photos: '#{$url}/fisherman/1-c-grown-fish';\A 4: 		\A 5: 	.fish-left, .fish-right{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: contain;"; }

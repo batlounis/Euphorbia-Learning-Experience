@@ -1,18 +1,17 @@
 /*
 Syntax error: Undefined variable: "$url".
-        on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss
+        on line 2 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss
 
-1: 
-2: #animation_2_a{
-3: 	$photos: '#{$url}/fisherman/2-a-net';
-4: 	
-5: 	.environment{
-6: 		width: 100%;
-7: 		height: 100%;
-8: 		background-size: cover;
+1: #animation_2_a, #animation_2_b, #animation_2_c, #animation_7_a, #animation_7_b, #animation_7_c{
+2: 	$photos: '#{$url}/fisherman/2-a-net';
+3: 
+4: 	.nature.special{
+5: 		background-image: url(#{$photos}/nature.png);
+6: 	}
+7: 	
 
 Backtrace:
-/Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss:3
+/Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss:2
 /Users/salim/.rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.3/lib/sass/script/variable.rb:49:in `_perform'
 /Users/salim/.rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.3/lib/sass/script/node.rb:40:in `perform'
 /Users/salim/.rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.3/lib/sass/script/string_interpolation.rb:82:in `_perform'
@@ -103,4 +102,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 3 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss\A \A 1: \A 2: #animation_2_a{\A 3: 	$photos: '#{$url}/fisherman/2-a-net';\A 4: 	\A 5: 	.environment{\A 6: 		width: 100%;\A 7: 		height: 100%;\A 8: 		background-size: cover;"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 2 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/2-a-net.css.scss\A \A 1: #animation_2_a, #animation_2_b, #animation_2_c, #animation_7_a, #animation_7_b, #animation_7_c{\A 2: 	$photos: '#{$url}/fisherman/2-a-net';\A 3: \A 4: 	.nature.special{\A 5: 		background-image: url(#{$photos}/nature.png);\A 6: 	}\A 7: 	"; }
