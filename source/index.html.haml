@@ -222,87 +222,87 @@ bodyClass: fisherman
 	/ 				.content
 	/ 					%p Se continuar a pescar no mesmo local, o lobo-marinho irá comer parte do peixe que é pescado por si, e além disso poderá estar a colocar em causa a vida de uma espécie protegida.
 	/ 					%p Perde 5 pontos
-	.screen
-		.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…
-		.choices
-			.choice{:score=>-10}
-				.title Guarda todos os peixes mesmo os sem valor comercial 
-				.consequence.underwater
-					.screen.underwater#animation_6_a
-						.nature
-						.fish-profitable
-						.fish-non-profitable
-						.money
-						.net
-					.content
-						%p Ao guardar os peixes que não possuem o tamanho mínimo de captura estabelecido por lei, estará a impedir que estes se reproduzam e por isso a diminuir a sua quantidade para o futuro.
-						%p Ao guardar as espécies que não têm interesse comercial, estará a criar um desequilíbrio no meio ambiente sem que daí retire qualquer lucro.
-						%p Os peixes demasiado jovens ou sem interesse comercial deverão ser devolvidos ao mar o mais rapidamente possível, para que possam continuar o seu ciclo de vida.
-						%p Assim, evitará prejudicar o futuro da pesca e danificar a vida marinha.
-						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Lança ao mar os peixes jovens
-				.consequence.underwater
-					.screen.underwater#animation_6_b
-						.nature
-						.net
-						.clock
-						.fish-left
-						.fish-right
-						.fish-group
-							.num1
-							.num2
-							.num3
-							.num4
-							.num5
-							.num6
-					.content
-						%p Existem limites mínimos para o tamanho dos peixes que podem ser capturados e consequentemente vendidos. Lembre-se que não deve retirar do oceano animais que ainda não atingiram a idade de reprodução. Quando detectar que o pescado não cumpre os requisitos para ter valor comercial, é importante que os lance ao mar imediatamente para que possam recuperar e crescer.
-						%p Ganha 10 pontos
-	.screen
-		.question O Manel apercebe-se que a rede está danificada, e...
-		.choices
-			.choice{:score=>-10}
-				.title Lança a rede no mar
-				.consequence.underwater
-					.screen.underwater#animation_7_a
-						.nature
-						.shredded-net
-						.fish-left
-						.fish-right
-						.tangled-fish
-						.passing-boat
-					.content
-						%p Linhas e redes de pesca permanecem no mar por muitos anos após terem sido abandonadas, aprisionando, magoando e por vezes levando à morte, muitos animais marinhos. Lobos-marinhos, golfinhos, tartarugas, baleias e aves são exemplos de animais que são prejudicados por esta má prática.
-						%p Estes materiais à deriva também danificam barcos, prendendo-se nas hélices e estragando o motor. Inquéritos mostram que muitas embarcações já tiveram danos diretamente relacionados com lixo abandonado no oceano.
-						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Recolhe a rede e remenda-a em terra
-				.consequence.underwater
-					.screen.underwater#animation_7_b
-						.nature
-						.fish-left
-						.fish-right
-						.broken-net
-						.thought-bubble
-					.content
-						%p Quando terminar a pescaria, deve trazer para terra todo o material de pesca. A opção mais correta é remendar a rede e depois reutilizá-la, assim também não está a contribuir para o aumento do lixo em terra.
-						%p Deixar redes danificadas no oceano irá destruir a vida marinha, o que compromete o futuro da atividade piscatória. Ao abandonar redes e covos no oceano, estes continuam a pescar sozinhos e provocam a morte de muitos peixes e outras espécies de animais.
-						%p Ganha 10 pontos
-			.choice{:score=>5}
-				.title Traz a rede para terra e deita-a no lixo.
-				.consequence.underwater
-					.screen.underwater#animation_7_c
-						.nature
-						.fish-left
-						.fish-right
-						.broken-net
-						.thought-bubble
-						.trashcan
-						.trashcan-lid
-					.content
-						%p Quando as redes já não podem ser reutilizadas devem ser trazidas para terra e colocadas no lixo. Mesmo que os aparelhos de pesca se encontrem presos no fundo deverá tentar recuperá-los a todo o custo. O abandono de artes de pesca no oceano causa a morte a um grande número de animais e estragos em muitos barcos. Não só o lixo que é produzido no barco deve ser trazido para terra como também todo o lixo que seja encontrado no oceano.
-						%p Ganha 5 pontos
+	/ .screen
+	/ 	.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…
+	/ 	.choices
+	/ 		.choice{:score=>-10}
+	/ 			.title Guarda todos os peixes mesmo os sem valor comercial 
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_6_a
+	/ 					.nature
+	/ 					.fish-profitable
+	/ 					.fish-non-profitable
+	/ 					.money
+	/ 					.net
+	/ 				.content
+	/ 					%p Ao guardar os peixes que não possuem o tamanho mínimo de captura estabelecido por lei, estará a impedir que estes se reproduzam e por isso a diminuir a sua quantidade para o futuro.
+	/ 					%p Ao guardar as espécies que não têm interesse comercial, estará a criar um desequilíbrio no meio ambiente sem que daí retire qualquer lucro.
+	/ 					%p Os peixes demasiado jovens ou sem interesse comercial deverão ser devolvidos ao mar o mais rapidamente possível, para que possam continuar o seu ciclo de vida.
+	/ 					%p Assim, evitará prejudicar o futuro da pesca e danificar a vida marinha.
+	/ 					%p Perde 10 pontos
+	/ 		.choice{:score=>10}
+	/ 			.title Lança ao mar os peixes jovens
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_6_b
+	/ 					.nature
+	/ 					.net
+	/ 					.clock
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 					.fish-group
+	/ 						.num1
+	/ 						.num2
+	/ 						.num3
+	/ 						.num4
+	/ 						.num5
+	/ 						.num6
+	/ 				.content
+	/ 					%p Existem limites mínimos para o tamanho dos peixes que podem ser capturados e consequentemente vendidos. Lembre-se que não deve retirar do oceano animais que ainda não atingiram a idade de reprodução. Quando detectar que o pescado não cumpre os requisitos para ter valor comercial, é importante que os lance ao mar imediatamente para que possam recuperar e crescer.
+	/ 					%p Ganha 10 pontos
+	/ .screen
+	/ 	.question O Manel apercebe-se que a rede está danificada, e...
+	/ 	.choices.come
+	/ 		.choice{:score=>-10}
+	/ 			.title Lança a rede no mar
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_7_a
+	/ 					.nature
+	/ 					.shredded-net
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 					.tangled-fish
+	/ 					.passing-boat
+	/ 				.content
+	/ 					%p Linhas e redes de pesca permanecem no mar por muitos anos após terem sido abandonadas, aprisionando, magoando e por vezes levando à morte, muitos animais marinhos. Lobos-marinhos, golfinhos, tartarugas, baleias e aves são exemplos de animais que são prejudicados por esta má prática.
+	/ 					%p Estes materiais à deriva também danificam barcos, prendendo-se nas hélices e estragando o motor. Inquéritos mostram que muitas embarcações já tiveram danos diretamente relacionados com lixo abandonado no oceano.
+	/ 					%p Perde 10 pontos
+	/ 		.choice{:score=>10}
+	/ 			.title Recolhe a rede e remenda-a em terra
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_7_b
+	/ 					.nature
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 					.broken-net
+	/ 					.thought-bubble
+	/ 				.content
+	/ 					%p Quando terminar a pescaria, deve trazer para terra todo o material de pesca. A opção mais correta é remendar a rede e depois reutilizá-la, assim também não está a contribuir para o aumento do lixo em terra.
+	/ 					%p Deixar redes danificadas no oceano irá destruir a vida marinha, o que compromete o futuro da atividade piscatória. Ao abandonar redes e covos no oceano, estes continuam a pescar sozinhos e provocam a morte de muitos peixes e outras espécies de animais.
+	/ 					%p Ganha 10 pontos
+	/ 		.choice{:score=>5}
+	/ 			.title Traz a rede para terra e deita-a no lixo.
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_7_c
+	/ 					.nature
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 					.broken-net
+	/ 					.thought-bubble
+	/ 					.trashcan
+	/ 					.trashcan-lid
+	/ 				.content
+	/ 					%p Quando as redes já não podem ser reutilizadas devem ser trazidas para terra e colocadas no lixo. Mesmo que os aparelhos de pesca se encontrem presos no fundo deverá tentar recuperá-los a todo o custo. O abandono de artes de pesca no oceano causa a morte a um grande número de animais e estragos em muitos barcos. Não só o lixo que é produzido no barco deve ser trazido para terra como também todo o lixo que seja encontrado no oceano.
+	/ 					%p Ganha 5 pontos
 	.screen
 		.question Este é o fim do dia de pesca do Manel e existe lixo no barco. O Manel não sabe o que fazer com o lixo...
 		.choices

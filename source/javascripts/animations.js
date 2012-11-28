@@ -216,6 +216,7 @@ $(document).ready(function(){
 	}
 	
 	animation_7_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.tangled-fish').addClass('pass')}, 1);
 		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 5);
 		playIn(function(){sub_screen.find('.passing-boat').addClass('drive')}, 6);
@@ -224,12 +225,14 @@ $(document).ready(function(){
 	}
 	
 	animation_7_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
 		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
 		playIn(function(){showConsequence(consequence)}, 4);
 	}
 	
 	animation_7_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
 		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
 		playIn(function(){sub_screen.find('.trashcan').addClass('show')}, 3);
