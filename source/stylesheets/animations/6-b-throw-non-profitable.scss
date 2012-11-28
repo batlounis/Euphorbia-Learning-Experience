@@ -37,6 +37,11 @@
 		top: 0%;
 		left: 0%;
 		
+		&.swim{		
+			left: 20%;
+			-webkit-transition: left 8s;
+		}
+		
 		&.future{
 			background-image: url(#{$photos}/fish-left-future.png);
 		}
@@ -53,6 +58,11 @@
 		position: absolute;
 		top: 0%;
 		left: 0%;
+		
+		&.swim{
+			left: -20%;
+			-webkit-transition: left 8s;
+		}
 		
 		&.future{
 			background-image: url(#{$photos}/fish-right-future.png);

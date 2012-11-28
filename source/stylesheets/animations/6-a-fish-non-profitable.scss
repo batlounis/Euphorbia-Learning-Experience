@@ -12,7 +12,12 @@
 		background-position: bottom left;
 		position: absolute;
 		bottom: 0;
-		left: 0;
+		left: 20%;
+		-webkit-transition: left 8s;
+		
+		&.swim{
+			left: 0%;
+		}
 		
 		&.future{
 			background-image: url(#{$photos}/fish-non-profitable-2.png);

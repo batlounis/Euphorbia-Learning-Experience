@@ -11,6 +11,7 @@ $photos: '#{$url}/fisherman/common';
 	position: absolute;
 	opacity: 0;
 	-webkit-transition: top 1s;
+	z-index: 2000;
 	
 	&.throw{
 		top: 0%;

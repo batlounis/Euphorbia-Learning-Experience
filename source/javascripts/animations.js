@@ -196,6 +196,7 @@ $(document).ready(function(){
 	}
 	
 	animation_6_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-non-profitable').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
 		playIn(function(){sub_screen.find('.money').addClass('show');}, 3);
 		playIn(function(){sub_screen.find('.fish-non-profitable').addClass('future')}, 3);
@@ -205,6 +206,7 @@ $(document).ready(function(){
 	}
 	
 	animation_6_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
 		playIn(function(){sub_screen.find('.net, .fish-group').addClass('net-2')}, 2);
 		playIn(function(){sub_screen.find('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);

@@ -181,47 +181,47 @@ bodyClass: fisherman
 	/ 				.content
 	/ 					%p Ao manter o lixo orgânico no barco não está a atrair aves nem mamíferos para o local onde está a pescar. Assim, estes animais não irão incomodar a sua pesca, nem serão capturados acidentalmente.
 	/ 					%p Ganha 10 pontos
-	.screen
-		.question O Manel está a pescar e vê um lobo-marinho a nadar ali perto...
-		.choices.come
-			.choice{:score=>-10}
-				.title Atira uma bomba para assustar o lobo-marinho
-				.consequence.underwater
-					.screen.underwater#animation_5_a
-						.bomb
-						.fish
-						.monk-seal						
-					.content
-						%p Atirar uma bomba para o lobo-marinho não é uma atitude sensata pois poderá feri-lo ou matá-lo. Este é um animal que está ameaçado de extinção, pelo que deverá protegê-lo.
-						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Recolhe o peixe que pescou e muda de local de pesca
-				.consequence.underwater
-					.screen.underwater#animation_5_b
-						.net
-						.fish-group
-							.num1
-							.num2
-							.num3
-							.num4
-						.monk-seal
-					.content
-						%p O lobo-marinho é um animal curioso e que irá tentar apanhar os peixes que está a pescar. Ao mudar o local de pesca, está a evitar que este animal incomode a sua atividade piscatória.
-						%p Ganha 10 pontos
-			.choice{:score=>-5}
-				.title Continua a pescar
-				.consequence.underwater
-					.screen.underwater#animation_5_c
-						.net
-						.fish-group
-							.num1
-							.num2
-							.num3
-							.num4
-						.monk-seal
-					.content
-						%p Se continuar a pescar no mesmo local, o lobo-marinho irá comer parte do peixe que é pescado por si, e além disso poderá estar a colocar em causa a vida de uma espécie protegida.
-						%p Perde 5 pontos
+	/ .screen
+	/ 	.question O Manel está a pescar e vê um lobo-marinho a nadar ali perto...
+	/ 	.choices
+	/ 		.choice{:score=>-10}
+	/ 			.title Atira uma bomba para assustar o lobo-marinho
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_a
+	/ 					.bomb
+	/ 					.fish
+	/ 					.monk-seal						
+	/ 				.content
+	/ 					%p Atirar uma bomba para o lobo-marinho não é uma atitude sensata pois poderá feri-lo ou matá-lo. Este é um animal que está ameaçado de extinção, pelo que deverá protegê-lo.
+	/ 					%p Perde 10 pontos
+	/ 		.choice{:score=>10}
+	/ 			.title Recolhe o peixe que pescou e muda de local de pesca
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_b
+	/ 					.net
+	/ 					.fish-group
+	/ 						.num1
+	/ 						.num2
+	/ 						.num3
+	/ 						.num4
+	/ 					.monk-seal
+	/ 				.content
+	/ 					%p O lobo-marinho é um animal curioso e que irá tentar apanhar os peixes que está a pescar. Ao mudar o local de pesca, está a evitar que este animal incomode a sua atividade piscatória.
+	/ 					%p Ganha 10 pontos
+	/ 		.choice{:score=>-5}
+	/ 			.title Continua a pescar
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_c
+	/ 					.net
+	/ 					.fish-group
+	/ 						.num1
+	/ 						.num2
+	/ 						.num3
+	/ 						.num4
+	/ 					.monk-seal
+	/ 				.content
+	/ 					%p Se continuar a pescar no mesmo local, o lobo-marinho irá comer parte do peixe que é pescado por si, e além disso poderá estar a colocar em causa a vida de uma espécie protegida.
+	/ 					%p Perde 5 pontos
 	.screen
 		.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…
 		.choices
