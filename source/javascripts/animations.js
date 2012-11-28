@@ -167,6 +167,8 @@ $(document).ready(function(){
 	}
 	
 	animation_5_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.fish, .monk-seal').addClass('swim'); }, 0);
+		
 		playIn(function(){ sub_screen.find('.bomb').show(); }, 1.5);
 		
 		playIn(function(){ sub_screen.find('.bomb').addClass('drop'); }, 2);
