@@ -241,6 +241,7 @@ $(document).ready(function(){
 	}
 	
 	animation_8_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.trash.num1').addClass('show')}, 1);
 		playIn(function(){sub_screen.find('.trash.num2').addClass('show')}, 2);
 		playIn(function(){sub_screen.find('.trash.num3').addClass('show')}, 3);
@@ -250,11 +251,13 @@ $(document).ready(function(){
 	}
 	
 	animation_8_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 1);
 		playIn(function(){showConsequence(consequence)}, 3);
 	}
 	
 	animation_8_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
 		playIn(function(){sub_screen.find('.battery.num1').addClass('show')}, 1);
 		playIn(function(){sub_screen.find('.battery.num2').addClass('show')}, 2);
 		playIn(function(){sub_screen.find('.battery.num3').addClass('show')}, 3);
