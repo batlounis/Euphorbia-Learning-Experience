@@ -177,8 +177,8 @@ footer{
 		color: white;
 		position: relative;
 
-		$choice_bar_height: .5em;
 		// visual bar below each choice
+		$choice_bar_height: .5em;
 		&:after{
 			content: '';
 			width: 90%;

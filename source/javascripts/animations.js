@@ -153,32 +153,33 @@ $(document).ready(function(){
 	}
 	
 	animation_5_b = function(consequence, sub_screen){
-		playIn(function(){$('.net').addClass('throw')}, 1);
-		playIn(function(){$('.net, .fish-group').addClass('net-2')}, 2);
-		playIn(function(){$('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.net, .fish-group').addClass('net-2')}, 2);
+		playIn(function(){sub_screen.find('.net, .fish-group').removeClass('net-2'); 
+											sub_screen.find('.net, .fish-group').addClass('net-3');}, 3);
 		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
 	animation_5_c = function(consequence, sub_screen){
-		playIn(function(){$('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
 		playIn(function(){showConsequence(consequence)}, 2);
 	}
 	
 	animation_6_a = function(consequence, sub_screen){
-		playIn(function(){$('.net').addClass('throw')}, 1);
-		playIn(function(){$('.money').addClass('show');}, 3);
-		playIn(function(){$('.fish-non-profitable').addClass('future')}, 3);
-		playIn(function(){$('.money').addClass('less');}, 4);
-		playIn(function(){$('.money').removeClass('less'); $('.money').addClass('and-less');}, 5);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.money').addClass('show');}, 3);
+		playIn(function(){sub_screen.find('.fish-non-profitable').addClass('future')}, 3);
+		playIn(function(){sub_screen.find('.money').addClass('less');}, 4);
+		playIn(function(){sub_screen.find('.money').removeClass('less'); $('.money').addClass('and-less');}, 5);
 		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 	animation_6_b = function(consequence, sub_screen){
-		playIn(function(){$('.net').addClass('throw')}, 1);
-		playIn(function(){$('.net, .fish-group').addClass('net-2')}, 2);
-		playIn(function(){$('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.net, .fish-group').addClass('net-2')}, 2);
+		playIn(function(){sub_screen.find('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);
 		playIn(function(){future_count(2020, 2, sub_screen);}, 3);		
-		playIn(function(){$('.fish-left, .fish-right').addClass('future')},5);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')},5);
 		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
