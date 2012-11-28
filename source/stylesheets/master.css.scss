@@ -177,23 +177,31 @@ footer{
 		color: white;
 		position: relative;
 
+		$choice_bar_height: .5em;
 		// visual bar below each choice
 		&:after{
 			content: '';
-			background-color: white;
 			width: 90%;
 			margin-left: 5%;
-			height: .5em;
 			position: absolute;
 			bottom: 0;
 			display: block;
+			padding-top: 1em;			
+			background: -webkit-linear-gradient(left, rgba(255,255,255,.4) 0%, rgba(255,255,255,.4) 100%);
+			background-position: bottom center;
+			height: $choice_bar_height;
+			background-size: 100% $choice_bar_height;
+			background-repeat: no-repeat;
+
 		}
 		
 		// visual bar once it's selected
 		&.selected{
 			&:after{
-				background-color: green;
-				box-shadow: 0 0 .5em .5em rgba(255, 255, 255, .5);
+				background: -webkit-linear-gradient(left, rgba(255,255,255,.8) 0%, rgba(255,255,255,.8) 100%), url(#{$url}/fisherman/selected-choice.png);
+				background-position: bottom center, $choice_bar_height center;
+				background-size: 100% $choice_bar_height, 100% 100%;
+				background-repeat: no-repeat;
 			}
 		}
 
@@ -302,7 +310,7 @@ footer{
 
 // --- SIMPLE ANIMATIONS VARIABLES ---
 // ** Select choice
-$sc_freeze: .5s; // PRODUCTION: 4s
+$sc_freeze: 1s; // PRODUCTION: 4s
 $sc_choices_go_down: 2s;
 $sc_control_goes_left: 2s;
 $sc_delay: -1s;
