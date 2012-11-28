@@ -154,15 +154,16 @@ $(document).ready(function(){
 	}
 	
 	animation_4_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.fish-left, .fish-right').addClass('swim'); }, 0);
 		playIn(function(){ sub_screen.find('.organic').addClass('throw'); }, 0);
 		playIn(function(){ sub_screen.find('.birds-left').addClass('come'); }, 1);
 		playIn(function(){ sub_screen.find('.birds-right').addClass('come'); }, 1.5);
-		
 		playIn(function(){showConsequence(consequence)}, 3);
 	}
 
 	animation_4_b = function(consequence, sub_screen){
-		playIn(function(){showConsequence(consequence)}, 2);
+		playIn(function(){ sub_screen.find('.fish-left, .fish-right').addClass('swim'); }, 0);
+		playIn(function(){showConsequence(consequence)}, 3);
 	}
 	
 	animation_5_a = function(consequence, sub_screen){
