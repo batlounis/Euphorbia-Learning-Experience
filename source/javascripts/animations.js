@@ -131,21 +131,26 @@ $(document).ready(function(){
 	}
 	
 	animation_3_a = function(consequence, sub_screen){
-		playIn(function(){ future_count(2020, 2, sub_screen) }, 1);
-		playIn(function(){sub_screen.find('.environment').addClass('future')}, 3);
-		playIn(function(){showConsequence(consequence)}, 5);
+		playIn(function(){sub_screen.find('.egg').addClass('drop')}, 1);
+		playIn(function(){sub_screen.find('.fish, .nature').addClass('future')}, 4);		
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 3);
+		playIn(function(){showConsequence(consequence)}, 7);
 	}
 	
 	animation_3_b = function(consequence, sub_screen){
-		playIn(function(){ future_count(2020, 2, sub_screen) }, 1);
-		playIn(function(){sub_screen.find('.environment').addClass('future')}, 3);
-		playIn(function(){showConsequence(consequence)}, 5);
+		playIn(function(){sub_screen.find('.calendar').addClass('come')}, 0);
+		playIn(function(){sub_screen.find('.calendar').removeClass('come')}, 2);
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 2);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 4);
+		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 	animation_3_c = function(consequence, sub_screen){
-		playIn(function(){ future_count(2020, 2, sub_screen) }, 1);
-		playIn(function(){sub_screen.find('.environment').addClass('future')}, 3);
-		playIn(function(){showConsequence(consequence)}, 5);
+		playIn(function(){sub_screen.find('.calendar').addClass('come')}, 0);
+		playIn(function(){sub_screen.find('.calendar').removeClass('come')}, 2);
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 2);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 4);
+		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 	animation_4_a = function(consequence, sub_screen){

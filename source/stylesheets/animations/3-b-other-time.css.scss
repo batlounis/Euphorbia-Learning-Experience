@@ -1,22 +1,57 @@
 
-#animation_3_b{
+#animation_3_b, #animation_3_c{
 	$photos: '#{$url}/fisherman/3-b-other-time';
 	
-	.environment{
+	
+	.nature.special{
+		background-image: url(#{$photos}/nature.png);
+	}
+	
+	.calendar{
 		width: 100%;
 		height: 100%;
-		background-size: cover;
-		background-position: bottom;
+		background-size: contain;
 		background-repeat: no-repeat;
+		background-position: top center;
+		z-index: 100;
 		position: absolute;
-		bottom: 0;
-		z-index: 300;
-		background-image: url(#{$photos}/environment.png);
+		background-image: url(#{$photos}/calendar.png);
+		top: -100%;
+		-webkit-transition: top 2s;
 		
-		&.future{
-			background-image: url(#{$photos}/future.png);
+		&.come{
+			top: 0;
 		}
 	}
 	
+	.fish-left{
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		z-index: 100;
+		position: absolute;
+		background-image: url(#{$photos}/fish-left.png);
+		
+		&.future{
+			background-image: url(#{$photos}/fish-left-future.png);
+		}
+	}
+	
+	.fish-right{
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		z-index: 100;
+		position: absolute;
+		background-image: url(#{$photos}/fish-right.png);
+		
+		&.future{
+			background-image: url(#{$photos}/fish-right-future.png);
+		}
+	}
 
 }
