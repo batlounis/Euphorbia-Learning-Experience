@@ -1,3 +1,10 @@
+#animation_8_a, #animation_8_b, #animation_8_c{
+	$photos: '#{$url}/fisherman/8-a-trash-ocean';
+
+	.nature.special{
+		background-image: url(#{$photos}/nature.png);
+	}	
+}
 
 #animation_8_a{
 	$photos: '#{$url}/fisherman/8-a-trash-ocean';

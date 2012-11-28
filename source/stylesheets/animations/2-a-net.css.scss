@@ -1,11 +1,14 @@
-
-#animation_2_a{
+#animation_2_a, #animation_2_b, #animation_2_c, #animation_7_a, #animation_7_b, #animation_7_c{
 	$photos: '#{$url}/fisherman/2-a-net';
-	
+
 	.nature.special{
 		background-image: url(#{$photos}/nature.png);
 	}
 	
+}
+
+#animation_2_a{
+	$photos: '#{$url}/fisherman/2-a-net';	
 	
 	.fish-left, .fish-right{
 		width: 100%;
