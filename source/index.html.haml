@@ -25,47 +25,49 @@ bodyClass: fisherman
 
 
 #setting
-	.screen
-		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
-		.choices.come
-			.choice{:score=>-10}
-				.title Junto a uma Reserva Natural
-				.consequence.underwater
-					.screen.underwater#animation_1_a
-						.nature
-						.net
-						.clock
-						.buoy
-						.fish-left
-						.fish-right
-					.content
-						%p As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.
-						%p Perde 10 pontos
-			.choice{:score=>-5}
-				.title Em local onde existem peixes jovens
-				.consequence.underwater
-					.screen.underwater#animation_1_b
-						.nature
-						.environment.first
-						.net
-						.clock
-					.content
-						%p Se pescar peixes muito jovens está a impedi-los de atingir a idade de reprodução e por isso a sua quantidade no futuro será cada vez menor.
-						%p Embora os peixes geralmente produzam imensos ovos, só uma pequena percentagem atinge a idade adulta.
-						%p Perde 5 pontos
-			.choice{:score=>10}
-				.title Em local onde existem peixes adultos
-				.consequence.underwater
-					.screen.underwater#animation_1_c
-						.nature
-						.environment
-					.content
-						%p É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.
-						%p Também deve sempre lembrar-se que:
-						%p • não deve pescar peixes durante o período de reprodução,
-						%p • não deve pescar peixes jovens que ainda não atingiram a idade para se reproduzirem,
-						%p • não deve pescar espécies em perigo de extinção.
-						%p Como o Manuel, teve em atenção todos estes factores: ganha 10 pontos
+	/ .screen
+	/ 	.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
+	/ 	.choices.come
+	/ 		.choice{:score=>-10}
+	/ 			.title Junto a uma Reserva Natural
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_1_a
+	/ 					.nature
+	/ 					.net
+	/ 					.clock
+	/ 					.buoy
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 				.content
+	/ 					%p As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.
+	/ 					%p Perde 10 pontos
+	/ 		.choice{:score=>-5}
+	/ 			.title Em local onde existem peixes jovens
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_1_b
+	/ 					.nature
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 					.net
+	/ 					.clock
+	/ 				.content
+	/ 					%p Se pescar peixes muito jovens está a impedi-los de atingir a idade de reprodução e por isso a sua quantidade no futuro será cada vez menor.
+	/ 					%p Embora os peixes geralmente produzam imensos ovos, só uma pequena percentagem atinge a idade adulta.
+	/ 					%p Perde 5 pontos
+	/ 		.choice{:score=>10}
+	/ 			.title Em local onde existem peixes adultos
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_1_c
+	/ 					.nature
+	/ 					.fish-left
+	/ 					.fish-right
+	/ 				.content
+	/ 					%p É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.
+	/ 					%p Também deve sempre lembrar-se que:
+	/ 					%p • não deve pescar peixes durante o período de reprodução,
+	/ 					%p • não deve pescar peixes jovens que ainda não atingiram a idade para se reproduzirem,
+	/ 					%p • não deve pescar espécies em perigo de extinção.
+	/ 					%p Como o Manuel, teve em atenção todos estes factores: ganha 10 pontos
 	.screen
 		.question O Manel, já escolheu o local, e tem de decidir que técnica utilizar para pescar
 		.choices
@@ -73,7 +75,10 @@ bodyClass: fisherman
 				.title Usa uma rede de arrasto
 				.consequence.underwater
 					.screen.underwater#animation_2_a
-						.environment
+						.nature.special
+						.fish-left
+						.fish-right
+						.arrasto
 					.content
 						%p Ao usar redes de arrasto uma grande parte do que é recolhido do mar pode não ser aproveitada. Acabou de pescar grande quantidade de lixo e peixes sem valor comercial, além de ter destruído todo o local por onde passou a rede.
 						%p É economicamente mais rentável e melhor para o ambiente utilizar técnicas de pesca seletivas.
@@ -102,8 +107,12 @@ bodyClass: fisherman
 				.title Utiliza técnicas de pesca seletivas (ex: cana de pesca, linha de anzois, etc)
 				.consequence.underwater
 					.screen.underwater#animation_2_c
-						.environment
+						.nature.special
 						.hooks
+						.fish-left
+						.fish-right
+						.fished-1
+						.fished-2
 					.content
 						%p As técnicas seletivas são mais indicadas pois reduzem a pesca acidental e contribuem positivamente para manter as populações de peixes, garantindo o futuro da atividade piscatória.
 						%p A seleção correta de isco, do tamanho do anzol e da profundidade de pesca, permitem diminuir a captura de espécies indesejáveis e de menor valor comercial.

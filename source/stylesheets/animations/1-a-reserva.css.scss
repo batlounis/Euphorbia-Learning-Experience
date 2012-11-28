@@ -27,7 +27,11 @@
 	
 	.fish-left{
 		background-image: url(#{$photos}/fish-left.png);
-		-webkit-animation: goright 8s $sc_underwater_start;
+
+		&.swim{		
+			left: 20%;
+			-webkit-transition: left 8s;
+		}
 		
 		&.future{
 			background-image: url(#{$photos}/fish-left-future.png);
@@ -36,20 +40,17 @@
 	
 	.fish-right{
 		background-image: url(#{$photos}/fish-right.png);
-		-webkit-animation: goleft 8s $sc_underwater_start;
+		
+		&.swim{
+			right: 20%;
+			-webkit-transition: right 8s;
+		}
+
 		
 		&.future{
 			background-image: url(#{$photos}/fish-right-future.png);
 		}
 	}
-}
-
-@-webkit-keyframes goleft{
-	100%{ right: 20%; }
-}
-
-@-webkit-keyframes goright{
-	100%{ left: 20%; }
 }
 
 @-webkit-keyframes fade{
