@@ -56,6 +56,8 @@ $(document).ready(function(){
 	continue_journey = function(){
 		step++;
 		$('#consequence').removeClass('come');
+		$('#character').addClass('walk');
+		playIn(function(){ $('#character').removeClass('walk'); }, 4);
 		$('#continue_journey_button').removeClass('come');
 		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
 
