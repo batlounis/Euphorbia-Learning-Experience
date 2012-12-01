@@ -205,13 +205,13 @@ footer{
 	.choice{
 		display: table-cell;
 		width: 2%; // used to force fixed table layout
-		padding: .5em;
+		padding: .5em .5em 1.2em .5em;
 		margin: 0 auto;
 		color: white;
 		position: relative;
 
 		// visual bar below each choice
-		$choice_bar_height: .5em;
+		$choice_bar_height: .3em;
 		&:after{
 			content: '';
 			width: 90%;
