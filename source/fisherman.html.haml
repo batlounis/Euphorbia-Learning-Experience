@@ -349,6 +349,10 @@ bodyClass: fisherman
 						%p As pilhas contêm mercúrio e chumbo.
 						%p A concentração do mercúrio aumenta com a profundidade. Os peixes que estão no mar que está contaminado com mercúrio, eles absorvem o mercúrio que posteriormente é processado muito lentamente (entre 1 a 3 anos dependendo do tamanho e idade do peixe)
 						%p Quando as pessoas ingerem estes peixes, o mercúrio é absorvido pelo organismo e entra na sua corrente sanguínea, contaminando os tecidos dos rins, fígado, medula óssea, cérebro. No longo prazo, as pessoas que ingerem mercúrio durante muito tempo, podem desenvolver doenças como: hipertensão, doenças de rins, problemas digestivos, anemia, doenças de boca, gengivas e dentes...
-						%p O peixe espada preto encontra-se em águas profundas, com uma natural concentração de mercúrio. Ao contaminar a água com mais mercúrio, está a aumentar a quantidade de mercúrio desta espécie, aumentando assim a probabilidade de transmissão de doenças aos humanos. 
-						%p O chumbo que é libertado pelas pilhas no mar, afecta o pH da água e a sua salinidade alterando e destruindo parte da vida marinha existente no local. Os peixes que se encontram nestas água também ingerem este composto que se acumula no fígado, rins e ovas destes peixes. As pessoas que consomem estes peixes e/ou as ovas, podem desenvolver doenças, tais como paralisia motora, dores de articulações e musculares, fraqueza muscular, comportamentos maníacos e doenças do foro mental, dores abdominais, insónias, etc 
+						%p ......
 						%p Perde 20 pontos
+	.screen.special
+		.question Parabéns foi um excelente pescador o futuro da pesca e a continuidade das espécies está garantido
+		.final_score{'data-bind'=>'text: score'}
+		.pier
+		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
