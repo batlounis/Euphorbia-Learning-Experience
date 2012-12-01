@@ -37,11 +37,14 @@ $(document).ready(function(){
 			sub_screen.find('.fish-left, .fish-right').addClass('swim');
 		}, 0);
 		
-		playIn(function(){ future_count(2030, 5, sub_screen) }, 1);
+		playIn(function(){ 
+			sub_screen.find('.net').removeClass('throw');
+			future_count(2030, 5, sub_screen);
+		}, 2);
 		
 		playIn(function(){
 			sub_screen.find('.fish-left, .fish-right').addClass('future');
-		}, 3);
+		}, 4);
 		
 		
 		playIn(function(){showConsequence(consequence)}, 5);
@@ -146,8 +149,6 @@ $(document).ready(function(){
 	}
 	
 	animation_3_c = function(consequence, sub_screen){
-		playIn(function(){sub_screen.find('.calendar').addClass('come')}, 0);
-		playIn(function(){sub_screen.find('.calendar').removeClass('come')}, 2);
 		playIn(function(){ future_count(2020, 2, sub_screen) }, 2);
 		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 4);
 		playIn(function(){showConsequence(consequence)}, 6);
