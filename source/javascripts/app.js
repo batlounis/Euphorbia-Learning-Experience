@@ -73,6 +73,7 @@ $(document).ready(function(){
 		}else{
 			$('#character').hide();
 			$('#score').hide();
+			$('#continue_journey_button').addClass('come');
 		}
 
 		return false;
