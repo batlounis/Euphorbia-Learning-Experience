@@ -26,10 +26,10 @@ bodyClass: farmer
 
 #setting
 	.screen
-		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
+		.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai a para o seu terreno e repara que a levada tem lixo. Ele deve...
 		.choices.come
 			.choice{:score=>-10}
-				.title Junto a uma Reserva Natural
+				.title Deixa assim, quem usa a água primeiro que limpe
 				.consequence.underwater
 					.screen.underwater#animation_1_a
 						.nature
@@ -39,10 +39,11 @@ bodyClass: farmer
 						.fish-left
 						.fish-right
 					.content
-						%p As reservas naturais marinhas são muito importantes para o crescimento das populações de peixes. A quantidade de peixes existentes no oceano tem diminuído muito, resultado da pesca excessiva e da utilização de técnicas de pesca não seletivas, por isso é extremamente importante proteger as reservas naturais marinhas, para que os peixes se reproduzam e aumentem a sua quantidade.
+						%p A água é um recurso muito valioso para a agricultura, por isso é importante que as pessoas a utilizem de forma responsável.
+						Se deixar o lixo na levada, a água vai ficar contaminada e vai desperdiçar parte da água. Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.
 						%p Perde 10 pontos
-			.choice{:score=>-5}
-				.title Em local onde existem peixes jovens
+			.choice{:score=>10}
+				.title Limpa a levada
 				.consequence.underwater
 					.screen.underwater#animation_1_b
 						.nature
@@ -51,28 +52,24 @@ bodyClass: farmer
 						.net
 						.clock
 					.content
-						%p Se pescar peixes muito jovens está a impedi-los de atingir a idade de reprodução e por isso a sua quantidade no futuro será cada vez menor.
-						%p Embora os peixes geralmente produzam imensos ovos, só uma pequena percentagem atinge a idade adulta.
-						%p Perde 5 pontos
-			.choice{:score=>10}
-				.title Em local onde existem peixes adultos
+						%p A água é um recurso valioso. É da responsabilidade de todos garantir que a água não é desperdiçada ou contaminada. Ao tirar o lixo e o mato da levada está a impedir que a água fique suja e seja desperdiçada. Vai ter água de boa qualidade e em quantidade para ter uma boa colheita. 
+						%p Ganha 10 pontos
+			.choice{:score=>-10}
+				.title Deixa assim, quem deitou o lixo que limpe
 				.consequence.underwater
 					.screen.underwater#animation_1_c
 						.nature
 						.fish-left
 						.fish-right
 					.content
-						%p É importante que o seu esforço seja recompensado da melhor maneira, assim ao capturar peixes adultos terá uma pescaria mais rentável, e ao mesmo tempo está a garantir o futuro das espécies.
-						%p Também deve sempre lembrar-se que:
-						%p • não deve pescar peixes durante o período de reprodução,
-						%p • não deve pescar peixes jovens que ainda não atingiram a idade para se reproduzirem,
-						%p • não deve pescar espécies em perigo de extinção.
-						%p Como o Manuel, teve em atenção todos estes factores: ganha 10 pontos
+						%p É da responsabilidade de todos garantir que a água não é desperdiçada ou contaminada. Apesar do lixo não ser seu, se não tirar o lixo da levada, a água vai ficar contaminada e vai desperdiçar parte da água.
+						%p Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.
+						%p Perde 10 pontos
 	.screen
-		.question O Manel, já escolheu o local, e tem de decidir que técnica utilizar para pescar
+		.question Entre o terreno e a floresta ele vê uma planta de maracujá banana a crescer. O que faz o António?
 		.choices
-			.choice{:score=>-5}
-				.title Usa uma rede de arrasto
+			.choice{:score=>-10}
+				.title Deixar a planta a crescer para depois poder comer os maracujás.
 				.consequence.underwater
 					.screen.underwater#animation_2_a
 						.nature.special
@@ -80,11 +77,12 @@ bodyClass: farmer
 						.fish-right
 						.arrasto
 					.content
-						%p Ao usar redes de arrasto uma grande parte do que é recolhido do mar pode não ser aproveitada. Acabou de pescar grande quantidade de lixo e peixes sem valor comercial, além de ter destruído todo o local por onde passou a rede.
-						%p É economicamente mais rentável e melhor para o ambiente utilizar técnicas de pesca seletivas.
-						%p Como pescou lixo e peixes sem valor comercial perde 5 pontos
-			.choice{:score=>-15}
-				.title Joga bombas
+						%p O maracujá banana é uma planta invasora, ou seja, ao crescer consegue eliminar outras plantas, ocupando todo o espaço.
+						%p Esta planta trepadeira cresce sobre as plantas da floresta natural da Madeira, tapando-as totalmente e matando-as. 
+						%p Se não fizer nada, está a ajudar a planta invasora a crescer, o que vai levar à diminuição da floresta Laurissilva.
+						%p Perde 10 pontos
+			.choice{:score=>-5}
+				.title Arrancar e levar para plantar perto de casa
 				.consequence.underwater
 					.screen.underwater#animation_2_b
 						.nature.special
@@ -100,12 +98,10 @@ bodyClass: farmer
 						#a1-after-fish-1
 						.clock
 					.content
-						%p As bombas matam os peixes de uma forma violenta, assim como todas as restantes espécies marinhas, animais e vegetais, que se encontrem por perto.
-						%p O uso de explosivos destrói o fundo do mar, resultando numa diminuição drástica da quantidade de peixes. Do ponto de vista comercial o peixe vale menos dinheiro, devido ao aspeto com que fica resultante da explosão.
-						%p Os locais destruídos pelos rebentamentos necessitam de vários anos para que haja novamente vida marinha. Esta técnica é ilegal.
-						%p Destruiu o ecossistema, perde 15 pontos
-			.choice{:score=>10}
-				.title Utiliza técnicas de pesca seletivas (ex: cana de pesca, linha de anzois, etc)
+						%p O maracujá banana não é uma planta natural da ilha da Madeira e tem carácter invasor. Esta planta cresce e multiplica-se rapidamente, matando as plantas à volta e ocupando todo o espaço. Se plantar espécies invasoras (como o maracujá banana, a acácia ou a bananilha) junto da sua casa ou no seu terreno tem de estar atento ao seu crescimento para evitar que cresça em cima de outras plantas e elas morram. O melhor é escolher outro tipo de maracujá para plantar.
+						%p Perde 5 pontos						
+			.choice{:score=>-15}
+				.title Come e deita a casca no chão
 				.consequence.underwater
 					.screen.underwater#animation_2_c
 						.nature.special
@@ -115,14 +111,22 @@ bodyClass: farmer
 						.fished-1
 						.fished-2
 					.content
-						%p As técnicas seletivas são mais indicadas pois reduzem a pesca acidental e contribuem positivamente para manter as populações de peixes, garantindo o futuro da atividade piscatória.
-						%p A seleção correta de isco, do tamanho do anzol e da profundidade de pesca, permitem diminuir a captura de espécies indesejáveis e de menor valor comercial.
-						%p Ganha 10 pontos
+						%p O maracujá banana é uma planta invasora. As plantas invasoras crescem muito rapidamente. Um fruto tem 30 a 200 sementes. Ao deitar as cascas no chão elas podem ter sementes e dar origem a novas plantas que vão danificar as plantas que estam nesse local.
+						%p Ao deitar restos de comida no chão está também a atrair ratos que vão comer o que plantou e vão espalhar doenças no seu terreno
+						%p Perde 15 pontos
+			.choice{:score=>10}
+				.title Arranca a planta
+				.consequence.underwater
+					.screen.underwater#animation_2_d
+						.nature
+					.content
+						%p Existem muitas plantas invasoras na Madeira, como a acácia, a bananilha e outras que crescem rapidamente e matam as plantas à volta. É necessário destruí-las para que elas não ocupem todo o espaço e destruam a floresta Laurissilva. As plantas invasoras são muito resistentes e não é fácil destruí-las. Cada planta tem de ser destruída de forma específica, se precisar de ajuda para conhecer e saber como eliminar as plantas invasoras contacte o Serviço do Parque Natural. 
+						%p Ganha 10 pontos.						
 	.screen
-		.question O Manel vai à pesca durante o período de desova de alguns peixes. O Manel decide...
+		.question O António vê um Pombo-trocaz a comer a sua colheita. O que faz?
 		.choices
-			.choice{:score=>-5}
-				.title Pesca-os a todos
+			.choice{:score=>15}
+				.title Deixa o Pombo-trocaz comer a plantação
 				.consequence.underwater
 					.screen.underwater#animation_3_a
 						.clock
@@ -130,10 +134,12 @@ bodyClass: farmer
 						.fish
 						.egg
 					.content
-						%p Pescar as espécies durante o período de reprodução impede a população de crescer e recuperar da pesca. Ao pescar peixes com ovos, está a diminuir drasticamente o no de peixes que vão nascer, levando à diminuição da rentabilidade da atividade piscatória, no futuro.
-						%p Perde 5 pontos
-			.choice{:score=>5}
-				.title Escolhe outra época para pescar esta espécie que está em desova
+						%p O Pombo-trocaz é um dos animais mais importantes da floresta Laurissilva.
+						%p O pombo come sementes da floresta, e ajuda na renovação da floresta, aumentando o número de plantas da floresta Laurissilva. Esta floresta é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura.
+						%p Ao deixar o pombo viver está a ajudar a floresta Laurissilva a crescer.
+						%p Ganha 15 pontos
+			.choice{:score=>-20}
+				.title Mata o Pombo-trocaz
 				.consequence.underwater
 					.screen.underwater#animation_3_b
 						.clock
@@ -142,10 +148,11 @@ bodyClass: farmer
 						.fish-right
 						.calendar
 					.content
-						%p Ao escolher outra época para pescar não está a prejudicar a espécie em reprodução e contribui para o aumento do número de peixes que vai pescar no futuro.
-						%p Ganha 5 pontos
-			.choice{:score=>5}
-				.title Escolhe outro local para pescar
+						%p O pombo é importante para a renovação da floresta Laurissilva porque ele come as sementes da floresta e ajuda a espalhar as sementes. A floresta Laurissilva é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura. Se matar o pombo, a floresta não vai crescer e vai ter menos água, logo a sua colheita vai ter menos qualidade.
+						%p O pombo é um animal em extinção e deve ser protegido.
+						%p Perde 20 pontos
+			.choice{:score=>20}
+				.title Afugenta o pombo trocaz
 				.consequence.underwater
 					.screen.underwater#animation_3_c
 						.clock
@@ -154,13 +161,22 @@ bodyClass: farmer
 						.fish-right
 						.calendar
 					.content
-						%p Escolhendo outro local, onde sabe que não irá capturar espécies em reprodução, contribuirá para o aumento da quantidade de peixes no futuro.
-						%p Ganha 5 pontos
+						%p Existem vários métodos para afugentar o pombo e manter o pombo longe do seu terreno. Pode utilizar “espanta pássaros” sonoros que emitem o som de um disparo de vez em quando. Pode utilizar redes que cobrem as plantações, fitas refletoras ou espantalhos. Mas como os animais se habituam, é importante que varie as soluções e o local onde as coloca no seu terreno.
+						%p O Serviço do Parque Natural pode ajudá-lo a escolher a melhor solução.
+						%p Ganha 20 pontos
+			.choice{:score=>-15}
+				.title Deita veneno nas plantas para matar os Pombos que as comerem
+				.consequence.underwater
+					.screen.underwater#animation_3_d
+						.nature
+					.content
+						%p Veneno é um produto muito perigoso para usar na agricultura. O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita. Por isso vai ter colheita de má qualidade e que não pode ser vendida.
+						%p Perde 15 pontos
 	.screen
-		.question Enquanto pesca o Manel está a almoçar. Quando acaba de comer pega nos restos e ...
+		.question O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?
 		.choices
-			.choice{:score=>-5}
-				.title Joga à água
+			.choice{:score=>-15}
+				.title Usar pesticidas químicos aumentando as quantidades e concentrações recomendadas
 				.consequence.underwater
 					.screen.underwater#animation_4_a
 						.nature.special
@@ -170,33 +186,42 @@ bodyClass: farmer
 						.birds-right
 						.organic
 					.content
-						%p O lixo orgânico, como restos de comida, decompõe-se facilmente no mar. Contudo ao atirá-lo à água enquanto pesca, está a atrair outros peixes e outros animais, como aves marinhas, que irão interferir na sua pescaria e poderão ser pescados acidentalmente. Mantenha o lixo orgânico longe das áreas de pesca.
-						%p Perde 5 pontos
-			.choice{:score=>10}
-				.title Mantem os restos no barco
+						%p Lá porque as lagartas são grandes não vai usar mais pesticida do que o indicado. Os pesticidas não matam só as pragas mas contaminam a colheita e a água. Se usar pesticidas sem respeitar as instruções o seu terreno vai ficar contaminado e não vai poder vender a sua colheita. Além disso o excesso de pesticida vai ser arrastado pela água da chuva e pelo vento e vai contaminar os terrenos à volta.
+						%p Perde 15 pontos						
+			.choice{:score=>15}
+				.title Usa outras plantas e animais para controlar as pragas.
 				.consequence.underwater
 					.screen.underwater#animation_4_b
 						.nature.special
 						.fish-left
 						.fish-right
 					.content
-						%p Ao manter o lixo orgânico no barco não está a atrair aves nem mamíferos para o local onde está a pescar. Assim, estes animais não irão incomodar a sua pesca, nem serão capturados acidentalmente.
-						%p Ganha 10 pontos
+						%p Existem animais que comem algumas pragas e podem ajudá-lo. Um casal de aves e suas crias podem consumir até 1000 insectos; a joaninha come até 60 pulgões por dia e os morcegos comem até 3000 borboletas por noite... Se tiver arbustos perto do terreno, as aves vão fazer ninhos e vão ajudá-lo a livrar-se das lagartas!
+						%p Ganha 15 pontos
+			.choice{:score=>5}
+				.title Usa pesticidas químicos seguindo as instruções
+				.consequence.underwater
+					.screen.underwater#animation_4_c
+						.nature
+					.content
+						%p Se escolher usar pesticidas químicos deve seguir as instruções da embalagem. E deve ter em atenção para não utilizar pesticidas quando está chuva e vento para não espalhar o pesticida pelos terrenos à volta.
+						%p Mas sempre que possível deve utilizar produtos aprovados para agricultura biológica, que apesar de serem mais caros, compensam porque não vão contaminar a colheita nem a água.
+						%p Ganha 5 pontos						
 	.screen
-		.question O Manel está a pescar e vê um lobo-marinho a nadar ali perto...
+		.question O António está a fumar um cigarro. Quando termina...
 		.choices
-			.choice{:score=>-10}
-				.title Atira uma bomba para assustar o lobo-marinho
+			.choice{:score=>10}
+				.title Apaga-o e guarda-o para depois colocar no lixo
 				.consequence.underwater
 					.screen.underwater#animation_5_a
 						.bomb
 						.fish
 						.monk-seal						
 					.content
-						%p Atirar uma bomba para o lobo-marinho não é uma atitude sensata pois poderá feri-lo ou matá-lo. Este é um animal que está ameaçado de extinção, pelo que deverá protegê-lo.
-						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Recolhe o peixe que pescou e muda de local de pesca
+						%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
+						%p Ganha 10 pontos 						
+			.choice{:score=>-10}
+				.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
 				.consequence.underwater
 					.screen.underwater#animation_5_b
 						.net
@@ -207,10 +232,11 @@ bodyClass: farmer
 							.num4
 						.monk-seal
 					.content
-						%p O lobo-marinho é um animal curioso e que irá tentar apanhar os peixes que está a pescar. Ao mudar o local de pesca, está a evitar que este animal incomode a sua atividade piscatória.
-						%p Ganha 10 pontos
-			.choice{:score=>-5}
-				.title Continua a pescar
+						%p As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.
+						Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.
+						%p Perde 10 pontos
+			.choice{:score=>-10}
+				.title Esconde-o debaixo de uma pedra
 				.consequence.underwater
 					.screen.underwater#animation_5_c
 						.net
@@ -221,13 +247,14 @@ bodyClass: farmer
 							.num4
 						.monk-seal
 					.content
-						%p Se continuar a pescar no mesmo local, o lobo-marinho irá comer parte do peixe que é pescado por si, e além disso poderá estar a colocar em causa a vida de uma espécie protegida.
-						%p Perde 5 pontos
+						%p Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada. 
+						%p A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.
+						%p Perde 10 pontos.
 	.screen
-		.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…
+		.question O António fez uma monda e tem restos de plantas para deitar fora.
 		.choices
 			.choice{:score=>-10}
-				.title Guarda todos os peixes mesmo os sem valor comercial 
+				.title Atira-os para a levada
 				.consequence.underwater
 					.screen.underwater#animation_6_a
 						.nature
@@ -236,13 +263,10 @@ bodyClass: farmer
 						.money
 						.net
 					.content
-						%p Ao guardar os peixes que não possuem o tamanho mínimo de captura estabelecido por lei, estará a impedir que estes se reproduzam e por isso a diminuir a sua quantidade para o futuro.
-						%p Ao guardar as espécies que não têm interesse comercial, estará a criar um desequilíbrio no meio ambiente sem que daí retire qualquer lucro.
-						%p Os peixes demasiado jovens ou sem interesse comercial deverão ser devolvidos ao mar o mais rapidamente possível, para que possam continuar o seu ciclo de vida.
-						%p Assim, evitará prejudicar o futuro da pesca e danificar a vida marinha.
+						%p Ao deitar o lixo na levada, corre o risco de entupir a levada. Assim, vai estar a desperdiçar água que vai correr fora da levada e vai ter menos água na levada para regar a sua plantação. Isto vai afetar a qualidade e o valor dos seus produtos.
 						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Lança ao mar os peixes jovens
+			.choice{:score=>15}
+				.title Coloca-os no compostor
 				.consequence.underwater
 					.screen.underwater#animation_6_b
 						.nature
@@ -258,13 +282,31 @@ bodyClass: farmer
 							.num5
 							.num6
 					.content
-						%p Existem limites mínimos para o tamanho dos peixes que podem ser capturados e consequentemente vendidos. Lembre-se que não deve retirar do oceano animais que ainda não atingiram a idade de reprodução. Quando detectar que o pescado não cumpre os requisitos para ter valor comercial, é importante que os lance ao mar imediatamente para que possam recuperar e crescer.
-						%p Ganha 10 pontos
+						%p Todos os restos de comida e plantas (lixo orgânico) podem ser postos no compostor. Ao pôr o lixo orgânico no compostor, as minhocas vão decompor os restos e vão libertar minerais para a terra. A terra depois deste processo vai ter melhor qualidade para plantar. Está a melhorar a qualidade da sua colheita sem gastar dinheiro em aditivos e adubos químicos.
+						%p Ganha 15 pontos
+			.choice{:score=>-5}
+				.title Contactar alguém para recolher o material
+				.consequence.underwater
+					.screen.underwater#animation_6_c
+						.nature
+					.content
+						%p Existem empresas que podem recolher os restos de plantas, mas vai estar a pagar para levarem uma coisa que é valiosa para o seu terreno. Se colocar estes restos no compostor vai ter terra com melhor qualidade para plantar. 
+						%p Mas se tem muitos restos e não cabem no compostor, deve retirá-los do terreno para não atrair ratos e não correr riscos de incêndios.
+						%p Perde 5 pontos
+			.choice{:score=>-15}						
+				.title Queima-os
+				.consequence.underwater
+					.screen.underwater#animation_6_d
+						.nature
+					.content
+						%p As queimadas são muito perigosas e podem dar origem a grandes incêndios que destroem plantações, casas e a floresta Laurissilva. Também ao queimar os restos de plantas está a perder minerais essenciais ao crescimento da sua colheita, que são facilmente arrastados para fora do seu terreno pela água da chuva.
+						%p Mas se tiver mesmo de fazer uma queimada avise os bombeiros e os serviços florestais.
+						%p Perde 15 pontos
 	.screen
-		.question O Manel apercebe-se que a rede está danificada, e...
+		.question O António acabou o trabalho no seu terreno e tem plásticos para deitar fora. O que faz com este lixo?
 		.choices
-			.choice{:score=>-10}
-				.title Lança a rede no mar
+			.choice{:score=>-15}
+				.title Atira-os para a levada
 				.consequence.underwater
 					.screen.underwater#animation_7_a
 						.nature.special
@@ -274,11 +316,11 @@ bodyClass: farmer
 						.tangled-fish
 						.passing-boat
 					.content
-						%p Linhas e redes de pesca permanecem no mar por muitos anos após terem sido abandonadas, aprisionando, magoando e por vezes levando à morte, muitos animais marinhos. Lobos-marinhos, golfinhos, tartarugas, baleias e aves são exemplos de animais que são prejudicados por esta má prática.
-						%p Estes materiais à deriva também danificam barcos, prendendo-se nas hélices e estragando o motor. Inquéritos mostram que muitas embarcações já tiveram danos diretamente relacionados com lixo abandonado no oceano.
-						%p Perde 10 pontos
-			.choice{:score=>10}
-				.title Recolhe a rede e remenda-a em terra
+						%p O plástico colocado na água demora mais de 50 anos a se decompor. 
+						%p Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores. 90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.
+						%p Perde 15 pontos
+			.choice{:score=>15}
+				.title Contactar alguém para recolher o lixo
 				.consequence.underwater
 					.screen.underwater#animation_7_b
 						.nature.special
@@ -287,11 +329,11 @@ bodyClass: farmer
 						.broken-net
 						.thought-bubble
 					.content
-						%p Quando terminar a pescaria, deve trazer para terra todo o material de pesca. A opção mais correta é remendar a rede e depois reutilizá-la, assim também não está a contribuir para o aumento do lixo em terra.
-						%p Deixar redes danificadas no oceano irá destruir a vida marinha, o que compromete o futuro da atividade piscatória. Ao abandonar redes e covos no oceano, estes continuam a pescar sozinhos e provocam a morte de muitos peixes e outras espécies de animais.
-						%p Ganha 10 pontos
-			.choice{:score=>5}
-				.title Traz a rede para terra e deita-a no lixo.
+						%p O plástico demora 450 anos a se decompor e provoca danos graves no ambiente. 
+						%p É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum. O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso. 
+						%p Ganha 15 pontos
+			.choice{:score=>15}
+				.title Reciclar o plástico
 				.consequence.underwater
 					.screen.underwater#animation_7_c
 						.nature.special
@@ -302,54 +344,14 @@ bodyClass: farmer
 						.trashcan
 						.trashcan-lid
 					.content
-						%p Quando as redes já não podem ser reutilizadas devem ser trazidas para terra e colocadas no lixo. Mesmo que os aparelhos de pesca se encontrem presos no fundo deverá tentar recuperá-los a todo o custo. O abandono de artes de pesca no oceano causa a morte a um grande número de animais e estragos em muitos barcos. Não só o lixo que é produzido no barco deve ser trazido para terra como também todo o lixo que seja encontrado no oceano.
-						%p Ganha 5 pontos
-	.screen
-		.question Este é o fim do dia de pesca do Manel e existe lixo no barco. O Manel não sabe o que fazer com o lixo...
-		.choices
-			.choice{:score=>-20}
-				.title Atira todo o lixo ao mar
+						%p O plástico é muito tóxico para o meio ambiente mas é dos tipos de lixo que mais se recicla em Portugal. Existem contentores próprios para a reciclagem de plástico, ecopontos amarelos, onde deve colocar as embalagens de plástico.
+						%p Mas tenha cuidado, porque nem todos os plásticos podem ser reciclados, embalagens de comida ainda sujas ou embalagens de produtos tóxicos não podem ser recicladas.
+						%p Ganha 15 pontos
+			.choice{:score=>-15}						
+				.title Atirar para o terreno abandonado
 				.consequence.underwater
-					.screen.underwater#animation_8_a
-						.nature.special
-						.fish-left
-						.fish-right
-						.trash.num1
-						.trash.num2
-						.trash.num3
-						.trash.num4
-						.trash.num5
+					.screen.underwater#animation_7_d
+						.nature
 					.content
-						%p O lixo é um dos principais factores para a diminuição da qualidade da água e da vida dos oceanos.
-						%p O plástico constitui 90% do lixo que se encontra no oceano e afeta a vida marinha e o oceano da seguinte forma: • Existem animais marinhos que confundem o plástico com o seu alimento natural (é o caso das tartarugas, baleias, muitos peixes e aves marinhas) o que pode provocar asfixia, bloqueio do sistema digestivo e morte. O plástico também contém substâncias tóxicas que passam para a água dos oceanos e para todos os seres marinhos.
-						%p Perde 20 pontos
-			.choice{:score=>25}
-				.title Leva o lixo para terra e coloca nos contentores para reciclagem
-				.consequence.underwater
-					.screen.underwater#animation_8_b
-						.nature.special
-						.fish-left
-						.fish-right
-						.thought-bubble					
-					.content
-						%p Um barco de pesca da Madeira gasta por dia, em media, 2 garrafas de plástico; 8 sacos de plástico; 4 garrafas de vidro; 29 embalagens de cartão e papel (incluindo embalagens de tabaco) e 12 pilhas. Agora multiplique esta quantidade pelo número de barcos que pescam na ilha e pelo número de dias do ano e verá a quantidade de lixo que é produzida no mar! 
-						%p É importante que traga todo o lixo para terra e o deposite os contentores para reciclagem. Assim, está a garantir o futuro das espécies e da atividades piscatória.
-						%p Ganha 25 pontos
-			.choice{:score=>-20}
-				.title Atirar as pilhas ao mar
-				.consequence.underwater
-					.screen.underwater#animation_8_c
-						.nature.special
-						.fish-left
-						.fish-right
-						.battery.num1
-						.battery.num2
-						.battery.num3
-						.chemicals
-					.content
-						%p As pilhas contêm mercúrio e chumbo.
-						%p A concentração do mercúrio aumenta com a profundidade. Os peixes que estão no mar que está contaminado com mercúrio, eles absorvem o mercúrio que posteriormente é processado muito lentamente (entre 1 a 3 anos dependendo do tamanho e idade do peixe)
-						%p Quando as pessoas ingerem estes peixes, o mercúrio é absorvido pelo organismo e entra na sua corrente sanguínea, contaminando os tecidos dos rins, fígado, medula óssea, cérebro. No longo prazo, as pessoas que ingerem mercúrio durante muito tempo, podem desenvolver doenças como: hipertensão, doenças de rins, problemas digestivos, anemia, doenças de boca, gengivas e dentes...
-						%p O peixe espada preto encontra-se em águas profundas, com uma natural concentração de mercúrio. Ao contaminar a água com mais mercúrio, está a aumentar a quantidade de mercúrio desta espécie, aumentando assim a probabilidade de transmissão de doenças aos humanos. 
-						%p O chumbo que é libertado pelas pilhas no mar, afecta o pH da água e a sua salinidade alterando e destruindo parte da vida marinha existente no local. Os peixes que se encontram nestas água também ingerem este composto que se acumula no fígado, rins e ovas destes peixes. As pessoas que consomem estes peixes e/ou as ovas, podem desenvolver doenças, tais como paralisia motora, dores de articulações e musculares, fraqueza muscular, comportamentos maníacos e doenças do foro mental, dores abdominais, insónias, etc 
-						%p Perde 20 pontos
+						%p O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno. Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.
+						%p Perde 15 pontos

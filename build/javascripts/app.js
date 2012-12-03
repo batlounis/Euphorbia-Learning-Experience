@@ -64,12 +64,18 @@ $(document).ready(function(){
 		current_screen = current_screen.next();
 		viewModel.reset();
 		
-		$('#control .arrow').removeClass('stop');
-		$('#control .arrow').addClass('swing');
-		current_screen.find('.choices').addClass('come');
-		$('#control').addClass('come');
+		if(!current_screen.hasClass('special')){
+			$('#control .arrow').removeClass('stop');
+			$('#control .arrow').addClass('swing');
+			current_screen.find('.choices').addClass('come');
+			$('#control').addClass('come');
+			$('#throw_button').removeClass('leave');			
+		}else{
+			$('#character').hide();
+			$('#score').hide();
+			$('#continue_journey_button').addClass('come');
+		}
 
-		$('#throw_button').removeClass('leave');
 		return false;
 	}
 	
@@ -93,6 +99,7 @@ $(document).ready(function(){
 	     this.g = ko.observable(10);
 	
 			this.score = ko.observable(0);
+			
 
 	     this.trails = ko.observableArray([]);
 	
