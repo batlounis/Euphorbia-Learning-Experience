@@ -1,0 +1,108 @@
+.farmer{
+	#animation_2_a, #animation_2_b, #animation_2_c, #animation_2_d{
+		$photos: '#{$url}/farmer/2-a-let-it-grow';
+	
+		*:not(.clock){
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1000;
+			background-position: bottom center;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+	
+		.trees{
+			background-image: url(#{$photos}/trees.png);
+		}
+	
+		.vegetables{
+			background-image: url(#{$photos}/vegetables.png);
+			
+			&.future{
+				background-image: url(#{$photos}/vegetables-future.png);
+			}
+		}
+		
+		.maracuja{
+			background-image: url(#{$photos}/maracuja.png);
+		}
+		
+		.maracuja-later-1, .maracuja-later-2{
+			top: 100%;
+			-webkit-transition: top .5s;
+
+			&.pop{
+				top: 0;
+			}
+		}
+		
+		.maracuja-later-1{
+			background-image: url(#{$photos}/maracuja-later-1.png);			
+		}
+		
+		.maracuja-later-2{
+			background-image: url(#{$photos}/maracuja-later-c.png);
+		}
+		
+		.maracuja-later-c{
+			background-image: url(#{$photos}/maracuja-later-2.png);
+		}
+		
+		.bubble{
+			background-image: url(#{$photos}/bubble-1.png);
+			top: -100%;
+			-webkit-transition: top .5s;
+			background-position: top center;
+			
+			&.show{
+				top: 0;
+			}
+			
+			&.second{
+				background-image: url(#{$photos}/bubble-2.png);
+			}
+			
+			&.third{
+				background-image: url(#{$photos}/bubble-3.png);
+			}
+			
+			&.fourth{
+				background-image: url(#{$photos}/bubble-4.png);
+			}
+		}
+		
+		.rat-1{
+			background-image: url(#{$photos}/rat-1.png);
+			left: -100%;
+			-webkit-transition: left 1s;
+			
+			&.come{
+				left: 0;
+			}
+		}
+		
+		.rat-2{
+			background-image: url(#{$photos}/rat-2.png);
+			left: 100%;
+			-webkit-transition: left 1s;
+			
+			&.come{
+				left: 0;
+			}
+		}
+		
+		.peel{
+			background-image: url(#{$photos}/peel.png);
+			top: -100%;
+			-webkit-transition: top .5s;
+			
+			&.drop{
+				top: 0;
+			}
+		}
+	
+	}
+}

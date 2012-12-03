@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	
+	if(!$('body').hasClass('fisherman')){
+		return;
+	}
 	
 	// useful function to count years on screen
 	future_count = function(to_year, in_seconds, screen){

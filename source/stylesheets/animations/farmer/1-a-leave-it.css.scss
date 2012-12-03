@@ -1,0 +1,41 @@
+.farmer{
+	#animation_1_a, #animation_1_b, #animation_1_c{
+		$photos: '#{$url}/farmer/1-a-leave-it';
+	
+		*:not(.clock){
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1000;
+			background-position: bottom center;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+	
+		.levada{
+			background-image: url(#{$photos}/levada.png);
+			
+			&.future{
+				background-image: url(#{$photos}/levada-future.png);
+			}
+		}
+	
+		.trash{
+			background-image: url(#{$photos}/trash.png);
+		}
+	
+		.tree{
+			background-image: url(#{$photos}/tree.png);
+		}
+	
+		.vegetables{
+			background-image: url(#{$photos}/vegetables.png);
+			
+			&.future{
+				background-image: url(#{$photos}/vegetables-future.png);
+			}
+		}
+	}
+}
