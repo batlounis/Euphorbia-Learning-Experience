@@ -1,0 +1,90 @@
+
+.fisherman #animation_8_c{
+	$photos: '#{$url}/fisherman/8-c-throw-batteries';
+	
+	.fish-left{
+		background-image: url(#{$photos}/fish-left.png);
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: bottom left;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		
+		&.swim{		
+			left: 20%;
+			-webkit-transition: left 8s;
+		}
+	}
+	
+	.fish-right{
+		background-image: url(#{$photos}/fish-right.png);
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: bottom right;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		
+		&.swim{
+			left: -20%;
+			-webkit-transition: left 8s;
+		}
+	}
+	
+	.chemicals{
+		background-image: url(#{$photos}/chemicals.png);
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: middle center;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		opacity: 0;
+		-webkit-transition: opacity 1s;
+		
+		&.show{
+			opacity: 1;
+		}
+	}
+	
+	
+	.battery{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: 1000;
+		background-position: top center;
+		position: absolute;
+		top: -100%;
+		left: 0%;
+		-webkit-transition: top 1s;
+		
+		&.show{
+			top: 0;
+		}
+		
+		&.num1{
+			background-image: url(#{$photos}/battery-1.png);
+		}
+		
+		&.num2{
+			background-image: url(#{$photos}/battery-2.png);
+		}
+		
+		&.num3{
+			background-image: url(#{$photos}/battery-3.png);
+		}
+	}
+
+}

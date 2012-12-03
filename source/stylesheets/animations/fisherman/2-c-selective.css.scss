@@ -1,0 +1,85 @@
+
+.fisherman #animation_2_c{
+	$photos: '#{$url}/fisherman/2-c-selective';
+	
+	.nature.special{
+		background-image: url(#{$photos}/nature.png);
+	}
+	
+	.fish-left, .fish-right, .fished-1, .fished-2{
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top center;
+		z-index: 100;
+		position: absolute;
+	}
+	
+	.fished-1{
+		background-image: url(#{$photos}/fished-1.png);
+		background-position: top left;
+		bottom: -100%;
+		-webkit-transition-name: bottom, left;
+		-webkit-transition-duration: 2s;
+		
+		&.fished{
+			bottom: -28%;
+			left: -6%;
+		}
+		
+	}
+	
+	.fished-2{
+		background-image: url(#{$photos}/fished-2.png);
+		background-position: top right;
+		bottom: -100%;
+		-webkit-transition-name: bottom, left;
+		-webkit-transition-duration: 2s;
+		
+		&.fished{
+			bottom: -43%;
+			left: 9%;
+		}
+	}
+	
+	.fish-left{
+		background-image: url(#{$photos}/fish-left.png);
+
+		&.swim{		
+			left: 20%;
+			-webkit-transition: left 8s;
+		}
+	}
+
+	.fish-right{
+		background-image: url(#{$photos}/fish-right.png);
+
+		&.swim{
+			right: 20%;
+			-webkit-transition: right 8s;
+		}
+	}
+	
+	
+	.hooks{
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -100%;
+		z-index: 1000;
+		background-image: url(#{$photos}/hooks.png);
+		-webkit-transition: top 1s;
+		
+		&.show{
+			top: 0;
+		}
+		
+		
+	}
+	
+
+}

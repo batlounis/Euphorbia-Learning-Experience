@@ -121,7 +121,6 @@ body{
 
 // --- UNDERWATER ---
 .underwater.screen{
-	background-image: url(#{$url}/fisherman/background_underwater.png);
 	background-size: cover;
 	background-position: top;
 	-webkit-transition: box-shadow 1s;
@@ -129,6 +128,14 @@ body{
 	&.future{
 		box-shadow: 0 0 7em 3em white inset;		
 	}
+}
+
+.fisherman .underwater.screen{
+	background-image: url(#{$url}/fisherman/background_underwater.png);
+}
+
+.farmer .underwater.screen{
+	background-image: url(#{$url}/farmer/background_underwater.png);
 }
 
 
@@ -543,7 +550,7 @@ $sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 	-webkit-transition: top $c_transition ease-in-out ($sc_freeze + $sc_choices_go_down);
 }
 
-body.fisherman #character{ // had to keep all the tags for precedence (top is also applied on it before)
+body #character{ // had to keep all the tags for precedence (top is also applied on it before)
 	-webkit-transition: top $c_transition ease-in-out 1s;
 
 	&.underwater{
@@ -553,36 +560,42 @@ body.fisherman #character{ // had to keep all the tags for precedence (top is al
 }
 
 
-@import "animations/1-a-reserva";
-@import "animations/1-b-young-fish";
-@import "animations/1-c-grown-fish";
 
-@import "animations/2-a-net";
-@import "animations/2-b-bomb";
-@import "animations/2-c-selective";
+// FARMER ANIMATIONS
 
-@import "animations/3-a-breeding-fish";
-@import "animations/3-b-other-time";
-@import "animations/3-c-other-location";
 
-@import "animations/4-a-organic-water";
-@import "animations/4-b-keep-leftovers";
 
-@import "animations/5-a-seal-bomb";
-@import "animations/5-b-seal-fish-elsewhere";
+// FISHERMAN ANIMATIONS
+@import "animations/fisherman/1-a-reserva";
+@import "animations/fisherman/1-b-young-fish";
+@import "animations/fisherman/1-c-grown-fish";
+
+@import "animations/fisherman/2-a-net";
+@import "animations/fisherman/2-b-bomb";
+@import "animations/fisherman/2-c-selective";
+
+@import "animations/fisherman/3-a-breeding-fish";
+@import "animations/fisherman/3-b-other-time";
+@import "animations/fisherman/3-c-other-location";
+
+@import "animations/fisherman/4-a-organic-water";
+@import "animations/fisherman/4-b-keep-leftovers";
+
+@import "animations/fisherman/5-a-seal-bomb";
+@import "animations/fisherman/5-b-seal-fish-elsewhere";
 // 5-c-continue-fishing same as 5-b
 
-@import "animations/6-a-fish-non-profitable";
-@import "animations/6-b-throw-non-profitable";
+@import "animations/fisherman/6-a-fish-non-profitable";
+@import "animations/fisherman/6-b-throw-non-profitable";
 
-@import "animations/7-a-throw-net";
-@import "animations/7-b-fix-net";
-@import "animations/7-c-net-trashcan";
+@import "animations/fisherman/7-a-throw-net";
+@import "animations/fisherman/7-b-fix-net";
+@import "animations/fisherman/7-c-net-trashcan";
 
-@import "animations/8-a-trash-ocean";
-@import "animations/8-b-trash-recycling";
-@import "animations/8-c-throw-batteries";
+@import "animations/fisherman/8-a-trash-ocean";
+@import "animations/fisherman/8-b-trash-recycling";
+@import "animations/fisherman/8-c-throw-batteries";
 
 
-@import "animations/0-common";
+@import "animations/fisherman/0-common";
 
