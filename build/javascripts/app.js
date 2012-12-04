@@ -1,5 +1,49 @@
 $(document).ready(function(){
 	
+	// tutorial frame sequence
+	
+	playIn(function(){
+		$('#score').hide();
+	}, 0);
+	
+	
+	playIn(function(){
+		$('.tutorial .character-intro').hide();
+		$('.tutorial .advance-control-intro').show();
+	}, 6);
+		
+	playIn(function(){
+		$('.tutorial .advance-control-intro').hide();
+		$('.tutorial .sea-intro').show();
+	}, 15);
+	
+	playIn(function(){
+		$('.tutorial .sea-intro').hide();
+		$('.tutorial .arrow-intro').show();
+	}, 20);
+	
+	playIn(function(){
+		$('.tutorial .arrow-intro').addClass('next');
+	}, 25);
+	
+	playIn(function(){
+		$('.tutorial .arrow-intro').hide();
+		$('.tutorial .good-luck').show();
+	}, 30);
+	
+	playIn(function(){
+		$('.tutorial .good-luck').hide();
+		$('#continue_journey_button').trigger('click');
+	}, 33);
+	
+
+	
+	playIn(function(){
+		$('#score').show();
+	}, 12);
+
+	
+	
 	// prevent scrolling on iOS
 	$(document).bind(
 	  'touchmove',

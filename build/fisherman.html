@@ -7,7 +7,8 @@
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/knockout-2.2.0.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/library.js' type='text/javascript'></script>
-    <script charset='utf-8' src='javascripts/animations.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/animations-fisherman.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/animations-farmer.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/app.js' type='text/javascript'></script>
   </head>
   <body class='fisherman'>
@@ -17,8 +18,8 @@
   <div class='content'></div>
 </div>
 <div id='continue_journey_button'></div>
-<div id='throw_button'></div>
-<div class='come' id='control'>
+<div class='leave' id='throw_button'></div>
+<div id='control'>
   <div class='arrow swing first'></div>
   <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
     <!-- the initial velocity vector -->
@@ -32,6 +33,33 @@
   </svg>
 </div>
 <div id='setting'>
+  <div class='screen tutorial'>
+    <!-- %a.skip_button{:href=>"#", :onclick=>"$('#continue_journey_button').trigger('click');"}Skip -->
+    <div class='screen character-intro'>
+      <div class='indicator'></div>
+      <div class='text'>Este é o Manel pescador</div>
+    </div>
+    <div class='screen advance-control-intro'>
+      <div class='indicator'></div>
+      <div class='continue_journey_button'></div>
+      <div class='text'>para o Manel avançar na aventura tem de carregar aqui</div>
+    </div>
+    <div class='screen sea-intro'>
+      <div class='indicator'></div>
+      <div class='text'>As decisões do Manel...</div>
+    </div>
+    <div class='screen arrow-intro'>
+      <div class='indicator'></div>
+      <div class='sea-background'></div>
+      <div class='throw_button'></div>
+      <div class='text'>este botão controla a cana de pesca</div>
+      <div class='text-next'>ao carregar no botao...</div>
+    </div>
+    <div class='screen good-luck'>
+      <div class='indicator'></div>
+      <div class='text'>Boa Sorte!</div>
+    </div>
+  </div>
   <div class='screen'>
     <div class='question'>Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.</div>
     <div class='choices come'>
@@ -470,9 +498,6 @@
     <div class='final_score' data-bind='text: score'></div>
     <div class='pier'></div>
     <div class='catch' data-bind='css: {"good": score() &gt; 0, "great": score() &gt; 20, "amazing": score() &gt; 40}'></div>
-  </div>
-  <div class='screen special'>
-    hey
   </div>
 </div>
   </body>
