@@ -66,7 +66,7 @@ bodyClass: farmer
 	/ 					%p Perde 10 pontos
 	/ .screen
 	/ 	.question Entre o terreno e a floresta ele vê uma planta de maracujá banana a crescer. O que faz o António?
-	/ 	.choices.come
+	/ 	.choices
 	/ 		.choice{:score=>-10}
 	/ 			.title Deixar a planta a crescer para depois poder comer os maracujás.
 	/ 			.consequence.underwater
@@ -115,56 +115,73 @@ bodyClass: farmer
 	/ 				.content
 	/ 					%p Existem muitas plantas invasoras na Madeira, como a acácia, a bananilha e outras que crescem rapidamente e matam as plantas à volta. É necessário destruí-las para que elas não ocupem todo o espaço e destruam a floresta Laurissilva. As plantas invasoras são muito resistentes e não é fácil destruí-las. Cada planta tem de ser destruída de forma específica, se precisar de ajuda para conhecer e saber como eliminar as plantas invasoras contacte o Serviço do Parque Natural. 
 	/ 					%p Ganha 10 pontos.						
-	/ .screen
-	/ 	.question O António vê um Pombo-trocaz a comer a sua colheita. O que faz?
-	/ 	.choices
-	/ 		.choice{:score=>15}
-	/ 			.title Deixa o Pombo-trocaz comer a plantação
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_3_a
-	/ 					.clock
-	/ 					.nature.special
-	/ 					.fish
-	/ 					.egg
-	/ 				.content
-	/ 					%p O Pombo-trocaz é um dos animais mais importantes da floresta Laurissilva.
-	/ 					%p O pombo come sementes da floresta, e ajuda na renovação da floresta, aumentando o número de plantas da floresta Laurissilva. Esta floresta é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura.
-	/ 					%p Ao deixar o pombo viver está a ajudar a floresta Laurissilva a crescer.
-	/ 					%p Ganha 15 pontos
-	/ 		.choice{:score=>-20}
-	/ 			.title Mata o Pombo-trocaz
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_3_b
-	/ 					.clock
-	/ 					.nature.special
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.calendar
-	/ 				.content
-	/ 					%p O pombo é importante para a renovação da floresta Laurissilva porque ele come as sementes da floresta e ajuda a espalhar as sementes. A floresta Laurissilva é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura. Se matar o pombo, a floresta não vai crescer e vai ter menos água, logo a sua colheita vai ter menos qualidade.
-	/ 					%p O pombo é um animal em extinção e deve ser protegido.
-	/ 					%p Perde 20 pontos
-	/ 		.choice{:score=>20}
-	/ 			.title Afugenta o pombo trocaz
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_3_c
-	/ 					.clock
-	/ 					.nature.special
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.calendar
-	/ 				.content
-	/ 					%p Existem vários métodos para afugentar o pombo e manter o pombo longe do seu terreno. Pode utilizar “espanta pássaros” sonoros que emitem o som de um disparo de vez em quando. Pode utilizar redes que cobrem as plantações, fitas refletoras ou espantalhos. Mas como os animais se habituam, é importante que varie as soluções e o local onde as coloca no seu terreno.
-	/ 					%p O Serviço do Parque Natural pode ajudá-lo a escolher a melhor solução.
-	/ 					%p Ganha 20 pontos
-	/ 		.choice{:score=>-15}
-	/ 			.title Deita veneno nas plantas para matar os Pombos que as comerem
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_3_d
-	/ 					.nature
-	/ 				.content
-	/ 					%p Veneno é um produto muito perigoso para usar na agricultura. O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita. Por isso vai ter colheita de má qualidade e que não pode ser vendida.
-	/ 					%p Perde 15 pontos
+	.screen
+		.question O António vê um Pombo-trocaz a comer a sua colheita. O que faz?
+		.choices.come
+			.choice{:score=>15}
+				.title Deixa o Pombo-trocaz comer a plantação
+				.consequence.underwater
+					.screen.underwater#animation_3_a
+						.grass
+						.levada
+						.crap
+						.crap-tree
+						.pigeon
+						.vegetables
+						.cloud-1
+						.cloud-2
+						.forest
+						.drop
+					.content
+						%p O Pombo-trocaz é um dos animais mais importantes da floresta Laurissilva.
+						%p O pombo come sementes da floresta, e ajuda na renovação da floresta, aumentando o número de plantas da floresta Laurissilva. Esta floresta é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura.
+						%p Ao deixar o pombo viver está a ajudar a floresta Laurissilva a crescer.
+						%p Ganha 15 pontos
+			.choice{:score=>-20}
+				.title Mata o Pombo-trocaz
+				.consequence.underwater
+					.screen.underwater#animation_3_b
+						.grass
+						.levada
+						.pigeon
+						.vegetables
+						.forest
+						.rifle
+						.gunpowder
+					.content
+						%p O pombo é importante para a renovação da floresta Laurissilva porque ele come as sementes da floresta e ajuda a espalhar as sementes. A floresta Laurissilva é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura. Se matar o pombo, a floresta não vai crescer e vai ter menos água, logo a sua colheita vai ter menos qualidade.
+						%p O pombo é um animal em extinção e deve ser protegido.
+						%p Perde 20 pontos
+			.choice{:score=>20}
+				.title Afugenta o pombo trocaz
+				.consequence.underwater
+					.screen.underwater#animation_3_c
+						.grass
+						.levada
+						.pigeon
+						.vegetables
+						.forest
+						.bomb
+						.scarecrow
+						.tape
+					.content
+						%p Existem vários métodos para afugentar o pombo e manter o pombo longe do seu terreno. Pode utilizar “espanta pássaros” sonoros que emitem o som de um disparo de vez em quando. Pode utilizar redes que cobrem as plantações, fitas refletoras ou espantalhos. Mas como os animais se habituam, é importante que varie as soluções e o local onde as coloca no seu terreno.
+						%p O Serviço do Parque Natural pode ajudá-lo a escolher a melhor solução.
+						%p Ganha 20 pontos
+			.choice{:score=>-15}
+				.title Deita veneno nas plantas para matar os Pombos que as comerem
+				.consequence.underwater
+					.screen.underwater#animation_3_d
+						.grass
+						.levada
+						.pigeon
+						.vegetables
+						.forest
+						.poison-1
+						.poison-2
+					.content
+						%p Veneno é um produto muito perigoso para usar na agricultura. O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita. Por isso vai ter colheita de má qualidade e que não pode ser vendida.
+						%p Perde 15 pontos
 	/ .screen
 	/ 	.question O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?
 	/ 	.choices

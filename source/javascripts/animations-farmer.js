@@ -109,4 +109,136 @@ $(document).ready(function(){
 		playIn(function(){showConsequence(consequence)}, 1);
 	}
 	
+	animation_3_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.crap').addClass('come');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.crap-tree').addClass('grow');
+		}, 9);
+		
+		playIn(function(){ 
+			sub_screen.find('.cloud-1').addClass('go');
+			sub_screen.find('.pigeon').addClass('leave');
+		}, 10);
+		
+		playIn(function(){ 
+			sub_screen.find('.cloud-2').addClass('come');
+		}, 11);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('appear');
+		}, 13);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('second');
+		}, 14);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('third');
+		}, 15);
+				
+		playIn(function(){showConsequence(consequence)}, 16);
+	}
+	
+	
+	animation_3_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.rifle').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.gunpowder').addClass('appear');
+			sub_screen.find('.pigeon').addClass('dead');
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetable').addClass('future');
+		}, 7);
+				
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_3_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.bomb').addClass('show');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.bomb').removeClass('show');
+			sub_screen.find('.scarecrow').addClass('show');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.scarecrow').removeClass('show');
+			sub_screen.find('.tape').addClass('show');
+		}, 7);
+		
+				
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_3_d = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.rifle').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison-1').addClass('show');
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison-2').addClass('show');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('dead');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 7);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 8);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetable').addClass('future');
+		}, 9);
+				
+		playIn(function(){showConsequence(consequence)}, 11);
+	}
+	
+	
+	
 });
