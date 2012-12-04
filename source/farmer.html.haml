@@ -182,93 +182,89 @@ bodyClass: farmer
 	/ 				.content
 	/ 					%p Veneno é um produto muito perigoso para usar na agricultura. O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita. Por isso vai ter colheita de má qualidade e que não pode ser vendida.
 	/ 					%p Perde 15 pontos
-	.screen
-		.question O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?
-		.choices.come
-			.choice{:score=>-15}
-				.title Usar pesticidas químicos aumentando as quantidades e concentrações recomendadas
-				.consequence.underwater
-					.screen.underwater#animation_4_a
-						.caterpillars-left
-						.caterpillars-right
-						.levada
-						.poison
-						.tree
-						.vegetables						
-					.content
-						%p Lá porque as lagartas são grandes não vai usar mais pesticida do que o indicado. Os pesticidas não matam só as pragas mas contaminam a colheita e a água. Se usar pesticidas sem respeitar as instruções o seu terreno vai ficar contaminado e não vai poder vender a sua colheita. Além disso o excesso de pesticida vai ser arrastado pela água da chuva e pelo vento e vai contaminar os terrenos à volta.
-						%p Perde 15 pontos						
-			.choice{:score=>15}
-				.title Usa outras plantas e animais para controlar as pragas.
-				.consequence.underwater
-					.screen.underwater#animation_4_b
-						.caterpillars-left
-						.caterpillars-right
-						.birds-left
-						.birds-right
-						.levada
-						.tree
-						.vegetables
-					.content
-						%p Existem animais que comem algumas pragas e podem ajudá-lo. Um casal de aves e suas crias podem consumir até 1000 insectos; a joaninha come até 60 pulgões por dia e os morcegos comem até 3000 borboletas por noite... Se tiver arbustos perto do terreno, as aves vão fazer ninhos e vão ajudá-lo a livrar-se das lagartas!
-						%p Ganha 15 pontos
-			.choice{:score=>5}
-				.title Usa pesticidas químicos seguindo as instruções
-				.consequence.underwater
-					.screen.underwater#animation_4_c
-						.caterpillars-left
-						.caterpillars-right
-						.levada
-						.poison
-						.tree
-						.vegetables
-					.content
-						%p Se escolher usar pesticidas químicos deve seguir as instruções da embalagem. E deve ter em atenção para não utilizar pesticidas quando está chuva e vento para não espalhar o pesticida pelos terrenos à volta.
-						%p Mas sempre que possível deve utilizar produtos aprovados para agricultura biológica, que apesar de serem mais caros, compensam porque não vão contaminar a colheita nem a água.
-						%p Ganha 5 pontos
 	/ .screen
-	/ 	.question O António está a fumar um cigarro. Quando termina...
+	/ 	.question O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?
 	/ 	.choices
-	/ 		.choice{:score=>10}
-	/ 			.title Apaga-o e guarda-o para depois colocar no lixo
+	/ 		.choice{:score=>-15}
+	/ 			.title Usar pesticidas químicos aumentando as quantidades e concentrações recomendadas
 	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_5_a
-	/ 					.bomb
-	/ 					.fish
-	/ 					.monk-seal						
+	/ 				.screen.underwater#animation_4_a
+	/ 					.caterpillars-left
+	/ 					.caterpillars-right
+	/ 					.levada
+	/ 					.poison
+	/ 					.tree
+	/ 					.vegetables						
 	/ 				.content
-	/ 					%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
-	/ 					%p Ganha 10 pontos 						
-	/ 		.choice{:score=>-10}
-	/ 			.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
+	/ 					%p Lá porque as lagartas são grandes não vai usar mais pesticida do que o indicado. Os pesticidas não matam só as pragas mas contaminam a colheita e a água. Se usar pesticidas sem respeitar as instruções o seu terreno vai ficar contaminado e não vai poder vender a sua colheita. Além disso o excesso de pesticida vai ser arrastado pela água da chuva e pelo vento e vai contaminar os terrenos à volta.
+	/ 					%p Perde 15 pontos						
+	/ 		.choice{:score=>15}
+	/ 			.title Usa outras plantas e animais para controlar as pragas.
 	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_5_b
-	/ 					.net
-	/ 					.fish-group
-	/ 						.num1
-	/ 						.num2
-	/ 						.num3
-	/ 						.num4
-	/ 					.monk-seal
+	/ 				.screen.underwater#animation_4_b
+	/ 					.caterpillars-left
+	/ 					.caterpillars-right
+	/ 					.birds-left
+	/ 					.birds-right
+	/ 					.levada
+	/ 					.tree
+	/ 					.vegetables
 	/ 				.content
-	/ 					%p As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.
-	/ 					Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.
-	/ 					%p Perde 10 pontos
-	/ 		.choice{:score=>-10}
-	/ 			.title Esconde-o debaixo de uma pedra
+	/ 					%p Existem animais que comem algumas pragas e podem ajudá-lo. Um casal de aves e suas crias podem consumir até 1000 insectos; a joaninha come até 60 pulgões por dia e os morcegos comem até 3000 borboletas por noite... Se tiver arbustos perto do terreno, as aves vão fazer ninhos e vão ajudá-lo a livrar-se das lagartas!
+	/ 					%p Ganha 15 pontos
+	/ 		.choice{:score=>5}
+	/ 			.title Usa pesticidas químicos seguindo as instruções
 	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_5_c
-	/ 					.net
-	/ 					.fish-group
-	/ 						.num1
-	/ 						.num2
-	/ 						.num3
-	/ 						.num4
-	/ 					.monk-seal
+	/ 				.screen.underwater#animation_4_c
+	/ 					.caterpillars-left
+	/ 					.caterpillars-right
+	/ 					.levada
+	/ 					.poison
+	/ 					.tree
+	/ 					.vegetables
 	/ 				.content
-	/ 					%p Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada. 
-	/ 					%p A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.
-	/ 					%p Perde 10 pontos.
+	/ 					%p Se escolher usar pesticidas químicos deve seguir as instruções da embalagem. E deve ter em atenção para não utilizar pesticidas quando está chuva e vento para não espalhar o pesticida pelos terrenos à volta.
+	/ 					%p Mas sempre que possível deve utilizar produtos aprovados para agricultura biológica, que apesar de serem mais caros, compensam porque não vão contaminar a colheita nem a água.
+	/ 					%p Ganha 5 pontos
+	.screen
+		.question O António está a fumar um cigarro. Quando termina...
+		.choices.come
+			.choice{:score=>10}
+				.title Apaga-o e guarda-o para depois colocar no lixo
+				.consequence.underwater
+					.screen.underwater#animation_5_a
+						.forest
+						.vegetables
+						.speech-bubble
+						.cigarette-1
+					.content
+						%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
+						%p Ganha 10 pontos 						
+			.choice{:score=>-10}
+				.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
+				.consequence.underwater
+					.screen.underwater#animation_5_b
+						.forest
+						.vegetables
+						.cigarette-2
+						.fire
+					.content
+						%p As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.
+						%p Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.
+						%p Perde 10 pontos
+			.choice{:score=>-10}
+				.title Esconde-o debaixo de uma pedra
+				.consequence.underwater
+					.screen.underwater#animation_5_c
+						.forest
+						.vegetables
+						.cigarette-3
+						.rock
+						.contamination
+					.content
+						%p Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada. 
+						%p A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.
+						%p Perde 10 pontos.
 	/ .screen
 	/ 	.question O António fez uma monda e tem restos de plantas para deitar fora.
 	/ 	.choices

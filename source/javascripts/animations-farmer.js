@@ -305,6 +305,46 @@ $(document).ready(function(){
 		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
+	animation_5_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.speech-bubble').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.cigarette-1').addClass('come');
+		}, 2);
+				
+		playIn(function(){showConsequence(consequence)}, 4);
+	}
+	
+	animation_5_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.cigarette-2').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.fire').addClass('come');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_5_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.cigarette-3').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.contamination').addClass('appear');
+		}, 3);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
 	
 	
 });
