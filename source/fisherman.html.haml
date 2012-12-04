@@ -8,8 +8,8 @@ bodyClass: fisherman
 #consequence
 	.content
 #continue_journey_button
-#throw_button
-#control.come
+#throw_button.leave
+#control
 	.arrow.swing.first
 	%svg.trajectory{:xmlns=>'http://www.w3.org/2000/svg', 'xmlns:xlink'=>'http://www.w3.org/1999/xlink'}
 		/ the initial velocity vector
@@ -25,6 +25,27 @@ bodyClass: fisherman
 
 
 #setting
+	.screen.tutorial
+		%a.skip_button{:href=>"#", :onclick=>"$('#continue_journey_button').trigger('click');"}Skip
+		.screen.character-intro			
+			.indicator
+			.text Este é o Manel pescador
+		.screen.advance-control-intro			
+			.indicator
+			.continue_journey_button
+			.text para o Manel avançar na aventura tem de carregar aqui
+		.screen.sea-intro
+			.indicator
+			.text As decisões do Manel...
+		.screen.arrow-intro
+			.indicator
+			.sea-background
+			.throw_button
+			.text este botão controla a cana de pesca
+			.text-next ao carregar no botao...
+		.screen.good-luck
+			.indicator
+			.text Boa Sorte!
 	.screen
 		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
 		.choices.come

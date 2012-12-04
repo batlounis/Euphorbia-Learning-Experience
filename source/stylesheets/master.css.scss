@@ -119,6 +119,170 @@ body{
 	}
 }
 
+.tutorial{
+	
+	.skip_button{
+		position: absolute;
+		z-index: 5000;
+		right: 3%;
+		top: 3%;
+				
+	}
+	
+	.screen{
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		background-position: center center;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		
+		&.character-intro{
+			display:block;
+		}
+	}
+	
+	*{
+		color: white;
+	}
+	
+	.text{
+		width: 30%;
+		z-index: 4000;
+	}
+	
+	.indicator{
+		background-size: contain;
+		background-position: top center;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1000;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+	}
+	
+	.character-intro{
+		.indicator{
+			background-image: url(#{$url}/tutorial/frame1.png);
+		}
+		
+		.text{
+			position: absolute;
+			left: 10%;
+			top: 10%;
+		}
+	}
+		
+	.advance-control-intro{		
+		.indicator{
+			background-image: url(#{$url}/tutorial/frame2_arrow.png);
+			background-position: bottom right;
+		}
+		
+		.continue_journey_button{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 40%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom right;
+		}
+
+		.text{
+			position: absolute;
+			right: 10%;
+			bottom: 50%;
+			text-align: right;
+		}
+	}
+	
+	.sea-intro{
+		.indicator{
+			background-image: url(#{$url}/tutorial/frame3.png);
+			background-position: bottom center;
+		}
+		
+		.text{
+			position: absolute;
+			left: 10%;
+			top: 10%;
+		}
+	}
+	
+	.arrow-intro{
+		.indicator{
+			background-image: url(#{$url}/tutorial/frame4_rod_arrow.png);
+			background-position: bottom center;
+			background-size: cover;
+		}
+		
+		&.next .indicator{
+			background-image: url(#{$url}/tutorial/frame5_rod_range.png);
+			background-position: bottom center;
+			background-size: cover;
+		}
+		
+		.text-next{ display: none; }
+		
+		&.next .text{
+			display: none;
+		}
+		
+		&.next .text-next{
+			display: block;
+			position: absolute;
+			left: 20%;
+			top: 23%;
+			z-index: 2000;
+		}
+		
+		.sea-background{
+			background-image: url(#{$url}/tutorial/frame3.png);
+			background-position: bottom center;
+			background-size: contain;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 10;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+		
+		.text{
+			position: absolute;
+			left: 20%;
+			top: 40%;
+		}
+	}
+	
+	.good-luck{
+		.indicator{
+			background-image: url(#{$url}/tutorial/frame6.png);
+			background-position: bottom center;
+			background-size: cover
+		}
+		
+		.text{
+			position: absolute;
+			left: 0%;
+			width: 100%;
+			text-align: center;
+			top: 10%;
+		}
+	}
+}
+
 // --- UNDERWATER ---
 .underwater.screen{
 	background-size: cover;
@@ -297,11 +461,11 @@ footer{
 	z-index: 500;
 }
 
-.fisherman #continue_journey_button{
+.fisherman #continue_journey_button, .fisherman .continue_journey_button{
 		background-image: url(#{$url}/fisherman/continue-button.png);
 }
 
-.farmer #continue_journey_button{
+.farmer #continue_journey_button, .farmer .continue_journey_button{
 		background-image: url(#{$url}/farmer/continue-button.png);
 }
 
@@ -314,7 +478,7 @@ footer{
 	right: 0;
 	width: 40%;
 	height: 100%;
-	z-index: 500;
+	z-index: 3000;
 	cursor: pointer;
 }
 
@@ -328,15 +492,15 @@ footer{
 	height: 100%;
 }
 
-.fisherman #throw_button{
+.fisherman #throw_button, .fisherman .throw_button{
 	background-image: url(#{$url}/fisherman/throw-button.png);
 }
 
-.farmer #throw_button{
+.farmer #throw_button, .farmer .throw_button{
 	background-image: url(#{$url}/farmer/throw-button.png);
 }
 
-#throw_button{
+#throw_button, .throw_button{
 	display: block;
 	background-repeat: no-repeat;
 	background-size: contain;
