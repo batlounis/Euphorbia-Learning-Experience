@@ -35,7 +35,7 @@ $(document).ready(function(){
 	animation_1_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			future_count(2020, 2, sub_screen);
+			// future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -345,6 +345,109 @@ $(document).ready(function(){
 		playIn(function(){showConsequence(consequence)}, 5);
 	}
 	
+	animation_6_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+			// future_count(2020, 2, sub_screen);
+		}, 2);
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_6_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.compost').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.trash-compost').addClass('come');
+		}, 2);
+
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 4);	
+	}
+	
+	animation_6_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.truck').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.trash-truck').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 5);
+		
+		playIn(function(){showConsequence(consequence)}, 6);	
+	}
+	
+	animation_6_d = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.trash-fire').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('burned');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.plastic').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.sea').addClass('appear');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.truck').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.plastic-truck').addClass('come');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.trash-group').addClass('show');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.recycle-bubble').addClass('show');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_d = function(consequence, sub_screen){		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-bubble').addClass('show');
+		}, 0);
+		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-trash').addClass('show');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-bubble').addClass('future');
+		}, 4);
+		
+		playIn(function(){showConsequence(consequence)}, 6);	
+	}
 	
 	
 });

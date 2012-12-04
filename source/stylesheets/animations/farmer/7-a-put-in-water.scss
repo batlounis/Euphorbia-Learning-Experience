@@ -1,0 +1,124 @@
+.farmer{
+	#animation_7_a, #animation_7_b, #animation_7_c, #animation_7_d{
+		$photos: '#{$url}/farmer/7-a-put-in-water';
+	
+		*:not(.clock){
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 1000;
+			background-position: bottom center;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+		
+		.levada{
+			background-image: url(#{$photos}/levada.png);
+		}
+		
+		.vegetables{
+			background-image: url(#{$photos}/vegetables.png);
+		}
+		
+		
+		.tree{
+			background-image: url(#{$photos}/tree.png);
+			background-position: bottom left;
+		}
+		
+		.sea{
+			background-image: url(#{$photos}/sea.png);
+			top: 100%;
+			-webkit-transition: top 2s;
+			
+			&.appear{
+				top: 0;
+			}
+		}
+		
+		.plastic{
+			top: -100%;
+			-webkit-transition: top 2s;
+			
+			&.come{
+				top: 0;
+			}
+			
+			&.first{
+				background-image: url(#{$photos}/plastic-1.png);
+				-webkit-transition-delay: 0;
+			}
+			
+			&.second{
+				background-image: url(#{$photos}/plastic-2.png);
+				-webkit-transition-delay: .5s;
+			}
+			
+			&.third{
+				background-image: url(#{$photos}/plastic-3.png);
+				-webkit-transition-delay: 1s;
+			}
+		}
+		
+		
+		.plastic-truck{
+			top: -100%;
+			-webkit-transition: top 2s;
+			background-image: url(#{$photos}/plastic-truck.png);
+			background-position: center bottom;
+			z-index: 2000;
+			
+			&.come{
+				top: 0;
+			}
+		}
+		
+		
+		.truck{
+			background-image: url(#{$photos}/truck.png);
+			background-position: center bottom;
+			left: -100%;
+			-webkit-transition: left 2s;
+			z-index: 2300;
+			
+			&.come{
+				left: 0;
+			}
+		}
+		
+		.recycle-bubble, .trash-group, .abandoned-trash, .abandoned-bubble{
+			top: -100%;
+			-webkit-transition: top .5s;
+			background-position: top center;
+			
+			&.show{
+				top: 0;
+			}
+		}
+		
+		.recycle-bubble{
+			background-image: url(#{$photos}/recycle-bubble.png);
+		}
+		
+		.trash-group{
+			background-image: url(#{$photos}/trash-group.png);
+		}
+		
+		.abandoned-trash{
+			background-image: url(#{$photos}/abandoned-trash.png);
+		}
+		
+		.abandoned-bubble{
+			background-image: url(#{$photos}/abandoned-bubble.png);
+			
+			&.future{
+				background-image: url(#{$photos}/abandoned-bubble-future.png);
+			}
+		}
+		
+		
+	
+	}
+}

@@ -226,45 +226,45 @@ bodyClass: farmer
 	/ 					%p Se escolher usar pesticidas químicos deve seguir as instruções da embalagem. E deve ter em atenção para não utilizar pesticidas quando está chuva e vento para não espalhar o pesticida pelos terrenos à volta.
 	/ 					%p Mas sempre que possível deve utilizar produtos aprovados para agricultura biológica, que apesar de serem mais caros, compensam porque não vão contaminar a colheita nem a água.
 	/ 					%p Ganha 5 pontos
-	.screen
-		.question O António está a fumar um cigarro. Quando termina...
-		.choices.come
-			.choice{:score=>10}
-				.title Apaga-o e guarda-o para depois colocar no lixo
-				.consequence.underwater
-					.screen.underwater#animation_5_a
-						.forest
-						.vegetables
-						.speech-bubble
-						.cigarette-1
-					.content
-						%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
-						%p Ganha 10 pontos 						
-			.choice{:score=>-10}
-				.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
-				.consequence.underwater
-					.screen.underwater#animation_5_b
-						.forest
-						.vegetables
-						.cigarette-2
-						.fire
-					.content
-						%p As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.
-						%p Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.
-						%p Perde 10 pontos
-			.choice{:score=>-10}
-				.title Esconde-o debaixo de uma pedra
-				.consequence.underwater
-					.screen.underwater#animation_5_c
-						.forest
-						.vegetables
-						.cigarette-3
-						.rock
-						.contamination
-					.content
-						%p Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada. 
-						%p A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.
-						%p Perde 10 pontos.
+	/ .screen
+	/ 	.question O António está a fumar um cigarro. Quando termina...
+	/ 	.choices
+	/ 		.choice{:score=>10}
+	/ 			.title Apaga-o e guarda-o para depois colocar no lixo
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_a
+	/ 					.forest
+	/ 					.vegetables
+	/ 					.speech-bubble
+	/ 					.cigarette-1
+	/ 				.content
+	/ 					%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
+	/ 					%p Ganha 10 pontos 						
+	/ 		.choice{:score=>-10}
+	/ 			.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_b
+	/ 					.forest
+	/ 					.vegetables
+	/ 					.cigarette-2
+	/ 					.fire
+	/ 				.content
+	/ 					%p As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.
+	/ 					%p Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.
+	/ 					%p Perde 10 pontos
+	/ 		.choice{:score=>-10}
+	/ 			.title Esconde-o debaixo de uma pedra
+	/ 			.consequence.underwater
+	/ 				.screen.underwater#animation_5_c
+	/ 					.forest
+	/ 					.vegetables
+	/ 					.cigarette-3
+	/ 					.rock
+	/ 					.contamination
+	/ 				.content
+	/ 					%p Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada. 
+	/ 					%p A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.
+	/ 					%p Perde 10 pontos.
 	/ .screen
 	/ 	.question O António fez uma monda e tem restos de plantas para deitar fora.
 	/ 	.choices
@@ -272,11 +272,11 @@ bodyClass: farmer
 	/ 			.title Atira-os para a levada
 	/ 			.consequence.underwater
 	/ 				.screen.underwater#animation_6_a
-	/ 					.nature
-	/ 					.fish-profitable
-	/ 					.fish-non-profitable
-	/ 					.money
-	/ 					.net
+	/ 					.levada
+	/ 					.trash
+	/ 					.tree
+	/ 					.vegetables
+	/ 					.clock
 	/ 				.content
 	/ 					%p Ao deitar o lixo na levada, corre o risco de entupir a levada. Assim, vai estar a desperdiçar água que vai correr fora da levada e vai ter menos água na levada para regar a sua plantação. Isto vai afetar a qualidade e o valor dos seus produtos.
 	/ 					%p Perde 10 pontos
@@ -284,18 +284,11 @@ bodyClass: farmer
 	/ 			.title Coloca-os no compostor
 	/ 			.consequence.underwater
 	/ 				.screen.underwater#animation_6_b
-	/ 					.nature
-	/ 					.net
-	/ 					.clock
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.fish-group
-	/ 						.num1
-	/ 						.num2
-	/ 						.num3
-	/ 						.num4
-	/ 						.num5
-	/ 						.num6
+	/ 					.levada
+	/ 					.tree
+	/ 					.vegetables
+	/ 					.compost
+	/ 					.trash-compost
 	/ 				.content
 	/ 					%p Todos os restos de comida e plantas (lixo orgânico) podem ser postos no compostor. Ao pôr o lixo orgânico no compostor, as minhocas vão decompor os restos e vão libertar minerais para a terra. A terra depois deste processo vai ter melhor qualidade para plantar. Está a melhorar a qualidade da sua colheita sem gastar dinheiro em aditivos e adubos químicos.
 	/ 					%p Ganha 15 pontos
@@ -303,7 +296,11 @@ bodyClass: farmer
 	/ 			.title Contactar alguém para recolher o material
 	/ 			.consequence.underwater
 	/ 				.screen.underwater#animation_6_c
-	/ 					.nature
+	/ 					.levada
+	/ 					.tree
+	/ 					.vegetables
+	/ 					.truck
+	/ 					.trash-truck
 	/ 				.content
 	/ 					%p Existem empresas que podem recolher os restos de plantas, mas vai estar a pagar para levarem uma coisa que é valiosa para o seu terreno. Se colocar estes restos no compostor vai ter terra com melhor qualidade para plantar. 
 	/ 					%p Mas se tem muitos restos e não cabem no compostor, deve retirá-los do terreno para não atrair ratos e não correr riscos de incêndios.
@@ -312,61 +309,72 @@ bodyClass: farmer
 	/ 			.title Queima-os
 	/ 			.consequence.underwater
 	/ 				.screen.underwater#animation_6_d
-	/ 					.nature
+	/ 					.levada
+	/ 					.forest
+	/ 					.vegetables
+	/ 					.trash-fire
 	/ 				.content
 	/ 					%p As queimadas são muito perigosas e podem dar origem a grandes incêndios que destroem plantações, casas e a floresta Laurissilva. Também ao queimar os restos de plantas está a perder minerais essenciais ao crescimento da sua colheita, que são facilmente arrastados para fora do seu terreno pela água da chuva.
 	/ 					%p Mas se tiver mesmo de fazer uma queimada avise os bombeiros e os serviços florestais.
 	/ 					%p Perde 15 pontos
-	/ .screen
-	/ 	.question O António acabou o trabalho no seu terreno e tem plásticos para deitar fora. O que faz com este lixo?
-	/ 	.choices
-	/ 		.choice{:score=>-15}
-	/ 			.title Atira-os para a levada
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_7_a
-	/ 					.nature.special
-	/ 					.shredded-net
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.tangled-fish
-	/ 					.passing-boat
-	/ 				.content
-	/ 					%p O plástico colocado na água demora mais de 50 anos a se decompor. 
-	/ 					%p Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores. 90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.
-	/ 					%p Perde 15 pontos
-	/ 		.choice{:score=>15}
-	/ 			.title Contactar alguém para recolher o lixo
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_7_b
-	/ 					.nature.special
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.broken-net
-	/ 					.thought-bubble
-	/ 				.content
-	/ 					%p O plástico demora 450 anos a se decompor e provoca danos graves no ambiente. 
-	/ 					%p É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum. O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso. 
-	/ 					%p Ganha 15 pontos
-	/ 		.choice{:score=>15}
-	/ 			.title Reciclar o plástico
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_7_c
-	/ 					.nature.special
-	/ 					.fish-left
-	/ 					.fish-right
-	/ 					.broken-net
-	/ 					.thought-bubble
-	/ 					.trashcan
-	/ 					.trashcan-lid
-	/ 				.content
-	/ 					%p O plástico é muito tóxico para o meio ambiente mas é dos tipos de lixo que mais se recicla em Portugal. Existem contentores próprios para a reciclagem de plástico, ecopontos amarelos, onde deve colocar as embalagens de plástico.
-	/ 					%p Mas tenha cuidado, porque nem todos os plásticos podem ser reciclados, embalagens de comida ainda sujas ou embalagens de produtos tóxicos não podem ser recicladas.
-	/ 					%p Ganha 15 pontos
-	/ 		.choice{:score=>-15}						
-	/ 			.title Atirar para o terreno abandonado
-	/ 			.consequence.underwater
-	/ 				.screen.underwater#animation_7_d
-	/ 					.nature
-	/ 				.content
-	/ 					%p O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno. Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.
-	/ 					%p Perde 15 pontos
+	.screen
+		.question O António acabou o trabalho no seu terreno e tem plásticos para deitar fora. O que faz com este lixo?
+		.choices.come
+			.choice{:score=>-15}
+				.title Atira-os para a levada
+				.consequence.underwater
+					.screen.underwater#animation_7_a
+						.levada
+						.plastic.first
+						.plastic.second
+						.plastic.third
+						.sea
+						.tree
+						.vegetables
+					.content
+						%p O plástico colocado na água demora mais de 50 anos a se decompor. 
+						%p Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores. 90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.
+						%p Perde 15 pontos
+			.choice{:score=>15}
+				.title Contactar alguém para recolher o lixo
+				.consequence.underwater
+					.screen.underwater#animation_7_b
+						.levada
+						.truck
+						.plastic-truck
+						.tree
+						.vegetables
+					.content
+						%p O plástico demora 450 anos a se decompor e provoca danos graves no ambiente. 
+						%p É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum. O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso. 
+						%p Ganha 15 pontos
+			.choice{:score=>15}
+				.title Reciclar o plástico
+				.consequence.underwater
+					.screen.underwater#animation_7_c
+						.levada
+						.tree
+						.vegetables
+						.trash-group
+						.recycle-bubble
+					.content
+						%p O plástico é muito tóxico para o meio ambiente mas é dos tipos de lixo que mais se recicla em Portugal. Existem contentores próprios para a reciclagem de plástico, ecopontos amarelos, onde deve colocar as embalagens de plástico.
+						%p Mas tenha cuidado, porque nem todos os plásticos podem ser reciclados, embalagens de comida ainda sujas ou embalagens de produtos tóxicos não podem ser recicladas.
+						%p Ganha 15 pontos
+			.choice{:score=>-15}						
+				.title Atirar para o terreno abandonado
+				.consequence.underwater
+					.screen.underwater#animation_7_d
+						.levada
+						.tree
+						.vegetables
+						.abandoned-bubble
+						.abandoned-trash
+					.content
+						%p O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno. Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.
+						%p Perde 15 pontos
+	.screen.special
+		.question Parabéns foi um excelente agricultor o futuro da agricultura e a continuidade das espécies está garantido
+		.final_score{'data-bind'=>'text: score'}
+		.pier
+		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
