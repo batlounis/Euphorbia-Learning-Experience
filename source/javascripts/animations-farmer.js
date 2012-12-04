@@ -239,6 +239,72 @@ $(document).ready(function(){
 		playIn(function(){showConsequence(consequence)}, 11);
 	}
 	
+	animation_4_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('show');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('future');
+			sub_screen.find('.caterpillars-left').hide();
+			sub_screen.find('.caterpillars-right').hide();
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.tree').addClass('future');
+		}, 7);
+				
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_4_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.birds-left').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.birds-right').addClass('come');
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_4_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('show');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').hide();
+			sub_screen.find('.caterpillars-right').hide();
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
 	
 	
 });

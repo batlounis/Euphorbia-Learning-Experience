@@ -1,0 +1,49 @@
+.farmer{
+	#animation_5_a, #animation_5_b, #animation_5_c{
+		$photos: '#{$url}/farmer/5-a-ashtray';
+	
+		*:not(.clock){
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 1000;
+			background-position: bottom center;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+		
+		.speech-bubble, .cigarette{
+			background-position: top center;
+			-webkit-transition: top 2s;
+			z-index: 2000;
+			top: -100%;
+			
+			&.come{
+				top: 0%;
+			}
+			
+			.speech-bubble{
+				background-image: url(#{$photos}/speech-bubble.png);
+			}
+			
+			.cigarette{
+				background-image: url(#{$photos}/ashtray.png);
+			}
+			
+			.forest{
+				background-image: url(#{$photos}/forest.png);
+				background-position: bottom left;
+			}
+			
+			.vegetables{
+				background-image: url(#{$photos}/vegetables.png);
+			}
+			
+		}
+		
+		
+	
+	}
+}
