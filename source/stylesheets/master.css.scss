@@ -220,15 +220,29 @@ body{
 	
 	.arrow-intro{
 		.indicator{
-			background-image: url(#{$url}/tutorial/frame4_rod_arrow.png);
 			background-position: bottom center;
 			background-size: cover;
+			
+			&.fisherman{
+				background-image: url(#{$url}/tutorial/frame4_rod_arrow.png);
+			}
+			
+			&.farmer{
+				background-image: url(#{$url}/tutorial/frame4_farmer_arrow.png);
+			}
 		}
 		
 		&.next .indicator{
-			background-image: url(#{$url}/tutorial/frame5_rod_range.png);
 			background-position: bottom center;
 			background-size: cover;
+			
+			&.fisherman{
+				background-image: url(#{$url}/tutorial/frame5_rod_range.png);
+			}
+			
+			&.farmer{
+				background-image: url(#{$url}/tutorial/frame5_farmer_range.png);
+			}
 		}
 		
 		.text-next{ display: none; }
