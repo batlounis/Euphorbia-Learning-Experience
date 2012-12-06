@@ -633,7 +633,6 @@ $sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 	top: -100%;
 	
 	&.come{
-		-webkit-transition: top $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay);
 		top: 15%;
 	}
 }

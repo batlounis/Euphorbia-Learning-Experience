@@ -23,11 +23,10 @@ bodyClass: farmer
 		/ the simulation object
 		%circle{:r=>'8', 'style'=>'stroke: white;', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 
-
 #setting
 	.screen.tutorial
 		%a#skip_tutorial{:href=>"#"}Skip
-		.screen.character-intro			
+		.screen.character-intro
 			.indicator
 			.text Este é o António, o agricultor
 		.screen.advance-control-intro
@@ -51,6 +50,7 @@ bodyClass: farmer
 			.text Boa Sorte!
 	.screen
 		.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...
+		%audio{:src=>'/audio/q1.m4a', :autoplay=>false, :controls=>false}
 		.choices.come
 			.choice{:score=>-10}
 				.title Deixa assim, quem usa a água primeiro que limpe
@@ -65,6 +65,7 @@ bodyClass: farmer
 						%p A água é um recurso muito valioso para a agricultura, por isso é importante que as pessoas a utilizem de forma responsável.
 						%p Se deixar o lixo na levada, a água vai ficar contaminada e vai desperdiçar parte da água. Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.
 						%p Perde 10 pontos
+						%audio{:src=>'/audio/q1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Limpa a levada
 				.consequence.underwater
