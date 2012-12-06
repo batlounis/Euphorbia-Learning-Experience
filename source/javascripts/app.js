@@ -155,7 +155,33 @@ $(document).ready(function(){
 		}
 		last_tutorial_step();
 		return false;
+	});
+	
+	
+	// Gallery browsing
+	$('#gallery_down').click(function(){
+		var doc = $('.drawings section');
+		var doc_height = parseInt(doc.css('height'));
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(-current_top+window_height < doc_height){
+			doc.css('top', (current_top-window_height).toString()+'px');
+		}else{
+			doc.css('top', (-doc_height+window_height).toString()+'px');
+		}
 	})
+	
+	$('#gallery_up').click(function(){
+		var doc = $('.drawings section');
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(current_top + window_height < 0){
+			doc.css('top', (current_top+window_height).toString()+'px');
+		}else{
+			doc.css('top', '0px');
+		}
+	})
+	
 	
 
 	  //
