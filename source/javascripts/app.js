@@ -89,7 +89,6 @@ $(document).ready(function(){
 		}else{
 			$('#character').hide();
 			$('#score').hide();
-			$('#continue_journey_button').addClass('come');
 		}
 		
 		playAudio(current_screen.find('audio').get(0));
@@ -158,7 +157,10 @@ $(document).ready(function(){
 	});
 	
 	
-	// Gallery browsing
+	
+	// --- Gallery browsing ---
+	
+	// Go down
 	$('#gallery_down').click(function(){
 		var doc = $('.drawings section');
 		var doc_height = parseInt(doc.css('height'));
@@ -171,6 +173,7 @@ $(document).ready(function(){
 		}
 	})
 	
+	// Go up
 	$('#gallery_up').click(function(){
 		var doc = $('.drawings section');
 		var window_height = parseInt($('.drawings').css('height'), 10);
