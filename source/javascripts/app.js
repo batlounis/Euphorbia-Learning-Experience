@@ -2,42 +2,63 @@ $(document).ready(function(){
 	
 	// tutorial frame sequence
 	
-	playIn(function(){
+	var tutorial_animations = [];
+	var anim;
+	
+	anim = setTimeout(function(){
 		$('#score').hide();
-	}, 0);
+	}, 0)
+	tutorial_animations.push(anim);
 	
-	
-	playIn(function(){
+	anim = setTimeout(function(){
 		$('#character').hide();
 		$('.tutorial .character-intro').hide();
 		$('.tutorial .advance-control-intro').show();
-	}, 4);
+	}, 4000);
+	tutorial_animations.push(anim);
 		
-	playIn(function(){
+	anim = setTimeout(function(){
 		$('.tutorial .advance-control-intro').hide();
 		$('.tutorial .sea-intro').show();
-	}, 10);
+	}, 10000);
+	tutorial_animations.push(anim);
 	
-	playIn(function(){
+	anim = setTimeout(function(){
 		$('.tutorial .sea-intro').hide();
 		$('.tutorial .arrow-intro').show();
-	}, 20);
+	}, 20000);
+	tutorial_animations.push(anim);
 	
-	playIn(function(){
+	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').addClass('next');
-	}, 27);
+	}, 27000);
+	tutorial_animations.push(anim);
 	
-	playIn(function(){
+	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').hide();
 		$('.tutorial .good-luck').show();
-	}, 37);
+	}, 37000);
+	tutorial_animations.push(anim);
 	
-	playIn(function(){
+	last_tutorial_step = function(){
 		$('#character').show();
 		$('.tutorial .good-luck').hide();
 		$('#score').show();
 		$('#continue_journey_button').trigger('click');
-	}, 41);
+	}
+	
+	anim = setTimeout(function(){
+		last_tutorial_step();
+	}, 41000);
+	tutorial_animations.push(anim);
+	
+	$('#skip_tutorial').click(function(){
+		for(var i = 0; i < tutorial_animations.length; i++){
+			clearTimeout(tutorial_animations[i]);
+		}
+		last_tutorial_step();
+		return false;
+	})
 		
 	
 	// prevent scrolling on iOS
