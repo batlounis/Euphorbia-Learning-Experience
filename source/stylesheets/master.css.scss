@@ -73,7 +73,12 @@ body{
 		&.walk{
 			-webkit-animation: walk 1s ease-in-out infinite alternate;
 		}
+		
+		&.underwater{
+			top: 0%;
+		}
 	}
+	
 	
 
 }
