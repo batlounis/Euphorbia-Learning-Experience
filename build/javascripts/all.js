@@ -757,16 +757,10 @@ $(document).ready(function(){
 	
 	playIn(function(){
 		$('.tutorial .good-luck').hide();
+		$('#score').show();
 		$('#continue_journey_button').trigger('click');
 	}, 33);
-	
-
-	
-	playIn(function(){
-		$('#score').show();
-	}, 12);
-
-	
+		
 	
 	// prevent scrolling on iOS
 	$(document).bind(

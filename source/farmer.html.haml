@@ -29,25 +29,28 @@ bodyClass: farmer
 		/ %a.skip_button{:href=>"#", :onclick=>"$('#continue_journey_button').trigger('click');"}Skip
 		.screen.character-intro			
 			.indicator
-			.text Este é o Manel pescador
-		.screen.advance-control-intro			
+			.text Este é o António, o agricultor
+		.screen.advance-control-intro
 			.indicator
 			.continue_journey_button
-			.text para o Manel avançar na aventura tem de carregar aqui
+			.background
+			.text Para o António avançar na aventura tem de carregar aqui
 		.screen.sea-intro
 			.choices.come
-			.text As decisões do Manel...
+			.text As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.
+			.background
 		.screen.arrow-intro
 			.choices.come
 			.indicator.farmer
 			.throw_button
-			.text este botão controla a cana de pesca
-			.text-next ao carregar no botao...
+			.text Este botão controla o braço que lança sementes
+			.background
+			.text-next Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.
 		.screen.good-luck
 			.indicator
 			.text Boa Sorte!
 	.screen
-		.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai a para o seu terreno e repara que a levada tem lixo. Ele deve...
+		.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...
 		.choices.come
 			.choice{:score=>-10}
 				.title Deixa assim, quem usa a água primeiro que limpe
@@ -89,7 +92,7 @@ bodyClass: farmer
 		.question Entre o terreno e a floresta ele vê uma planta de maracujá banana a crescer. O que faz o António?
 		.choices
 			.choice{:score=>-10}
-				.title Deixar a planta a crescer para depois poder comer os maracujás.
+				.title Deixa a planta crescer para depois poder comer os maracujás.
 				.consequence.underwater
 					.screen.underwater#animation_2_a
 						.trees
@@ -103,7 +106,7 @@ bodyClass: farmer
 						%p Se não fizer nada, está a ajudar a planta invasora a crescer, o que vai levar à diminuição da floresta Laurissilva.
 						%p Perde 10 pontos
 			.choice{:score=>-5}
-				.title Arrancar e levar para plantar perto de casa
+				.title Arranca e leva para plantar perto de casa
 				.consequence.underwater
 					.screen.underwater#animation_2_b
 						.trees
@@ -207,7 +210,7 @@ bodyClass: farmer
 		.question O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?
 		.choices
 			.choice{:score=>-15}
-				.title Usar pesticidas químicos aumentando as quantidades e concentrações recomendadas
+				.title Usa pesticidas químicos aumentando as quantidades e concentrações recomendadas
 				.consequence.underwater
 					.screen.underwater#animation_4_a
 						.caterpillars-left
@@ -262,7 +265,7 @@ bodyClass: farmer
 						%p O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.
 						%p Ganha 10 pontos 						
 			.choice{:score=>-10}
-				.title Atira-a para o chão, para a levada ou para a sargeta/adufa.
+				.title Atira-o para o chão, para a levada ou para a sargeta/adufa.
 				.consequence.underwater
 					.screen.underwater#animation_5_b
 						.forest
@@ -314,7 +317,7 @@ bodyClass: farmer
 						%p Todos os restos de comida e plantas (lixo orgânico) podem ser postos no compostor. Ao pôr o lixo orgânico no compostor, as minhocas vão decompor os restos e vão libertar minerais para a terra. A terra depois deste processo vai ter melhor qualidade para plantar. Está a melhorar a qualidade da sua colheita sem gastar dinheiro em aditivos e adubos químicos.
 						%p Ganha 15 pontos
 			.choice{:score=>-5}
-				.title Contactar alguém para recolher o material
+				.title Contacta alguém para recolher o material
 				.consequence.underwater
 					.screen.underwater#animation_6_c
 						.levada
@@ -357,7 +360,7 @@ bodyClass: farmer
 						%p Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores. 90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.
 						%p Perde 15 pontos
 			.choice{:score=>15}
-				.title Contactar alguém para recolher o lixo
+				.title Contacta alguém para recolher o lixo
 				.consequence.underwater
 					.screen.underwater#animation_7_b
 						.levada
@@ -370,7 +373,7 @@ bodyClass: farmer
 						%p É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum. O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso. 
 						%p Ganha 15 pontos
 			.choice{:score=>15}
-				.title Reciclar o plástico
+				.title Recicla o plástico
 				.consequence.underwater
 					.screen.underwater#animation_7_c
 						.levada
@@ -383,7 +386,7 @@ bodyClass: farmer
 						%p Mas tenha cuidado, porque nem todos os plásticos podem ser reciclados, embalagens de comida ainda sujas ou embalagens de produtos tóxicos não podem ser recicladas.
 						%p Ganha 15 pontos
 			.choice{:score=>-15}						
-				.title Atirar para o terreno abandonado
+				.title Atira para o terreno abandonado
 				.consequence.underwater
 					.screen.underwater#animation_7_d
 						.levada

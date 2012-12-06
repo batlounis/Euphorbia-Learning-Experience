@@ -1,16 +1,8 @@
-$photos: '#{$url}/fisherman/common';
+$photos: '#{$url}/farmer/common';
 
 .farmer{
-	
-
-	.nature{
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: bottom;
-		position: absolute;
-		bottom: 0;
-		background-repeat: no-repeat;
-		background-image: url(#{$photos}/setting.png);
+	.vegetables{
+		z-index: 900 !important;
 	}
+
 }

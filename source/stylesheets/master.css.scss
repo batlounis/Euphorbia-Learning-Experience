@@ -155,6 +155,20 @@ body{
 		z-index: 4000;
 	}
 	
+	.background{
+		background-image: url(#{$url}/tutorial/frame6.png);
+		background-size: contain;
+		background-position: top center;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 900;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+	}
+	
 	.indicator{
 		background-size: contain;
 		background-position: top center;
@@ -162,7 +176,7 @@ body{
 		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		z-index: 1000;
+		z-index: 3100;
 		position: absolute;
 		top: 0%;
 		left: 0%;
@@ -184,6 +198,7 @@ body{
 		.indicator{
 			background-image: url(#{$url}/tutorial/frame2_arrow.png);
 			background-position: bottom right;
+			z-index: 1100;
 		}
 		
 		.continue_journey_button{
@@ -194,6 +209,7 @@ body{
 			height: 100%;
 			background-repeat: no-repeat;
 			background-size: contain;
+			z-index: 1000;
 			background-position: bottom right;
 		}
 
@@ -215,6 +231,7 @@ body{
 			position: absolute;
 			left: 10%;
 			top: 10%;
+			width: 40%;
 		}
 	}
 	
@@ -257,20 +274,6 @@ body{
 			left: 20%;
 			top: 23%;
 			z-index: 2000;
-		}
-		
-		.sea-background{
-			background-image: url(#{$url}/tutorial/frame3.png);
-			background-position: bottom center;
-			background-size: contain;
-			width: 100%;
-			height: 100%;
-			background-repeat: no-repeat;
-			background-size: cover;
-			z-index: 10;
-			position: absolute;
-			top: 0%;
-			left: 0%;
 		}
 		
 		.text{
@@ -355,7 +358,7 @@ body{
 		background-color: rgba(0, 0, 0, .5);
 		color: white;
 		
-		content: 'Pontução:';
+		content: 'Pontuação:';
 		text-transform: uppercase;
 		font-size: .4em;
 		padding: .2em 0;
@@ -401,6 +404,7 @@ footer{
 	bottom: 0;
 	left: 0;
 	counter-reset: choice;
+	z-index: 1100;
 	
 	.choice{
 		display: table-cell;
@@ -524,7 +528,7 @@ footer{
 	left: 0;
 	width: 20%;
 	height: 100%;
-	z-index: 500;
+	z-index: 1500;
 	cursor: pointer;
 }
 
@@ -766,6 +770,7 @@ body #character{ // had to keep all the tags for precedence (top is also applied
 
 
 // FARMER ANIMATIONS
+@import "animations/farmer/0-common";
 @import "animations/farmer/1-a-leave-it";
 @import "animations/farmer/2-a-let-it-grow";
 @import "animations/farmer/3-a-let-pigeons-eat";

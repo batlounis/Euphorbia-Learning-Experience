@@ -8,14 +8,15 @@ $(document).ready(function(){
 	
 	
 	playIn(function(){
+		$('#character').hide();
 		$('.tutorial .character-intro').hide();
 		$('.tutorial .advance-control-intro').show();
-	}, 6);
+	}, 4);
 		
 	playIn(function(){
 		$('.tutorial .advance-control-intro').hide();
 		$('.tutorial .sea-intro').show();
-	}, 15);
+	}, 10);
 	
 	playIn(function(){
 		$('.tutorial .sea-intro').hide();
@@ -24,18 +25,19 @@ $(document).ready(function(){
 	
 	playIn(function(){
 		$('.tutorial .arrow-intro').addClass('next');
-	}, 25);
+	}, 27);
 	
 	playIn(function(){
 		$('.tutorial .arrow-intro').hide();
 		$('.tutorial .good-luck').show();
-	}, 30);
+	}, 37);
 	
 	playIn(function(){
+		$('#character').show();
 		$('.tutorial .good-luck').hide();
 		$('#score').show();
 		$('#continue_journey_button').trigger('click');
-	}, 33);
+	}, 41);
 		
 	
 	// prevent scrolling on iOS
