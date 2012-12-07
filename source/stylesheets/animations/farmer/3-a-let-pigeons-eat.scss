@@ -22,22 +22,20 @@
 		.bomb{
 			background-image: url(#{$photos}/bomb.png);
 			background-position: bottom left;
-			-webkit-transition: opacity .5s;
-			opacity: 0;
+			display: none;
 			
 			&.show{
-				opacity: 1;
+				display: block;
 			}
 		}
 		
 		.scarecrow{
 			background-image: url(#{$photos}/scarecrow.png);
 			background-position: bottom left;
-			-webkit-transition: opacity .5s;
-			opacity: 0;
+			display: none;
 			
 			&.show{
-				opacity: 1;
+				display: block;
 			}
 		}
 		
@@ -45,32 +43,30 @@
 			background-image: url(#{$photos}/tape.png);
 			background-position: bottom left;
 			-webkit-transition: opacity .5s;
-			opacity: 0;
+			display: none;
 			
 			&.show{
-				opacity: 1;
+				display: block;
 			}
 		}
 		
 		.poison-1{
 			background-image: url(#{$photos}/poison-1.png);
 			background-position: bottom left;
-			-webkit-transition: opacity .5s;
-			opacity: 0;
+			display: none;
 			
 			&.show{
-				opacity: 1;
+				display: block;
 			}
 		}
 		
 		.poison-2{
 			background-image: url(#{$photos}/poison-2.png);
 			background-position: bottom left;
-			-webkit-transition: opacity .5s;
-			opacity: 0;
+			display: none;
 			
 			&.show{
-				opacity: 1;
+				display: block;
 			}
 		}
 		
