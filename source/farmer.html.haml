@@ -399,7 +399,9 @@ bodyClass: farmer
 	/ 					%p O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno. Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.
 	/ 					%p Perde 15 pontos
 	.screen.special
-		.question Parabéns foi um excelente agricultor o futuro da agricultura e a continuidade das espécies está garantido
+		.question{'data-bind'=>'visible: score() <= 0'} Ui! Desta forma os nossos filhos não vão poder usar a floresta laurissilva! é preciso ser eco compatível.
+		.question{'data-bind'=>'visible: score() > 0 && score() < 40'} Parabéns, está no bom caminho para se tornar um agricultor eco compatível, com um pouco mais de cuidado o nosso futuro será melhor.
+		.question{'data-bind'=>'visible: score() >= 40'} Parabéns, foi um excelente agricultor, o futuro da agricultura e da floresta está garantido.
 		.final_score
 			%span{'data-bind'=>'text: score'}
 			Pontos

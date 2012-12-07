@@ -376,7 +376,9 @@ bodyClass: fisherman
 	/ 					%p As pilhas contém mercúrio, que é ingerido por peixes, como por exemplo o peixe espada. Se estes peixes forem pescados e consumidos, podem causar doenças graves às pessoas que os comerem. Deve trazer as pilhas para terra e colocá-las nos contentores de reciclagem.
 	/ 					%p Perde 20 pontos
 	.screen.special
-		.question Parabéns foi um excelente pescador o futuro da pesca e a continuidade das espécies está garantido
+		.question{'data-bind'=>'visible: score() <= 0'}  Ui! Desta forma os nossos filhos não vão poder comer peixe! é preciso ser eco compatível.
+		.question{'data-bind'=>'visible: score() > 0 && score() < 40'} Parabéns, está no bom caminho para se tornar um pescador eco compatível, com um pouco mais de cuidado o nosso futuro será melhor.
+		.question{'data-bind'=>'visible: score() >= 40'} Parabéns, foi um excelente pescador o futuro da pesca e a continuidade das espécies está garantido.
 		.final_score
 			%span{'data-bind'=>'text: score'}
 			Pontos
