@@ -2,12 +2,12 @@
 Syntax error: Undefined variable: "$url".
         on line 1 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/farmer/0-common.css.scss
 
-1: $photos: '#{$url}/fisherman/common';
+1: $photos: '#{$url}/farmer/common';
 2: 
 3: .farmer{
-4: 	
-5: 
-6: 	.nature{
+4: 	.vegetables{
+5: 		z-index: 900 !important;
+6: 	}
 
 Backtrace:
 /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/farmer/0-common.css.scss:1
@@ -91,4 +91,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$url\".\A         on line 1 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/farmer/0-common.css.scss\A \A 1: $photos: '#{$url}/fisherman/common';\A 2: \A 3: .farmer{\A 4: 	\A 5: \A 6: 	.nature{"; }
+  content: "Syntax error: Undefined variable: \"$url\".\A         on line 1 of /Users/salim/desktop/euphorbia-html-prototype/source/stylesheets/animations/farmer/0-common.css.scss\A \A 1: $photos: '#{$url}/farmer/common';\A 2: \A 3: .farmer{\A 4: 	.vegetables{\A 5: 		z-index: 900 !important;\A 6: 	}"; }

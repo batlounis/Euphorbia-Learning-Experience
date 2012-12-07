@@ -794,6 +794,40 @@ menu.general{
 		&#exit{
 			background-image: url(#{$url}/bt_exit.png);
 		}
+		
+		&#view_gallery{
+			background-image: url(#{$url}/bt_gallery.png);
+		}
+	}
+}
+
+// ** Score
+.score_page{
+	position: absolute;
+	bottom: -100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 50%;
+	background-color: rgba(black, .8);
+	z-index: 3000;
+	overflow: hidden;
+	-webkit-transition: bottom 1s;
+	color: white;
+	
+	&.show{
+		bottom: 0;
+	}
+	
+	table{
+		margin: auto;
+		
+		td{
+			border-bottom-style: solid;
+			border-width: 1px;
+			border-color: rgba(white, .7);
+			padding: 1em 0;
+		}
 	}
 }
 
@@ -803,7 +837,7 @@ menu.general{
 	$figure_margin: 2%;
 	
 	position: absolute;
-	bottom: 0;
+	bottom: -100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -811,6 +845,11 @@ menu.general{
 	background-color: rgba(black, .8);
 	z-index: 3000;
 	overflow: hidden;
+	-webkit-transition: bottom 1s;
+	
+	&.show{
+		bottom: 0;
+	}
 	
 	menu{
 		width: $menu_width;

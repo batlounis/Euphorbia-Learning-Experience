@@ -25,30 +25,30 @@ bodyClass: fisherman
 
 
 #setting
-	.screen.tutorial
-		%a#skip_tutorial{:href=>"#"}Skip
-		.screen.character-intro			
-			.indicator
-			.text Este é o Manel, o pescador
-		.screen.advance-control-intro			
-			.indicator
-			.continue_journey_button
-			.background
-			.text Para o Manel avançar na aventura tem de carregar aqui
-		.screen.sea-intro
-			.choices.come
-			.text As decisões do Manel vão depender da sua pontaria. Em cada decisão existe um mar de opções... e uma cana para as pescar.
-			.background
-		.screen.arrow-intro
-			.choices.come
-			.indicator.fisherman
-			.throw_button
-			.text Este botão controla a cana de pesca
-			.background
-			.text-next Ao carregar no botão quando a cana tiver a inclinação certa vai conseguir selecionar a resposta.
-		.screen.good-luck
-			.indicator
-			.text Boa Sorte!
+	/ .screen.tutorial
+	/ 	%a#skip_tutorial{:href=>"#"}Skip
+	/ 	.screen.character-intro			
+	/ 		.indicator
+	/ 		.text Este é o Manel, o pescador
+	/ 	.screen.advance-control-intro			
+	/ 		.indicator
+	/ 		.continue_journey_button
+	/ 		.background
+	/ 		.text Para o Manel avançar na aventura tem de carregar aqui
+	/ 	.screen.sea-intro
+	/ 		.choices.come
+	/ 		.text As decisões do Manel vão depender da sua pontaria. Em cada decisão existe um mar de opções... e uma cana para as pescar.
+	/ 		.background
+	/ 	.screen.arrow-intro
+	/ 		.choices.come
+	/ 		.indicator.fisherman
+	/ 		.throw_button
+	/ 		.text Este botão controla a cana de pesca
+	/ 		.background
+	/ 		.text-next Ao carregar no botão quando a cana tiver a inclinação certa vai conseguir selecionar a resposta.
+	/ 	.screen.good-luck
+	/ 		.indicator
+	/ 		.text Boa Sorte!
 	/ .screen
 	/ 	.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
 	/ 	.choices.come
@@ -381,11 +381,23 @@ bodyClass: fisherman
 			%span{'data-bind'=>'text: score'}
 			Pontos
 		%menu.general
+			#view_score
 			%a#save_score{:href=>'#'}Guardar Pontuaçâo
-			%a#play_again{:href=>'/fisherman.html'}Jogar Outra Vez
+			%a#play_again{:href=>'/farmer.html'}Jogar Outra Vez
+			%a#view_gallery{:href=>'#'}Galeria de Desenhos
 			%a#exit{:href=>'/'}Sair
 		.pier
 		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
+		.score_page
+			%table
+				%thead
+					%tr
+						%th Jogador
+						%th Pontuação
+				%tbody{'data-bind'=>'foreach: scores'}
+					%tr
+						%td{'data-bind'=>'text: name'}
+						%td{'data-bind'=>'text: score'}
 		.drawings
 			%menu
 				%a#gallery_up{:href=>'#'}

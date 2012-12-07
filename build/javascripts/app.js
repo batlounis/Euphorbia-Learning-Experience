@@ -1,42 +1,4 @@
-$(document).ready(function(){
-	
-	// tutorial frame sequence
-	
-	playIn(function(){
-		$('#score').hide();
-	}, 0);
-	
-	
-	playIn(function(){
-		$('.tutorial .character-intro').hide();
-		$('.tutorial .advance-control-intro').show();
-	}, 6);
-		
-	playIn(function(){
-		$('.tutorial .advance-control-intro').hide();
-		$('.tutorial .sea-intro').show();
-	}, 15);
-	
-	playIn(function(){
-		$('.tutorial .sea-intro').hide();
-		$('.tutorial .arrow-intro').show();
-	}, 20);
-	
-	playIn(function(){
-		$('.tutorial .arrow-intro').addClass('next');
-	}, 25);
-	
-	playIn(function(){
-		$('.tutorial .arrow-intro').hide();
-		$('.tutorial .good-luck').show();
-	}, 30);
-	
-	playIn(function(){
-		$('.tutorial .good-luck').hide();
-		$('#score').show();
-		$('#continue_journey_button').trigger('click');
-	}, 33);
-		
+$(document).ready(function(){		
 	
 	// prevent scrolling on iOS
 	$(document).bind(
@@ -53,6 +15,22 @@ $(document).ready(function(){
 	var handle;	// used in drawn path by knockout js
 	var c_transition = 3; // if you change this, change css also
 	var step = 0;
+	
+	var playing_audio;
+	playAudio = function(audio){
+		if(playing_audio){
+			playing_audio.pause();
+		}
+		if(audio){
+			playing_audio = audio;
+			playing_audio.play();
+		}		
+	}
+	pauseAudio = function(){
+		if(playing_audio){
+			playing_audio.pause();
+		}
+	}
 	
 	// --- ONLOAD ---
 	
@@ -111,11 +89,102 @@ $(document).ready(function(){
 		}else{
 			$('#character').hide();
 			$('#score').hide();
-			$('#continue_journey_button').addClass('come');
 		}
+		
+		playAudio(current_screen.find('audio').get(0));
 
 		return false;
 	}
+	
+	// tutorial frame sequence
+	
+	var tutorial_animations = [];
+	var anim;
+	
+	anim = setTimeout(function(){
+		$('#score').hide();
+	}, 0)
+	tutorial_animations.push(anim);
+	
+	anim = setTimeout(function(){
+		$('#character').hide();
+		$('.tutorial .character-intro').hide();
+		$('.tutorial .advance-control-intro').show();
+	}, 4000);
+	tutorial_animations.push(anim);
+		
+	anim = setTimeout(function(){
+		$('.tutorial .advance-control-intro').hide();
+		$('.tutorial .sea-intro').show();
+	}, 10000);
+	tutorial_animations.push(anim);
+	
+	anim = setTimeout(function(){
+		$('.tutorial .sea-intro').hide();
+		$('.tutorial .arrow-intro').show();
+	}, 20000);
+	tutorial_animations.push(anim);
+	
+	anim = setTimeout(function(){
+		$('.tutorial .arrow-intro').addClass('next');
+	}, 27000);
+	tutorial_animations.push(anim);
+	
+	anim = setTimeout(function(){
+		$('.tutorial .arrow-intro').hide();
+		$('.tutorial .good-luck').show();
+	}, 37000);
+	tutorial_animations.push(anim);
+	
+	last_tutorial_step = function(){
+		$('#character').show();
+		$('.tutorial .good-luck').hide();
+		$('#score').show();
+		$('#continue_journey_button').trigger('click');
+	}
+	
+	anim = setTimeout(function(){
+		last_tutorial_step();
+	}, 41000);
+	tutorial_animations.push(anim);
+	
+	$('#skip_tutorial').click(function(){
+		for(var i = 0; i < tutorial_animations.length; i++){
+			clearTimeout(tutorial_animations[i]);
+		}
+		last_tutorial_step();
+		return false;
+	});
+	
+	
+	
+	// --- Gallery browsing ---
+	
+	// Go down
+	$('#gallery_down').click(function(){
+		var doc = $('.drawings section');
+		var doc_height = parseInt(doc.css('height'));
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(-current_top+window_height < doc_height){
+			doc.css('top', (current_top-window_height).toString()+'px');
+		}else{
+			doc.css('top', (-doc_height+window_height).toString()+'px');
+		}
+	})
+	
+	// Go up
+	$('#gallery_up').click(function(){
+		var doc = $('.drawings section');
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(current_top + window_height < 0){
+			doc.css('top', (current_top+window_height).toString()+'px');
+		}else{
+			doc.css('top', '0px');
+		}
+	})
+	
 	
 
 	  //
@@ -193,9 +262,12 @@ $(document).ready(function(){
 	}
 	
 	showConsequence = function(consequence){
-		$('#consequence .content').html(consequence.find('.content'));
+		var consequence_content = consequence.find('.content')
+		$('#consequence .content').html(consequence_content);
 		$('#consequence').addClass('come');
-		$('#continue_journey_button').addClass('come');	
+		$('#continue_journey_button').addClass('come');
+		
+		playAudio(consequence_content.find('audio').get(0));
 	}
 	
 	// find which choice was selected based on the x of the path's end point. returns choice div
@@ -251,6 +323,7 @@ $(document).ready(function(){
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
+		pauseAudio();
 		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
 		var selection = Math.ceil(rotation/answer_range);

@@ -34,7 +34,7 @@
 </div>
 <div id='setting'>
   <div class='screen tutorial'>
-    <!-- %a.skip_button{:href=>"#", :onclick=>"$('#continue_journey_button').trigger('click');"}Skip -->
+    <a href='#' id='skip_tutorial'>Skip</a>
     <div class='screen character-intro'>
       <div class='indicator'></div>
       <div class='text'>Este é o António, o agricultor</div>
@@ -42,17 +42,20 @@
     <div class='screen advance-control-intro'>
       <div class='indicator'></div>
       <div class='continue_journey_button'></div>
+      <div class='background'></div>
       <div class='text'>Para o António avançar na aventura tem de carregar aqui</div>
     </div>
     <div class='screen sea-intro'>
       <div class='choices come'></div>
       <div class='text'>As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.</div>
+      <div class='background'></div>
     </div>
     <div class='screen arrow-intro'>
       <div class='choices come'></div>
       <div class='indicator farmer'></div>
       <div class='throw_button'></div>
       <div class='text'>Este botão controla o braço que lança sementes</div>
+      <div class='background'></div>
       <div class='text-next'>Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.</div>
     </div>
     <div class='screen good-luck'>
@@ -62,6 +65,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...</div>
+    <audio src='/audio/q1.m4a'></audio>
     <div class='choices come'>
       <div class='choice' score='-10'>
         <div class='title'>Deixa assim, quem usa a água primeiro que limpe</div>
@@ -77,6 +81,7 @@
             <p>A água é um recurso muito valioso para a agricultura, por isso é importante que as pessoas a utilizem de forma responsável.</p>
             <p>Se deixar o lixo na levada, a água vai ficar contaminada e vai desperdiçar parte da água. Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.</p>
             <p>Perde 10 pontos</p>
+            <audio src='/audio/q1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -524,9 +529,264 @@
   </div>
   <div class='screen special'>
     <div class='question'>Parabéns foi um excelente agricultor o futuro da agricultura e a continuidade das espécies está garantido</div>
-    <div class='final_score' data-bind='text: score'></div>
+    <div class='final_score'>
+      <span data-bind='text: score'></span>
+      Pontos
+    </div>
+    <menu class='general'>
+      <a href='#' id='save_score'>Guardar Pontuaçâo</a>
+      <a href='/farmer.html' id='play_again'>Jogar Outra Vez</a>
+      <a href='/' id='exit'>Sair</a>
+    </menu>
     <div class='pier'></div>
     <div class='catch' data-bind='css: {"good": score() &gt; 0, "great": score() &gt; 20, "amazing": score() &gt; 40}'></div>
+    <div class='drawings'>
+      <menu>
+        <a href='#' id='gallery_up'></a>
+        <a href='#' id='gallery_down'></a>
+      </menu>
+      <section>
+        <h3>Santana</h3>
+        <figure>
+          <img src='/images/gallery/SANT_3_adriana_silva_alves.jpg' />
+          <figcaption>Adriana Silva Alves</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_afonso.jpg' />
+          <figcaption>Afonso</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_ana_catarina.jpg' />
+          <figcaption>Ana Catarina</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_andre_miguel_rocha_caldeira.jpg' />
+          <figcaption>Andre Miguel Rocha Caldeira</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_bryan.jpg' />
+          <figcaption>Bryan</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_diana_jose_silva_camara.jpg' />
+          <figcaption>Diana Jose Silva Camara</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_duarte.jpg' />
+          <figcaption>Duarte</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_francisco.jpg' />
+          <figcaption>Francisco</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_joana.jpg' />
+          <figcaption>Joana</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_kevin.jpg' />
+          <figcaption>Kevin</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_liliana_martins_andrade.jpg' />
+          <figcaption>Liliana Martins Andrade</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_natasha_goncalves_laranja.jpg' />
+          <figcaption>Natasha Goncalves Laranja</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_rafael.jpg' />
+          <figcaption>Rafael</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_raquel.jpg' />
+          <figcaption>Raquel</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_rodrigo_almada.jpg' />
+          <figcaption>Rodrigo Almada</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_rodrigo_filipe.jpg' />
+          <figcaption>Rodrigo Filipe</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_3_sara.jpg' />
+          <figcaption>Sara</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_bernardo.jpg' />
+          <figcaption>Bernardo</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_claudia_nunes_alves.jpg' />
+          <figcaption>Claudia Nunes Alves</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_daniel.jpg' />
+          <figcaption>Daniel</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_diogo_antonio.jpg' />
+          <figcaption>Diogo Antonio</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_diogo_azevedo.jpg' />
+          <figcaption>Diogo Azevedo</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_francisco.jpg' />
+          <figcaption>Francisco</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_gustavo.jpg' />
+          <figcaption>Gustavo</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_joao_pedro.jpg' />
+          <figcaption>Joao Pedro</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_leandro.jpg' />
+          <figcaption>Leandro</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_luis_filipe.jpg' />
+          <figcaption>Luis Filipe</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_pedro_miguel.jpg' />
+          <figcaption>Pedro Miguel</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_rodrigo.jpg' />
+          <figcaption>Rodrigo</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_sergio.jpg' />
+          <figcaption>Sergio</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SANT_4_sofia.jpg' />
+          <figcaption>Sofia</figcaption>
+        </figure>
+        <h3>Seixal</h3>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Bruno.jpg' />
+          <figcaption>Bruno</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Diana.jpg' />
+          <figcaption>Diana</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Francisca.jpg' />
+          <figcaption>Francisca</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Joao Pedro.jpg' />
+          <figcaption>João Pedro</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Joao Pedro2.jpg' />
+          <figcaption>João Pedro</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Laurina.jpg' />
+          <figcaption>Laurina</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Leonardo.jpg' />
+          <figcaption>Leonardo</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Leticia.jpg' />
+          <figcaption>Leticia</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Matilde.jpg' />
+          <figcaption>Matilde</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_3_Oriana.jpg' />
+          <figcaption>Oriana</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SEIX_4_Catarina.jpg' />
+          <figcaption>Catarina</figcaption>
+        </figure>
+        <h3>Sao Roc Faial</h3>
+        <figure>
+          <img src='/images/gallery/SRF_3_cristiano.jpg' />
+          <figcaption>Cristiano</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_cristina.jpg' />
+          <figcaption>Cristina</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_emanuel.jpg' />
+          <figcaption>Emanuel</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_nicole.jpg' />
+          <figcaption>Nicole</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_pedro_miguel.jpg' />
+          <figcaption>Pedro Miguel</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_rodrigo_nunes.jpg' />
+          <figcaption>Rodrigo Nunes</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_sabrina.jpg' />
+          <figcaption>Sabrina</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_3_veronica.jpg' />
+          <figcaption>Veronica</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_ana_luisa.jpg' />
+          <figcaption>Ana Luisa</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_ana_luisa_2.jpg' />
+          <figcaption>Ana Luisa</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_bruna.jpg' />
+          <figcaption>Bruna</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_bruno_faisca.jpg' />
+          <figcaption>Bruno Faisca</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_joao_pedro_abreu_correia.jpg' />
+          <figcaption>Joao Pedro Abreu Correia</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_mariana.jpg' />
+          <figcaption>Mariana</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_oceano.jpg' />
+          <figcaption>Oceano</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_pedro_alexandre.jpg' />
+          <figcaption>Pedro Alexandre</figcaption>
+        </figure>
+        <figure>
+          <img src='/images/gallery/SRF_4_renato.jpg' />
+          <figcaption>Renato</figcaption>
+        </figure>
+      </section>
+    </div>
   </div>
 </div>
   </body>

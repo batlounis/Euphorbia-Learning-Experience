@@ -24,30 +24,30 @@ bodyClass: farmer
 		%circle{:r=>'8', 'style'=>'stroke: white;', 'data-bind'=>"attr: {cx:x()+'%',cy:(100-y())+'%'}"}
 
 #setting
-	.screen.tutorial
-		%a#skip_tutorial{:href=>"#"}Skip
-		.screen.character-intro
-			.indicator
-			.text Este é o António, o agricultor
-		.screen.advance-control-intro
-			.indicator
-			.continue_journey_button
-			.background
-			.text Para o António avançar na aventura tem de carregar aqui
-		.screen.sea-intro
-			.choices.come
-			.text As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.
-			.background
-		.screen.arrow-intro
-			.choices.come
-			.indicator.farmer
-			.throw_button
-			.text Este botão controla o braço que lança sementes
-			.background
-			.text-next Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.
-		.screen.good-luck
-			.indicator
-			.text Boa Sorte!
+	/ .screen.tutorial
+	/ 	%a#skip_tutorial{:href=>"#"}Skip
+	/ 	.screen.character-intro
+	/ 		.indicator
+	/ 		.text Este é o António, o agricultor
+	/ 	.screen.advance-control-intro
+	/ 		.indicator
+	/ 		.continue_journey_button
+	/ 		.background
+	/ 		.text Para o António avançar na aventura tem de carregar aqui
+	/ 	.screen.sea-intro
+	/ 		.choices.come
+	/ 		.text As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.
+	/ 		.background
+	/ 	.screen.arrow-intro
+	/ 		.choices.come
+	/ 		.indicator.farmer
+	/ 		.throw_button
+	/ 		.text Este botão controla o braço que lança sementes
+	/ 		.background
+	/ 		.text-next Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.
+	/ 	.screen.good-luck
+	/ 		.indicator
+	/ 		.text Boa Sorte!
 	/ .screen
 	/ 	.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...
 	/ 	%audio{:src=>'/audio/q1.m4a', :autoplay=>false, :controls=>false}
@@ -404,11 +404,23 @@ bodyClass: farmer
 			%span{'data-bind'=>'text: score'}
 			Pontos
 		%menu.general
+			#view_score
 			%a#save_score{:href=>'#'}Guardar Pontuaçâo
 			%a#play_again{:href=>'/farmer.html'}Jogar Outra Vez
+			%a#view_gallery{:href=>'#'}Galeria de Desenhos
 			%a#exit{:href=>'/'}Sair
 		.pier
 		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
+		.score_page
+			%table
+				%thead
+					%tr
+						%th Jogador
+						%th Pontuação
+				%tbody{'data-bind'=>'foreach: scores'}
+					%tr
+						%td{'data-bind'=>'text: name'}
+						%td{'data-bind'=>'text: score'}
 		.drawings
 			%menu
 				%a#gallery_up{:href=>'#'}

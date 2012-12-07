@@ -1,5 +1,6 @@
 $(document).ready(function(){		
 	
+	
 	// prevent scrolling on iOS
 	$(document).bind(
 	  'touchmove',
@@ -157,6 +158,37 @@ $(document).ready(function(){
 	});
 	
 	
+	// --- End Screen Functionality ---
+	$('#view_gallery').click(function(){
+		$('.drawings').toggleClass('show');
+	});
+	
+	$('#view_score').click(function(){
+		current_screen.find('.score_page').toggleClass('show');
+	});
+	
+	$('#save_score').click(function(){
+		var journey_character = $('body').attr('class');
+		var score = viewModel.score();
+		var name = 'Salim';
+		
+		var stored_scores = localStorage[journey_character];
+		var scores;
+		
+		if(stored_scores){
+			scores = JSON.parse(localStorage[journey_character]);
+		}else{
+			scores = [];
+		}
+		
+		scores.unshift({'score':score, 'name':name});
+		localStorage[journey_character] = JSON.stringify(scores);
+		
+		viewModel.scores(scores);
+				
+		$('#view_score').trigger('click');
+	});
+	
 	
 	// --- Gallery browsing ---
 	
@@ -204,6 +236,8 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+		this.scores = ko.observableArray([]);
 	
 			this.score = ko.observable(0);
 			
