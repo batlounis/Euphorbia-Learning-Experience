@@ -30,15 +30,18 @@ bodyClass: fisherman
 		.screen.character-intro			
 			.indicator
 			.text Este é o Manel, o pescador
+			%audio{:src=>'/audio/fishermen/T1.m4a', :autoplay=>false, :controls=>false}
 		.screen.advance-control-intro			
 			.indicator
 			.continue_journey_button
 			.background
 			.text Para o Manel avançar na aventura tem de carregar aqui
+			%audio{:src=>'/audio/fishermen/T2.m4a', :autoplay=>false, :controls=>false}
 		.screen.sea-intro
 			.choices.come
 			.text As decisões do Manel vão depender da sua pontaria. Em cada decisão existe um mar de opções... e uma cana para as pescar.
 			.background
+			%audio{:src=>'/audio/fishermen/T3.m4a', :autoplay=>false, :controls=>false}
 		.screen.arrow-intro
 			.choices.come
 			.indicator.fisherman
@@ -46,9 +49,12 @@ bodyClass: fisherman
 			.text Este botão controla a cana de pesca
 			.background
 			.text-next Ao carregar no botão quando a cana tiver a inclinação certa vai conseguir selecionar a resposta.
+			%audio{:src=>'/audio/fishermen/T4.m4a', :autoplay=>false, :controls=>false}
+			%audio{:src=>'/audio/fishermen/T5.m4a', :autoplay=>false, :controls=>false}
 		.screen.good-luck
 			.indicator
 			.text Boa Sorte!
+			%audio{:src=>'/audio/fishermen/T7.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
 		%audio{:src=>'/audio/fishermen/1.m4a', :autoplay=>false, :controls=>false}

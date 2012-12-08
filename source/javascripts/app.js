@@ -104,6 +104,7 @@ $(document).ready(function(){
 	
 	anim = setTimeout(function(){
 		$('#score').hide();
+		playAudio($('.screen.tutorial audio').get(0));
 	}, 0)
 	tutorial_animations.push(anim);
 	
@@ -111,29 +112,34 @@ $(document).ready(function(){
 		$('#character').hide();
 		$('.tutorial .character-intro').hide();
 		$('.tutorial .advance-control-intro').show();
+		playAudio($('.screen.tutorial audio').get(1));
 	}, 4000);
 	tutorial_animations.push(anim);
 		
 	anim = setTimeout(function(){
 		$('.tutorial .advance-control-intro').hide();
 		$('.tutorial .sea-intro').show();
+		playAudio($('.screen.tutorial audio').get(2));
 	}, 10000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .sea-intro').hide();
 		$('.tutorial .arrow-intro').show();
+		playAudio($('.screen.tutorial audio').get(3));
 	}, 20000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').addClass('next');
+		playAudio($('.screen.tutorial audio').get(4));
 	}, 27000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').hide();
 		$('.tutorial .good-luck').show();
+		playAudio($('.screen.tutorial audio').get(5));
 	}, 37000);
 	tutorial_animations.push(anim);
 	
