@@ -35,7 +35,7 @@ $(document).ready(function(){
 	animation_1_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			// future_count(2020, 2, sub_screen);
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -56,6 +56,7 @@ $(document).ready(function(){
 	animation_2_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.maracuja-later-1').addClass('pop');
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		
 		playIn(function(){ 
@@ -68,6 +69,7 @@ $(document).ready(function(){
 	animation_2_b = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.bubble').addClass('show');
+			future_count(2020, 2, sub_screen);
 		}, 1);
 		
 		playIn(function(){ 
@@ -163,6 +165,7 @@ $(document).ready(function(){
 		playIn(function(){ 
 			sub_screen.find('.gunpowder').addClass('appear');
 			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
 		}, 4);
 		
 		playIn(function(){ 
@@ -192,15 +195,15 @@ $(document).ready(function(){
 		playIn(function(){ 
 			sub_screen.find('.bomb').removeClass('show');
 			sub_screen.find('.scarecrow').addClass('show');
-		}, 5);
+		}, 4);
 		
 		playIn(function(){ 
 			sub_screen.find('.scarecrow').removeClass('show');
 			sub_screen.find('.tape').addClass('show');
-		}, 7);
+		}, 5);
 		
 				
-		playIn(function(){showConsequence(consequence)}, 9);
+		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 	animation_3_d = function(consequence, sub_screen){
@@ -222,6 +225,7 @@ $(document).ready(function(){
 		
 		playIn(function(){ 
 			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
 		}, 6);
 		
 		playIn(function(){ 
@@ -247,6 +251,7 @@ $(document).ready(function(){
 		
 		playIn(function(){ 
 			sub_screen.find('.poison').addClass('show');
+			future_count(2020, 2, sub_screen);
 		}, 3);
 		
 		playIn(function(){ 
@@ -348,7 +353,7 @@ $(document).ready(function(){
 	animation_6_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			// future_count(2020, 2, sub_screen);
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -400,6 +405,7 @@ $(document).ready(function(){
 	animation_7_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.plastic').addClass('come');
+			future_count(2020, 2, sub_screen);
 		}, 1);
 		
 		playIn(function(){ 
@@ -436,6 +442,7 @@ $(document).ready(function(){
 	animation_7_d = function(consequence, sub_screen){		
 		playIn(function(){ 
 			sub_screen.find('.abandoned-bubble').addClass('show');
+			future_count(2020, 3, sub_screen);
 		}, 0);
 		
 		playIn(function(){ 
@@ -724,6 +731,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){		
 	
+	
 	// prevent scrolling on iOS
 	$(document).bind(
 	  'touchmove',
@@ -881,6 +889,58 @@ $(document).ready(function(){
 	});
 	
 	
+	// --- End Screen Functionality ---
+	
+	getScores = function(){
+		var journey_character = $('body').attr('class');
+		var stored_scores = localStorage[journey_character];
+		var scores;
+		
+		if(stored_scores){
+			scores = JSON.parse(localStorage[journey_character]);
+		}else{
+			scores = [];
+		}
+		
+		return scores;
+	}
+	
+	var score_saved = false; // Used to allow just one save per play
+	
+	addScore = function(name, score){
+		var journey_character = $('body').attr('class');
+		var scores = getScores();
+		if(!score_saved){
+			scores.unshift({'score':score, 'name':name});
+			localStorage[journey_character] = JSON.stringify(scores);
+			score_saved = true;
+		}		
+		return scores;		
+	}
+	
+	
+	$('#view_gallery').click(function(){
+		$('.drawings').toggleClass('show');
+	});
+	
+	$('#view_score').click(function(){
+		var scores = getScores();
+		viewModel.scores(scores);
+		$('.score_page').toggleClass('show');
+	});
+	
+	$('#save_score').click(function(){
+		
+		var score = viewModel.score();
+		var name = 'salim';
+		var scores = addScore(name, score);
+		
+		viewModel.scores(scores);
+				
+		$('#view_score').trigger('click');
+	});
+	
+	
 	
 	// --- Gallery browsing ---
 	
@@ -928,6 +988,8 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+		this.scores = ko.observableArray([]);
 	
 			this.score = ko.observable(0);
 			

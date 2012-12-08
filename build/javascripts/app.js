@@ -1,5 +1,6 @@
 $(document).ready(function(){		
 	
+	
 	// prevent scrolling on iOS
 	$(document).bind(
 	  'touchmove',
@@ -157,6 +158,58 @@ $(document).ready(function(){
 	});
 	
 	
+	// --- End Screen Functionality ---
+	
+	getScores = function(){
+		var journey_character = $('body').attr('class');
+		var stored_scores = localStorage[journey_character];
+		var scores;
+		
+		if(stored_scores){
+			scores = JSON.parse(localStorage[journey_character]);
+		}else{
+			scores = [];
+		}
+		
+		return scores;
+	}
+	
+	var score_saved = false; // Used to allow just one save per play
+	
+	addScore = function(name, score){
+		var journey_character = $('body').attr('class');
+		var scores = getScores();
+		if(!score_saved){
+			scores.unshift({'score':score, 'name':name});
+			localStorage[journey_character] = JSON.stringify(scores);
+			score_saved = true;
+		}		
+		return scores;		
+	}
+	
+	
+	$('#view_gallery').click(function(){
+		$('.drawings').toggleClass('show');
+	});
+	
+	$('#view_score').click(function(){
+		var scores = getScores();
+		viewModel.scores(scores);
+		$('.score_page').toggleClass('show');
+	});
+	
+	$('#save_score').click(function(){
+		
+		var score = viewModel.score();
+		var name = 'salim';
+		var scores = addScore(name, score);
+		
+		viewModel.scores(scores);
+				
+		$('#view_score').trigger('click');
+	});
+	
+	
 	
 	// --- Gallery browsing ---
 	
@@ -204,6 +257,8 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+		this.scores = ko.observableArray([]);
 	
 			this.score = ko.observable(0);
 			

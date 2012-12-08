@@ -25,6 +25,31 @@ body {
   font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   font-size: 140%; }
   /* line 33, master.css.scss */
+  body #welcome_setting {
+    background-image: url(../images/welcome/background.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block; }
+    /* line 46, master.css.scss */
+    body #welcome_setting .choose_journey_button {
+      background-image: url(../images/welcome/bt_play_pt.png);
+      background-size: contain;
+      background-position: center center;
+      position: absolute;
+      bottom: 14%;
+      left: 35%;
+      background-repeat: no-repeat;
+      width: 30%;
+      height: 35%;
+      display: block; }
+  /* line 60, master.css.scss */
   body #setting {
     z-index: 0;
     background-size: 100%;
@@ -36,13 +61,24 @@ body {
     top: 0;
     margin: 0;
     padding: 0; }
-  /* line 46, master.css.scss */
+  /* line 73, master.css.scss */
   body.fisherman #setting {
     background-image: url(../images/fisherman/background.jpg); }
-  /* line 50, master.css.scss */
+  /* line 77, master.css.scss */
   body.farmer #setting {
     background-image: url(../images/farmer/background.jpg); }
-  /* line 54, master.css.scss */
+    /* line 80, master.css.scss */
+    body.farmer #setting .overlay {
+      background-image: url(../images/farmer/background_overlay.png);
+      background-repeat: repeat;
+      background-size: contain;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  /* line 93, master.css.scss */
   body #character {
     z-index: 100;
     background-repeat: no-repeat;
@@ -53,39 +89,39 @@ body {
     top: 20%;
     width: 100%;
     display: block; }
-  /* line 66, master.css.scss */
+  /* line 105, master.css.scss */
   body.fisherman #character {
     background-image: url(../images/fisherman/character.png); }
-  /* line 70, master.css.scss */
+  /* line 109, master.css.scss */
   body.farmer #character {
     background-image: url(../images/farmer/character-2.png); }
-    /* line 73, master.css.scss */
+    /* line 112, master.css.scss */
     body.farmer #character.walk {
       -webkit-animation: walk 1s ease-in-out infinite alternate; }
-    /* line 77, master.css.scss */
+    /* line 116, master.css.scss */
     body.farmer #character.underwater {
       top: 0%; }
 
 @-webkit-keyframes walk {
-  /* line 87, master.css.scss */
+  /* line 126, master.css.scss */
   0% {
     background-image: url(../images/farmer/character-1.png); }
 
-  /* line 88, master.css.scss */
+  /* line 127, master.css.scss */
   50% {
     background-image: url(../images/farmer/character-2.png); }
 
-  /* line 89, master.css.scss */
+  /* line 128, master.css.scss */
   100% {
     background-image: url(../images/farmer/character-3.png); } }
 
-/* line 92, master.css.scss */
+/* line 131, master.css.scss */
 .screen {
   width: 100%;
   position: relative;
   overflow: hidden;
   -webkit-transition: top 1.5s; }
-  /* line 98, master.css.scss */
+  /* line 137, master.css.scss */
   .screen .clock {
     background-image: url(../images/fisherman/clock.png);
     background-size: contain;
@@ -105,17 +141,17 @@ body {
     font-size: 2em;
     color: white;
     z-index: 2000; }
-    /* line 121, master.css.scss */
+    /* line 160, master.css.scss */
     .screen .clock.show {
       bottom: 0; }
 
-/* line 129, master.css.scss */
+/* line 168, master.css.scss */
 .tutorial #skip_tutorial {
   position: absolute;
   z-index: 5000;
   right: 3%;
   top: 3%; }
-/* line 137, master.css.scss */
+/* line 176, master.css.scss */
 .tutorial .screen {
   display: none;
   width: 100%;
@@ -127,17 +163,17 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-  /* line 149, master.css.scss */
+  /* line 188, master.css.scss */
   .tutorial .screen.character-intro {
     display: block; }
-/* line 154, master.css.scss */
+/* line 193, master.css.scss */
 .tutorial * {
   color: white; }
-/* line 158, master.css.scss */
+/* line 197, master.css.scss */
 .tutorial .text {
   width: 30%;
   z-index: 4000; }
-/* line 163, master.css.scss */
+/* line 202, master.css.scss */
 .tutorial .background {
   background-image: url(../images/tutorial/frame6.png);
   background-size: contain;
@@ -150,7 +186,7 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-/* line 177, master.css.scss */
+/* line 216, master.css.scss */
 .tutorial .indicator {
   background-size: contain;
   background-position: top center;
@@ -162,20 +198,20 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-/* line 191, master.css.scss */
+/* line 230, master.css.scss */
 .tutorial .character-intro .indicator {
   background-image: url(../images/tutorial/frame1.png); }
-/* line 195, master.css.scss */
+/* line 234, master.css.scss */
 .tutorial .character-intro .text {
   position: absolute;
   left: 10%;
   top: 10%; }
-/* line 203, master.css.scss */
+/* line 242, master.css.scss */
 .tutorial .advance-control-intro .indicator {
   background-image: url(../images/tutorial/frame2_arrow.png);
   background-position: bottom right;
   z-index: 1100; }
-/* line 209, master.css.scss */
+/* line 248, master.css.scss */
 .tutorial .advance-control-intro .continue_journey_button {
   position: absolute;
   bottom: 0;
@@ -186,66 +222,66 @@ body {
   background-size: contain;
   z-index: 1000;
   background-position: bottom right; }
-/* line 221, master.css.scss */
+/* line 260, master.css.scss */
 .tutorial .advance-control-intro .text {
   position: absolute;
   right: 10%;
   bottom: 50%;
   text-align: right; }
-/* line 230, master.css.scss */
+/* line 269, master.css.scss */
 .tutorial .sea-intro .indicator {
   background-image: url(../images/tutorial/frame3.png);
   background-position: bottom center; }
-/* line 235, master.css.scss */
+/* line 274, master.css.scss */
 .tutorial .sea-intro .text {
   position: absolute;
   left: 10%;
   top: 10%;
   width: 40%; }
-/* line 244, master.css.scss */
+/* line 283, master.css.scss */
 .tutorial .arrow-intro .indicator {
   background-position: bottom center;
   background-size: cover; }
-  /* line 248, master.css.scss */
+  /* line 287, master.css.scss */
   .tutorial .arrow-intro .indicator.fisherman {
     background-image: url(../images/tutorial/frame4_rod_arrow.png); }
-  /* line 252, master.css.scss */
+  /* line 291, master.css.scss */
   .tutorial .arrow-intro .indicator.farmer {
     background-image: url(../images/tutorial/frame4_farmer_arrow.png); }
-/* line 257, master.css.scss */
+/* line 296, master.css.scss */
 .tutorial .arrow-intro.next .indicator {
   background-position: bottom center;
   background-size: cover; }
-  /* line 261, master.css.scss */
+  /* line 300, master.css.scss */
   .tutorial .arrow-intro.next .indicator.fisherman {
     background-image: url(../images/tutorial/frame5_rod_range.png); }
-  /* line 265, master.css.scss */
+  /* line 304, master.css.scss */
   .tutorial .arrow-intro.next .indicator.farmer {
     background-image: url(../images/tutorial/frame5_farmer_range.png); }
-/* line 270, master.css.scss */
+/* line 309, master.css.scss */
 .tutorial .arrow-intro .text-next {
   display: none; }
-/* line 272, master.css.scss */
+/* line 311, master.css.scss */
 .tutorial .arrow-intro.next .text {
   display: none; }
-/* line 276, master.css.scss */
+/* line 315, master.css.scss */
 .tutorial .arrow-intro.next .text-next {
   display: block;
   position: absolute;
   left: 20%;
   top: 23%;
   z-index: 2000; }
-/* line 284, master.css.scss */
+/* line 323, master.css.scss */
 .tutorial .arrow-intro .text {
   position: absolute;
   left: 20%;
   top: 40%; }
-/* line 292, master.css.scss */
+/* line 331, master.css.scss */
 .tutorial .good-luck .indicator {
   background-image: url(../images/tutorial/frame6.png);
   background-position: bottom center;
   background-size: cover; }
-/* line 298, master.css.scss */
+/* line 337, master.css.scss */
 .tutorial .good-luck .text {
   position: absolute;
   left: 0%;
@@ -253,31 +289,31 @@ body {
   text-align: center;
   top: 10%; }
 
-/* line 309, master.css.scss */
+/* line 348, master.css.scss */
 .underwater.screen {
   background-size: cover;
   background-position: top;
   -webkit-transition: box-shadow 1s; }
-  /* line 314, master.css.scss */
+  /* line 353, master.css.scss */
   .underwater.screen.future {
     box-shadow: 0 0 7em 3em white inset; }
 
-/* line 319, master.css.scss */
+/* line 358, master.css.scss */
 .fisherman .underwater.screen {
   background-image: url(../images/fisherman/background_underwater.png); }
 
-/* line 323, master.css.scss */
+/* line 362, master.css.scss */
 .farmer .underwater.screen {
   background-image: url(../images/farmer/background_underwater.png); }
 
-/* line 329, master.css.scss */
+/* line 368, master.css.scss */
 .question, #consequence p {
   background-color: rgba(255, 255, 255, 0.5);
   padding: .5em;
   margin: 0 auto;
   font-size: .9em; }
 
-/* line 340, master.css.scss */
+/* line 379, master.css.scss */
 .question {
   display: table;
   table-layout: fixed;
@@ -285,7 +321,7 @@ body {
   width: 30em;
   top: 5%; }
 
-/* line 348, master.css.scss */
+/* line 387, master.css.scss */
 #score {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -299,7 +335,7 @@ body {
   text-align: center;
   padding: .2em;
   z-index: 500; }
-  /* line 362, master.css.scss */
+  /* line 401, master.css.scss */
   #score:before {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -313,7 +349,7 @@ body {
     text-align: center;
     width: 100%; }
 
-/* line 381, master.css.scss */
+/* line 420, master.css.scss */
 footer {
   background-repeat: no-repeat;
   background-size: 100%;
@@ -324,15 +360,15 @@ footer {
   position: absolute;
   bottom: 0; }
 
-/* line 392, master.css.scss */
+/* line 431, master.css.scss */
 .fisherman .choices {
   background-image: url(../images/fisherman/choices-background.png); }
 
-/* line 396, master.css.scss */
+/* line 435, master.css.scss */
 .farmer .choices {
   background-image: url(../images/farmer/choices-background.png); }
 
-/* line 400, master.css.scss */
+/* line 439, master.css.scss */
 .choices {
   background-repeat: no-repeat;
   background-size: cover;
@@ -346,7 +382,7 @@ footer {
   left: 0;
   counter-reset: choice;
   z-index: 1100; }
-  /* line 414, master.css.scss */
+  /* line 453, master.css.scss */
   .choices .choice {
     display: table-cell;
     width: 2%;
@@ -354,7 +390,7 @@ footer {
     margin: 0 auto;
     color: white;
     position: relative; }
-    /* line 424, master.css.scss */
+    /* line 463, master.css.scss */
     .choices .choice:after {
       content: '';
       width: 90%;
@@ -368,48 +404,48 @@ footer {
       height: 0.3em;
       background-size: 100% 0.3em;
       background-repeat: no-repeat; }
-    /* line 442, master.css.scss */
+    /* line 481, master.css.scss */
     .choices .choice.selected:after {
       background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../images/fisherman/selected-choice.png);
       background-position: bottom center, 0.3em center;
       background-size: 100% 0.3em, 100% 100%;
       background-repeat: no-repeat; }
-    /* line 450, master.css.scss */
+    /* line 489, master.css.scss */
     .choices .choice .title {
       text-align: center;
       vertical-align: top; }
-      /* line 454, master.css.scss */
+      /* line 493, master.css.scss */
       .choices .choice .title:before {
         content: counter(choice) ".";
         counter-increment: choice;
         margin-right: .5em; }
-    /* line 461, master.css.scss */
+    /* line 500, master.css.scss */
     .choices .choice .consequence {
       display: none;
       font-size: .8em; }
 
-/* line 469, master.css.scss */
+/* line 508, master.css.scss */
 .arrow, .trajectory {
   position: absolute;
   bottom: 10%;
   -webkit-backface-visibility: hidden; }
 
-/* line 478, master.css.scss */
+/* line 517, master.css.scss */
 #consequence {
   width: 50%;
   left: 25%;
   position: fixed;
   z-index: 500; }
 
-/* line 487, master.css.scss */
+/* line 526, master.css.scss */
 .fisherman #continue_journey_button, .fisherman .continue_journey_button {
   background-image: url(../images/fisherman/continue-button.png); }
 
-/* line 491, master.css.scss */
+/* line 530, master.css.scss */
 .farmer #continue_journey_button, .farmer .continue_journey_button {
   background-image: url(../images/farmer/continue-button.png); }
 
-/* line 495, master.css.scss */
+/* line 534, master.css.scss */
 #continue_journey_button {
   background-repeat: no-repeat;
   background-size: contain;
@@ -421,22 +457,22 @@ footer {
   z-index: 3000;
   cursor: pointer; }
 
-/* line 511, master.css.scss */
+/* line 550, master.css.scss */
 #control {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%; }
 
-/* line 518, master.css.scss */
+/* line 557, master.css.scss */
 .fisherman #throw_button, .fisherman .throw_button {
   background-image: url(../images/fisherman/throw-button.png); }
 
-/* line 522, master.css.scss */
+/* line 561, master.css.scss */
 .farmer #throw_button, .farmer .throw_button {
   background-image: url(../images/farmer/throw-button.png); }
 
-/* line 526, master.css.scss */
+/* line 565, master.css.scss */
 #throw_button, .throw_button {
   display: block;
   background-repeat: no-repeat;
@@ -450,15 +486,15 @@ footer {
   z-index: 1500;
   cursor: pointer; }
 
-/* line 540, master.css.scss */
+/* line 579, master.css.scss */
 .fisherman .arrow {
   background-image: url(../images/fisherman/control.png); }
 
-/* line 544, master.css.scss */
+/* line 583, master.css.scss */
 .farmer .arrow {
   background-image: url(../images/farmer/control.png); }
 
-/* line 548, master.css.scss */
+/* line 587, master.css.scss */
 .arrow {
   background-repeat: no-repeat;
   width: 25%;
@@ -470,15 +506,15 @@ footer {
 
 @-webkit-keyframes swing {
   /*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
-  /* line 560, master.css.scss */
+  /* line 599, master.css.scss */
   0% {
     -webkit-transform: rotate(-52deg); }
 
-  /* line 561, master.css.scss */
+  /* line 600, master.css.scss */
   100% {
     -webkit-transform: rotate(-15deg); } }
 
-/* line 564, master.css.scss */
+/* line 603, master.css.scss */
 .trajectory {
   width: 100%;
   height: 100%;
@@ -486,55 +522,55 @@ footer {
   left: 0;
   z-index: 50; }
 
-/* line 594, master.css.scss */
+/* line 633, master.css.scss */
 .choices {
   -webkit-transition: bottom 2s 3s;
   bottom: -100%; }
-  /* line 598, master.css.scss */
+  /* line 637, master.css.scss */
   .choices.come {
     -webkit-transition: bottom 2s 4s;
     bottom: 0; }
 
-/* line 604, master.css.scss */
+/* line 643, master.css.scss */
 #throw_button {
   -webkit-transition: left 2s 4s; }
-  /* line 607, master.css.scss */
+  /* line 646, master.css.scss */
   #throw_button.leave {
     -webkit-transition: left 2s 3s;
     left: -100%; }
 
-/* line 613, master.css.scss */
+/* line 652, master.css.scss */
 #control {
   -webkit-transition: left 2s 3s;
   left: -100%; }
-  /* line 617, master.css.scss */
+  /* line 656, master.css.scss */
   #control.come {
     -webkit-transition: left 2s 4s;
     left: 0; }
 
-/* line 625, master.css.scss */
+/* line 664, master.css.scss */
 .question.leave {
   -webkit-transition: top 2s 3s;
   top: -100%; }
 
-/* line 631, master.css.scss */
+/* line 670, master.css.scss */
 #consequence {
   -webkit-transition: top 1s 0;
   top: -100%; }
-  /* line 635, master.css.scss */
+  /* line 674, master.css.scss */
   #consequence.come {
     top: 15%; }
 
-/* line 640, master.css.scss */
+/* line 679, master.css.scss */
 #continue_journey_button {
   -webkit-transition: right 1s 0;
   right: -100%; }
-  /* line 644, master.css.scss */
+  /* line 683, master.css.scss */
   #continue_journey_button.come {
     right: 0;
     -webkit-transition: right 1s 6.5s; }
 
-/* line 651, master.css.scss */
+/* line 690, master.css.scss */
 .arrow.swing {
   display: block;
   -webkit-transform-origin: 0 50%;
@@ -543,11 +579,11 @@ footer {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-direction: alternate; }
-  /* line 661, master.css.scss */
+  /* line 700, master.css.scss */
   .arrow.swing.stop {
     -webkit-animation-play-state: paused; }
 
-/* line 667, master.css.scss */
+/* line 706, master.css.scss */
 .pier {
   width: 100%;
   height: 50%;
@@ -559,17 +595,17 @@ footer {
   bottom: 0%;
   left: 0%; }
 
-/* line 679, master.css.scss */
+/* line 718, master.css.scss */
 .fisherman .pier {
   background-image: url(../images/fisherman/pier.png); }
 
-/* line 683, master.css.scss */
+/* line 722, master.css.scss */
 .farmer .pier {
   background-image: url(../images/farmer/pier.png);
   width: 100%;
   height: 50%; }
 
-/* line 689, master.css.scss */
+/* line 728, master.css.scss */
 .catch {
   width: 100%;
   height: 50%;
@@ -581,36 +617,36 @@ footer {
   bottom: 0%;
   left: 0%; }
 
-/* line 701, master.css.scss */
+/* line 740, master.css.scss */
 .fisherman .catch {
   background-image: url(../images/fisherman/BOX.png);
   background-position: top center; }
-  /* line 705, master.css.scss */
+  /* line 744, master.css.scss */
   .fisherman .catch.good {
     background-image: url(../images/fisherman/BOX_FEW.png); }
-    /* line 708, master.css.scss */
+    /* line 747, master.css.scss */
     .fisherman .catch.good.great {
       background-image: url(../images/fisherman/BOX_MEDIUM.png); }
-      /* line 711, master.css.scss */
+      /* line 750, master.css.scss */
       .fisherman .catch.good.great.amazing {
         background-image: url(../images/fisherman/BOX_LOT.png); }
 
-/* line 718, master.css.scss */
+/* line 757, master.css.scss */
 .farmer .catch {
   background-image: url(../images/farmer/BOX.png);
   background-position: top center;
   bottom: 10%; }
-  /* line 723, master.css.scss */
+  /* line 762, master.css.scss */
   .farmer .catch.good {
     background-image: url(../images/farmer/BOX_FEW.png); }
-    /* line 726, master.css.scss */
+    /* line 765, master.css.scss */
     .farmer .catch.good.great {
       background-image: url(../images/farmer/BOX_MEDIUM.png); }
-      /* line 729, master.css.scss */
+      /* line 768, master.css.scss */
       .farmer .catch.good.great.amazing {
         background-image: url(../images/farmer/BOX_LOT.png); }
 
-/* line 736, master.css.scss */
+/* line 775, master.css.scss */
 .final_score {
   text-align: center;
   margin-top: 3%;
@@ -620,31 +656,31 @@ footer {
   position: relative;
   text-transform: uppercase; }
 
-/* line 746, master.css.scss */
+/* line 785, master.css.scss */
 .screen:first .arrow.first {
   -webkit-animation-delay: 0; }
 
-/* line 751, master.css.scss */
+/* line 790, master.css.scss */
 #setting {
   -webkit-transition: top 3s ease-in-out 1s; }
 
-/* line 756, master.css.scss */
+/* line 795, master.css.scss */
 #setting.underwater {
   -webkit-transition: top 3s ease-in-out 5s; }
 
-/* line 760, master.css.scss */
+/* line 799, master.css.scss */
 body #character {
   -webkit-transition: top 3s ease-in-out 1s; }
-  /* line 763, master.css.scss */
+  /* line 802, master.css.scss */
   body #character.underwater {
     top: -25%;
     -webkit-transition: top 3s ease-in-out 5s; }
 
-/* line 770, master.css.scss */
+/* line 809, master.css.scss */
 menu.general {
   display: table;
   margin: 2em auto 0 auto; }
-  /* line 774, master.css.scss */
+  /* line 813, master.css.scss */
   menu.general a {
     background-color: rgba(0, 0, 0, 0.9);
     background-position: left;
@@ -656,28 +692,72 @@ menu.general {
     color: rgba(255, 255, 255, 0.9);
     font-family: 'Arial Black';
     text-decoration: none; }
-    /* line 786, master.css.scss */
+    /* line 825, master.css.scss */
     menu.general a#save_score {
       background-image: url(../images/bt_save.png); }
-    /* line 790, master.css.scss */
+    /* line 829, master.css.scss */
     menu.general a#play_again {
       background-image: url(../images/bt_play_again.png); }
-    /* line 794, master.css.scss */
+    /* line 833, master.css.scss */
     menu.general a#exit {
       background-image: url(../images/bt_exit.png); }
+    /* line 837, master.css.scss */
+    menu.general a#view_gallery {
+      background-image: url(../images/bt_gallery.png); }
 
-/* line 801, master.css.scss */
-.drawings {
+/* line 843, master.css.scss */
+#welcome_setting menu.general {
   position: absolute;
-  bottom: 0;
+  bottom: 2%; }
+  /* line 847, master.css.scss */
+  #welcome_setting menu.general #view_score {
+    background-image: url(../images/welcome/bt_highscore.png); }
+  /* line 851, master.css.scss */
+  #welcome_setting menu.general #in_english {
+    background-image: url(../images/welcome/bt_english.png); }
+
+/* line 857, master.css.scss */
+.score_page {
+  position: absolute;
+  bottom: -100%;
   width: 100%;
   padding: 0;
   margin: 0;
   height: 50%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 3000;
-  overflow: hidden; }
-  /* line 815, master.css.scss */
+  overflow: hidden;
+  -webkit-transition: bottom 1s;
+  color: white; }
+  /* line 870, master.css.scss */
+  .score_page.show {
+    bottom: 0; }
+  /* line 874, master.css.scss */
+  .score_page table {
+    margin: auto; }
+    /* line 877, master.css.scss */
+    .score_page table td {
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-color: rgba(255, 255, 255, 0.7);
+      padding: 1em 0; }
+
+/* line 887, master.css.scss */
+.drawings {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3000;
+  overflow: hidden;
+  -webkit-transition: bottom 1s; }
+  /* line 902, master.css.scss */
+  .drawings.show {
+    bottom: 0; }
+  /* line 906, master.css.scss */
   .drawings menu {
     width: 10%;
     height: 100%;
@@ -687,19 +767,19 @@ menu.general {
     padding: 0;
     position: relative;
     z-index: 5000; }
-  /* line 826, master.css.scss */
+  /* line 917, master.css.scss */
   .drawings section {
     top: 0;
     width: 90%;
     display: inline-block;
     position: relative;
     -webkit-transition: top .5s; }
-  /* line 835, master.css.scss */
+  /* line 926, master.css.scss */
   .drawings h3 {
     color: rgba(255, 255, 255, 0.6);
     text-align: right;
     margin: 2% 2% 0 0; }
-  /* line 841, master.css.scss */
+  /* line 932, master.css.scss */
   .drawings figure {
     width: 25%;
     height: 50%;
@@ -709,11 +789,11 @@ menu.general {
     color: white;
     font-size: .8em;
     text-align: left; }
-    /* line 851, master.css.scss */
+    /* line 942, master.css.scss */
     .drawings figure img {
       width: 100%;
       max-height: 100%; }
-  /* line 857, master.css.scss */
+  /* line 948, master.css.scss */
   .drawings #gallery_down, .drawings #gallery_up {
     display: block;
     width: 90%;
@@ -721,10 +801,10 @@ menu.general {
     height: 50%;
     background-repeat: no-repeat;
     background-position: center center; }
-  /* line 866, master.css.scss */
+  /* line 957, master.css.scss */
   .drawings #gallery_down {
     background-image: url(../images/gallery_right.png); }
-  /* line 870, master.css.scss */
+  /* line 961, master.css.scss */
   .drawings #gallery_up {
     background-image: url(../images/gallery_left.png); }
 
@@ -906,71 +986,67 @@ menu.general {
 .farmer #animation_3_a .bomb, .farmer #animation_3_b .bomb, .farmer #animation_3_c .bomb, .farmer #animation_3_d .bomb {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/bomb.png);
   background-position: bottom left;
-  -webkit-transition: opacity .5s;
-  opacity: 0; }
-  /* line 28, animations/farmer/3-a-let-pigeons-eat.scss */
+  display: none; }
+  /* line 27, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .bomb.show, .farmer #animation_3_b .bomb.show, .farmer #animation_3_c .bomb.show, .farmer #animation_3_d .bomb.show {
-    opacity: 1; }
-/* line 33, animations/farmer/3-a-let-pigeons-eat.scss */
+    display: block; }
+/* line 32, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .scarecrow, .farmer #animation_3_b .scarecrow, .farmer #animation_3_c .scarecrow, .farmer #animation_3_d .scarecrow {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/scarecrow.png);
   background-position: bottom left;
-  -webkit-transition: opacity .5s;
-  opacity: 0; }
-  /* line 39, animations/farmer/3-a-let-pigeons-eat.scss */
+  display: none; }
+  /* line 37, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .scarecrow.show, .farmer #animation_3_b .scarecrow.show, .farmer #animation_3_c .scarecrow.show, .farmer #animation_3_d .scarecrow.show {
-    opacity: 1; }
-/* line 44, animations/farmer/3-a-let-pigeons-eat.scss */
+    display: block; }
+/* line 42, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .tape, .farmer #animation_3_b .tape, .farmer #animation_3_c .tape, .farmer #animation_3_d .tape {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/tape.png);
   background-position: bottom left;
   -webkit-transition: opacity .5s;
-  opacity: 0; }
-  /* line 50, animations/farmer/3-a-let-pigeons-eat.scss */
+  display: none; }
+  /* line 48, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .tape.show, .farmer #animation_3_b .tape.show, .farmer #animation_3_c .tape.show, .farmer #animation_3_d .tape.show {
-    opacity: 1; }
-/* line 55, animations/farmer/3-a-let-pigeons-eat.scss */
+    display: block; }
+/* line 53, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .poison-1, .farmer #animation_3_b .poison-1, .farmer #animation_3_c .poison-1, .farmer #animation_3_d .poison-1 {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/poison-1.png);
   background-position: bottom left;
-  -webkit-transition: opacity .5s;
-  opacity: 0; }
-  /* line 61, animations/farmer/3-a-let-pigeons-eat.scss */
+  display: none; }
+  /* line 58, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .poison-1.show, .farmer #animation_3_b .poison-1.show, .farmer #animation_3_c .poison-1.show, .farmer #animation_3_d .poison-1.show {
-    opacity: 1; }
-/* line 66, animations/farmer/3-a-let-pigeons-eat.scss */
+    display: block; }
+/* line 63, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .poison-2, .farmer #animation_3_b .poison-2, .farmer #animation_3_c .poison-2, .farmer #animation_3_d .poison-2 {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/poison-2.png);
   background-position: bottom left;
-  -webkit-transition: opacity .5s;
-  opacity: 0; }
-  /* line 72, animations/farmer/3-a-let-pigeons-eat.scss */
+  display: none; }
+  /* line 68, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .poison-2.show, .farmer #animation_3_b .poison-2.show, .farmer #animation_3_c .poison-2.show, .farmer #animation_3_d .poison-2.show {
-    opacity: 1; }
-/* line 77, animations/farmer/3-a-let-pigeons-eat.scss */
+    display: block; }
+/* line 73, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .rifle, .farmer #animation_3_b .rifle, .farmer #animation_3_c .rifle, .farmer #animation_3_d .rifle {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/rifle.png);
   background-position: bottom right;
   left: 100%;
   -webkit-transition: left 1s; }
-  /* line 83, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 79, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .rifle.come, .farmer #animation_3_b .rifle.come, .farmer #animation_3_c .rifle.come, .farmer #animation_3_d .rifle.come {
     left: 0; }
-/* line 88, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 84, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .gunpowder, .farmer #animation_3_b .gunpowder, .farmer #animation_3_c .gunpowder, .farmer #animation_3_d .gunpowder {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/gunpowder.png);
   background-position: bottom right;
   display: none; }
-  /* line 93, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 89, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .gunpowder.appear, .farmer #animation_3_b .gunpowder.appear, .farmer #animation_3_c .gunpowder.appear, .farmer #animation_3_d .gunpowder.appear {
     display: block; }
-/* line 98, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 94, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .levada, .farmer #animation_3_b .levada, .farmer #animation_3_c .levada, .farmer #animation_3_d .levada {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/levada.png); }
-  /* line 101, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 97, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .levada.future, .farmer #animation_3_b .levada.future, .farmer #animation_3_c .levada.future, .farmer #animation_3_d .levada.future {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/levada-future.png); }
-/* line 106, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 102, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .crap, .farmer #animation_3_b .crap, .farmer #animation_3_c .crap, .farmer #animation_3_d .crap {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/crap.png);
   background-position: bottom left;
@@ -979,11 +1055,11 @@ menu.general {
   -webkit-animation-name: opacity, top;
   -webkit-duration: .5s;
   z-index: 2000; }
-  /* line 115, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 111, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .crap.come, .farmer #animation_3_b .crap.come, .farmer #animation_3_c .crap.come, .farmer #animation_3_d .crap.come {
     opacity: 1;
     top: 0; }
-/* line 121, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 117, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .crap-tree, .farmer #animation_3_b .crap-tree, .farmer #animation_3_c .crap-tree, .farmer #animation_3_d .crap-tree {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/crap-tree.png);
   background-position: bottom left;
@@ -992,70 +1068,70 @@ menu.general {
   -webkit-transition-name: opacity top;
   -webkit-transition-duration: 1s;
   z-index: 2000; }
-  /* line 130, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 126, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .crap-tree.grow, .farmer #animation_3_b .crap-tree.grow, .farmer #animation_3_c .crap-tree.grow, .farmer #animation_3_d .crap-tree.grow {
     opacity: 1;
     top: 0; }
-/* line 136, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 132, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .pigeon, .farmer #animation_3_b .pigeon, .farmer #animation_3_c .pigeon, .farmer #animation_3_d .pigeon {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/pigeon.png);
   background-position: bottom left;
   left: -100%;
   -webkit-transition: left 2s;
   z-index: 2000; }
-  /* line 143, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 139, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .pigeon.come, .farmer #animation_3_b .pigeon.come, .farmer #animation_3_c .pigeon.come, .farmer #animation_3_d .pigeon.come {
     left: -30%; }
-  /* line 147, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 143, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .pigeon.move, .farmer #animation_3_b .pigeon.move, .farmer #animation_3_c .pigeon.move, .farmer #animation_3_d .pigeon.move {
     left: 0; }
-  /* line 151, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 147, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .pigeon.leave, .farmer #animation_3_b .pigeon.leave, .farmer #animation_3_c .pigeon.leave, .farmer #animation_3_d .pigeon.leave {
     left: 100%; }
-  /* line 155, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 151, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .pigeon.dead, .farmer #animation_3_b .pigeon.dead, .farmer #animation_3_c .pigeon.dead, .farmer #animation_3_d .pigeon.dead {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/pigeon-dead.png); }
-/* line 160, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 156, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .vegetables, .farmer #animation_3_b .vegetables, .farmer #animation_3_c .vegetables, .farmer #animation_3_d .vegetables {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/vegetables.png); }
-  /* line 163, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 159, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .vegetables.future, .farmer #animation_3_b .vegetables.future, .farmer #animation_3_c .vegetables.future, .farmer #animation_3_d .vegetables.future {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/vegetables-future.png); }
-/* line 168, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 164, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .cloud-1, .farmer #animation_3_b .cloud-1, .farmer #animation_3_c .cloud-1, .farmer #animation_3_d .cloud-1 {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/cloud-1.png);
   z-index: 1500;
   -webkit-transition: left 2s; }
-  /* line 173, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 169, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .cloud-1.go, .farmer #animation_3_b .cloud-1.go, .farmer #animation_3_c .cloud-1.go, .farmer #animation_3_d .cloud-1.go {
     left: -100%; }
-/* line 178, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 174, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .cloud-2, .farmer #animation_3_b .cloud-2, .farmer #animation_3_c .cloud-2, .farmer #animation_3_d .cloud-2 {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/cloud-2.png);
   z-index: 1500;
   left: -100%;
   -webkit-transition: left 2s; }
-  /* line 184, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 180, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .cloud-2.come, .farmer #animation_3_b .cloud-2.come, .farmer #animation_3_c .cloud-2.come, .farmer #animation_3_d .cloud-2.come {
     left: 0; }
-/* line 189, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 185, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .forest, .farmer #animation_3_b .forest, .farmer #animation_3_c .forest, .farmer #animation_3_d .forest {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/forest.png);
   background-position: bottom left; }
-  /* line 193, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 189, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .forest.future, .farmer #animation_3_b .forest.future, .farmer #animation_3_c .forest.future, .farmer #animation_3_d .forest.future {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/forest-future.png); }
-/* line 198, animations/farmer/3-a-let-pigeons-eat.scss */
+/* line 194, animations/farmer/3-a-let-pigeons-eat.scss */
 .farmer #animation_3_a .drop, .farmer #animation_3_b .drop, .farmer #animation_3_c .drop, .farmer #animation_3_d .drop {
   background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-1.png);
   display: none; }
-  /* line 202, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 198, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .drop.appear, .farmer #animation_3_b .drop.appear, .farmer #animation_3_c .drop.appear, .farmer #animation_3_d .drop.appear {
     display: block; }
-  /* line 206, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 202, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .drop.second, .farmer #animation_3_b .drop.second, .farmer #animation_3_c .drop.second, .farmer #animation_3_d .drop.second {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-2.png); }
-  /* line 210, animations/farmer/3-a-let-pigeons-eat.scss */
+  /* line 206, animations/farmer/3-a-let-pigeons-eat.scss */
   .farmer #animation_3_a .drop.third, .farmer #animation_3_b .drop.third, .farmer #animation_3_c .drop.third, .farmer #animation_3_d .drop.third {
     background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-3.png); }
 
@@ -1473,7 +1549,7 @@ menu.general {
     background-repeat: no-repeat; }
 
 /* line 36, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-1 {
+#a1-fish-1 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1484,15 +1560,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 80%; }
   /* line 48, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-1.swim {
+  #a1-fish-1.swim {
     left: 10%; }
   /* line 53, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-1.die {
+  #a1-fish-1.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 59, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-2 {
+#a1-fish-2 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1503,15 +1579,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 90%; }
   /* line 71, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-2.swim {
+  #a1-fish-2.swim {
     left: 10%; }
   /* line 76, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-2.die {
+  #a1-fish-2.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 83, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-3 {
+#a1-fish-3 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1522,15 +1598,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 10%; }
   /* line 95, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-3.swim {
+  #a1-fish-3.swim {
     left: 70%; }
   /* line 100, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-3.die {
+  #a1-fish-3.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 106, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-4 {
+#a1-fish-4 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1541,15 +1617,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 30%; }
   /* line 118, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-4.swim {
+  #a1-fish-4.swim {
     left: 90%; }
   /* line 123, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-4.die {
+  #a1-fish-4.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 129, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-5 {
+#a1-fish-5 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1560,15 +1636,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 20%; }
   /* line 141, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-5.swim {
+  #a1-fish-5.swim {
     left: 70%; }
   /* line 146, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-5.die {
+  #a1-fish-5.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 152, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-6 {
+#a1-fish-6 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1579,15 +1655,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 50%; }
   /* line 164, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-6.swim {
+  #a1-fish-6.swim {
     left: 10%; }
   /* line 169, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-6.die {
+  #a1-fish-6.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 175, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-7 {
+#a1-fish-7 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1598,15 +1674,15 @@ menu.general {
   -webkit-transition: left 8s;
   left: 60%; }
   /* line 187, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-7.swim {
+  #a1-fish-7.swim {
     left: 100%; }
   /* line 192, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-7.die {
+  #a1-fish-7.die {
     -webkit-transition: top 1s;
     top: 20%; }
 
 /* line 198, animations/fisherman/2-b-bomb.css.scss */
-.fisherman#a1-fish-8 {
+#a1-fish-8 {
   width: 5%;
   height: 5%;
   background-size: contain;
@@ -1617,10 +1693,10 @@ menu.general {
   -webkit-transition: left 8s;
   left: 40%; }
   /* line 210, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-8.swim {
+  #a1-fish-8.swim {
     left: 0%; }
   /* line 214, animations/fisherman/2-b-bomb.css.scss */
-  .fisherman#a1-fish-8.die {
+  #a1-fish-8.die {
     -webkit-transition: top 1s;
     top: 20%; }
 

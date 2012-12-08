@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest='/offline.manifest'>
   <head>
     <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
     <title>Farmer</title>
@@ -33,6 +33,7 @@
   </svg>
 </div>
 <div id='setting'>
+  <div class='overlay'></div>
   <div class='screen tutorial'>
     <a href='#' id='skip_tutorial'>Skip</a>
     <div class='screen character-intro'>
@@ -65,7 +66,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...</div>
-    <audio src='/audio/q1.m4a'></audio>
+    <audio src='/audio/farmers/1.m4a'></audio>
     <div class='choices come'>
       <div class='choice' score='-10'>
         <div class='title'>Deixa assim, quem usa a água primeiro que limpe</div>
@@ -81,7 +82,7 @@
             <p>A água é um recurso muito valioso para a agricultura, por isso é importante que as pessoas a utilizem de forma responsável.</p>
             <p>Se deixar o lixo na levada, a água vai ficar contaminada e vai desperdiçar parte da água. Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.</p>
             <p>Perde 10 pontos</p>
-            <audio src='/audio/q1.m4a'></audio>
+            <audio src='/audio/farmers/1-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -94,8 +95,10 @@
             <div class='vegetables'></div>
           </div>
           <div class='content'>
-            <p>A água é um recurso valioso. É da responsabilidade de todos garantir que a água não é desperdiçada ou contaminada. Ao tirar o lixo e o mato da levada está a impedir que a água fique suja e seja desperdiçada. Vai ter água de boa qualidade e em quantidade para ter uma boa colheita.</p>
+            <p>A água é um recurso valioso. É da responsabilidade de todos garantir que a água não é desperdiçada ou contaminada.</p>
+            <p>Ao tirar o lixo e o mato da levada está a impedir que a água fique suja e seja desperdiçada. Vai ter água de boa qualidade e em quantidade para ter uma boa colheita.</p>
             <p>Ganha 10 pontos</p>
+            <audio src='/audio/farmers/1-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -113,6 +116,7 @@
             <p>É da responsabilidade de todos garantir que a água não é desperdiçada ou contaminada. Apesar do lixo não ser seu, se não tirar o lixo da levada, a água vai ficar contaminada e vai desperdiçar parte da água.</p>
             <p>Vai receber menos água para a rega e água de má qualidade, o que vai afetar a qualidade da sua colheita.</p>
             <p>Perde 10 pontos</p>
+            <audio src='/audio/farmers/1-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -120,6 +124,7 @@
   </div>
   <div class='screen'>
     <div class='question'>Entre o terreno e a floresta ele vê uma planta de maracujá banana a crescer. O que faz o António?</div>
+    <audio src='/audio/farmers/2.m4a'></audio>
     <div class='choices'>
       <div class='choice' score='-10'>
         <div class='title'>Deixa a planta crescer para depois poder comer os maracujás.</div>
@@ -136,6 +141,7 @@
             <p>Esta planta trepadeira cresce sobre as plantas da floresta natural da Madeira, tapando-as totalmente e matando-as.</p>
             <p>Se não fizer nada, está a ajudar a planta invasora a crescer, o que vai levar à diminuição da floresta Laurissilva.</p>
             <p>Perde 10 pontos</p>
+            <audio src='/audio/farmers/2-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -149,8 +155,11 @@
             <div class='bubble'></div>
           </div>
           <div class='content'>
-            <p>O maracujá banana não é uma planta natural da ilha da Madeira e tem carácter invasor. Esta planta cresce e multiplica-se rapidamente, matando as plantas à volta e ocupando todo o espaço. Se plantar espécies invasoras (como o maracujá banana, a acácia ou a bananilha) junto da sua casa ou no seu terreno tem de estar atento ao seu crescimento para evitar que cresça em cima de outras plantas e elas morram. O melhor é escolher outro tipo de maracujá para plantar.</p>
+            <p>O maracujá banana não é uma planta natural da ilha da Madeira e tem carácter invasor. Esta planta cresce e multiplica-se rapidamente, matando as plantas à volta e ocupando todo o espaço.</p>
+            <p>Se plantar espécies invasoras (como o maracujá banana, a acácia ou a bananilha) junto da sua casa ou no seu terreno tem de estar atento ao seu crescimento para evitar que cresça em cima de outras plantas e elas morram.</p>
+            <p>O melhor é escolher outro tipo de maracujá para plantar.</p>
             <p>Perde 5 pontos</p>
+            <audio src='/audio/farmers/2-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -169,6 +178,7 @@
             <p>O maracujá banana é uma planta invasora. As plantas invasoras crescem muito rapidamente. Um fruto tem 30 a 200 sementes. Ao deitar as cascas no chão elas podem ter sementes e dar origem a novas plantas que vão danificar as plantas que estam nesse local.</p>
             <p>Ao deitar restos de comida no chão está também a atrair ratos que vão comer o que plantou e vão espalhar doenças no seu terreno</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/2-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -180,8 +190,10 @@
             <div class='trees'></div>
           </div>
           <div class='content'>
-            <p>Existem muitas plantas invasoras na Madeira, como a acácia, a bananilha e outras que crescem rapidamente e matam as plantas à volta. É necessário destruí-las para que elas não ocupem todo o espaço e destruam a floresta Laurissilva. As plantas invasoras são muito resistentes e não é fácil destruí-las. Cada planta tem de ser destruída de forma específica, se precisar de ajuda para conhecer e saber como eliminar as plantas invasoras contacte o Serviço do Parque Natural.</p>
+            <p>Existem muitas plantas invasoras na Madeira, como a acácia, a bananilha e outras que crescem rapidamente e matam as plantas à volta. É necessário destruí-las para que elas não ocupem todo o espaço e destruam a floresta Laurissilva.</p>
+            <p>As plantas invasoras são muito resistentes e não é fácil destruí-las. Cada planta tem de ser destruída de forma específica, se precisar de ajuda para conhecer e saber como eliminar as plantas invasoras contacte o Serviço do Parque Natural.</p>
             <p>Ganha 10 pontos.</p>
+            <audio src='/audio/farmers/2-4.m4a'></audio>
           </div>
         </div>
       </div>
@@ -189,6 +201,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António vê um Pombo-trocaz a comer a sua colheita. O que faz?</div>
+    <audio src='/audio/farmers/3.m4a'></audio>
     <div class='choices'>
       <div class='choice' score='15'>
         <div class='title'>Deixa o Pombo-trocaz comer a plantação</div>
@@ -210,6 +223,7 @@
             <p>O pombo come sementes da floresta, e ajuda na renovação da floresta, aumentando o número de plantas da floresta Laurissilva. Esta floresta é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura.</p>
             <p>Ao deixar o pombo viver está a ajudar a floresta Laurissilva a crescer.</p>
             <p>Ganha 15 pontos</p>
+            <audio src='/audio/farmers/3-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -226,14 +240,17 @@
             <div class='gunpowder'></div>
           </div>
           <div class='content'>
-            <p>O pombo é importante para a renovação da floresta Laurissilva porque ele come as sementes da floresta e ajuda a espalhar as sementes. A floresta Laurissilva é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura. Se matar o pombo, a floresta não vai crescer e vai ter menos água, logo a sua colheita vai ter menos qualidade.</p>
+            <p>O pombo é importante para a renovação da floresta Laurissilva porque ele come as sementes da floresta e ajuda a espalhar as sementes.</p>
+            <p>A floresta Laurissilva é importante porque as suas plantas absorvem água do nevoeiro, essa água é depois encaminhada para as levadas para ser usada na agricultura.</p>
+            <p>Se matar o pombo, a floresta não vai crescer e vai ter menos água, logo a sua colheita vai ter menos qualidade.</p>
             <p>O pombo é um animal em extinção e deve ser protegido.</p>
             <p>Perde 20 pontos</p>
+            <audio src='/audio/farmers/3-2.m4a'></audio>
           </div>
         </div>
       </div>
       <div class='choice' score='20'>
-        <div class='title'>Afugenta o pombo trocaz</div>
+        <div class='title'>Afugenta o Pombo-trocaz</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_3_c'>
             <div class='grass'></div>
@@ -246,14 +263,16 @@
             <div class='tape'></div>
           </div>
           <div class='content'>
-            <p>Existem vários métodos para afugentar o pombo e manter o pombo longe do seu terreno. Pode utilizar “espanta pássaros” sonoros que emitem o som de um disparo de vez em quando. Pode utilizar redes que cobrem as plantações, fitas refletoras ou espantalhos. Mas como os animais se habituam, é importante que varie as soluções e o local onde as coloca no seu terreno.</p>
-            <p>O Serviço do Parque Natural pode ajudá-lo a escolher a melhor solução.</p>
+            <p>Existem vários métodos para afugentar o pombo e manter o pombo longe do seu terreno.</p>
+            <p>Pode utilizar “espanta pássaros” sonoros que emitem o som de um disparo de vez em quando. Pode utilizar redes que cobrem as plantações, fitas refletoras ou espantalhos.</p>
+            <p>Mas como os animais se habituam, é importante que varie as soluções e o local onde as coloca no seu terreno. O Serviço do Parque Natural pode ajudá-lo a escolher a melhor solução.</p>
             <p>Ganha 20 pontos</p>
+            <audio src='/audio/farmers/3-3.m4a'></audio>
           </div>
         </div>
       </div>
       <div class='choice' score='-15'>
-        <div class='title'>Deita veneno nas plantas para matar os Pombos que as comerem</div>
+        <div class='title'>Deita veneno nas plantas para matar os pombos que as comerem</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_3_d'>
             <div class='grass'></div>
@@ -265,8 +284,11 @@
             <div class='poison-2'></div>
           </div>
           <div class='content'>
-            <p>Veneno é um produto muito perigoso para usar na agricultura. O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita. Por isso vai ter colheita de má qualidade e que não pode ser vendida.</p>
+            <p>Veneno é um produto muito perigoso para usar na agricultura.</p>
+            <p>O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita.</p>
+            <p>Por isso vai ter colheita de má qualidade e que não pode ser vendida.</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/3-4.m4a'></audio>
           </div>
         </div>
       </div>
@@ -274,6 +296,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António encontra algumas lagartas na sua plantação. Algumas até já estão bem grandes. Como resolve o problema?</div>
+    <audio src='/audio/farmers/4.m4a'></audio>
     <div class='choices'>
       <div class='choice' score='-15'>
         <div class='title'>Usa pesticidas químicos aumentando as quantidades e concentrações recomendadas</div>
@@ -287,8 +310,11 @@
             <div class='vegetables'></div>
           </div>
           <div class='content'>
-            <p>Lá porque as lagartas são grandes não vai usar mais pesticida do que o indicado. Os pesticidas não matam só as pragas mas contaminam a colheita e a água. Se usar pesticidas sem respeitar as instruções o seu terreno vai ficar contaminado e não vai poder vender a sua colheita. Além disso o excesso de pesticida vai ser arrastado pela água da chuva e pelo vento e vai contaminar os terrenos à volta.</p>
+            <p>Lá porque as lagartas são grandes não vai usar mais pesticida do que o indicado.</p>
+            <p>Os pesticidas não matam só as pragas mas contaminam a colheita e a água. Se usar pesticidas sem respeitar as instruções o seu terreno vai ficar contaminado e não vai poder vender a sua colheita.</p>
+            <p>Além disso, o excesso de pesticida vai ser arrastado pela água da chuva e pelo vento e vai contaminar os terrenos à volta.</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/4-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -305,8 +331,10 @@
             <div class='vegetables'></div>
           </div>
           <div class='content'>
-            <p>Existem animais que comem algumas pragas e podem ajudá-lo. Um casal de aves e suas crias podem consumir até 1000 insectos; a joaninha come até 60 pulgões por dia e os morcegos comem até 3000 borboletas por noite... Se tiver arbustos perto do terreno, as aves vão fazer ninhos e vão ajudá-lo a livrar-se das lagartas!</p>
+            <p>Existem animais que comem algumas pragas e podem ajudá-lo. Um casal de aves e suas crias podem consumir até 1000 insectos; a joaninha come até 60 pulgões por dia e os morcegos comem até 3000 borboletas por noite...</p>
+            <p>Se tiver arbustos perto do terreno, as aves vão fazer ninhos e vão ajudá-lo a livrar-se das lagartas!</p>
             <p>Ganha 15 pontos</p>
+            <audio src='/audio/farmers/4-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -325,6 +353,7 @@
             <p>Se escolher usar pesticidas químicos deve seguir as instruções da embalagem. E deve ter em atenção para não utilizar pesticidas quando está chuva e vento para não espalhar o pesticida pelos terrenos à volta.</p>
             <p>Mas sempre que possível deve utilizar produtos aprovados para agricultura biológica, que apesar de serem mais caros, compensam porque não vão contaminar a colheita nem a água.</p>
             <p>Ganha 5 pontos</p>
+            <audio src='/audio/farmers/4-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -332,6 +361,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António está a fumar um cigarro. Quando termina...</div>
+    <audio src='/audio/farmers/5.m4a'></audio>
     <div class='choices'>
       <div class='choice' score='10'>
         <div class='title'>Apaga-o e guarda-o para depois colocar no lixo</div>
@@ -343,8 +373,10 @@
             <div class='cigarette-1'></div>
           </div>
           <div class='content'>
-            <p>O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece... Ao deitar as betas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.</p>
+            <p>O melhor para a sua saúde era mesmo não fumar, mas se é fumador o mais provável é fumar entre 10 a 20 cigarros por dia, ou seja 3600 a 7200 cigarros por ano. Agora multiplique este valor pelos fumadores que conhece...</p>
+            <p>Ao deitar as beatas no lixo está a impedir que esse lixo se acumule, até porque essas beatas demoram 2 a 5 anos a se desfazerem na terra e com a chuva são arrastadas para o mar onde continuam a dar problemas.</p>
             <p>Ganha 10 pontos</p>
+            <audio src='/audio/farmers/5-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -361,6 +393,7 @@
             <p>As beatas de cigarro mal apagadas são responsáveis por incêndios que destroem a floresta e também casas e terrenos agrícolas.</p>
             <p>Deitá-las na levada também não é solução porque elas vão contaminar a água para a rega com os químicos acumulados no filtro e depois são arrastadas para o mar, onde contaminam o oceano e os animais marinhos.</p>
             <p>Perde 10 pontos</p>
+            <audio src='/audio/farmers/5-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -378,6 +411,7 @@
             <p>Esconder o problema não faz com que ele desapareça, esconder o cigarro debaixo de uma pedra tem o mesmo efeito que jogá-lo para o chão ou para a levada.</p>
             <p>A beata vai contaminar o terreno e a água junto ao local onde a colocar, afetando a qualidade da sua colheita.</p>
             <p>Perde 10 pontos.</p>
+            <audio src='/audio/farmers/5-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -385,6 +419,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António fez uma monda e tem restos de plantas para deitar fora.</div>
+    <audio src='/audio/farmers/6.m4a'></audio>
     <div class='choices'>
       <div class='choice' score='-10'>
         <div class='title'>Atira-os para a levada</div>
@@ -397,8 +432,10 @@
             <div class='clock'></div>
           </div>
           <div class='content'>
-            <p>Ao deitar o lixo na levada, corre o risco de entupir a levada. Assim, vai estar a desperdiçar água que vai correr fora da levada e vai ter menos água na levada para regar a sua plantação. Isto vai afetar a qualidade e o valor dos seus produtos.</p>
+            <p>Ao deitar o lixo na levada, corre o risco de entupir a levada. Assim, vai estar a desperdiçar água que vai correr fora da levada e vai ter menos água na levada para regar a sua plantação.</p>
+            <p>Isto vai afetar a qualidade e o valor dos seus produtos.</p>
             <p>Perde 10 pontos</p>
+            <audio src='/audio/farmers/6-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -413,8 +450,11 @@
             <div class='trash-compost'></div>
           </div>
           <div class='content'>
-            <p>Todos os restos de comida e plantas (lixo orgânico) podem ser postos no compostor. Ao pôr o lixo orgânico no compostor, as minhocas vão decompor os restos e vão libertar minerais para a terra. A terra depois deste processo vai ter melhor qualidade para plantar. Está a melhorar a qualidade da sua colheita sem gastar dinheiro em aditivos e adubos químicos.</p>
+            <p>Todos os restos de comida e plantas (lixo orgânico) podem ser postos no compostor.</p>
+            <p>Ao pôr o lixo orgânico no compostor, as minhocas vão decompor os restos e vão libertar minerais para a terra. A terra depois deste processo vai ter melhor qualidade para plantar.</p>
+            <p>Está a melhorar a qualidade da sua colheita sem gastar dinheiro em aditivos e adubos químicos.</p>
             <p>Ganha 15 pontos</p>
+            <audio src='/audio/farmers/6-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -432,6 +472,7 @@
             <p>Existem empresas que podem recolher os restos de plantas, mas vai estar a pagar para levarem uma coisa que é valiosa para o seu terreno. Se colocar estes restos no compostor vai ter terra com melhor qualidade para plantar.</p>
             <p>Mas se tem muitos restos e não cabem no compostor, deve retirá-los do terreno para não atrair ratos e não correr riscos de incêndios.</p>
             <p>Perde 5 pontos</p>
+            <audio src='/audio/farmers/6-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -445,9 +486,11 @@
             <div class='trash-fire'></div>
           </div>
           <div class='content'>
-            <p>As queimadas são muito perigosas e podem dar origem a grandes incêndios que destroem plantações, casas e a floresta Laurissilva. Também ao queimar os restos de plantas está a perder minerais essenciais ao crescimento da sua colheita, que são facilmente arrastados para fora do seu terreno pela água da chuva.</p>
+            <p>As queimadas são muito perigosas e podem dar origem a grandes incêndios que destroem plantações, casas e a floresta Laurissilva.</p>
+            <p>Também ao queimar os restos de plantas está a perder minerais essenciais ao crescimento da sua colheita, que são facilmente arrastados para fora do seu terreno pela água da chuva.</p>
             <p>Mas se tiver mesmo de fazer uma queimada avise os bombeiros e os serviços florestais.</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/6-4.m4a'></audio>
           </div>
         </div>
       </div>
@@ -455,6 +498,7 @@
   </div>
   <div class='screen'>
     <div class='question'>O António acabou o trabalho no seu terreno e tem plásticos para deitar fora. O que faz com este lixo?</div>
+    <audio src='/audio/farmers/7.m4a'></audio>
     <div class='choices come'>
       <div class='choice' score='-15'>
         <div class='title'>Atira-os para a levada</div>
@@ -470,8 +514,10 @@
           </div>
           <div class='content'>
             <p>O plástico colocado na água demora mais de 50 anos a se decompor.</p>
-            <p>Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores. 90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.</p>
+            <p>Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores.</p>
+            <p>90% do lixo que se encontra no mar são plásticos, muitos animais marinhos confundem os plásticos com alimento, acabando por morrer ao comê-los.</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/7-1.m4a'></audio>
           </div>
         </div>
       </div>
@@ -487,8 +533,10 @@
           </div>
           <div class='content'>
             <p>O plástico demora 450 anos a se decompor e provoca danos graves no ambiente.</p>
-            <p>É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum. O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso.</p>
+            <p>É importante que o plástico seja reciclado, mas atenção porque as embalagens de material tóxico não podem ser recicladas, para não contaminarem outros plásticos para reciclagem. Estas embalagens também não podem ser colocadas juntamente com o lixo comum.</p>
+            <p>O plástico das embalagens de produtos tóxicos, como pesticidas, deve ser enviado para locais específicos e tratado como resíduo perigoso.</p>
             <p>Ganha 15 pontos</p>
+            <audio src='/audio/farmers/7-2.m4a'></audio>
           </div>
         </div>
       </div>
@@ -506,6 +554,7 @@
             <p>O plástico é muito tóxico para o meio ambiente mas é dos tipos de lixo que mais se recicla em Portugal. Existem contentores próprios para a reciclagem de plástico, ecopontos amarelos, onde deve colocar as embalagens de plástico.</p>
             <p>Mas tenha cuidado, porque nem todos os plásticos podem ser reciclados, embalagens de comida ainda sujas ou embalagens de produtos tóxicos não podem ser recicladas.</p>
             <p>Ganha 15 pontos</p>
+            <audio src='/audio/farmers/7-3.m4a'></audio>
           </div>
         </div>
       </div>
@@ -520,26 +569,57 @@
             <div class='abandoned-trash'></div>
           </div>
           <div class='content'>
-            <p>O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno. Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.</p>
+            <p>O plástico demora 450 anos a se desfazer na terra. O plástico tem químicos que vão contaminar o terreno e as ervas e plantas desse terreno.</p>
+            <p>Ao contaminar a terra, os danos vão espalhar-se também para os terrenos à volta e vai ter problemas com as suas colheitas.</p>
             <p>Perde 15 pontos</p>
+            <audio src='/audio/farmers/7-4.m4a'></audio>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class='screen special'>
-    <div class='question'>Parabéns foi um excelente agricultor o futuro da agricultura e a continuidade das espécies está garantido</div>
+    <div class='question' data-bind='visible: score() &lt;= 0'>Ui! Desta forma os nossos filhos não vão poder usar a floresta laurissilva! É preciso ser eco compatível.</div>
+    <div class='audio_content' data-bind='if: score()&lt;=0'>
+      <audio data-bind='if: score()&lt;=0' src='/audio/farmers/endscore3.m4a'></audio>
+    </div>
+    <div class='question' data-bind='visible: score() &gt; 0 &amp;&amp; score() &lt; 40'>Parabéns, está no bom caminho para se tornar um agricultor eco compatível, com um pouco mais de cuidado o nosso futuro será melhor.</div>
+    <div class='audio_content' data-bind='if: score() &gt; 0 &amp;&amp; score() &lt; 40'>
+      <audio src='/audio/farmers/endscore2.m4a'></audio>
+    </div>
+    <div class='question' data-bind='visible: score() &gt;= 40'>Parabéns, foi um excelente agricultor, o futuro da agricultura e da floresta está garantido.</div>
+    <div class='audio_content' data-bind='if: score() &gt;= 40'>
+      <audio src='/audio/farmers/endscore1.m4a'></audio>
+    </div>
     <div class='final_score'>
       <span data-bind='text: score'></span>
       Pontos
     </div>
     <menu class='general'>
+      <div id='view_score'></div>
       <a href='#' id='save_score'>Guardar Pontuaçâo</a>
       <a href='/farmer.html' id='play_again'>Jogar Outra Vez</a>
+      <a href='#' id='view_gallery'>Galeria de Desenhos</a>
       <a href='/' id='exit'>Sair</a>
     </menu>
     <div class='pier'></div>
     <div class='catch' data-bind='css: {"good": score() &gt; 0, "great": score() &gt; 20, "amazing": score() &gt; 40}'></div>
+    <div class='score_page'>
+      <table>
+        <thead>
+          <tr>
+            <th>Jogador</th>
+            <th>Pontuação</th>
+          </tr>
+        </thead>
+        <tbody data-bind='foreach: scores'>
+          <tr>
+            <td data-bind='text: name'></td>
+            <td data-bind='text: score'></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class='drawings'>
       <menu>
         <a href='#' id='gallery_up'></a>
@@ -548,241 +628,241 @@
       <section>
         <h3>Santana</h3>
         <figure>
-          <img src='/images/gallery/SANT_3_adriana_silva_alves.jpg' />
+          <img src='images/gallery/SANT_3_adriana_silva_alves.jpg' />
           <figcaption>Adriana Silva Alves</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_afonso.jpg' />
+          <img src='images/gallery/SANT_3_afonso.jpg' />
           <figcaption>Afonso</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_ana_catarina.jpg' />
+          <img src='images/gallery/SANT_3_ana_catarina.jpg' />
           <figcaption>Ana Catarina</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_andre_miguel_rocha_caldeira.jpg' />
+          <img src='images/gallery/SANT_3_andre_miguel_rocha_caldeira.jpg' />
           <figcaption>Andre Miguel Rocha Caldeira</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_bryan.jpg' />
+          <img src='images/gallery/SANT_3_bryan.jpg' />
           <figcaption>Bryan</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_diana_jose_silva_camara.jpg' />
+          <img src='images/gallery/SANT_3_diana_jose_silva_camara.jpg' />
           <figcaption>Diana Jose Silva Camara</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_duarte.jpg' />
+          <img src='images/gallery/SANT_3_duarte.jpg' />
           <figcaption>Duarte</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_francisco.jpg' />
+          <img src='images/gallery/SANT_3_francisco.jpg' />
           <figcaption>Francisco</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_joana.jpg' />
+          <img src='images/gallery/SANT_3_joana.jpg' />
           <figcaption>Joana</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_kevin.jpg' />
+          <img src='images/gallery/SANT_3_kevin.jpg' />
           <figcaption>Kevin</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_liliana_martins_andrade.jpg' />
+          <img src='images/gallery/SANT_3_liliana_martins_andrade.jpg' />
           <figcaption>Liliana Martins Andrade</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_natasha_goncalves_laranja.jpg' />
+          <img src='images/gallery/SANT_3_natasha_goncalves_laranja.jpg' />
           <figcaption>Natasha Goncalves Laranja</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_rafael.jpg' />
+          <img src='images/gallery/SANT_3_rafael.jpg' />
           <figcaption>Rafael</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_raquel.jpg' />
+          <img src='images/gallery/SANT_3_raquel.jpg' />
           <figcaption>Raquel</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_rodrigo_almada.jpg' />
+          <img src='images/gallery/SANT_3_rodrigo_almada.jpg' />
           <figcaption>Rodrigo Almada</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_rodrigo_filipe.jpg' />
+          <img src='images/gallery/SANT_3_rodrigo_filipe.jpg' />
           <figcaption>Rodrigo Filipe</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_3_sara.jpg' />
+          <img src='images/gallery/SANT_3_sara.jpg' />
           <figcaption>Sara</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_bernardo.jpg' />
+          <img src='images/gallery/SANT_4_bernardo.jpg' />
           <figcaption>Bernardo</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_claudia_nunes_alves.jpg' />
+          <img src='images/gallery/SANT_4_claudia_nunes_alves.jpg' />
           <figcaption>Claudia Nunes Alves</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_daniel.jpg' />
+          <img src='images/gallery/SANT_4_daniel.jpg' />
           <figcaption>Daniel</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_diogo_antonio.jpg' />
+          <img src='images/gallery/SANT_4_diogo_antonio.jpg' />
           <figcaption>Diogo Antonio</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_diogo_azevedo.jpg' />
+          <img src='images/gallery/SANT_4_diogo_azevedo.jpg' />
           <figcaption>Diogo Azevedo</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_francisco.jpg' />
+          <img src='images/gallery/SANT_4_francisco.jpg' />
           <figcaption>Francisco</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_gustavo.jpg' />
+          <img src='images/gallery/SANT_4_gustavo.jpg' />
           <figcaption>Gustavo</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_joao_pedro.jpg' />
+          <img src='images/gallery/SANT_4_joao_pedro.jpg' />
           <figcaption>Joao Pedro</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_leandro.jpg' />
+          <img src='images/gallery/SANT_4_leandro.jpg' />
           <figcaption>Leandro</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_luis_filipe.jpg' />
+          <img src='images/gallery/SANT_4_luis_filipe.jpg' />
           <figcaption>Luis Filipe</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_pedro_miguel.jpg' />
+          <img src='images/gallery/SANT_4_pedro_miguel.jpg' />
           <figcaption>Pedro Miguel</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_rodrigo.jpg' />
+          <img src='images/gallery/SANT_4_rodrigo.jpg' />
           <figcaption>Rodrigo</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_sergio.jpg' />
+          <img src='images/gallery/SANT_4_sergio.jpg' />
           <figcaption>Sergio</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SANT_4_sofia.jpg' />
+          <img src='images/gallery/SANT_4_sofia.jpg' />
           <figcaption>Sofia</figcaption>
         </figure>
         <h3>Seixal</h3>
         <figure>
-          <img src='/images/gallery/SEIX_3_Bruno.jpg' />
+          <img src='images/gallery/SEIX_3_Bruno.jpg' />
           <figcaption>Bruno</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Diana.jpg' />
+          <img src='images/gallery/SEIX_3_Diana.jpg' />
           <figcaption>Diana</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Francisca.jpg' />
+          <img src='images/gallery/SEIX_3_Francisca.jpg' />
           <figcaption>Francisca</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Joao Pedro.jpg' />
+          <img src='images/gallery/SEIX_3_Joao_Pedro.jpg' />
           <figcaption>João Pedro</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Joao Pedro2.jpg' />
+          <img src='images/gallery/SEIX_3_Joao_Pedro2.jpg' />
           <figcaption>João Pedro</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Laurina.jpg' />
+          <img src='images/gallery/SEIX_3_Laurina.jpg' />
           <figcaption>Laurina</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Leonardo.jpg' />
+          <img src='images/gallery/SEIX_3_Leonardo.jpg' />
           <figcaption>Leonardo</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Leticia.jpg' />
+          <img src='images/gallery/SEIX_3_Leticia.jpg' />
           <figcaption>Leticia</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Matilde.jpg' />
+          <img src='images/gallery/SEIX_3_Matilde.jpg' />
           <figcaption>Matilde</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_3_Oriana.jpg' />
+          <img src='images/gallery/SEIX_3_Oriana.jpg' />
           <figcaption>Oriana</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SEIX_4_Catarina.jpg' />
+          <img src='images/gallery/SEIX_4_Catarina.jpg' />
           <figcaption>Catarina</figcaption>
         </figure>
         <h3>Sao Roc Faial</h3>
         <figure>
-          <img src='/images/gallery/SRF_3_cristiano.jpg' />
+          <img src='images/gallery/SRF_3_cristiano.jpg' />
           <figcaption>Cristiano</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_cristina.jpg' />
+          <img src='images/gallery/SRF_3_cristina.jpg' />
           <figcaption>Cristina</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_emanuel.jpg' />
+          <img src='images/gallery/SRF_3_emanuel.jpg' />
           <figcaption>Emanuel</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_nicole.jpg' />
+          <img src='images/gallery/SRF_3_nicole.jpg' />
           <figcaption>Nicole</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_pedro_miguel.jpg' />
+          <img src='images/gallery/SRF_3_pedro_miguel.jpg' />
           <figcaption>Pedro Miguel</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_rodrigo_nunes.jpg' />
+          <img src='images/gallery/SRF_3_rodrigo_nunes.jpg' />
           <figcaption>Rodrigo Nunes</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_sabrina.jpg' />
+          <img src='images/gallery/SRF_3_sabrina.jpg' />
           <figcaption>Sabrina</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_3_veronica.jpg' />
+          <img src='images/gallery/SRF_3_veronica.jpg' />
           <figcaption>Veronica</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_ana_luisa.jpg' />
+          <img src='images/gallery/SRF_4_ana_luisa.jpg' />
           <figcaption>Ana Luisa</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_ana_luisa_2.jpg' />
+          <img src='images/gallery/SRF_4_ana_luisa_2.jpg' />
           <figcaption>Ana Luisa</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_bruna.jpg' />
+          <img src='images/gallery/SRF_4_bruna.jpg' />
           <figcaption>Bruna</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_bruno_faisca.jpg' />
+          <img src='images/gallery/SRF_4_bruno_faisca.jpg' />
           <figcaption>Bruno Faisca</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_joao_pedro_abreu_correia.jpg' />
+          <img src='images/gallery/SRF_4_joao_pedro_abreu_correia.jpg' />
           <figcaption>Joao Pedro Abreu Correia</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_mariana.jpg' />
+          <img src='images/gallery/SRF_4_mariana.jpg' />
           <figcaption>Mariana</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_oceano.jpg' />
+          <img src='images/gallery/SRF_4_oceano.jpg' />
           <figcaption>Oceano</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_pedro_alexandre.jpg' />
+          <img src='images/gallery/SRF_4_pedro_alexandre.jpg' />
           <figcaption>Pedro Alexandre</figcaption>
         </figure>
         <figure>
-          <img src='/images/gallery/SRF_4_renato.jpg' />
+          <img src='images/gallery/SRF_4_renato.jpg' />
           <figcaption>Renato</figcaption>
         </figure>
       </section>
