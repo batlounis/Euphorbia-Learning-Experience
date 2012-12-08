@@ -260,7 +260,7 @@ $(document).ready(function(){
 	
 		this.scores = ko.observableArray([]);
 	
-			this.score = ko.observable(13);
+			this.score = ko.observable(0);
 			
 
 	     this.trails = ko.observableArray([]);
