@@ -192,15 +192,15 @@ $(document).ready(function(){
 		playIn(function(){ 
 			sub_screen.find('.bomb').removeClass('show');
 			sub_screen.find('.scarecrow').addClass('show');
-		}, 5);
+		}, 4);
 		
 		playIn(function(){ 
 			sub_screen.find('.scarecrow').removeClass('show');
 			sub_screen.find('.tape').addClass('show');
-		}, 7);
+		}, 5);
 		
 				
-		playIn(function(){showConsequence(consequence)}, 9);
+		playIn(function(){showConsequence(consequence)}, 6);
 	}
 	
 	animation_3_d = function(consequence, sub_screen){
