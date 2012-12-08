@@ -51,6 +51,7 @@ bodyClass: fisherman
 			.text Boa Sorte!
 	.screen
 		.question Manel, o pescador vai iniciar a sua pesca no oceano. Ele tem de decidir onde pescar.
+		%audio{:src=>'/audio/fishermen/1.m4a', :autoplay=>false, :controls=>false}
 		.choices.come
 			.choice{:score=>-10}
 				.title Junto a uma Reserva Natural
@@ -67,6 +68,7 @@ bodyClass: fisherman
 						%p A quantidade de peixes tem diminuído muito por causa da pesca excessiva e das técnicas usadas, como por exemplo a pesca com redes.
 						%p É importante proteger as reservas para os peixes se reproduzirem e aumentar o número de peixes disponíveis no futuro.
 						%p Perde 10 pontos
+						%audio{:src=>'/audio/fishermen/1-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>-5}
 				.title Em local onde existem peixes jovens
 				.consequence.underwater
@@ -80,6 +82,7 @@ bodyClass: fisherman
 						%p Se pescar peixes muito jovens eles não vão crescer e reproduzir-se. Logo, no futuro vão existir menos peixes disponíveis no oceano.
 						%p Os peixes produzem muitos ovos mas só duma pequena parte desses ovos é que nascem peixes que sobrevivem e crescem.
 						%p Perde 5 pontos
+						%audio{:src=>'/audio/fishermen/1-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Em local onde existem peixes adultos
 				.consequence.underwater
@@ -90,9 +93,11 @@ bodyClass: fisherman
 					.content
 						%p Ao pescar peixes adultos, vai ganhar mais dinheiro com a sua venda e também está a garantir que no futuro terá mais peixes no oceano porque estes peixes já se reproduziram.
 						%p Tenha atenção e não pesque durante o período de desova nem pesque espécies protegidas.
-						%p Ganha 10 pontos						
+						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/1-3.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel, já escolheu o local, e tem de decidir que técnica utilizar para pescar
+		%audio{:src=>'/audio/fishermen/2.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-5}
 				.title Usa uma rede de arrasto
@@ -105,7 +110,8 @@ bodyClass: fisherman
 					.content
 						%p Ao pescar com rede de arrasto, parte do que está na rede não tem valor. Pesca lixo e peixes que não podem ser vendidos, e destrói a zona por onde a rede passa.
 						%p Se utilizar técnicas seletivas (como a cana e a linha) vai controlar o que pesca e pode pescar peixes que valem mais dinheiro, e é melhor para o ambiente.
-						%p Perde 5 pontos		
+						%p Perde 5 pontos
+						%audio{:src=>'/audio/fishermen/2-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>-15}
 				.title Joga bombas
 				.consequence.underwater
@@ -127,6 +133,7 @@ bodyClass: fisherman
 						%p Os peixes pescados com bombas valem menos dinheiro por causa do seu aspecto após a explosão.
 						%p As explosões destroem a zona e mesmo durante muitos anos depois da explosão, essa zona continua sem peixes. Além disso, esta técnica é ilegal.
 						%p Perde 15 pontos
+						%audio{:src=>'/audio/fishermen/2-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Utiliza técnicas de pesca seletivas (ex: cana de pesca, linha de anzois, etc)
 				.consequence.underwater
@@ -141,8 +148,10 @@ bodyClass: fisherman
 						%p Com as técnicas seletivas pode controlar o que pesca, escolhendo o isco, o anzol e a profundidade de pesca.
 						%p Assim, não pesca peixes que não deve pescar ou que não valem muito e está a garantir que vão existir peixes no futuro.
 						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/2-3.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel vai à pesca durante o período de desova de alguns peixes. O Manel decide...
+		%audio{:src=>'/audio/fishermen/3.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-5}
 				.title Pesca-os a todos
@@ -156,6 +165,7 @@ bodyClass: fisherman
 						%p Ao pescar durante o período de desova está a diminuir o número de peixes para o futuro. Os ovos dos peixes que são pescados, não dão origem a novos peixes.
 						%p Se não existirem tantos peixes no futuro, os pescadores vão ter cada vez menos peixes para pescar e vender.
 						%p Perde 5 pontos
+						%audio{:src=>'/audio/fishermen/3-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>5}
 				.title Escolhe outra época para pescar esta espécie que está em desova
 				.consequence.underwater
@@ -169,6 +179,7 @@ bodyClass: fisherman
 						%p Ao escolher outra época para pescar não está a prejudicar a espécie durante a desova.
 						%p Está a permitir que os peixes possam nascer e crescer e que vão existir mais peixes para pescar no futuro.
 						%p Ganha 5 pontos
+						%audio{:src=>'/audio/fishermen/3-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>5}
 				.title Escolhe outro local para pescar
 				.consequence.underwater
@@ -181,8 +192,10 @@ bodyClass: fisherman
 						%p Se pescar noutro local, não vai pescar peixes durante a desova.
 						%p Está a permitir que os peixes possam nascer e crescer e que vão existir mais peixes para pescar no futuro.
 						%p Ganha 5 pontos
+						%audio{:src=>'/audio/fishermen/3-3.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question Enquanto pesca o Manel está a almoçar. Quando acaba de comer pega nos restos e ...
+		%audio{:src=>'/audio/fishermen/4.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-5}
 				.title Joga à água
@@ -198,6 +211,7 @@ bodyClass: fisherman
 						%p Os restos de comida decompõe-se facilmente no mar e alimentam os peixes e outros animais. Mas ao atirá-lo à água enquanto pesca, vai atrair aves e outros animais, que irão interferir com a sua pesca e podem ser pescados acidentalmente.
 						%p Mantenha todo o lixo no barco, em contentores fechados.
 						%p Perde 5 pontos
+						%audio{:src=>'/audio/fishermen/4-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Mantém os restos no barco
 				.consequence.underwater
@@ -209,8 +223,10 @@ bodyClass: fisherman
 						%p Ao manter os restos de comida no barco não está a atrair aves nem outros animais para o local onde está a pescar.
 						%p Assim, estes animais não vão incomodar a sua pesca e não existe o perigo de pescá-los ou magoá-los acidentalmente.
 						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/4-2.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel está a pescar e vê um lobo-marinho a nadar ali perto...
+		%audio{:src=>'/audio/fishermen/5.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-10}
 				.title Atira uma bomba para assustar o lobo-marinho
@@ -223,6 +239,7 @@ bodyClass: fisherman
 						%p Não deve atirar bombas para o lobo-marinho porque pode feri-lo ou matá-lo.
 						%p O lobo-marinho é um animal que está ameaçado de extinção, por isso deve protegê-lo.
 						%p Perde 10 pontos
+						%audio{:src=>'/audio/fishermen/5-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Recolhe o peixe que pescou e muda de local de pesca
 				.consequence.underwater
@@ -238,6 +255,7 @@ bodyClass: fisherman
 						%p O lobo-marinho é um animal curioso e vai tentar apanhar os peixes que está a pescar.
 						%p Ao mudar o local de pesca, está a evitar que este animal o incomode e atrapalhe a sua pesca.
 						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/5-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>-5}
 				.title Continua a pescar
 				.consequence.underwater
@@ -252,8 +270,10 @@ bodyClass: fisherman
 					.content
 						%p Se continuar a pescar no mesmo local, o lobo-marinho vai comer parte do peixe que é pescado por si, e pode acabar por colocar em perigo a vida de uma espécie protegida.
 						%p Perde 5 pontos
+						%audio{:src=>'/audio/fishermen/5-3.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel está a pescar utilizando uma rede. Ele recolhe a rede e apercebe-se que nem toda a pesca é a desejável…
+		%audio{:src=>'/audio/fishermen/6.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-10}
 				.title Guarda todos os peixes mesmo os sem valor comercial 
@@ -269,6 +289,7 @@ bodyClass: fisherman
 						%p Assim, deve deitar ao mar todos os peixes jovens e que não podem ser vendidos para que possam crescer e dar origem a mais peixes que poderão ser pescados e vendidos no futuro.
 						%p Ao fazer isto, está a prejudicar a quantidade de peixes no mar e não está a ganhar dinheiro com a sua venda.
 						%p Perde 10 pontos
+						%audio{:src=>'/audio/fishermen/6-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Lança ao mar os peixes jovens
 				.consequence.underwater
@@ -290,8 +311,10 @@ bodyClass: fisherman
 						%p Lembre-se também que não deve pescar peixes jovens, que ainda não se reproduziram. 
 						%p Sempre que pescar peixes jovens ou que não têm valor comercial, deite-os no mar logo, para que eles possam recuperar e crescer.
 						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/6-2.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel apercebe-se que a rede está danificada, e...
+		%audio{:src=>'/audio/fishermen/7.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-10}
 				.title Lança a rede no mar
@@ -308,6 +331,7 @@ bodyClass: fisherman
 						%p Estas redes prendem, magoam e às vezes matam muitos animais, como por exemplo: lobos-marinhos, golfinhos, tartarugas, baleias e aves.
 						%p Estes materiais à deriva também danificam barcos porque prendem-se nas hélices e estragam o motor, mais de 6 em cada 10 barcos madeirenses já tiveram problemas por causa do lixo.
 						%p Perde 10 pontos
+						%audio{:src=>'/audio/fishermen/7-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>10}
 				.title Recolhe a rede e remenda-a em terra
 				.consequence.underwater
@@ -322,6 +346,7 @@ bodyClass: fisherman
 						%p Se jogar as redes para o mar, vai afectar os peixes e outros animais e plantas, o que vai ter consequências graves para a sua pesca.
 						%p As redes que são abandonadas continuam a pescar sozinhas, matando peixes que ficam no fundo do mar.
 						%p Ganha 10 pontos
+						%audio{:src=>'/audio/fishermen/7-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>5}
 				.title Traz a rede para terra e deita-a no lixo.
 				.consequence.underwater
@@ -338,8 +363,10 @@ bodyClass: fisherman
 						%p Caso os aparelhos de pesca estejam presos no fundo deve tentar retirá-los a todo o custo porque o abandono de material no mar causa a morte de animais e traz problemas aos barcos de pesca.
 						%p Deve trazer para terra todo o lixo produzido no barco e todo o lixo que encontrar no oceano.
 						%p Ganha 5 pontos
+						%audio{:src=>'/audio/fishermen/7-3.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question Este é o fim do dia de pesca do Manel e existe lixo no barco. O Manel não sabe o que fazer com o lixo...
+		%audio{:src=>'/audio/fishermen/8.m4a', :autoplay=>false, :controls=>false}
 		.choices
 			.choice{:score=>-20}
 				.title Atira o plástico ao mar
@@ -358,6 +385,7 @@ bodyClass: fisherman
 						%p 90% do lixo que se encontra no oceano é plástico. O plástico é perigoso porque existem animais marinhos que confundem o plástico com o seu alimento natural (como por exemplo as tartarugas, baleias, muitos peixes e aves marinhas) e comem o lixo, o que provoca asfixia, bloqueio do sistema digestivo e morte. 
 						%p O plástico também contém substâncias tóxicas que passam para a água dos oceanos e para todos os seres marinhos. 
 						%p Perde 20 pontos
+						%audio{:src=>'/audio/fishermen/8-1.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>25}
 				.title Leva o lixo para terra e coloca nos contentores para reciclagem
 				.consequence.underwater
@@ -371,6 +399,7 @@ bodyClass: fisherman
 						%p Agora multiplique esta quantidade pelo número de barcos que pescam na ilha e pelo número de dias do ano e verá a quantidade de lixo que é produzida no mar! 
 						%p Traga todo o lixo para terra e o deposite nos contentores para reciclagem. Assim, está a garantir o futuro da pesca.
 						%p Ganha 25 pontos
+						%audio{:src=>'/audio/fishermen/8-2.m4a', :autoplay=>false, :controls=>false}
 			.choice{:score=>-20}
 				.title Atira as pilhas ao mar
 				.consequence.underwater
@@ -387,10 +416,17 @@ bodyClass: fisherman
 						%p As pilhas contém mercúrio, que é ingerido por peixes, como por exemplo o peixe espada. Se estes peixes forem pescados e consumidos, podem causar doenças graves às pessoas que os comerem.
 						%p Deve trazer as pilhas para terra e colocá-las nos contentores de reciclagem.
 						%p Perde 20 pontos
+						%audio{:src=>'/audio/fishermen/8-3.m4a', :autoplay=>false, :controls=>false}
 	.screen.special
 		.question{'data-bind'=>'visible: score() <= 0'}  Ui! Desta forma os nossos filhos não vão poder comer peixe! é preciso ser eco compatível.
+		.audio_content{'data-bind'=>'if: score()<=0'}
+			%audio{'data-bind'=>'if: score()<=0', :src=>'/audio/fishermen/endscore3.m4a', :autoplay=>false, :controls=>false}
 		.question{'data-bind'=>'visible: score() > 0 && score() < 40'} Parabéns, está no bom caminho para se tornar um pescador eco compatível, com um pouco mais de cuidado o nosso futuro será melhor.
+		.audio_content{'data-bind'=>'if: score() > 0 && score() < 40'}
+			%audio{:src=>'/audio/fishermen/endscore2.m4a', :autoplay=>false, :controls=>false}
 		.question{'data-bind'=>'visible: score() >= 40'} Parabéns, foi um excelente pescador o futuro da pesca e a continuidade das espécies está garantido.
+		.audio_content{'data-bind'=>'if: score() >= 40'}
+			%audio{:src=>'/audio/fishermen/endscore1.m4a', :autoplay=>false, :controls=>false}
 		.final_score
 			%span{'data-bind'=>'text: score'}
 			Pontos
