@@ -35,7 +35,7 @@ $(document).ready(function(){
 	animation_1_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			// future_count(2020, 2, sub_screen);
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -56,6 +56,7 @@ $(document).ready(function(){
 	animation_2_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.maracuja-later-1').addClass('pop');
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		
 		playIn(function(){ 
@@ -68,6 +69,7 @@ $(document).ready(function(){
 	animation_2_b = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.bubble').addClass('show');
+			future_count(2020, 2, sub_screen);
 		}, 1);
 		
 		playIn(function(){ 
@@ -163,6 +165,7 @@ $(document).ready(function(){
 		playIn(function(){ 
 			sub_screen.find('.gunpowder').addClass('appear');
 			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
 		}, 4);
 		
 		playIn(function(){ 
@@ -222,6 +225,7 @@ $(document).ready(function(){
 		
 		playIn(function(){ 
 			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
 		}, 6);
 		
 		playIn(function(){ 
@@ -247,6 +251,7 @@ $(document).ready(function(){
 		
 		playIn(function(){ 
 			sub_screen.find('.poison').addClass('show');
+			future_count(2020, 2, sub_screen);
 		}, 3);
 		
 		playIn(function(){ 
@@ -348,7 +353,7 @@ $(document).ready(function(){
 	animation_6_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			// future_count(2020, 2, sub_screen);
+			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -400,6 +405,7 @@ $(document).ready(function(){
 	animation_7_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.plastic').addClass('come');
+			future_count(2020, 2, sub_screen);
 		}, 1);
 		
 		playIn(function(){ 
@@ -436,6 +442,7 @@ $(document).ready(function(){
 	animation_7_d = function(consequence, sub_screen){		
 		playIn(function(){ 
 			sub_screen.find('.abandoned-bubble').addClass('show');
+			future_count(2020, 3, sub_screen);
 		}, 0);
 		
 		playIn(function(){ 
