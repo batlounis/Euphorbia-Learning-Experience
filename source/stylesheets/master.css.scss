@@ -30,6 +30,33 @@ body{
 	font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 	font-size: 140%;
 	
+	#welcome_setting{
+		background-image: url(#{$url}/welcome/background.jpg);
+		background-size: cover;
+		background-position: center bottom;
+		overflow: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		display: block;
+		
+		.choose_journey_button{
+			background-image: url(#{$url}/welcome/bt_play_pt.png);
+			background-size: contain;
+			background-position: center center;
+			position: absolute;
+			bottom: 14%;
+			left: 35%;
+			background-repeat: no-repeat;
+			width: 30%;
+			height: 35%;
+			display: block;
+		}
+	}
+	
 	#setting{
 		z-index: 0;
 		background-size: 100%;
@@ -810,6 +837,19 @@ menu.general{
 		&#view_gallery{
 			background-image: url(#{$url}/bt_gallery.png);
 		}
+	}
+}
+
+#welcome_setting menu.general{
+	position: absolute;
+	bottom: 2%;
+	
+	#view_score{
+		background-image: url(#{$url}/welcome/bt_highscore.png);
+	}
+	
+	#in_english{
+		background-image: url(#{$url}/welcome/bt_english.png);
 	}
 }
 

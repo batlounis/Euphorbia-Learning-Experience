@@ -1,6 +1,19 @@
 ---
 title: Welcome
+bodyClass: welcome
 ---
 
-%a{:href=>'fisherman.html'} Fisherman Journey
-%a{:href=>'farmer.html'} Farmer Journey
+#welcome_setting
+	%a.choose_journey_button{:href=>'choose_journey.html'}
+	%menu.general
+		%a#in_english{:href=>'/index_english.html'}English
+	.score_page
+		%table
+			%thead
+				%tr
+					%th Jogador
+					%th Pontuação
+			%tbody{'data-bind'=>'foreach: scores'}
+				%tr
+					%td{'data-bind'=>'text: name'}
+					%td{'data-bind'=>'text: score'}
