@@ -811,7 +811,7 @@ menu.general{
 	margin: 2em auto 0 auto;
 		
 	a{
-		&#save_score{
+		&#view_score{
 			background-image: url(#{$url}/bt_save.png);
 		}
 
@@ -869,9 +869,44 @@ menu.general a, #skip_tutorial{
 	height: 50%;
 	background-color: rgba(black, .8);
 	z-index: 3000;
-	overflow: hidden;
+	overflow: auto;
 	-webkit-transition: bottom 1s;
 	color: white;
+	
+	.save_box{
+		display: table;
+		margin: 1em auto;
+		
+		input[type=text]{
+			background-color: rgba(white, .4);
+			border-radius: 0;
+			border-style: none;
+			font-size: 1.5em;
+			width: 10em;
+			margin-right: 1em;
+		}
+		
+		#save_score{
+			background-color: gray;
+			padding: .5em;
+			display: table-cell;
+			vertical-align: middle;
+			color: white;
+			text-decoration: none;
+			box-shadow: 0 .1em .1em rgba(white, .2);
+		}
+	}
+	
+	.close_score{
+		width: 100%;
+		background-color: rgba(white, .2);
+		color: white;
+		position: relative;
+		top: 0;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+	}
 	
 	&.show{
 		bottom: 0;

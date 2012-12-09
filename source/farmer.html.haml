@@ -469,14 +469,17 @@ bodyClass: farmer
 			%span{'data-bind'=>'text: score'}
 			Pontos
 		%menu.general
-			#view_score
-			%a#save_score{:href=>'#'}Guardar Pontuaçâo
+			%a#view_score{:href=>'#'}Guardar Pontuaçâo
 			%a#play_again{:href=>'/farmer.html'}Jogar Outra Vez
 			%a#view_gallery{:href=>'#'}Galeria de Desenhos
 			%a#exit{:href=>'/'}Sair
 		.pier
 		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
 		.score_page
+			%a.close_score{:href=>'#'}Fechar
+			.save_box
+				%input#score_name{:type=>'text'}
+				%a#save_score{:href=>'#'}Guardar
 			%table
 				%thead
 					%tr

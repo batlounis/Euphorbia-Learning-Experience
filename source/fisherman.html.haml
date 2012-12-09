@@ -422,7 +422,7 @@ bodyClass: fisherman
 						%p As pilhas contém mercúrio, que é ingerido por peixes, como por exemplo o peixe espada. Se estes peixes forem pescados e consumidos, podem causar doenças graves às pessoas que os comerem.
 						%p Deve trazer as pilhas para terra e colocá-las nos contentores de reciclagem.
 						%p Perde 20 pontos
-						%audio{:src=>'/audio/fishermen/8-3.m4a', :autoplay=>false, :controls=>false}
+	/ 					%audio{:src=>'/audio/fishermen/8-3.m4a', :autoplay=>false, :controls=>false}
 	.screen.special
 		.question{'data-bind'=>'visible: score() <= 0'}  Ui! Desta forma os nossos filhos não vão poder comer peixe! é preciso ser eco compatível.
 		.audio_content{'data-bind'=>'if: score()<=0'}
@@ -437,14 +437,17 @@ bodyClass: fisherman
 			%span{'data-bind'=>'text: score'}
 			Pontos
 		%menu.general
-			#view_score
-			%a#save_score{:href=>'#'}Guardar Pontuaçâo
+			%a#view_score{:href=>'#'}Guardar Pontuaçâo
 			%a#play_again{:href=>'/farmer.html'}Jogar Outra Vez
 			%a#view_gallery{:href=>'#'}Galeria de Desenhos
 			%a#exit{:href=>'/'}Sair
 		.pier
 		.catch{'data-bind'=>'css: {"good": score() > 0, "great": score() > 20, "amazing": score() > 40}'}
 		.score_page
+			%a.close_score{:href=>'#'}Fechar
+			.save_box
+				%input#score_name{:type=>'text'}
+				%a#save_score{:href=>'#'}Guardar
 			%table
 				%thead
 					%tr

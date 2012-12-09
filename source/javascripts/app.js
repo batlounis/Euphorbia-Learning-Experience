@@ -198,7 +198,7 @@ $(document).ready(function(){
 		$('.drawings').toggleClass('show');
 	});
 	
-	$('#view_score').click(function(){
+	$('#view_score, .close_score').click(function(){
 		var scores = getScores();
 		viewModel.scores(scores);
 		$('.score_page').toggleClass('show');
@@ -207,12 +207,11 @@ $(document).ready(function(){
 	$('#save_score').click(function(){
 		
 		var score = viewModel.score();
-		var name = 'salim';
+		var name = $('#score_name').attr('value');
 		var scores = addScore(name, score);
+		$('.save_box').html('');
 		
 		viewModel.scores(scores);
-				
-		$('#view_score').trigger('click');
 	});
 	
 	
