@@ -1,18 +1,18 @@
 ---
 title: Welcome
-bodyClass: welcome
+bodyClass: welcome english
 ---
 
 #welcome_setting
-	%a.choose_journey_button{:href=>'choose_journey.html'}
+	%a.choose_journey_button{:href=>'choose_journey_en.html'}
 	%menu.general
-		%a#in_english{:href=>'/index_en.html'}English
+		%a#in_portuguese{:href=>'/index.html'}Portugues
 	.score_page
 		%table
 			%thead
 				%tr
-					%th Jogador
-					%th Pontuação
+					%th Player
+					%th Points
 			%tbody{'data-bind'=>'foreach: scores'}
 				%tr
 					%td{'data-bind'=>'text: name'}

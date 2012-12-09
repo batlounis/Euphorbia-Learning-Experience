@@ -47,7 +47,9 @@ $(document).ready(function(){
 	
 	current_screen = $('.screen:first');
 	
-	$('#throw_button').click(function(){return selectAnswer();});
+	$('#throw_button').click(function(){
+		return selectAnswer();
+	});
 	
 	// --- --- --- ---
 
@@ -322,7 +324,7 @@ $(document).ready(function(){
 	}
 	
 	showConsequence = function(consequence){
-		var consequence_content = consequence.find('.content')
+		var consequence_content = consequence.find('.content');
 		$('#consequence .content').html(consequence_content);
 		$('#consequence').addClass('come');
 		$('#continue_journey_button').addClass('come');
@@ -384,10 +386,10 @@ $(document).ready(function(){
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
 		pauseAudio();
+		$('#control .arrow').addClass('stop');
 		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
-		var selection = Math.ceil(rotation/answer_range);
-		$('#control .arrow').addClass('stop');
+		var selection = Math.ceil(rotation/answer_range);		
 
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);

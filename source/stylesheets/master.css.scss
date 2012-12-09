@@ -30,6 +30,14 @@ body{
 	font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 	font-size: 140%;
 	
+	&.english{
+		#welcome_setting{
+			.choose_journey_button{
+				background-image: url(#{$url}/welcome/bt_play_en.png);
+			}			
+		}
+	}
+	
 	#welcome_setting{
 		background-image: url(#{$url}/welcome/background.jpg);
 		background-size: cover;
@@ -71,7 +79,7 @@ body{
 	}
 	
 	&.fisherman #setting{
-		background-image: url(#{$url}/fisherman/background.jpg);
+		background: url(#{$url}/fisherman/background3.jpg);
 	}
 	
 	&.farmer #setting{
@@ -856,6 +864,10 @@ menu.general a, #skip_tutorial{
 	
 	#in_english{
 		background-image: url(#{$url}/welcome/bt_english.png);
+	}
+	
+	#in_portuguese{
+		background-image: url(#{$url}/welcome/bt_portuguese.png);
 	}
 }
 
