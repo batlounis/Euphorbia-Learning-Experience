@@ -1,574 +1,540 @@
 CACHE MANIFEST
 
-./audio/farmers/1-1.m4a
-./audio/farmers/1-2.m4a
-./audio/farmers/1-3.m4a
-./audio/farmers/1.m4a
-./audio/farmers/2-1.m4a
-./audio/farmers/2-2.m4a
-./audio/farmers/2-3.m4a
-./audio/farmers/2-4.m4a
-./audio/farmers/2.m4a
-./audio/farmers/3-1.m4a
-./audio/farmers/3-2.m4a
-./audio/farmers/3-3.m4a
-./audio/farmers/3-4.m4a
-./audio/farmers/3.m4a
-./audio/farmers/4-1.m4a
-./audio/farmers/4-2.m4a
-./audio/farmers/4-3.m4a
-./audio/farmers/4.m4a
-./audio/farmers/5-1.m4a
-./audio/farmers/5-2.m4a
-./audio/farmers/5-3.m4a
-./audio/farmers/5.m4a
-./audio/farmers/6-1.m4a
-./audio/farmers/6-2.m4a
-./audio/farmers/6-3.m4a
-./audio/farmers/6-4.m4a
-./audio/farmers/6.m4a
-./audio/farmers/7-1.m4a
-./audio/farmers/7-2.m4a
-./audio/farmers/7-3.m4a
-./audio/farmers/7-4.m4a
-./audio/farmers/7.m4a
-./audio/farmers/endscore1.m4a
-./audio/farmers/endscore2.m4a
-./audio/farmers/endscore3.m4a
-./audio/farmers/T1.m4a
-./audio/farmers/T2.m4a
-./audio/farmers/T3.m4a
-./audio/farmers/T4.m4a
-./audio/farmers/T5.m4a
-./audio/farmers/T6.m4a
-./audio/farmers/T7.m4a
-./audio/q1.m4a
-./choose_journey.html
-./farmer.html
-./fisherman.html
-./images/background.png
-./images/bt_exit.png
-./images/bt_gallery.png
-./images/bt_play_again.png
-./images/bt_save.png
-./images/farmer
-./images/farmer/.DS_Store
-./images/farmer/1-a-leave-it
-./images/farmer/1-a-leave-it/compost.png
-./images/farmer/1-a-leave-it/forest-burned.png
-./images/farmer/1-a-leave-it/forest.png
-./images/farmer/1-a-leave-it/levada-future.png
-./images/farmer/1-a-leave-it/levada.png
-./images/farmer/1-a-leave-it/trash-compost.png
-./images/farmer/1-a-leave-it/trash-fire.png
-./images/farmer/1-a-leave-it/trash-truck.png
-./images/farmer/1-a-leave-it/trash.png
-./images/farmer/1-a-leave-it/tree.png
-./images/farmer/1-a-leave-it/truck.png
-./images/farmer/1-a-leave-it/vegetables-future.png
-./images/farmer/1-a-leave-it/vegetables.png
-./images/farmer/2-a-let-it-grow
-./images/farmer/2-a-let-it-grow/bubble-1.png
-./images/farmer/2-a-let-it-grow/bubble-2.png
-./images/farmer/2-a-let-it-grow/bubble-3.png
-./images/farmer/2-a-let-it-grow/bubble-4.png
-./images/farmer/2-a-let-it-grow/maracuja-later-1.png
-./images/farmer/2-a-let-it-grow/maracuja-later-2.png
-./images/farmer/2-a-let-it-grow/maracuja-later-c.png
-./images/farmer/2-a-let-it-grow/maracuja.png
-./images/farmer/2-a-let-it-grow/peel.png
-./images/farmer/2-a-let-it-grow/rat-1.png
-./images/farmer/2-a-let-it-grow/rat-2.png
-./images/farmer/2-a-let-it-grow/trees.png
-./images/farmer/2-a-let-it-grow/vegetables-future.png
-./images/farmer/2-a-let-it-grow/vegetables.png
-./images/farmer/3-a-let-pigeons-eat
-./images/farmer/3-a-let-pigeons-eat/bomb.png
-./images/farmer/3-a-let-pigeons-eat/cloud-1.png
-./images/farmer/3-a-let-pigeons-eat/cloud-2.png
-./images/farmer/3-a-let-pigeons-eat/crap-tree.png
-./images/farmer/3-a-let-pigeons-eat/crap.png
-./images/farmer/3-a-let-pigeons-eat/drop-1.png
-./images/farmer/3-a-let-pigeons-eat/drop-2.png
-./images/farmer/3-a-let-pigeons-eat/drop-3.png
-./images/farmer/3-a-let-pigeons-eat/forest-future.png
-./images/farmer/3-a-let-pigeons-eat/forest.png
-./images/farmer/3-a-let-pigeons-eat/grass.png
-./images/farmer/3-a-let-pigeons-eat/gunpowder.png
-./images/farmer/3-a-let-pigeons-eat/levada-future.png
-./images/farmer/3-a-let-pigeons-eat/levada.png
-./images/farmer/3-a-let-pigeons-eat/pigeon-dead.png
-./images/farmer/3-a-let-pigeons-eat/pigeon.png
-./images/farmer/3-a-let-pigeons-eat/poison-1.png
-./images/farmer/3-a-let-pigeons-eat/poison-2.png
-./images/farmer/3-a-let-pigeons-eat/rifle.png
-./images/farmer/3-a-let-pigeons-eat/scarecrow.png
-./images/farmer/3-a-let-pigeons-eat/tape.png
-./images/farmer/3-a-let-pigeons-eat/vegetables.png
-./images/farmer/3-a-let-pigeons-eat/vegetables_future.png
-./images/farmer/4-a-poison-caterpillars
-./images/farmer/4-a-poison-caterpillars/birds-left.png
-./images/farmer/4-a-poison-caterpillars/birds-right.png
-./images/farmer/4-a-poison-caterpillars/caterpillars-left.png
-./images/farmer/4-a-poison-caterpillars/caterpillars-right.png
-./images/farmer/4-a-poison-caterpillars/levada-future.png
-./images/farmer/4-a-poison-caterpillars/levada.png
-./images/farmer/4-a-poison-caterpillars/poison-future.png
-./images/farmer/4-a-poison-caterpillars/poison.png
-./images/farmer/4-a-poison-caterpillars/tree-future.png
-./images/farmer/4-a-poison-caterpillars/tree.png
-./images/farmer/4-a-poison-caterpillars/vegetables-future.png
-./images/farmer/4-a-poison-caterpillars/vegetables.png
-./images/farmer/5-a-ashtray
-./images/farmer/5-a-ashtray/cigarette-1.png
-./images/farmer/5-a-ashtray/cigarette-2.png
-./images/farmer/5-a-ashtray/cigarette-3.png
-./images/farmer/5-a-ashtray/contamination.png
-./images/farmer/5-a-ashtray/fire.png
-./images/farmer/5-a-ashtray/forest-future.png
-./images/farmer/5-a-ashtray/forest.png
-./images/farmer/5-a-ashtray/rock.png
-./images/farmer/5-a-ashtray/speech-bubble.png
-./images/farmer/5-a-ashtray/vegetables.png
-./images/farmer/7-a-put-in-water
-./images/farmer/7-a-put-in-water/abandoned-bubble-future.png
-./images/farmer/7-a-put-in-water/abandoned-bubble.png
-./images/farmer/7-a-put-in-water/abandoned-trash.png
-./images/farmer/7-a-put-in-water/levada.png
-./images/farmer/7-a-put-in-water/plastic-1.png
-./images/farmer/7-a-put-in-water/plastic-2.png
-./images/farmer/7-a-put-in-water/plastic-3.png
-./images/farmer/7-a-put-in-water/plastic-truck.png
-./images/farmer/7-a-put-in-water/recycle-bubble.png
-./images/farmer/7-a-put-in-water/sea.png
-./images/farmer/7-a-put-in-water/trash-group.png
-./images/farmer/7-a-put-in-water/tree.png
-./images/farmer/7-a-put-in-water/truck.png
-./images/farmer/7-a-put-in-water/vegetables.png
-./images/farmer/background.jpg
-./images/farmer/background_overlay.png
-./images/farmer/background_underwater.png
-./images/farmer/BOX.png
-./images/farmer/BOX_FEW.png
-./images/farmer/BOX_LOT.png
-./images/farmer/BOX_MEDIUM.png
-./images/farmer/character-1.png
-./images/farmer/character-2.png
-./images/farmer/character-3.png
-./images/farmer/choices-background.png
-./images/farmer/continue-button.png
-./images/farmer/control.png
-./images/farmer/pier.png
-./images/farmer/throw-button.png
-./images/fisherman/1-a-reserva/buoy.png
-./images/fisherman/1-a-reserva/fish-left-future.png
-./images/fisherman/1-a-reserva/fish-left.png
-./images/fisherman/1-a-reserva/fish-right-future.png
-./images/fisherman/1-a-reserva/fish-right.png
-./images/fisherman/1-a-reserva/medusa.png
-./images/fisherman/1-a-reserva/octopus.png
-./images/fisherman/1-a-reserva/reserva_future_1.png
-./images/fisherman/1-b-young-fish/fish-left-future.png
-./images/fisherman/1-b-young-fish/fish-left.png
-./images/fisherman/1-b-young-fish/fish-right-future.png
-./images/fisherman/1-b-young-fish/fish-right.png
-./images/fisherman/1-b-young-fish/scenario.png
-./images/fisherman/1-b-young-fish/young-fish.png
-./images/fisherman/1-c-grown-fish/fish-left.png
-./images/fisherman/1-c-grown-fish/fish-right.png
-./images/fisherman/2-a-net/arrasto.png
-./images/fisherman/2-a-net/fish-left.png
-./images/fisherman/2-a-net/fish-right.png
-./images/fisherman/2-a-net/nature.png
-./images/fisherman/2-c-selective/environment.png
-./images/fisherman/2-c-selective/fish-left.png
-./images/fisherman/2-c-selective/fish-right.png
-./images/fisherman/2-c-selective/fished-1.png
-./images/fisherman/2-c-selective/fished-2.png
-./images/fisherman/2-c-selective/hooks.png
-./images/fisherman/3-a-breeding-fish/egg.png
-./images/fisherman/3-a-breeding-fish/fish-future.png
-./images/fisherman/3-a-breeding-fish/fish.png
-./images/fisherman/3-a-breeding-fish/future.png
-./images/fisherman/3-a-breeding-fish/nature-future.png
-./images/fisherman/3-a-breeding-fish/nature.png
-./images/fisherman/3-b-other-time/calendar.png
-./images/fisherman/3-b-other-time/environment.png
-./images/fisherman/3-b-other-time/fish-left-future.png
-./images/fisherman/3-b-other-time/fish-left.png
-./images/fisherman/3-b-other-time/fish-right-future.png
-./images/fisherman/3-b-other-time/fish-right.png
-./images/fisherman/3-b-other-time/nature.png
-./images/fisherman/4-a-organic-water/birds-left.png
-./images/fisherman/4-a-organic-water/birds-right.png
-./images/fisherman/4-a-organic-water/fish-left.png
-./images/fisherman/4-a-organic-water/fish-right.png
-./images/fisherman/4-a-organic-water/nature.png
-./images/fisherman/4-a-organic-water/organic.png
-./images/fisherman/4-b-keep-leftovers/environment.png
-./images/fisherman/5-a-seal-bomb/fish.png
-./images/fisherman/5-a-seal-bomb/monk-seal-scared.png
-./images/fisherman/5-a-seal-bomb/monk-seal.png
-./images/fisherman/5-b-seal-fish-elsewhere/fish-1.png
-./images/fisherman/5-b-seal-fish-elsewhere/fish-2.png
-./images/fisherman/5-b-seal-fish-elsewhere/fish-3.png
-./images/fisherman/5-b-seal-fish-elsewhere/fish-4.png
-./images/fisherman/5-b-seal-fish-elsewhere/monk-seal.png
-./images/fisherman/5-b-seal-fish-elsewhere/net-1.png
-./images/fisherman/5-b-seal-fish-elsewhere/net-2.png
-./images/fisherman/5-b-seal-fish-elsewhere/net-3.png
-./images/fisherman/6-a-fish-non-profitable/fish-non-profitable-2.png
-./images/fisherman/6-a-fish-non-profitable/fish-non-profitable.png
-./images/fisherman/6-a-fish-non-profitable/fish-profitable.png
-./images/fisherman/6-a-fish-non-profitable/money-2.png
-./images/fisherman/6-a-fish-non-profitable/money-3.png
-./images/fisherman/6-a-fish-non-profitable/money.png
-./images/fisherman/6-b-throw-non-profitable/fish-1.png
-./images/fisherman/6-b-throw-non-profitable/fish-2.png
-./images/fisherman/6-b-throw-non-profitable/fish-3.png
-./images/fisherman/6-b-throw-non-profitable/fish-4.png
-./images/fisherman/6-b-throw-non-profitable/fish-5.png
-./images/fisherman/6-b-throw-non-profitable/fish-6.png
-./images/fisherman/6-b-throw-non-profitable/fish-left-future.png
-./images/fisherman/6-b-throw-non-profitable/fish-left.png
-./images/fisherman/6-b-throw-non-profitable/fish-right-future.png
-./images/fisherman/6-b-throw-non-profitable/fish-right.png
-./images/fisherman/6-b-throw-non-profitable/net-1.png
-./images/fisherman/6-b-throw-non-profitable/net-2.png
-./images/fisherman/6-b-throw-non-profitable/net-3.png
-./images/fisherman/7-a-throw-net/fish-left-future.png
-./images/fisherman/7-a-throw-net/fish-left.png
-./images/fisherman/7-a-throw-net/fish-right-future.png
-./images/fisherman/7-a-throw-net/fish-right.png
-./images/fisherman/7-a-throw-net/passing-boat.png
-./images/fisherman/7-a-throw-net/shredded-net.png
-./images/fisherman/7-a-throw-net/tangled-fish.png
-./images/fisherman/7-b-fix-net/broken-net.png
-./images/fisherman/7-b-fix-net/fish-left.png
-./images/fisherman/7-b-fix-net/fish-right.png
-./images/fisherman/7-b-fix-net/thought-bubble.png
-./images/fisherman/7-c-net-trashcan/broken-net.png
-./images/fisherman/7-c-net-trashcan/fish-left.png
-./images/fisherman/7-c-net-trashcan/fish-right.png
-./images/fisherman/7-c-net-trashcan/thought-bubble.png
-./images/fisherman/7-c-net-trashcan/trashcan-lid.png
-./images/fisherman/7-c-net-trashcan/trashcan.png
-./images/fisherman/8-a-trash-ocean/fish-left.png
-./images/fisherman/8-a-trash-ocean/fish-right.png
-./images/fisherman/8-a-trash-ocean/nature.png
-./images/fisherman/8-a-trash-ocean/trash-1.png
-./images/fisherman/8-a-trash-ocean/trash-2.png
-./images/fisherman/8-a-trash-ocean/trash-3.png
-./images/fisherman/8-a-trash-ocean/trash-4.png
-./images/fisherman/8-a-trash-ocean/trash-5.png
-./images/fisherman/8-b-trash-recycling/fish-left.png
-./images/fisherman/8-b-trash-recycling/fish-right.png
-./images/fisherman/8-b-trash-recycling/thought-bubble.png
-./images/fisherman/8-c-throw-batteries/battery-1.png
-./images/fisherman/8-c-throw-batteries/battery-2.png
-./images/fisherman/8-c-throw-batteries/battery-3.png
-./images/fisherman/8-c-throw-batteries/chemicals.png
-./images/fisherman/8-c-throw-batteries/fish-left.png
-./images/fisherman/8-c-throw-batteries/fish-right.png
-./images/fisherman/animation_bomb/blast_1.png
-./images/fisherman/animation_bomb/blast_2.png
-./images/fisherman/animation_bomb/bomb.png
-./images/fisherman/animation_bomb/fish1.png
-./images/fisherman/animation_bomb/fish2.png
-./images/fisherman/animation_bomb/fish3.png
-./images/fisherman/animation_bomb/fish4.png
-./images/fisherman/animation_bomb/fish5.png
-./images/fisherman/animation_bomb/fish6.png
-./images/fisherman/animation_bomb/fish7.png
-./images/fisherman/animation_bomb/fish8.png
-./images/fisherman/animation_bomb/ground.png
-./images/fisherman/animation_bomb/rock1.png
-./images/fisherman/animation_bomb/rock2.png
-./images/fisherman/animation_bomb/rock3.png
-./images/fisherman/animation_bomb/seaweed.png
-./images/fisherman/animation_bomb/seaweed2.png
-./images/fisherman/animation_bomb/seaweed3.png
-./images/fisherman/animation_bomb/seaweed4.png
-./images/fisherman/animation_bomb/starfish.png
-./images/fisherman/arrow.png
-./images/fisherman/background.jpg
-./images/fisherman/background_underwater.png
-./images/fisherman/box.png
-./images/fisherman/BOX_FEW.png
-./images/fisherman/BOX_FISH_FEW.png
-./images/fisherman/BOX_FISH_LOT.png
-./images/fisherman/BOX_FISH_MEDIUM.png
-./images/fisherman/BOX_LOT.png
-./images/fisherman/BOX_MEDIUM.png
-./images/fisherman/character.png
-./images/fisherman/choices-background.png
-./images/fisherman/clock.png
-./images/fisherman/common/net.png
-./images/fisherman/common/setting.png
-./images/fisherman/continue-button.png
-./images/fisherman/continue_button.png
-./images/fisherman/control.png
-./images/fisherman/line.svg
-./images/fisherman/pier.png
-./images/fisherman/selected-choice.png
-./images/fisherman/throw-button.png
-./images/fisherman/throw_button.png
-./images/gallery/CAN_3B_grupo1.jpg
-./images/gallery/CAN_3B_grupo2.jpg
-./images/gallery/CAN_4A_beatriz_alves_moreira.jpg
-./images/gallery/CAN_4A_bruna_maria_nunes_gomes.jpg
-./images/gallery/CAN_4A_bruno_jose_alves_moreira.jpg
-./images/gallery/CAN_4A_joao_davide_alves_da_silva.jpg
-./images/gallery/CAN_4A_joao_duarte_santos_costa.jpg
-./images/gallery/CAN_4A_joao_fernando_nunes_alves.jpg
-./images/gallery/CAN_4A_joao_gabriel.jpg
-./images/gallery/CAN_4A_joao_lourenco_franco_moniz.jpg
-./images/gallery/CAN_4A_jose_francisco_silva_dos_santos.jpg
-./images/gallery/CAN_4A_leandro_catinho_colaco.jpg
-./images/gallery/CAN_4A_luis_filipe_moniz_da_silva.jpg
-./images/gallery/CAN_4A_luisa.jpg
-./images/gallery/CAN_4A_maria_carlota_freitas_sousa.jpg
-./images/gallery/CAN_4A_maria_luisa_moreira_de_menezes.jpg
-./images/gallery/CAN_4A_marilia_leticia_moniz_teles.jpg
-./images/gallery/CAN_4A_miguel_lomelino_calaca.jpg
-./images/gallery/CAN_4A_nelson_bernardo_nunes_dos_santos.jpg
-./images/gallery/CAN_4A_pedro_henrique.jpg
-./images/gallery/CAN_4A_sofia_alves_dos_santos.jpg
-./images/gallery/CAN_4A_tiago_nunes_alves_melim.jpg
-./images/gallery/CAN_4A_tomas_jorge_dos_santos_delgado.jpg
-./images/gallery/CAN_4B_ana_sofia_santos_alves.jpg
-./images/gallery/CAN_4B_daniela.jpg
-./images/gallery/CAN_4B_Elsio_andre_nuno_santos.jpg
-./images/gallery/CAN_4B_hugo.jpg
-./images/gallery/CAN_4B_joao_duarte_costa_colaco.jpg
-./images/gallery/CAN_4B_joao_luis_alves_silva.jpg
-./images/gallery/CAN_4B_joao_rodrigo.jpg
-./images/gallery/CAN_4B_linda_sofia.jpg
-./images/gallery/CAN_4B_luis_fernando_gouveia_silva.jpg
-./images/gallery/CAN_4B_luis_filipe_silva_alves.jpg
-./images/gallery/CAN_4B_marco_alexandre_remesso_moreira.jpg
-./images/gallery/CAN_4B_maria_elisa.jpg
-./images/gallery/CAN_4B_nicole_maria_fernandes_sousa.jpg
-./images/gallery/CAN_4B_nuno_goncalo_lopes_camara.jpg
-./images/gallery/CAN_4B_pedro_jacinto_diogo_santos_sousa_vieira.jpg
-./images/gallery/CAN_4B_pedro_miguel_vieira_nunes.jpg
-./images/gallery/CAN_4B_ricardina.jpg
-./images/gallery/CAN_4B_rodrigo_daniel.jpg
-./images/gallery/CAN_4B_sara_filipa_colaco_vidinha.jpg
-./images/gallery/CAN_4C_alice_maria_sousa_calaca.jpg
-./images/gallery/CAN_4C_diogo.jpg
-./images/gallery/CAN_4C_egidio.jpg
-./images/gallery/CAN_4C_fabiana_cristina_santos_pereira.jpeg
-./images/gallery/CAN_4C_goncalo_sousa.jpg
-./images/gallery/CAN_4C_joao_andre.jpg
-./images/gallery/CAN_4C_joao_carlos.jpg
-./images/gallery/CAN_4C_joao_nicolau_da_silva_roque.jpg
-./images/gallery/CAN_4C_julia_maria_sousa_moniz.jpg
-./images/gallery/CAN_4C_maria_catarina_dos_santos_sousa.jpg
-./images/gallery/CAN_4C_matilde_alves_viveiros.jpeg
-./images/gallery/CAN_4C_miguel.jpg
-./images/gallery/CAN_4C_raquel_martins.jpg
-./images/gallery/CAN_4C_ricardo_magalhaes.jpg
-./images/gallery/CAN_4C_ruben.jpg
-./images/gallery/CAN_4C_Sandra.jpg
-./images/gallery/CAN_4C_sandra2.jpg
-./images/gallery/CAN_4C_sara_alexandra_lucas_levezinho_bibanio.jpg
-./images/gallery/CAN_4C_sofia.jpg
-./images/gallery/CAN_4C_susana.jpg
-./images/gallery/CL_3_jessica_patricia_reis_nunes.jpeg
-./images/gallery/CL_3_luis.jpeg
-./images/gallery/CL_3_sergio_antonio.jpeg
-./images/gallery/CL_3A_andre_miguel.jpeg
-./images/gallery/CL_3A_bruna_margarida_oliveira_faria.jpeg
-./images/gallery/CL_3A_bruno_afonso_nunes_colonho.jpeg
-./images/gallery/CL_3A_eduarda_carolina_atanasio_caires.jpeg
-./images/gallery/CL_3A_ema_filipa_carvalho_freitas.jpeg
-./images/gallery/CL_3A_emanuel.jpeg
-./images/gallery/CL_3A_fatima_carolina_ferreira.jpeg
-./images/gallery/CL_3A_francisco_jose_dos_reis_brito.jpeg
-./images/gallery/CL_3A_ines_andrade_rodrigues.jpeg
-./images/gallery/CL_3A_joana_filipa_olival_dos_santos_ferreira.jpeg
-./images/gallery/CL_3A_joana_raquel_sousa_coelho_belo.jpeg
-./images/gallery/CL_3A_joao_pedro_oliveira.jpeg
-./images/gallery/CL_3A_luana.jpeg
-./images/gallery/CL_3A_mario_nelson_silva_goncalves.jpeg
-./images/gallery/CL_3A_miguel_henrique_freitas_goncalves_de_barros.jpeg
-./images/gallery/CL_3A_soraia.jpeg
-./images/gallery/CL_3A_tiago.jpeg
-./images/gallery/CL_3B_ana_dulce_henriques_andrade.jpeg
-./images/gallery/CL_3B_andreina_beatriz_freitas_da_silva.jpeg
-./images/gallery/CL_3B_carolina.jpeg
-./images/gallery/CL_3B_clara.jpeg
-./images/gallery/CL_3B_clara_goncalves-dos_santos.jpeg
-./images/gallery/CL_3B_claudia_patricia_silva_brito.jpeg
-./images/gallery/CL_3B_david.jpeg
-./images/gallery/CL_3B_deise.jpeg
-./images/gallery/CL_3B_duarte.jpeg
-./images/gallery/CL_3B_enio.jpeg
-./images/gallery/CL_3B_isabel.jpeg
-./images/gallery/CL_3B_jose_nuno.jpeg
-./images/gallery/CL_3B_pedro_afonso_silva_henriques.jpeg
-./images/gallery/CL_3B_rodrigo.jpeg
-./images/gallery/CL_3B_sirla.jpeg
-./images/gallery/CL_4_alexadre.jpeg
-./images/gallery/CL_4_leandro.jpeg
-./images/gallery/CL_4_leandro2.jpeg
-./images/gallery/CL_4A_daniel_guilherme_ferreira.jpeg
-./images/gallery/CL_4A_diogo_antonio.jpeg
-./images/gallery/CL_4A_ema_n.jpeg
-./images/gallery/CL_4A_erico.jpeg
-./images/gallery/CL_4A_fabricio.jpeg
-./images/gallery/CL_4A_fatima.jpeg
-./images/gallery/CL_4A_goncalo_teles.jpeg
-./images/gallery/CL_4A_hugo_calisto.jpeg
-./images/gallery/CL_4A_hugo_calisto.jpg
-./images/gallery/CL_4A_hugo_miguel.jpeg
-./images/gallery/CL_4A_joana_isabel.jpeg
-./images/gallery/CL_4A_joana_raquel_sousa.jpeg
-./images/gallery/CL_4A_joao_leonardo_sa.jpeg
-./images/gallery/CL_4A_leonardo_f.jpeg
-./images/gallery/CL_4A_micaela.jpeg
-./images/gallery/CL_4A_nidia_deise_nunes_freitas.jpeg
-./images/gallery/CL_4A_pedro.jpeg
-./images/gallery/CL_4A_pedro_abreu.jpeg
-./images/gallery/CL_4A_rafael_luis.jpeg
-./images/gallery/CL_4A_ruben_santos.jpeg
-./images/gallery/CL_4A_sara_sofia_reis_rodrigues.jpeg
-./images/gallery/CL_4A_silvia_paixao.jpeg
-./images/gallery/CL_4A_tiago.jpeg
-./images/gallery/CL_4A_vanessa.jpeg
-./images/gallery/CL_4B_ana_beatriz.jpeg
-./images/gallery/CL_4B_ana_daniela.jpeg
-./images/gallery/CL_4B_ana_isa.jpeg
-./images/gallery/CL_4B_ana_margarida.jpeg
-./images/gallery/CL_4B_andre_bruno_goncalves_brito.jpeg
-./images/gallery/CL_4B_carlos.jpeg
-./images/gallery/CL_4B_catarina.jpeg
-./images/gallery/CL_4B_eduardo.jpeg
-./images/gallery/CL_4B_enio.jpeg
-./images/gallery/CL_4B_fatima.jpeg
-./images/gallery/CL_4B_francisco.jpeg
-./images/gallery/CL_4B_gabriela.jpeg
-./images/gallery/CL_4B_janete.jpeg
-./images/gallery/CL_4B_laura.jpeg
-./images/gallery/CL_4B_leandra.jpeg
-./images/gallery/CL_4B_nuno_roberto.jpeg
-./images/gallery/CL_4B_vitor.jpeg
-./images/gallery/SANT_3_adriana_silva_alves.jpg
-./images/gallery/SANT_3_afonso.jpg
-./images/gallery/SANT_3_ana_catarina.jpg
-./images/gallery/SANT_3_andre_miguel_rocha_caldeira.jpg
-./images/gallery/SANT_3_bryan.jpg
-./images/gallery/SANT_3_diana_jose_silva_camara.jpg
-./images/gallery/SANT_3_duarte.jpg
-./images/gallery/SANT_3_francisco.jpg
-./images/gallery/SANT_3_joana.jpg
-./images/gallery/SANT_3_kevin.jpg
-./images/gallery/SANT_3_liliana_martins_andrade.jpg
-./images/gallery/SANT_3_natasha_goncalves_laranja.jpg
-./images/gallery/SANT_3_rafael.jpg
-./images/gallery/SANT_3_raquel.jpg
-./images/gallery/SANT_3_rodrigo_almada.jpg
-./images/gallery/SANT_3_rodrigo_filipe.jpg
-./images/gallery/SANT_3_sara.jpg
-./images/gallery/SANT_4_bernardo.jpg
-./images/gallery/SANT_4_claudia_nunes_alves.jpg
-./images/gallery/SANT_4_daniel.jpg
-./images/gallery/SANT_4_diogo_antonio.jpg
-./images/gallery/SANT_4_diogo_azevedo.jpg
-./images/gallery/SANT_4_francisco.jpg
-./images/gallery/SANT_4_gustavo.jpg
-./images/gallery/SANT_4_joao_pedro.jpg
-./images/gallery/SANT_4_leandro.jpg
-./images/gallery/SANT_4_luis_filipe.jpg
-./images/gallery/SANT_4_pedro_miguel.jpg
-./images/gallery/SANT_4_rodrigo.jpg
-./images/gallery/SANT_4_sergio.jpg
-./images/gallery/SANT_4_sofia.jpg
-./images/gallery/SEIX_3_Bruno.jpg
-./images/gallery/SEIX_3_Diana.jpg
-./images/gallery/SEIX_3_Francisca.jpg
-./images/gallery/SEIX_3_Joao Pedro.jpg
-./images/gallery/SEIX_3_Joao Pedro2.jpg
-./images/gallery/SEIX_3_Laurina.jpg
-./images/gallery/SEIX_3_Leonardo.jpg
-./images/gallery/SEIX_3_Leticia.jpg
-./images/gallery/SEIX_3_Matilde.jpg
-./images/gallery/SEIX_3_Oriana.jpg
-./images/gallery/SEIX_4_Catarina.jpg
-./images/gallery/SRF_3_cristiano.jpg
-./images/gallery/SRF_3_cristina.jpg
-./images/gallery/SRF_3_emanuel.jpg
-./images/gallery/SRF_3_nicole.jpg
-./images/gallery/SRF_3_pedro_miguel.jpg
-./images/gallery/SRF_3_rodrigo_nunes.jpg
-./images/gallery/SRF_3_sabrina.jpg
-./images/gallery/SRF_3_veronica.jpg
-./images/gallery/SRF_4_ana_luisa.jpg
-./images/gallery/SRF_4_ana_luisa_2.jpg
-./images/gallery/SRF_4_bruna.jpg
-./images/gallery/SRF_4_bruno_faisca.jpg
-./images/gallery/SRF_4_joao_pedro_abreu_correia.jpg
-./images/gallery/SRF_4_mariana.jpg
-./images/gallery/SRF_4_oceano.jpg
-./images/gallery/SRF_4_pedro_alexandre.jpg
-./images/gallery/SRF_4_renato.jpg
-./images/gallery_left.png
-./images/gallery_right.png
-./images/middleman.png
-./images/tutorial/frame1.png
-./images/tutorial/frame2_arrow.png
-./images/tutorial/frame3.png
-./images/tutorial/frame4_farmer_arrow.png
-./images/tutorial/frame4_rod_arrow.png
-./images/tutorial/frame5.png
-./images/tutorial/frame5_farmer_range.png
-./images/tutorial/frame5_rod_range.png
-./images/tutorial/frame6.png
-./images/welcome/background.jpg
-./images/welcome/bt_english.png
-./images/welcome/bt_highscore.png
-./images/welcome/bt_narration.png
-./images/welcome/bt_play_eng.png
-./images/welcome/bt_play_pt.png
-./images/welcome/bt_portuguese.png
-./index.html
-./javascripts/all.js
-./javascripts/animations-farmer.js
-./javascripts/animations-fisherman.js
-./javascripts/animations.js
-./javascripts/app.js
-./javascripts/jquery-1.8.2.min.js
-./javascripts/knockout-2.2.0.js
-./javascripts/library.js
-./manifest
-./offline.appcache
-./stylesheets
-./stylesheets/ABeeZee-Italic.ttf
-./stylesheets/ABeeZee-Regular.ttf
-./stylesheets/all.css
-./stylesheets/animations/0-common.css
-./stylesheets/animations/1-a-reserva.css
-./stylesheets/animations/1-b-young-fish.css
-./stylesheets/animations/1-c-grown-fish.css
-./stylesheets/animations/2-a-net.css
-./stylesheets/animations/2-c-selective.css
-./stylesheets/animations/3-a-breeding-fish.css
-./stylesheets/animations/3-b-other-time.css
-./stylesheets/animations/3-c-other-location.css
-./stylesheets/animations/4-b-keep-leftovers.css
-./stylesheets/animations/farmer/0-common.css
-./stylesheets/animations/farmer/1-a-leave-it.css
-./stylesheets/animations/fisherman/0-common.css
-./stylesheets/animations/fisherman/1-a-reserva.css
-./stylesheets/animations/fisherman/1-b-young-fish.css
-./stylesheets/animations/fisherman/1-c-grown-fish.css
-./stylesheets/animations/fisherman/2-a-net.css
-./stylesheets/animations/fisherman/2-b-bomb.css
-./stylesheets/animations/fisherman/2-c-selective.css
-./stylesheets/animations/fisherman/3-a-breeding-fish.css
-./stylesheets/animations/fisherman/3-b-other-time.css
-./stylesheets/animations/fisherman/3-c-other-location.css
-./stylesheets/animations/fisherman/4-b-keep-leftovers.css
-./stylesheets/master.css
-./stylesheets/normalize.css
+# NETWORK:
+# *
+
+# /audio/farmers/1-1.m4a
+# /audio/farmers/1-2.m4a
+# /audio/farmers/1-3.m4a
+# /audio/farmers/1.m4a
+# /audio/farmers/2-1.m4a
+# /audio/farmers/2-2.m4a
+# /audio/farmers/2-3.m4a
+# /audio/farmers/2-4.m4a
+# /audio/farmers/2.m4a
+# /audio/farmers/3-1.m4a
+# /audio/farmers/3-2.m4a
+# /audio/farmers/3-3.m4a
+# /audio/farmers/3-4.m4a
+# /audio/farmers/3.m4a
+# /audio/farmers/4-1.m4a
+# /audio/farmers/4-2.m4a
+# /audio/farmers/4-3.m4a
+# /audio/farmers/4.m4a
+# /audio/farmers/5-1.m4a
+# /audio/farmers/5-2.m4a
+# /audio/farmers/5-3.m4a
+# /audio/farmers/5.m4a
+# /audio/farmers/6-1.m4a
+# /audio/farmers/6-2.m4a
+# /audio/farmers/6-3.m4a
+# /audio/farmers/6-4.m4a
+# /audio/farmers/6.m4a
+# /audio/farmers/7-1.m4a
+# /audio/farmers/7-2.m4a
+# /audio/farmers/7-3.m4a
+# /audio/farmers/7-4.m4a
+# /audio/farmers/7.m4a
+# /audio/farmers/endscore1.m4a
+# /audio/farmers/endscore2.m4a
+# /audio/farmers/endscore3.m4a
+# /audio/farmers/T1.m4a
+# /audio/farmers/T2.m4a
+# /audio/farmers/T3.m4a
+# /audio/farmers/T4.m4a
+# /audio/farmers/T5.m4a
+# /audio/farmers/T6.m4a
+# /audio/farmers/T7.m4a
+# /choose_journey.html
+# /farmer.html
+# /fisherman.html
+# /images/bt_exit.png
+# /images/bt_gallery.png
+# /images/bt_play_again.png
+# /images/bt_save.png
+# /images/farmer/1-a-leave-it/compost.png
+# /images/farmer/1-a-leave-it/forest-burned.png
+# /images/farmer/1-a-leave-it/forest.png
+# /images/farmer/1-a-leave-it/levada-future.png
+# /images/farmer/1-a-leave-it/levada.png
+# /images/farmer/1-a-leave-it/trash-compost.png
+# /images/farmer/1-a-leave-it/trash-fire.png
+# /images/farmer/1-a-leave-it/trash-truck.png
+# /images/farmer/1-a-leave-it/trash.png
+# /images/farmer/1-a-leave-it/tree.png
+# /images/farmer/1-a-leave-it/truck.png
+# /images/farmer/1-a-leave-it/vegetables-future.png
+# /images/farmer/1-a-leave-it/vegetables.png
+# /images/farmer/2-a-let-it-grow/bubble-1.png
+# /images/farmer/2-a-let-it-grow/bubble-2.png
+# /images/farmer/2-a-let-it-grow/bubble-3.png
+# /images/farmer/2-a-let-it-grow/bubble-4.png
+# /images/farmer/2-a-let-it-grow/maracuja-later-1.png
+# /images/farmer/2-a-let-it-grow/maracuja-later-2.png
+# /images/farmer/2-a-let-it-grow/maracuja-later-c.png
+# /images/farmer/2-a-let-it-grow/maracuja.png
+# /images/farmer/2-a-let-it-grow/peel.png
+# /images/farmer/2-a-let-it-grow/rat-1.png
+# /images/farmer/2-a-let-it-grow/rat-2.png
+# /images/farmer/2-a-let-it-grow/trees.png
+# /images/farmer/2-a-let-it-grow/vegetables-future.png
+# /images/farmer/2-a-let-it-grow/vegetables.png
+# /images/farmer/3-a-let-pigeons-eat/bomb.png
+# /images/farmer/3-a-let-pigeons-eat/cloud-1.png
+# /images/farmer/3-a-let-pigeons-eat/cloud-2.png
+# /images/farmer/3-a-let-pigeons-eat/crap-tree.png
+# /images/farmer/3-a-let-pigeons-eat/crap.png
+# /images/farmer/3-a-let-pigeons-eat/drop-1.png
+# /images/farmer/3-a-let-pigeons-eat/drop-2.png
+# /images/farmer/3-a-let-pigeons-eat/drop-3.png
+# /images/farmer/3-a-let-pigeons-eat/forest-future.png
+# /images/farmer/3-a-let-pigeons-eat/forest.png
+# /images/farmer/3-a-let-pigeons-eat/grass.png
+# /images/farmer/3-a-let-pigeons-eat/gunpowder.png
+# /images/farmer/3-a-let-pigeons-eat/levada-future.png
+# /images/farmer/3-a-let-pigeons-eat/levada.png
+# /images/farmer/3-a-let-pigeons-eat/pigeon-dead.png
+# /images/farmer/3-a-let-pigeons-eat/pigeon.png
+# /images/farmer/3-a-let-pigeons-eat/poison-1.png
+# /images/farmer/3-a-let-pigeons-eat/poison-2.png
+# /images/farmer/3-a-let-pigeons-eat/rifle.png
+# /images/farmer/3-a-let-pigeons-eat/scarecrow.png
+# /images/farmer/3-a-let-pigeons-eat/tape.png
+# /images/farmer/3-a-let-pigeons-eat/vegetables.png
+# /images/farmer/3-a-let-pigeons-eat/vegetables_future.png
+# /images/farmer/4-a-poison-caterpillars/birds-left.png
+# /images/farmer/4-a-poison-caterpillars/birds-right.png
+# /images/farmer/4-a-poison-caterpillars/caterpillars-left.png
+# /images/farmer/4-a-poison-caterpillars/caterpillars-right.png
+# /images/farmer/4-a-poison-caterpillars/levada-future.png
+# /images/farmer/4-a-poison-caterpillars/levada.png
+# /images/farmer/4-a-poison-caterpillars/poison-future.png
+# /images/farmer/4-a-poison-caterpillars/poison.png
+# /images/farmer/4-a-poison-caterpillars/tree-future.png
+# /images/farmer/4-a-poison-caterpillars/tree.png
+# /images/farmer/4-a-poison-caterpillars/vegetables-future.png
+# /images/farmer/4-a-poison-caterpillars/vegetables.png
+# /images/farmer/5-a-ashtray/cigarette-1.png
+# /images/farmer/5-a-ashtray/cigarette-2.png
+# /images/farmer/5-a-ashtray/cigarette-3.png
+# /images/farmer/5-a-ashtray/contamination.png
+# /images/farmer/5-a-ashtray/fire.png
+# /images/farmer/5-a-ashtray/forest-future.png
+# /images/farmer/5-a-ashtray/forest.png
+# /images/farmer/5-a-ashtray/rock.png
+# /images/farmer/5-a-ashtray/speech-bubble.png
+# /images/farmer/5-a-ashtray/vegetables.png
+# /images/farmer/7-a-put-in-water/abandoned-bubble-future.png
+# /images/farmer/7-a-put-in-water/abandoned-bubble.png
+# /images/farmer/7-a-put-in-water/abandoned-trash.png
+# /images/farmer/7-a-put-in-water/levada.png
+# /images/farmer/7-a-put-in-water/plastic-1.png
+# /images/farmer/7-a-put-in-water/plastic-2.png
+# /images/farmer/7-a-put-in-water/plastic-3.png
+# /images/farmer/7-a-put-in-water/plastic-truck.png
+# /images/farmer/7-a-put-in-water/recycle-bubble.png
+# /images/farmer/7-a-put-in-water/sea.png
+# /images/farmer/7-a-put-in-water/trash-group.png
+# /images/farmer/7-a-put-in-water/tree.png
+# /images/farmer/7-a-put-in-water/truck.png
+# /images/farmer/7-a-put-in-water/vegetables.png
+# /images/farmer/background.jpg
+# /images/farmer/background_overlay.png
+# /images/farmer/background_underwater.png
+# /images/farmer/BOX.png
+# /images/farmer/BOX_FEW.png
+# /images/farmer/BOX_LOT.png
+# /images/farmer/BOX_MEDIUM.png
+# /images/farmer/character-1.png
+# /images/farmer/character-2.png
+# /images/farmer/character-3.png
+# /images/farmer/choices-background.png
+# /images/farmer/continue-button.png
+# /images/farmer/control.png
+# /images/farmer/pier.png
+# /images/farmer/throw-button.png
+# /images/fisherman/1-a-reserva/buoy.png
+# /images/fisherman/1-a-reserva/fish-left-future.png
+# /images/fisherman/1-a-reserva/fish-left.png
+# /images/fisherman/1-a-reserva/fish-right-future.png
+# /images/fisherman/1-a-reserva/fish-right.png
+# /images/fisherman/1-a-reserva/medusa.png
+# /images/fisherman/1-a-reserva/octopus.png
+# /images/fisherman/1-b-young-fish/fish-left-future.png
+# /images/fisherman/1-b-young-fish/fish-left.png
+# /images/fisherman/1-b-young-fish/fish-right-future.png
+# /images/fisherman/1-b-young-fish/fish-right.png
+# /images/fisherman/1-c-grown-fish/fish-left.png
+# /images/fisherman/1-c-grown-fish/fish-right.png
+# /images/fisherman/2-a-net/arrasto.png
+# /images/fisherman/2-a-net/fish-left.png
+# /images/fisherman/2-a-net/fish-right.png
+# /images/fisherman/2-a-net/nature.png
+# /images/fisherman/2-c-selective/fish-left.png
+# /images/fisherman/2-c-selective/fish-right.png
+# /images/fisherman/2-c-selective/fished-1.png
+# /images/fisherman/2-c-selective/fished-2.png
+# /images/fisherman/2-c-selective/hooks.png
+# /images/fisherman/3-a-breeding-fish/egg.png
+# /images/fisherman/3-a-breeding-fish/fish-future.png
+# /images/fisherman/3-a-breeding-fish/fish.png
+# /images/fisherman/3-a-breeding-fish/nature-future.png
+# /images/fisherman/3-a-breeding-fish/nature.png
+# /images/fisherman/3-b-other-time/calendar.png
+# /images/fisherman/3-b-other-time/fish-left-future.png
+# /images/fisherman/3-b-other-time/fish-left.png
+# /images/fisherman/3-b-other-time/fish-right-future.png
+# /images/fisherman/3-b-other-time/fish-right.png
+# /images/fisherman/3-b-other-time/nature.png
+# /images/fisherman/4-a-organic-water/birds-left.png
+# /images/fisherman/4-a-organic-water/birds-right.png
+# /images/fisherman/4-a-organic-water/fish-left.png
+# /images/fisherman/4-a-organic-water/fish-right.png
+# /images/fisherman/4-a-organic-water/nature.png
+# /images/fisherman/4-a-organic-water/organic.png
+# /images/fisherman/5-a-seal-bomb/fish.png
+# /images/fisherman/5-a-seal-bomb/monk-seal-scared.png
+# /images/fisherman/5-a-seal-bomb/monk-seal.png
+# /images/fisherman/5-b-seal-fish-elsewhere/fish-1.png
+# /images/fisherman/5-b-seal-fish-elsewhere/fish-2.png
+# /images/fisherman/5-b-seal-fish-elsewhere/fish-3.png
+# /images/fisherman/5-b-seal-fish-elsewhere/fish-4.png
+# /images/fisherman/5-b-seal-fish-elsewhere/monk-seal.png
+# /images/fisherman/5-b-seal-fish-elsewhere/net-1.png
+# /images/fisherman/5-b-seal-fish-elsewhere/net-2.png
+# /images/fisherman/5-b-seal-fish-elsewhere/net-3.png
+# /images/fisherman/6-a-fish-non-profitable/fish-non-profitable-2.png
+# /images/fisherman/6-a-fish-non-profitable/fish-non-profitable.png
+# /images/fisherman/6-a-fish-non-profitable/fish-profitable.png
+# /images/fisherman/6-a-fish-non-profitable/money-2.png
+# /images/fisherman/6-a-fish-non-profitable/money-3.png
+# /images/fisherman/6-a-fish-non-profitable/money.png
+# /images/fisherman/6-b-throw-non-profitable/fish-1.png
+# /images/fisherman/6-b-throw-non-profitable/fish-2.png
+# /images/fisherman/6-b-throw-non-profitable/fish-3.png
+# /images/fisherman/6-b-throw-non-profitable/fish-4.png
+# /images/fisherman/6-b-throw-non-profitable/fish-5.png
+# /images/fisherman/6-b-throw-non-profitable/fish-6.png
+# /images/fisherman/6-b-throw-non-profitable/fish-left-future.png
+# /images/fisherman/6-b-throw-non-profitable/fish-left.png
+# /images/fisherman/6-b-throw-non-profitable/fish-right-future.png
+# /images/fisherman/6-b-throw-non-profitable/fish-right.png
+# /images/fisherman/6-b-throw-non-profitable/net-1.png
+# /images/fisherman/6-b-throw-non-profitable/net-2.png
+# /images/fisherman/6-b-throw-non-profitable/net-3.png
+# /images/fisherman/7-a-throw-net/fish-left-future.png
+# /images/fisherman/7-a-throw-net/fish-left.png
+# /images/fisherman/7-a-throw-net/fish-right-future.png
+# /images/fisherman/7-a-throw-net/fish-right.png
+# /images/fisherman/7-a-throw-net/passing-boat.png
+# /images/fisherman/7-a-throw-net/shredded-net.png
+# /images/fisherman/7-a-throw-net/tangled-fish.png
+# /images/fisherman/7-b-fix-net/broken-net.png
+# /images/fisherman/7-b-fix-net/fish-left.png
+# /images/fisherman/7-b-fix-net/fish-right.png
+# /images/fisherman/7-b-fix-net/thought-bubble.png
+# /images/fisherman/7-c-net-trashcan/broken-net.png
+# /images/fisherman/7-c-net-trashcan/fish-left.png
+# /images/fisherman/7-c-net-trashcan/fish-right.png
+# /images/fisherman/7-c-net-trashcan/thought-bubble.png
+# /images/fisherman/7-c-net-trashcan/trashcan-lid.png
+# /images/fisherman/7-c-net-trashcan/trashcan.png
+# /images/fisherman/8-a-trash-ocean/fish-left.png
+# /images/fisherman/8-a-trash-ocean/fish-right.png
+# /images/fisherman/8-a-trash-ocean/nature.png
+# /images/fisherman/8-a-trash-ocean/trash-1.png
+# /images/fisherman/8-a-trash-ocean/trash-2.png
+# /images/fisherman/8-a-trash-ocean/trash-3.png
+# /images/fisherman/8-a-trash-ocean/trash-4.png
+# /images/fisherman/8-a-trash-ocean/trash-5.png
+# /images/fisherman/8-b-trash-recycling/fish-left.png
+# /images/fisherman/8-b-trash-recycling/fish-right.png
+# /images/fisherman/8-b-trash-recycling/thought-bubble.png
+# /images/fisherman/8-c-throw-batteries/battery-1.png
+# /images/fisherman/8-c-throw-batteries/battery-2.png
+# /images/fisherman/8-c-throw-batteries/battery-3.png
+# /images/fisherman/8-c-throw-batteries/chemicals.png
+# /images/fisherman/8-c-throw-batteries/fish-left.png
+# /images/fisherman/8-c-throw-batteries/fish-right.png
+# /images/fisherman/animation_bomb/blast_1.png
+# /images/fisherman/animation_bomb/blast_2.png
+# /images/fisherman/animation_bomb/bomb.png
+# /images/fisherman/animation_bomb/fish1.png
+# /images/fisherman/animation_bomb/fish2.png
+# /images/fisherman/animation_bomb/fish3.png
+# /images/fisherman/animation_bomb/fish4.png
+# /images/fisherman/animation_bomb/fish5.png
+# /images/fisherman/animation_bomb/fish6.png
+# /images/fisherman/animation_bomb/fish7.png
+# /images/fisherman/animation_bomb/fish8.png
+# /images/fisherman/animation_bomb/ground.png
+# /images/fisherman/animation_bomb/rock1.png
+# /images/fisherman/animation_bomb/rock2.png
+# /images/fisherman/animation_bomb/rock3.png
+# /images/fisherman/animation_bomb/seaweed.png
+# /images/fisherman/animation_bomb/seaweed2.png
+# /images/fisherman/animation_bomb/seaweed3.png
+# /images/fisherman/animation_bomb/seaweed4.png
+# /images/fisherman/animation_bomb/starfish.png
+# /images/fisherman/arrow.png
+# /images/fisherman/background.jpg
+# /images/fisherman/background_underwater.png
+# /images/fisherman/BOX.png
+# /images/fisherman/BOX_FEW.png
+# /images/fisherman/BOX_LOT.png
+# /images/fisherman/BOX_MEDIUM.png
+# /images/fisherman/character.png
+# /images/fisherman/choices-background.png
+# /images/fisherman/clock.png
+# /images/fisherman/common/net.png
+# /images/fisherman/common/setting.png
+# /images/fisherman/continue-button.png
+# /images/fisherman/control.png
+# /images/fisherman/line.svg
+# /images/fisherman/pier.png
+# /images/fisherman/selected-choice.png
+# /images/fisherman/throw-button.png
+# /images/gallery/CAN_3B_grupo1.jpg
+# /images/gallery/CAN_3B_grupo2.jpg
+# /images/gallery/CAN_4A_beatriz_alves_moreira.jpg
+# /images/gallery/CAN_4A_bruna_maria_nunes_gomes.jpg
+# /images/gallery/CAN_4A_bruno_jose_alves_moreira.jpg
+# /images/gallery/CAN_4A_joao_davide_alves_da_silva.jpg
+# /images/gallery/CAN_4A_joao_duarte_santos_costa.jpg
+# /images/gallery/CAN_4A_joao_fernando_nunes_alves.jpg
+# /images/gallery/CAN_4A_joao_gabriel.jpg
+# /images/gallery/CAN_4A_joao_lourenco_franco_moniz.jpg
+# /images/gallery/CAN_4A_jose_francisco_silva_dos_santos.jpg
+# /images/gallery/CAN_4A_leandro_catinho_colaco.jpg
+# /images/gallery/CAN_4A_luis_filipe_moniz_da_silva.jpg
+# /images/gallery/CAN_4A_luisa.jpg
+# /images/gallery/CAN_4A_maria_carlota_freitas_sousa.jpg
+# /images/gallery/CAN_4A_maria_luisa_moreira_de_menezes.jpg
+# /images/gallery/CAN_4A_marilia_leticia_moniz_teles.jpg
+# /images/gallery/CAN_4A_miguel_lomelino_calaca.jpg
+# /images/gallery/CAN_4A_nelson_bernardo_nunes_dos_santos.jpg
+# /images/gallery/CAN_4A_pedro_henrique.jpg
+# /images/gallery/CAN_4A_sofia_alves_dos_santos.jpg
+# /images/gallery/CAN_4A_tiago_nunes_alves_melim.jpg
+# /images/gallery/CAN_4A_tomas_jorge_dos_santos_delgado.jpg
+# /images/gallery/CAN_4B_ana_sofia_santos_alves.jpg
+# /images/gallery/CAN_4B_daniela.jpg
+# /images/gallery/CAN_4B_Elsio_andre_nuno_santos.jpg
+# /images/gallery/CAN_4B_hugo.jpg
+# /images/gallery/CAN_4B_joao_duarte_costa_colaco.jpg
+# /images/gallery/CAN_4B_joao_luis_alves_silva.jpg
+# /images/gallery/CAN_4B_joao_rodrigo.jpg
+# /images/gallery/CAN_4B_linda_sofia.jpg
+# /images/gallery/CAN_4B_luis_fernando_gouveia_silva.jpg
+# /images/gallery/CAN_4B_luis_filipe_silva_alves.jpg
+# /images/gallery/CAN_4B_marco_alexandre_remesso_moreira.jpg
+# /images/gallery/CAN_4B_maria_elisa.jpg
+# /images/gallery/CAN_4B_nicole_maria_fernandes_sousa.jpg
+# /images/gallery/CAN_4B_nuno_goncalo_lopes_camara.jpg
+# /images/gallery/CAN_4B_pedro_jacinto_diogo_santos_sousa_vieira.jpg
+# /images/gallery/CAN_4B_pedro_miguel_vieira_nunes.jpg
+# /images/gallery/CAN_4B_ricardina.jpg
+# /images/gallery/CAN_4B_rodrigo_daniel.jpg
+# /images/gallery/CAN_4B_sara_filipa_colaco_vidinha.jpg
+# /images/gallery/CAN_4C_alice_maria_sousa_calaca.jpg
+# /images/gallery/CAN_4C_diogo.jpg
+# /images/gallery/CAN_4C_egidio.jpg
+# /images/gallery/CAN_4C_fabiana_cristina_santos_pereira.jpeg
+# /images/gallery/CAN_4C_goncalo_sousa.jpg
+# /images/gallery/CAN_4C_joao_andre.jpg
+# /images/gallery/CAN_4C_joao_carlos.jpg
+# /images/gallery/CAN_4C_joao_nicolau_da_silva_roque.jpg
+# /images/gallery/CAN_4C_julia_maria_sousa_moniz.jpg
+# /images/gallery/CAN_4C_maria_catarina_dos_santos_sousa.jpg
+# /images/gallery/CAN_4C_matilde_alves_viveiros.jpeg
+# /images/gallery/CAN_4C_miguel.jpg
+# /images/gallery/CAN_4C_raquel_martins.jpg
+# /images/gallery/CAN_4C_ricardo_magalhaes.jpg
+# /images/gallery/CAN_4C_ruben.jpg
+# /images/gallery/CAN_4C_Sandra.jpg
+# /images/gallery/CAN_4C_sandra2.jpg
+# /images/gallery/CAN_4C_sara_alexandra_lucas_levezinho_bibanio.jpg
+# /images/gallery/CAN_4C_sofia.jpg
+# /images/gallery/CAN_4C_susana.jpg
+# /images/gallery/CL_3_jessica_patricia_reis_nunes.jpeg
+# /images/gallery/CL_3_luis.jpeg
+# /images/gallery/CL_3_sergio_antonio.jpeg
+# /images/gallery/CL_3A_andre_miguel.jpeg
+# /images/gallery/CL_3A_bruna_margarida_oliveira_faria.jpeg
+# /images/gallery/CL_3A_bruno_afonso_nunes_colonho.jpeg
+# /images/gallery/CL_3A_eduarda_carolina_atanasio_caires.jpeg
+# /images/gallery/CL_3A_ema_filipa_carvalho_freitas.jpeg
+# /images/gallery/CL_3A_emanuel.jpeg
+# /images/gallery/CL_3A_fatima_carolina_ferreira.jpeg
+# /images/gallery/CL_3A_francisco_jose_dos_reis_brito.jpeg
+# /images/gallery/CL_3A_ines_andrade_rodrigues.jpeg
+# /images/gallery/CL_3A_joana_filipa_olival_dos_santos_ferreira.jpeg
+# /images/gallery/CL_3A_joana_raquel_sousa_coelho_belo.jpeg
+# /images/gallery/CL_3A_joao_pedro_oliveira.jpeg
+# /images/gallery/CL_3A_luana.jpeg
+# /images/gallery/CL_3A_mario_nelson_silva_goncalves.jpeg
+# /images/gallery/CL_3A_miguel_henrique_freitas_goncalves_de_barros.jpeg
+# /images/gallery/CL_3A_soraia.jpeg
+# /images/gallery/CL_3A_tiago.jpeg
+# /images/gallery/CL_3B_ana_dulce_henriques_andrade.jpeg
+# /images/gallery/CL_3B_andreina_beatriz_freitas_da_silva.jpeg
+# /images/gallery/CL_3B_carolina.jpeg
+# /images/gallery/CL_3B_clara.jpeg
+# /images/gallery/CL_3B_clara_goncalves-dos_santos.jpeg
+# /images/gallery/CL_3B_claudia_patricia_silva_brito.jpeg
+# /images/gallery/CL_3B_david.jpeg
+# /images/gallery/CL_3B_deise.jpeg
+# /images/gallery/CL_3B_duarte.jpeg
+# /images/gallery/CL_3B_enio.jpeg
+# /images/gallery/CL_3B_isabel.jpeg
+# /images/gallery/CL_3B_jose_nuno.jpeg
+# /images/gallery/CL_3B_pedro_afonso_silva_henriques.jpeg
+# /images/gallery/CL_3B_rodrigo.jpeg
+# /images/gallery/CL_3B_sirla.jpeg
+# /images/gallery/CL_4_alexadre.jpeg
+# /images/gallery/CL_4_leandro.jpeg
+# /images/gallery/CL_4_leandro2.jpeg
+# /images/gallery/CL_4A_daniel_guilherme_ferreira.jpeg
+# /images/gallery/CL_4A_diogo_antonio.jpeg
+# /images/gallery/CL_4A_ema_n.jpeg
+# /images/gallery/CL_4A_erico.jpeg
+# /images/gallery/CL_4A_fabricio.jpeg
+# /images/gallery/CL_4A_fatima.jpeg
+# /images/gallery/CL_4A_goncalo_teles.jpeg
+# /images/gallery/CL_4A_hugo_calisto.jpeg
+# /images/gallery/CL_4A_hugo_calisto.jpg
+# /images/gallery/CL_4A_hugo_miguel.jpeg
+# /images/gallery/CL_4A_joana_isabel.jpeg
+# /images/gallery/CL_4A_joana_raquel_sousa.jpeg
+# /images/gallery/CL_4A_joao_leonardo_sa.jpeg
+# /images/gallery/CL_4A_leonardo_f.jpeg
+# /images/gallery/CL_4A_micaela.jpeg
+# /images/gallery/CL_4A_nidia_deise_nunes_freitas.jpeg
+# /images/gallery/CL_4A_pedro.jpeg
+# /images/gallery/CL_4A_pedro_abreu.jpeg
+# /images/gallery/CL_4A_rafael_luis.jpeg
+# /images/gallery/CL_4A_ruben_santos.jpeg
+# /images/gallery/CL_4A_sara_sofia_reis_rodrigues.jpeg
+# /images/gallery/CL_4A_silvia_paixao.jpeg
+# /images/gallery/CL_4A_tiago.jpeg
+# /images/gallery/CL_4A_vanessa.jpeg
+# /images/gallery/CL_4B_ana_beatriz.jpeg
+# /images/gallery/CL_4B_ana_daniela.jpeg
+# /images/gallery/CL_4B_ana_isa.jpeg
+# /images/gallery/CL_4B_ana_margarida.jpeg
+# /images/gallery/CL_4B_andre_bruno_goncalves_brito.jpeg
+# /images/gallery/CL_4B_carlos.jpeg
+# /images/gallery/CL_4B_catarina.jpeg
+# /images/gallery/CL_4B_eduardo.jpeg
+# /images/gallery/CL_4B_enio.jpeg
+# /images/gallery/CL_4B_fatima.jpeg
+# /images/gallery/CL_4B_francisco.jpeg
+# /images/gallery/CL_4B_gabriela.jpeg
+# /images/gallery/CL_4B_janete.jpeg
+# /images/gallery/CL_4B_laura.jpeg
+# /images/gallery/CL_4B_leandra.jpeg
+# /images/gallery/CL_4B_nuno_roberto.jpeg
+# /images/gallery/CL_4B_vitor.jpeg
+# /images/gallery/SANT_3_adriana_silva_alves.jpg
+# /images/gallery/SANT_3_afonso.jpg
+# /images/gallery/SANT_3_ana_catarina.jpg
+# /images/gallery/SANT_3_andre_miguel_rocha_caldeira.jpg
+# /images/gallery/SANT_3_bryan.jpg
+# /images/gallery/SANT_3_diana_jose_silva_camara.jpg
+# /images/gallery/SANT_3_duarte.jpg
+# /images/gallery/SANT_3_francisco.jpg
+# /images/gallery/SANT_3_joana.jpg
+# /images/gallery/SANT_3_kevin.jpg
+# /images/gallery/SANT_3_liliana_martins_andrade.jpg
+# /images/gallery/SANT_3_natasha_goncalves_laranja.jpg
+# /images/gallery/SANT_3_rafael.jpg
+# /images/gallery/SANT_3_raquel.jpg
+# /images/gallery/SANT_3_rodrigo_almada.jpg
+# /images/gallery/SANT_3_rodrigo_filipe.jpg
+# /images/gallery/SANT_3_sara.jpg
+# /images/gallery/SANT_4_bernardo.jpg
+# /images/gallery/SANT_4_claudia_nunes_alves.jpg
+# /images/gallery/SANT_4_daniel.jpg
+# /images/gallery/SANT_4_diogo_antonio.jpg
+# /images/gallery/SANT_4_diogo_azevedo.jpg
+# /images/gallery/SANT_4_francisco.jpg
+# /images/gallery/SANT_4_gustavo.jpg
+# /images/gallery/SANT_4_joao_pedro.jpg
+# /images/gallery/SANT_4_leandro.jpg
+# /images/gallery/SANT_4_luis_filipe.jpg
+# /images/gallery/SANT_4_pedro_miguel.jpg
+# /images/gallery/SANT_4_rodrigo.jpg
+# /images/gallery/SANT_4_sergio.jpg
+# /images/gallery/SANT_4_sofia.jpg
+# /images/gallery/SEIX_3_Bruno.jpg
+# /images/gallery/SEIX_3_Diana.jpg
+# /images/gallery/SEIX_3_Francisca.jpg
+# /images/gallery/SEIX_3_Joao_Pedro.jpg
+# /images/gallery/SEIX_3_Joao_Pedro2.jpg
+# /images/gallery/SEIX_3_Laurina.jpg
+# /images/gallery/SEIX_3_Leonardo.jpg
+# /images/gallery/SEIX_3_Leticia.jpg
+# /images/gallery/SEIX_3_Matilde.jpg
+# /images/gallery/SEIX_3_Oriana.jpg
+# /images/gallery/SEIX_4_Catarina.jpg
+# /images/gallery/SRF_3_cristiano.jpg
+# /images/gallery/SRF_3_cristina.jpg
+# /images/gallery/SRF_3_emanuel.jpg
+# /images/gallery/SRF_3_nicole.jpg
+# /images/gallery/SRF_3_pedro_miguel.jpg
+# /images/gallery/SRF_3_rodrigo_nunes.jpg
+# /images/gallery/SRF_3_sabrina.jpg
+# /images/gallery/SRF_3_veronica.jpg
+# /images/gallery/SRF_4_ana_luisa.jpg
+# /images/gallery/SRF_4_ana_luisa_2.jpg
+# /images/gallery/SRF_4_bruna.jpg
+# /images/gallery/SRF_4_bruno_faisca.jpg
+# /images/gallery/SRF_4_joao_pedro_abreu_correia.jpg
+# /images/gallery/SRF_4_mariana.jpg
+# /images/gallery/SRF_4_oceano.jpg
+# /images/gallery/SRF_4_pedro_alexandre.jpg
+# /images/gallery/SRF_4_renato.jpg
+# /images/gallery_left.png
+# /images/gallery_right.png
+# /images/tutorial/frame1.png
+# /images/tutorial/frame2_arrow.png
+# /images/tutorial/frame3.png
+# /images/tutorial/frame4_farmer_arrow.png
+# /images/tutorial/frame4_rod_arrow.png
+# /images/tutorial/frame5.png
+# /images/tutorial/frame5_farmer_range.png
+# /images/tutorial/frame5_rod_range.png
+# /images/tutorial/frame6.png
+# /images/welcome/background.jpg
+# /images/welcome/bt_english.png
+# /images/welcome/bt_highscore.png
+# /images/welcome/bt_narration.png
+# /images/welcome/bt_play_eng.png
+# /images/welcome/bt_play_pt.png
+# /images/welcome/bt_portuguese.png
+# /index.html
+# /javascripts/all.js
+# /javascripts/animations-farmer.js
+# /javascripts/animations-fisherman.js
+# /javascripts/app.js
+# /javascripts/jquery-1.8.2.min.js
+# /javascripts/knockout-2.2.0.js
+# /javascripts/library.js
+# /stylesheets/ABeeZee-Italic.ttf
+# /stylesheets/ABeeZee-Regular.ttf
+# /stylesheets/all.css
+# /stylesheets/animations/farmer/0-common.css
+# /stylesheets/animations/farmer/1-a-leave-it.css
+# /stylesheets/animations/fisherman/0-common.css
+# /stylesheets/animations/fisherman/1-a-reserva.css
+# /stylesheets/animations/fisherman/1-b-young-fish.css
+# /stylesheets/animations/fisherman/1-c-grown-fish.css
+# /stylesheets/animations/fisherman/2-a-net.css
+# /stylesheets/animations/fisherman/2-b-bomb.css
+# /stylesheets/animations/fisherman/2-c-selective.css
+# /stylesheets/animations/fisherman/3-a-breeding-fish.css
+# /stylesheets/animations/fisherman/3-b-other-time.css
+# /stylesheets/animations/fisherman/3-c-other-location.css
+# /stylesheets/animations/fisherman/4-b-keep-leftovers.css
+# /stylesheets/master.css
+# /stylesheets/normalize.css

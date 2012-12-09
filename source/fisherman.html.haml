@@ -424,7 +424,7 @@ bodyClass: fisherman
 						%p Perde 20 pontos
 	 					%audio{:src=>'/audio/fishermen/8-3.m4a', :autoplay=>false, :controls=>false}
 	.screen.special
-		.question{'data-bind'=>'visible: score() <= 0'}  Ui! Desta forma os nossos filhos não vão poder comer peixe! é preciso ser eco compatível.
+		.question{'data-bind'=>'visible: score() <= 0'}  Ui! Desta forma os nossos filhos não vão poder comer peixe! É preciso ser eco compatível.
 		.audio_content{'data-bind'=>'if: score()<=0'}
 			%audio{'data-bind'=>'if: score()<=0', :src=>'/audio/fishermen/endscore3.m4a', :autoplay=>false, :controls=>false}
 		.question{'data-bind'=>'visible: score() > 0 && score() < 40'} Parabéns, está no bom caminho para se tornar um pescador eco compatível, com um pouco mais de cuidado o nosso futuro será melhor.

@@ -778,7 +778,9 @@ $(document).ready(function(){
 	
 	current_screen = $('.screen:first');
 	
-	$('#throw_button').click(function(){return selectAnswer();});
+	$('#throw_button').click(function(){
+		return selectAnswer();
+	});
 	
 	// --- --- --- ---
 
@@ -835,6 +837,7 @@ $(document).ready(function(){
 	
 	anim = setTimeout(function(){
 		$('#score').hide();
+		playAudio($('.screen.tutorial audio').get(0));
 	}, 0)
 	tutorial_animations.push(anim);
 	
@@ -842,29 +845,34 @@ $(document).ready(function(){
 		$('#character').hide();
 		$('.tutorial .character-intro').hide();
 		$('.tutorial .advance-control-intro').show();
+		playAudio($('.screen.tutorial audio').get(1));
 	}, 4000);
 	tutorial_animations.push(anim);
 		
 	anim = setTimeout(function(){
 		$('.tutorial .advance-control-intro').hide();
 		$('.tutorial .sea-intro').show();
+		playAudio($('.screen.tutorial audio').get(2));
 	}, 10000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .sea-intro').hide();
 		$('.tutorial .arrow-intro').show();
+		playAudio($('.screen.tutorial audio').get(3));
 	}, 20000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').addClass('next');
+		playAudio($('.screen.tutorial audio').get(4));
 	}, 27000);
 	tutorial_animations.push(anim);
 	
 	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').hide();
 		$('.tutorial .good-luck').show();
+		playAudio($('.screen.tutorial audio').get(5));
 	}, 37000);
 	tutorial_animations.push(anim);
 	
@@ -923,7 +931,7 @@ $(document).ready(function(){
 		$('.drawings').toggleClass('show');
 	});
 	
-	$('#view_score').click(function(){
+	$('#view_score, .close_score').click(function(){
 		var scores = getScores();
 		viewModel.scores(scores);
 		$('.score_page').toggleClass('show');
@@ -932,12 +940,11 @@ $(document).ready(function(){
 	$('#save_score').click(function(){
 		
 		var score = viewModel.score();
-		var name = 'salim';
+		var name = $('#score_name').attr('value');
 		var scores = addScore(name, score);
+		$('.save_box').html('');
 		
 		viewModel.scores(scores);
-				
-		$('#view_score').trigger('click');
 	});
 	
 	
@@ -1048,7 +1055,7 @@ $(document).ready(function(){
 	}
 	
 	showConsequence = function(consequence){
-		var consequence_content = consequence.find('.content')
+		var consequence_content = consequence.find('.content');
 		$('#consequence .content').html(consequence_content);
 		$('#consequence').addClass('come');
 		$('#continue_journey_button').addClass('come');
@@ -1110,10 +1117,10 @@ $(document).ready(function(){
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
 		pauseAudio();
+		$('#control .arrow').addClass('stop');
 		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
-		var selection = Math.ceil(rotation/answer_range);
-		$('#control .arrow').addClass('stop');
+		var selection = Math.ceil(rotation/answer_range);		
 
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);

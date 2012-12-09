@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
-    <title>Welcome</title>
+    <title>Choose Journey</title>
     <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/knockout-2.2.0.js' type='text/javascript'></script>
@@ -12,28 +12,8 @@
     <script charset='utf-8' src='javascripts/animations-farmer.js' type='text/javascript'></script>
     <script charset='utf-8' src='javascripts/app.js' type='text/javascript'></script>
   </head>
-  <body class='welcome'>
-    <div id='welcome_setting'>
-      <a class='choose_journey_button' href='choose_journey.html'></a>
-      <menu class='general'>
-        <a href='/index_en.html' id='in_english'>English</a>
-      </menu>
-      <div class='score_page'>
-        <table>
-          <thead>
-            <tr>
-              <th>Jogador</th>
-              <th>Pontuação</th>
-            </tr>
-          </thead>
-          <tbody data-bind='foreach: scores'>
-            <tr>
-              <td data-bind='text: name'></td>
-              <td data-bind='text: score'></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <body class='english'>
+    <a href='fisherman_en.html'>Fisherman Journey</a>
+    <a href='farmer_en.html'>Farmer Journey</a>
   </body>
 </html>

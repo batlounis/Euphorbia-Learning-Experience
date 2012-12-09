@@ -1,3 +1,8 @@
+.english .fisherman #animation_1_a{
+	.buoy{
+		background-image: url(#{$photos}/buoy-en.png);
+	}
+}
 
 .fisherman #animation_1_a{
 	$photos: '#{$url}/fisherman/1-a-reserva';

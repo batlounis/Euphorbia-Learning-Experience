@@ -36,6 +36,32 @@ body{
 				background-image: url(#{$url}/welcome/bt_play_en.png);
 			}			
 		}
+		
+		#score:before{
+			content: 'Points:';
+		}
+		
+		&.fisherman #continue_journey_button, .fisherman .continue_journey_button{
+				background-image: url(#{$url}/fisherman/continue-button-en.png);
+		}
+
+		&.farmer #continue_journey_button, .farmer .continue_journey_button{
+			background-image: url(#{$url}/farmer/continue-button-en.png);
+		}
+		
+		&.fisherman #throw_button, .fisherman .throw_button{
+			background-image: url(#{$url}/fisherman/throw-button-en.png);
+		}
+
+		&.farmer #throw_button, .farmer .throw_button{
+			background-image: url(#{$url}/farmer/throw-button-en.png);
+		}
+		
+		.screen{
+			.clock{
+				background-image: url(#{$url}/fisherman/clock-en.png);
+			}
+		}
 	}
 	
 	#welcome_setting{
