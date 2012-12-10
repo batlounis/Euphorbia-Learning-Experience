@@ -93,7 +93,7 @@ body{
 	
 	#setting{
 		z-index: 0;
-		background-size: 100%;
+		background-size: auto;
 		width: 100%;
 		overflow: auto;
 		background-position: top center;
@@ -105,7 +105,8 @@ body{
 	}
 	
 	&.fisherman #setting{
-		background: url(#{$url}/fisherman/background3.jpg);
+		// background: url(#{$url}/fisherman/background-1.jpg) 0 0 no-repeat, url(#{$url}/fisherman/background-2.jpg) 0 1536px no-repeat, url(#{$url}/fisherman/background-3.jpg) 0 1536*2px no-repeat, url(#{$url}/fisherman/background-4.jpg) 0 1536*3px no-repeat, url(#{$url}/fisherman/background-5.jpg) 0 1536*4px no-repeat, url(#{$url}/fisherman/background-6.jpg) 0 1536*5px no-repeat, url(#{$url}/fisherman/background-7.jpg) 0 1536*6px no-repeat, url(#{$url}/fisherman/background-8.jpg) 0 1536*7px no-repeat;
+		background-image: url(#{$url}/fisherman/background-1.jpg); //TODO: this is just one part
 	}
 	
 	&.farmer #setting{
