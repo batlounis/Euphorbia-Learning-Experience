@@ -832,76 +832,93 @@ $(document).ready(function(){
 	
 	// tutorial frame sequence
 	
-	var tutorial_animations = [];
-	var anim;
+	$('#play_tutorial').click(function(){
+		$('#continue_journey_button').trigger('click');
+		setTimeout(function(){play_tutorial();}, 2000);
+	})
 	
-	anim = setTimeout(function(){
-		$('#score').hide();
-		playAudio($('.screen.tutorial audio').get(0));
-	}, 0)
-	tutorial_animations.push(anim);
-	
-	anim = setTimeout(function(){
-		$('#character').hide();
-		$('.tutorial .character-intro').hide();
-		$('.tutorial .advance-control-intro').show();
-		playAudio($('.screen.tutorial audio').get(1));
-	}, 4000);
-	tutorial_animations.push(anim);
-		
-	anim = setTimeout(function(){
-		$('.tutorial .advance-control-intro').hide();
-		$('.tutorial .sea-intro').show();
-		playAudio($('.screen.tutorial audio').get(2));
-	}, 10000);
-	tutorial_animations.push(anim);
-	
-	anim = setTimeout(function(){
-		$('.tutorial .sea-intro').hide();
-		$('.tutorial .arrow-intro').show();
-		playAudio($('.screen.tutorial audio').get(3));
-	}, 20000);
-	tutorial_animations.push(anim);
-	
-	anim = setTimeout(function(){
-		$('.tutorial .arrow-intro').addClass('next');
-		playAudio($('.screen.tutorial audio').get(4));
-	}, 27000);
-	tutorial_animations.push(anim);
-	
-	anim = setTimeout(function(){
-		$('.tutorial .arrow-intro').hide();
-		$('.tutorial .choice-illuminates').show();
-		playAudio($('.screen.tutorial audio').get(5));
-	}, 37000);
-	tutorial_animations.push(anim);
-	
-	anim = setTimeout(function(){
-		$('.tutorial .choice-illuminates').hide();
-		$('.tutorial .good-luck').show();
-		playAudio($('.screen.tutorial audio').get(6));
-	}, 45000);
-	tutorial_animations.push(anim);
-	
-	last_tutorial_step = function(){
+	$('#just_play').click(function(){
+		$('.screen.tutorial').remove();
 		$('#character').show();
-		$('.tutorial .good-luck').hide();
 		$('#score').show();
 		$('#continue_journey_button').trigger('click');
-	}
+	})
 	
-	anim = setTimeout(function(){
-		last_tutorial_step();
-	}, 47000);
-	tutorial_animations.push(anim);
-	
-	$('#skip_tutorial').click(function(){
-		for(var i = 0; i < tutorial_animations.length; i++){
-			clearTimeout(tutorial_animations[i]);
+	play_tutorial = function(){
+		var tutorial_animations = [];
+		var anim;
+
+		anim = setTimeout(function(){
+			$('#control').removeClass('come');
+			$('#score').hide();
+			$('#character').show();
+			playAudio($('.screen.tutorial audio').get(0));
+		}, 0)
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('#character').hide();
+			$('.tutorial .character-intro').hide();
+			$('.tutorial .advance-control-intro').show();
+			playAudio($('.screen.tutorial audio').get(1));
+		}, 4000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .advance-control-intro').hide();
+			$('.tutorial .sea-intro').show();
+			playAudio($('.screen.tutorial audio').get(2));
+		}, 10000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .sea-intro').hide();
+			$('.tutorial .arrow-intro').show();
+			playAudio($('.screen.tutorial audio').get(3));
+		}, 20000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').addClass('next');
+			playAudio($('.screen.tutorial audio').get(4));
+		}, 27000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').hide();
+			$('.tutorial .choice-illuminates').show();
+			playAudio($('.screen.tutorial audio').get(5));
+		}, 37000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .choice-illuminates').hide();
+			$('.tutorial .good-luck').show();
+			playAudio($('.screen.tutorial audio').get(6));
+		}, 45000);
+		tutorial_animations.push(anim);
+
+		last_tutorial_step = function(){
+			$('#character').show();
+			$('.tutorial .good-luck').hide();
+			$('#score').show();
+			$('#continue_journey_button').trigger('click');
 		}
-		last_tutorial_step();
-		return false;
-	});
+
+		anim = setTimeout(function(){
+			last_tutorial_step();
+		}, 47000);
+		tutorial_animations.push(anim);
+
+		$('#skip_tutorial').click(function(){
+			for(var i = 0; i < tutorial_animations.length; i++){
+				clearTimeout(tutorial_animations[i]);
+			}
+			last_tutorial_step();
+			return false;
+		});
+	}
+
 	
 	
 	// --- End Screen Functionality ---
