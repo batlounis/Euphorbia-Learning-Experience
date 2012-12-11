@@ -91,6 +91,38 @@ body{
 		}
 	}
 	
+	#choose_journey{
+		background-image: url(#{$url}/background-choose-adventure.png);
+		background-size: cover;
+		background-position: center bottom;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		display: block;
+		text-align: center;
+		
+		p{
+			font-size: 1.5em;
+			text-align: center;
+			color: rgba(white, .8);
+		}
+		
+		a{
+			margin: 10%;
+			font-size: 2em;
+			background-color: rgba(black, .8);
+			color: rgba(white, .8);
+			display: inline-block;
+			text-decoration: none;
+			padding: .5em;
+		}
+		
+	}
+	
 	#setting{
 		z-index: 0;
 		background-size: auto;

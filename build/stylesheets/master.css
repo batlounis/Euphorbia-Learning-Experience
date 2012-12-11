@@ -71,6 +71,34 @@ body {
       height: 35%;
       display: block; }
   /* line 94, master.css.scss */
+  body #choose_journey {
+    background-image: url(../images/background-choose-adventure.png);
+    background-size: cover;
+    background-position: center bottom;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center; }
+    /* line 108, master.css.scss */
+    body #choose_journey p {
+      font-size: 1.5em;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8); }
+    /* line 114, master.css.scss */
+    body #choose_journey a {
+      margin: 10%;
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      text-decoration: none;
+      padding: .5em; }
+  /* line 126, master.css.scss */
   body #setting {
     z-index: 0;
     background-size: auto;
@@ -82,13 +110,13 @@ body {
     top: 0;
     margin: 0;
     padding: 0; }
-  /* line 107, master.css.scss */
+  /* line 139, master.css.scss */
   body.fisherman #setting {
     background-image: url(../images/fisherman/background-1.jpg); }
-  /* line 112, master.css.scss */
+  /* line 144, master.css.scss */
   body.farmer #setting {
     background-image: url(../images/farmer/background.jpg); }
-    /* line 115, master.css.scss */
+    /* line 147, master.css.scss */
     body.farmer #setting .overlay {
       background-image: url(../images/farmer/background_overlay.png);
       background-repeat: repeat;
@@ -99,7 +127,7 @@ body {
       position: absolute;
       top: 0;
       left: 0; }
-  /* line 128, master.css.scss */
+  /* line 160, master.css.scss */
   body #character {
     z-index: 100;
     background-repeat: no-repeat;
@@ -110,39 +138,39 @@ body {
     top: 20%;
     width: 100%;
     display: block; }
-  /* line 140, master.css.scss */
+  /* line 172, master.css.scss */
   body.fisherman #character {
     background-image: url(../images/fisherman/character.png); }
-  /* line 144, master.css.scss */
+  /* line 176, master.css.scss */
   body.farmer #character {
     background-image: url(../images/farmer/character-2.png); }
-    /* line 147, master.css.scss */
+    /* line 179, master.css.scss */
     body.farmer #character.walk {
       -webkit-animation: walk 1s ease-in-out infinite alternate; }
-    /* line 151, master.css.scss */
+    /* line 183, master.css.scss */
     body.farmer #character.underwater {
       top: 0%; }
 
 @-webkit-keyframes walk {
-  /* line 161, master.css.scss */
+  /* line 193, master.css.scss */
   0% {
     background-image: url(../images/farmer/character-1.png); }
 
-  /* line 162, master.css.scss */
+  /* line 194, master.css.scss */
   50% {
     background-image: url(../images/farmer/character-2.png); }
 
-  /* line 163, master.css.scss */
+  /* line 195, master.css.scss */
   100% {
     background-image: url(../images/farmer/character-3.png); } }
 
-/* line 166, master.css.scss */
+/* line 198, master.css.scss */
 .screen {
   width: 100%;
   position: relative;
   overflow: hidden;
   -webkit-transition: top 1.5s; }
-  /* line 172, master.css.scss */
+  /* line 204, master.css.scss */
   .screen .clock {
     background-image: url(../images/fisherman/clock.png);
     background-size: contain;
@@ -162,17 +190,17 @@ body {
     font-size: 2em;
     color: white;
     z-index: 2000; }
-    /* line 195, master.css.scss */
+    /* line 227, master.css.scss */
     .screen .clock.show {
       bottom: 0; }
 
-/* line 203, master.css.scss */
+/* line 235, master.css.scss */
 .tutorial #skip_tutorial {
   position: absolute;
   z-index: 5000;
   right: 3%;
   top: 3%; }
-/* line 211, master.css.scss */
+/* line 243, master.css.scss */
 .tutorial .screen {
   display: none;
   width: 100%;
@@ -184,17 +212,17 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-  /* line 223, master.css.scss */
+  /* line 255, master.css.scss */
   .tutorial .screen.character-intro {
     display: block; }
-/* line 228, master.css.scss */
+/* line 260, master.css.scss */
 .tutorial * {
   color: white; }
-/* line 232, master.css.scss */
+/* line 264, master.css.scss */
 .tutorial .text {
   width: 30%;
   z-index: 4000; }
-/* line 237, master.css.scss */
+/* line 269, master.css.scss */
 .tutorial .background {
   background-image: url(../images/tutorial/frame6.png);
   background-size: contain;
@@ -207,7 +235,7 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-/* line 251, master.css.scss */
+/* line 283, master.css.scss */
 .tutorial .indicator {
   background-size: contain;
   background-position: top center;
@@ -219,20 +247,20 @@ body {
   position: absolute;
   top: 0%;
   left: 0%; }
-/* line 265, master.css.scss */
+/* line 297, master.css.scss */
 .tutorial .character-intro .indicator {
   background-image: url(../images/tutorial/frame1.png); }
-/* line 269, master.css.scss */
+/* line 301, master.css.scss */
 .tutorial .character-intro .text {
   position: absolute;
   left: 10%;
   top: 10%; }
-/* line 277, master.css.scss */
+/* line 309, master.css.scss */
 .tutorial .advance-control-intro .indicator {
   background-image: url(../images/tutorial/frame2_arrow.png);
   background-position: bottom right;
   z-index: 1100; }
-/* line 283, master.css.scss */
+/* line 315, master.css.scss */
 .tutorial .advance-control-intro .continue_journey_button {
   position: absolute;
   bottom: 0;
@@ -243,66 +271,66 @@ body {
   background-size: contain;
   z-index: 1000;
   background-position: bottom right; }
-/* line 295, master.css.scss */
+/* line 327, master.css.scss */
 .tutorial .advance-control-intro .text {
   position: absolute;
   right: 10%;
   bottom: 50%;
   text-align: right; }
-/* line 304, master.css.scss */
+/* line 336, master.css.scss */
 .tutorial .sea-intro .indicator {
   background-image: url(../images/tutorial/frame3.png);
   background-position: bottom center; }
-/* line 309, master.css.scss */
+/* line 341, master.css.scss */
 .tutorial .sea-intro .text {
   position: absolute;
   left: 10%;
   top: 10%;
   width: 40%; }
-/* line 318, master.css.scss */
+/* line 350, master.css.scss */
 .tutorial .arrow-intro .indicator {
   background-position: bottom center;
   background-size: cover; }
-  /* line 322, master.css.scss */
+  /* line 354, master.css.scss */
   .tutorial .arrow-intro .indicator.fisherman {
     background-image: url(../images/tutorial/frame4_rod_arrow.png); }
-  /* line 326, master.css.scss */
+  /* line 358, master.css.scss */
   .tutorial .arrow-intro .indicator.farmer {
     background-image: url(../images/tutorial/frame4_farmer_arrow.png); }
-/* line 331, master.css.scss */
+/* line 363, master.css.scss */
 .tutorial .arrow-intro.next .indicator {
   background-position: bottom center;
   background-size: cover; }
-  /* line 335, master.css.scss */
+  /* line 367, master.css.scss */
   .tutorial .arrow-intro.next .indicator.fisherman {
     background-image: url(../images/tutorial/frame5_rod_range.png); }
-  /* line 339, master.css.scss */
+  /* line 371, master.css.scss */
   .tutorial .arrow-intro.next .indicator.farmer {
     background-image: url(../images/tutorial/frame5_farmer_range.png); }
-/* line 344, master.css.scss */
+/* line 376, master.css.scss */
 .tutorial .arrow-intro .text-next {
   display: none; }
-/* line 346, master.css.scss */
+/* line 378, master.css.scss */
 .tutorial .arrow-intro.next .text {
   display: none; }
-/* line 350, master.css.scss */
+/* line 382, master.css.scss */
 .tutorial .arrow-intro.next .text-next {
   display: block;
   position: absolute;
   left: 20%;
   top: 23%;
   z-index: 2000; }
-/* line 358, master.css.scss */
+/* line 390, master.css.scss */
 .tutorial .arrow-intro .text {
   position: absolute;
   left: 20%;
   top: 40%; }
-/* line 366, master.css.scss */
+/* line 398, master.css.scss */
 .tutorial .good-luck .indicator {
   background-image: url(../images/tutorial/frame6.png);
   background-position: bottom center;
   background-size: cover; }
-/* line 372, master.css.scss */
+/* line 404, master.css.scss */
 .tutorial .good-luck .text {
   position: absolute;
   left: 0%;
@@ -310,31 +338,31 @@ body {
   text-align: center;
   top: 10%; }
 
-/* line 383, master.css.scss */
+/* line 415, master.css.scss */
 .underwater.screen {
   background-size: cover;
   background-position: top;
   -webkit-transition: box-shadow 1s; }
-  /* line 388, master.css.scss */
+  /* line 420, master.css.scss */
   .underwater.screen.future {
     box-shadow: 0 0 7em 3em white inset; }
 
-/* line 393, master.css.scss */
+/* line 425, master.css.scss */
 .fisherman .underwater.screen {
   background-image: url(../images/fisherman/background_underwater.png); }
 
-/* line 397, master.css.scss */
+/* line 429, master.css.scss */
 .farmer .underwater.screen {
   background-image: url(../images/farmer/background_underwater.png); }
 
-/* line 403, master.css.scss */
+/* line 435, master.css.scss */
 .question, #consequence p {
   background-color: rgba(255, 255, 255, 0.5);
   padding: .5em;
   margin: 0 auto;
   font-size: .9em; }
 
-/* line 414, master.css.scss */
+/* line 446, master.css.scss */
 .question {
   display: table;
   table-layout: fixed;
@@ -342,7 +370,7 @@ body {
   width: 30em;
   top: 5%; }
 
-/* line 422, master.css.scss */
+/* line 454, master.css.scss */
 #score {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -356,7 +384,7 @@ body {
   text-align: center;
   padding: .2em;
   z-index: 500; }
-  /* line 436, master.css.scss */
+  /* line 468, master.css.scss */
   #score:before {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -370,7 +398,7 @@ body {
     text-align: center;
     width: 100%; }
 
-/* line 455, master.css.scss */
+/* line 487, master.css.scss */
 footer {
   background-repeat: no-repeat;
   background-size: 100%;
@@ -381,15 +409,15 @@ footer {
   position: absolute;
   bottom: 0; }
 
-/* line 466, master.css.scss */
+/* line 498, master.css.scss */
 .fisherman .choices {
   background-image: url(../images/fisherman/choices-background.png); }
 
-/* line 470, master.css.scss */
+/* line 502, master.css.scss */
 .farmer .choices {
   background-image: url(../images/farmer/choices-background.png); }
 
-/* line 474, master.css.scss */
+/* line 506, master.css.scss */
 .choices {
   background-repeat: no-repeat;
   background-size: cover;
@@ -403,7 +431,7 @@ footer {
   left: 0;
   counter-reset: choice;
   z-index: 1100; }
-  /* line 488, master.css.scss */
+  /* line 520, master.css.scss */
   .choices .choice {
     display: table-cell;
     width: 2%;
@@ -411,7 +439,7 @@ footer {
     margin: 0 auto;
     color: white;
     position: relative; }
-    /* line 498, master.css.scss */
+    /* line 530, master.css.scss */
     .choices .choice:after {
       content: '';
       width: 90%;
@@ -425,48 +453,48 @@ footer {
       height: 0.3em;
       background-size: 100% 0.3em;
       background-repeat: no-repeat; }
-    /* line 516, master.css.scss */
+    /* line 548, master.css.scss */
     .choices .choice.selected:after {
       background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../images/fisherman/selected-choice.png);
       background-position: bottom center, 0.3em center;
       background-size: 100% 0.3em, 100% 100%;
       background-repeat: no-repeat; }
-    /* line 524, master.css.scss */
+    /* line 556, master.css.scss */
     .choices .choice .title {
       text-align: center;
       vertical-align: top; }
-      /* line 528, master.css.scss */
+      /* line 560, master.css.scss */
       .choices .choice .title:before {
         content: counter(choice) ".";
         counter-increment: choice;
         margin-right: .5em; }
-    /* line 535, master.css.scss */
+    /* line 567, master.css.scss */
     .choices .choice .consequence {
       display: none;
       font-size: .8em; }
 
-/* line 543, master.css.scss */
+/* line 575, master.css.scss */
 .arrow, .trajectory {
   position: absolute;
   bottom: 10%;
   -webkit-backface-visibility: hidden; }
 
-/* line 552, master.css.scss */
+/* line 584, master.css.scss */
 #consequence {
   width: 50%;
   left: 25%;
   position: fixed;
   z-index: 500; }
 
-/* line 561, master.css.scss */
+/* line 593, master.css.scss */
 .fisherman #continue_journey_button, .fisherman .continue_journey_button {
   background-image: url(../images/fisherman/continue-button.png); }
 
-/* line 565, master.css.scss */
+/* line 597, master.css.scss */
 .farmer #continue_journey_button, .farmer .continue_journey_button {
   background-image: url(../images/farmer/continue-button.png); }
 
-/* line 569, master.css.scss */
+/* line 601, master.css.scss */
 #continue_journey_button {
   background-repeat: no-repeat;
   background-size: contain;
@@ -478,22 +506,22 @@ footer {
   z-index: 3000;
   cursor: pointer; }
 
-/* line 585, master.css.scss */
+/* line 617, master.css.scss */
 #control {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%; }
 
-/* line 592, master.css.scss */
+/* line 624, master.css.scss */
 .fisherman #throw_button, .fisherman .throw_button {
   background-image: url(../images/fisherman/throw-button.png); }
 
-/* line 596, master.css.scss */
+/* line 628, master.css.scss */
 .farmer #throw_button, .farmer .throw_button {
   background-image: url(../images/farmer/throw-button.png); }
 
-/* line 600, master.css.scss */
+/* line 632, master.css.scss */
 #throw_button, .throw_button {
   display: block;
   background-repeat: no-repeat;
@@ -507,15 +535,15 @@ footer {
   z-index: 1500;
   cursor: pointer; }
 
-/* line 614, master.css.scss */
+/* line 646, master.css.scss */
 .fisherman .arrow {
   background-image: url(../images/fisherman/control.png); }
 
-/* line 618, master.css.scss */
+/* line 650, master.css.scss */
 .farmer .arrow {
   background-image: url(../images/farmer/control.png); }
 
-/* line 622, master.css.scss */
+/* line 654, master.css.scss */
 .arrow {
   background-repeat: no-repeat;
   width: 25%;
@@ -527,15 +555,15 @@ footer {
 
 @-webkit-keyframes swing {
   /*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
-  /* line 634, master.css.scss */
+  /* line 666, master.css.scss */
   0% {
     -webkit-transform: rotate(-52deg); }
 
-  /* line 635, master.css.scss */
+  /* line 667, master.css.scss */
   100% {
     -webkit-transform: rotate(-15deg); } }
 
-/* line 638, master.css.scss */
+/* line 670, master.css.scss */
 .trajectory {
   width: 100%;
   height: 100%;
@@ -543,55 +571,55 @@ footer {
   left: 0;
   z-index: 50; }
 
-/* line 668, master.css.scss */
+/* line 700, master.css.scss */
 .choices {
   -webkit-transition: bottom 2s 3s;
   bottom: -100%; }
-  /* line 672, master.css.scss */
+  /* line 704, master.css.scss */
   .choices.come {
     -webkit-transition: bottom 2s 4s;
     bottom: 0; }
 
-/* line 678, master.css.scss */
+/* line 710, master.css.scss */
 #throw_button {
   -webkit-transition: left 2s 4s; }
-  /* line 681, master.css.scss */
+  /* line 713, master.css.scss */
   #throw_button.leave {
     -webkit-transition: left 2s 3s;
     left: -100%; }
 
-/* line 687, master.css.scss */
+/* line 719, master.css.scss */
 #control {
   -webkit-transition: left 2s 3s;
   left: -100%; }
-  /* line 691, master.css.scss */
+  /* line 723, master.css.scss */
   #control.come {
     -webkit-transition: left 2s 4s;
     left: 0; }
 
-/* line 699, master.css.scss */
+/* line 731, master.css.scss */
 .question.leave {
   -webkit-transition: top 2s 3s;
   top: -100%; }
 
-/* line 705, master.css.scss */
+/* line 737, master.css.scss */
 #consequence {
   -webkit-transition: top 1s 0;
   top: -100%; }
-  /* line 709, master.css.scss */
+  /* line 741, master.css.scss */
   #consequence.come {
     top: 15%; }
 
-/* line 714, master.css.scss */
+/* line 746, master.css.scss */
 #continue_journey_button {
   -webkit-transition: right 1s 0;
   right: -100%; }
-  /* line 718, master.css.scss */
+  /* line 750, master.css.scss */
   #continue_journey_button.come {
     right: 0;
     -webkit-transition: right 1s 6.5s; }
 
-/* line 725, master.css.scss */
+/* line 757, master.css.scss */
 .arrow.swing {
   display: block;
   -webkit-transform-origin: 0 50%;
@@ -600,11 +628,11 @@ footer {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-direction: alternate; }
-  /* line 735, master.css.scss */
+  /* line 767, master.css.scss */
   .arrow.swing.stop {
     -webkit-animation-play-state: paused; }
 
-/* line 741, master.css.scss */
+/* line 773, master.css.scss */
 .pier {
   width: 100%;
   height: 50%;
@@ -616,17 +644,17 @@ footer {
   bottom: 0%;
   left: 0%; }
 
-/* line 753, master.css.scss */
+/* line 785, master.css.scss */
 .fisherman .pier {
   background-image: url(../images/fisherman/pier.png); }
 
-/* line 757, master.css.scss */
+/* line 789, master.css.scss */
 .farmer .pier {
   background-image: url(../images/farmer/pier.png);
   width: 100%;
   height: 50%; }
 
-/* line 763, master.css.scss */
+/* line 795, master.css.scss */
 .catch {
   width: 100%;
   height: 50%;
@@ -638,36 +666,36 @@ footer {
   bottom: 0%;
   left: 0%; }
 
-/* line 775, master.css.scss */
+/* line 807, master.css.scss */
 .fisherman .catch {
   background-image: url(../images/fisherman/BOX.png);
   background-position: top center; }
-  /* line 779, master.css.scss */
+  /* line 811, master.css.scss */
   .fisherman .catch.good {
     background-image: url(../images/fisherman/BOX_FEW.png); }
-    /* line 782, master.css.scss */
+    /* line 814, master.css.scss */
     .fisherman .catch.good.great {
       background-image: url(../images/fisherman/BOX_MEDIUM.png); }
-      /* line 785, master.css.scss */
+      /* line 817, master.css.scss */
       .fisherman .catch.good.great.amazing {
         background-image: url(../images/fisherman/BOX_LOT.png); }
 
-/* line 792, master.css.scss */
+/* line 824, master.css.scss */
 .farmer .catch {
   background-image: url(../images/farmer/BOX.png);
   background-position: top center;
   bottom: 10%; }
-  /* line 797, master.css.scss */
+  /* line 829, master.css.scss */
   .farmer .catch.good {
     background-image: url(../images/farmer/BOX_FEW.png); }
-    /* line 800, master.css.scss */
+    /* line 832, master.css.scss */
     .farmer .catch.good.great {
       background-image: url(../images/farmer/BOX_MEDIUM.png); }
-      /* line 803, master.css.scss */
+      /* line 835, master.css.scss */
       .farmer .catch.good.great.amazing {
         background-image: url(../images/farmer/BOX_LOT.png); }
 
-/* line 810, master.css.scss */
+/* line 842, master.css.scss */
 .final_score {
   text-align: center;
   margin-top: 3%;
@@ -677,44 +705,44 @@ footer {
   position: relative;
   text-transform: uppercase; }
 
-/* line 820, master.css.scss */
+/* line 852, master.css.scss */
 .screen:first .arrow.first {
   -webkit-animation-delay: 0; }
 
-/* line 825, master.css.scss */
+/* line 857, master.css.scss */
 #setting {
   -webkit-transition: top 3s ease-in-out 1s; }
 
-/* line 830, master.css.scss */
+/* line 862, master.css.scss */
 #setting.underwater {
   -webkit-transition: top 3s ease-in-out 5s; }
 
-/* line 834, master.css.scss */
+/* line 866, master.css.scss */
 body #character {
   -webkit-transition: top 3s ease-in-out 1s; }
-  /* line 837, master.css.scss */
+  /* line 869, master.css.scss */
   body #character.underwater {
     top: -25%;
     -webkit-transition: top 3s ease-in-out 5s; }
 
-/* line 844, master.css.scss */
+/* line 876, master.css.scss */
 menu.general {
   display: table;
   margin: 2em auto 0 auto; }
-  /* line 849, master.css.scss */
+  /* line 881, master.css.scss */
   menu.general a#view_score {
     background-image: url(../images/bt_save.png); }
-  /* line 853, master.css.scss */
+  /* line 885, master.css.scss */
   menu.general a#play_again {
     background-image: url(../images/bt_play_again.png); }
-  /* line 857, master.css.scss */
+  /* line 889, master.css.scss */
   menu.general a#exit {
     background-image: url(../images/bt_exit.png); }
-  /* line 861, master.css.scss */
+  /* line 893, master.css.scss */
   menu.general a#view_gallery {
     background-image: url(../images/bt_gallery.png); }
 
-/* line 867, master.css.scss */
+/* line 899, master.css.scss */
 menu.general a, #skip_tutorial {
   background-color: rgba(0, 0, 0, 0.9);
   background-repeat: no-repeat;
@@ -729,25 +757,25 @@ menu.general a, #skip_tutorial {
   text-decoration: none;
   display: inline-block; }
 
-/* line 882, master.css.scss */
+/* line 914, master.css.scss */
 #skip_tutorial {
   background-image: url(../images/bt_skip.png); }
 
-/* line 886, master.css.scss */
+/* line 918, master.css.scss */
 #welcome_setting menu.general {
   position: absolute;
   bottom: 2%; }
-  /* line 890, master.css.scss */
+  /* line 922, master.css.scss */
   #welcome_setting menu.general #view_score {
     background-image: url(../images/welcome/bt_highscore.png); }
-  /* line 894, master.css.scss */
+  /* line 926, master.css.scss */
   #welcome_setting menu.general #in_english {
     background-image: url(../images/welcome/bt_english.png); }
-  /* line 898, master.css.scss */
+  /* line 930, master.css.scss */
   #welcome_setting menu.general #in_portuguese {
     background-image: url(../images/welcome/bt_portuguese.png); }
 
-/* line 905, master.css.scss */
+/* line 937, master.css.scss */
 .score_page, .drawings {
   position: absolute;
   bottom: -100%;
@@ -760,11 +788,11 @@ menu.general a, #skip_tutorial {
   overflow: hidden;
   -webkit-transition: bottom 1s;
   color: white; }
-  /* line 918, master.css.scss */
+  /* line 950, master.css.scss */
   .score_page.show, .drawings.show {
     bottom: 0; }
 
-/* line 924, master.css.scss */
+/* line 956, master.css.scss */
 .close_score, .close_gallery {
   width: 30%;
   line-height: 2em;
@@ -781,11 +809,11 @@ menu.general a, #skip_tutorial {
   text-align: center;
   text-decoration: none; }
 
-/* line 943, master.css.scss */
+/* line 975, master.css.scss */
 .score_page .save_box {
   display: table;
   margin: 1em auto; }
-  /* line 947, master.css.scss */
+  /* line 979, master.css.scss */
   .score_page .save_box input[type=text] {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0;
@@ -793,7 +821,7 @@ menu.general a, #skip_tutorial {
     font-size: 1.5em;
     width: 10em;
     margin-right: 1em; }
-  /* line 956, master.css.scss */
+  /* line 988, master.css.scss */
   .score_page .save_box #save_score {
     background-color: gray;
     padding: .5em;
@@ -802,17 +830,17 @@ menu.general a, #skip_tutorial {
     color: white;
     text-decoration: none;
     box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.2); }
-/* line 967, master.css.scss */
+/* line 999, master.css.scss */
 .score_page table {
   margin: auto; }
-  /* line 970, master.css.scss */
+  /* line 1002, master.css.scss */
   .score_page table td {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.7);
     padding: 0 2em; }
 
-/* line 984, master.css.scss */
+/* line 1016, master.css.scss */
 .drawings menu {
   width: 10%;
   height: 100%;
@@ -822,19 +850,19 @@ menu.general a, #skip_tutorial {
   padding: 0;
   position: relative;
   z-index: 5000; }
-/* line 995, master.css.scss */
+/* line 1027, master.css.scss */
 .drawings section {
   top: 0;
   width: 90%;
   display: inline-block;
   position: relative;
   -webkit-transition: top .5s; }
-/* line 1004, master.css.scss */
+/* line 1036, master.css.scss */
 .drawings h3 {
   color: rgba(255, 255, 255, 0.6);
   text-align: right;
   margin: 2% 2% 0 0; }
-/* line 1010, master.css.scss */
+/* line 1042, master.css.scss */
 .drawings figure {
   width: 25%;
   height: 50%;
@@ -844,11 +872,11 @@ menu.general a, #skip_tutorial {
   color: white;
   font-size: .8em;
   text-align: left; }
-  /* line 1020, master.css.scss */
+  /* line 1052, master.css.scss */
   .drawings figure img {
     width: 100%;
     max-height: 100%; }
-/* line 1026, master.css.scss */
+/* line 1058, master.css.scss */
 .drawings #gallery_down, .drawings #gallery_up {
   display: block;
   width: 90%;
@@ -856,10 +884,10 @@ menu.general a, #skip_tutorial {
   height: 50%;
   background-repeat: no-repeat;
   background-position: center center; }
-/* line 1035, master.css.scss */
+/* line 1067, master.css.scss */
 .drawings #gallery_down {
   background-image: url(../images/gallery_right.png); }
-/* line 1039, master.css.scss */
+/* line 1071, master.css.scss */
 .drawings #gallery_up {
   background-image: url(../images/gallery_left.png); }
 
