@@ -63,14 +63,15 @@ body{
 			}
 		}
 	}
+	
 	.english #welcome_setting{
-		background-image: url(#{$url}/welcome/background-en.png);
+		background-image: url(#{$url}/welcome/background-en.jpg);
 	}
 	
 	#welcome_setting{
-		background-image: url(#{$url}/welcome/background.png);
+		background-image: url(#{$url}/welcome/background.jpg);
 		background-color: #191714;
-		background-size: contain;
+		background-size: auto 100%;
 		background-position: center center;
 		overflow: hidden;
 		position: absolute;
@@ -87,15 +88,15 @@ body{
 			background-position: center center;
 			left: 43.5%;
 			background-repeat: no-repeat;
-			width: 13%;
+			width: 12%;
 			height: 35%;
-			margin: 15em auto auto auto;
+			margin: 28% auto auto auto;
 			display: table;
 		}
 	}
 	
 	#choose_journey{
-		background-image: url(#{$url}/background-choose-adventure.png);
+		background-image: url(#{$url}/background-choose-adventure.jpg);
 		background-size: cover;
 		background-position: center bottom;
 		overflow: hidden;
