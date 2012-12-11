@@ -871,9 +871,16 @@ $(document).ready(function(){
 	
 	anim = setTimeout(function(){
 		$('.tutorial .arrow-intro').hide();
-		$('.tutorial .good-luck').show();
+		$('.tutorial .choice-illuminates').show();
 		playAudio($('.screen.tutorial audio').get(5));
 	}, 37000);
+	tutorial_animations.push(anim);
+	
+	anim = setTimeout(function(){
+		$('.tutorial .choice-illuminates').hide();
+		$('.tutorial .good-luck').show();
+		playAudio($('.screen.tutorial audio').get(6));
+	}, 45000);
 	tutorial_animations.push(anim);
 	
 	last_tutorial_step = function(){
@@ -885,7 +892,7 @@ $(document).ready(function(){
 	
 	anim = setTimeout(function(){
 		last_tutorial_step();
-	}, 41000);
+	}, 47000);
 	tutorial_animations.push(anim);
 	
 	$('#skip_tutorial').click(function(){

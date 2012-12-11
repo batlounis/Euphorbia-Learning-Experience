@@ -270,7 +270,7 @@ body{
 	}
 	
 	.background{
-		background-image: url(#{$url}/tutorial/frame6.png);
+		background-image: url(#{$url}/tutorial/frame7.png);
 		background-size: contain;
 		background-position: top center;
 		width: 100%;
@@ -397,9 +397,30 @@ body{
 		}
 	}
 	
+	.choice-illuminates{
+		.indicator{
+			background-position: bottom center;
+			
+			&.farmer{
+				background-image: url(#{$url}/tutorial/frame6-farmer.png);
+			}
+			
+			&.fisherman{
+				background-image: url(#{$url}/tutorial/frame6-fisherman.png);
+			}
+		}
+		
+		.text{
+			position: absolute;
+			left: 40%;
+			top: 25%;
+			width: 40%;
+		}
+	}
+	
 	.good-luck{
 		.indicator{
-			background-image: url(#{$url}/tutorial/frame6.png);
+			background-image: url(#{$url}/tutorial/frame7.png);
 			background-position: bottom center;
 			background-size: cover
 		}
