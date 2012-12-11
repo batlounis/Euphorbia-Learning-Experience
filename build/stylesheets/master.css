@@ -121,18 +121,18 @@ body {
   /* line 151, master.css.scss */
   body #setting {
     z-index: 0;
-    background-size: auto;
+    background-size: 100%;
     width: 100%;
     overflow: auto;
     background-position: top center;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     position: relative;
     top: 0;
     margin: 0;
     padding: 0; }
   /* line 164, master.css.scss */
   body.fisherman #setting {
-    background-image: url(../images/fisherman/background-1.jpg); }
+    background-image: url(../images/fisherman/background-shorter.jpg); }
   /* line 169, master.css.scss */
   body.farmer #setting {
     background-image: url(../images/farmer/background.jpg); }

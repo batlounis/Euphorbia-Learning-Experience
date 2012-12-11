@@ -150,11 +150,11 @@ body{
 	
 	#setting{
 		z-index: 0;
-		background-size: auto;
+		background-size: 100%;
 		width: 100%;
 		overflow: auto;
 		background-position: top center;
-		background-repeat: repeat;
+		background-repeat: repeat-y;
 		position: relative;
 		top: 0;
 		margin: 0;
@@ -163,7 +163,7 @@ body{
 	
 	&.fisherman #setting{
 		// background: url(#{$url}/fisherman/background-1.jpg) 0 0 no-repeat, url(#{$url}/fisherman/background-2.jpg) 0 1536px no-repeat, url(#{$url}/fisherman/background-3.jpg) 0 1536*2px no-repeat, url(#{$url}/fisherman/background-4.jpg) 0 1536*3px no-repeat, url(#{$url}/fisherman/background-5.jpg) 0 1536*4px no-repeat, url(#{$url}/fisherman/background-6.jpg) 0 1536*5px no-repeat, url(#{$url}/fisherman/background-7.jpg) 0 1536*6px no-repeat, url(#{$url}/fisherman/background-8.jpg) 0 1536*7px no-repeat;
-		background-image: url(#{$url}/fisherman/background-1.jpg); //TODO: this is just one part
+		background-image: url(#{$url}/fisherman/background-shorter.jpg); //TODO: this is just one part
 	}
 	
 	&.farmer #setting{
@@ -255,6 +255,32 @@ body{
 	}
 }
 
+#journey_buttons{
+	position: absolute;
+	z-index: 5000;
+	left: 1%;
+	top: 3%;
+	
+	#audio_status{
+		background-image: url(#{$url}/bt_sound.png);
+		
+		&:after{
+			content: 'ON';
+		}
+		
+		&.off{
+			&:after{
+				content: 'OFF';
+			}
+		}
+	}
+	
+	#journey_exit{
+		background-image: url(#{$url}/bt_exit.png);
+	}
+}
+
+
 .tutorial{
 	
 	#skip_tutorial{
@@ -262,7 +288,6 @@ body{
 		z-index: 5000;
 		right: 3%;
 		top: 3%;
-				
 	}
 	
 	.screen{
@@ -942,7 +967,7 @@ menu.general{
 	}		
 }
 
-menu.general a, #skip_tutorial{
+menu.general a, #skip_tutorial, #audio_status, #journey_exit{
 	background-color: rgba(black, .90);
 	background-repeat: no-repeat;
 	background-size: auto 1.5em;

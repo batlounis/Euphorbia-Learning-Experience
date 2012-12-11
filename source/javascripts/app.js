@@ -18,7 +18,12 @@ $(document).ready(function(){
 	var step = 0;
 	
 	var playing_audio;
+	var mute = false;
 	playAudio = function(audio){
+		if(mute){
+			return;
+		}
+		
 		if(playing_audio){
 			playing_audio.pause();
 		}
@@ -32,6 +37,11 @@ $(document).ready(function(){
 			playing_audio.pause();
 		}
 	}
+	
+	$('#audio_status').click(function(){
+		mute = !mute;
+		$(this).toggleClass('off');
+	})
 	
 	// --- ONLOAD ---
 	
