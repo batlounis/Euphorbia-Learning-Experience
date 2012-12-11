@@ -717,36 +717,37 @@ menu.general {
 /* line 867, master.css.scss */
 menu.general a, #skip_tutorial {
   background-color: rgba(0, 0, 0, 0.9);
-  background-position: left;
   background-repeat: no-repeat;
   background-size: auto 1.5em;
   background-position: .3em;
   padding: .2em .5em .2em 2em;
   margin-right: .4em;
+  margin-bottom: .5em;
   font-size: 1em;
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Arial Black';
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
 
-/* line 881, master.css.scss */
+/* line 882, master.css.scss */
 #skip_tutorial {
   background-image: url(../images/bt_skip.png); }
 
-/* line 885, master.css.scss */
+/* line 886, master.css.scss */
 #welcome_setting menu.general {
   position: absolute;
   bottom: 2%; }
-  /* line 889, master.css.scss */
+  /* line 890, master.css.scss */
   #welcome_setting menu.general #view_score {
     background-image: url(../images/welcome/bt_highscore.png); }
-  /* line 893, master.css.scss */
+  /* line 894, master.css.scss */
   #welcome_setting menu.general #in_english {
     background-image: url(../images/welcome/bt_english.png); }
-  /* line 897, master.css.scss */
+  /* line 898, master.css.scss */
   #welcome_setting menu.general #in_portuguese {
     background-image: url(../images/welcome/bt_portuguese.png); }
 
-/* line 904, master.css.scss */
+/* line 905, master.css.scss */
 .score_page, .drawings {
   position: absolute;
   bottom: -100%;
@@ -759,11 +760,11 @@ menu.general a, #skip_tutorial {
   overflow: hidden;
   -webkit-transition: bottom 1s;
   color: white; }
-  /* line 917, master.css.scss */
+  /* line 918, master.css.scss */
   .score_page.show, .drawings.show {
     bottom: 0; }
 
-/* line 923, master.css.scss */
+/* line 924, master.css.scss */
 .close_score, .close_gallery {
   width: 30%;
   line-height: 2em;
@@ -780,11 +781,11 @@ menu.general a, #skip_tutorial {
   text-align: center;
   text-decoration: none; }
 
-/* line 942, master.css.scss */
+/* line 943, master.css.scss */
 .score_page .save_box {
   display: table;
   margin: 1em auto; }
-  /* line 946, master.css.scss */
+  /* line 947, master.css.scss */
   .score_page .save_box input[type=text] {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0;
@@ -792,7 +793,7 @@ menu.general a, #skip_tutorial {
     font-size: 1.5em;
     width: 10em;
     margin-right: 1em; }
-  /* line 955, master.css.scss */
+  /* line 956, master.css.scss */
   .score_page .save_box #save_score {
     background-color: gray;
     padding: .5em;
@@ -801,17 +802,17 @@ menu.general a, #skip_tutorial {
     color: white;
     text-decoration: none;
     box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.2); }
-/* line 966, master.css.scss */
+/* line 967, master.css.scss */
 .score_page table {
   margin: auto; }
-  /* line 969, master.css.scss */
+  /* line 970, master.css.scss */
   .score_page table td {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.7);
     padding: 0 2em; }
 
-/* line 983, master.css.scss */
+/* line 984, master.css.scss */
 .drawings menu {
   width: 10%;
   height: 100%;
@@ -821,19 +822,19 @@ menu.general a, #skip_tutorial {
   padding: 0;
   position: relative;
   z-index: 5000; }
-/* line 994, master.css.scss */
+/* line 995, master.css.scss */
 .drawings section {
   top: 0;
   width: 90%;
   display: inline-block;
   position: relative;
   -webkit-transition: top .5s; }
-/* line 1003, master.css.scss */
+/* line 1004, master.css.scss */
 .drawings h3 {
   color: rgba(255, 255, 255, 0.6);
   text-align: right;
   margin: 2% 2% 0 0; }
-/* line 1009, master.css.scss */
+/* line 1010, master.css.scss */
 .drawings figure {
   width: 25%;
   height: 50%;
@@ -843,11 +844,11 @@ menu.general a, #skip_tutorial {
   color: white;
   font-size: .8em;
   text-align: left; }
-  /* line 1019, master.css.scss */
+  /* line 1020, master.css.scss */
   .drawings figure img {
     width: 100%;
     max-height: 100%; }
-/* line 1025, master.css.scss */
+/* line 1026, master.css.scss */
 .drawings #gallery_down, .drawings #gallery_up {
   display: block;
   width: 90%;
@@ -855,10 +856,10 @@ menu.general a, #skip_tutorial {
   height: 50%;
   background-repeat: no-repeat;
   background-position: center center; }
-/* line 1034, master.css.scss */
+/* line 1035, master.css.scss */
 .drawings #gallery_down {
   background-image: url(../images/gallery_right.png); }
-/* line 1038, master.css.scss */
+/* line 1039, master.css.scss */
 .drawings #gallery_up {
   background-image: url(../images/gallery_left.png); }
 

@@ -866,16 +866,17 @@ menu.general{
 
 menu.general a, #skip_tutorial{
 	background-color: rgba(black, .90);
-	background-position: left;
 	background-repeat: no-repeat;
 	background-size: auto 1.5em;
 	background-position: .3em;
 	padding: .2em .5em .2em 2em;
 	margin-right: .4em;
+	margin-bottom: .5em;
 	font-size: 1em;
 	color: rgba(white, .90);
 	font-family: 'Arial Black';
 	text-decoration: none;
+	display: inline-block;
 }
 
 #skip_tutorial{
