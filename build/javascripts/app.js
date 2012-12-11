@@ -196,14 +196,16 @@ $(document).ready(function(){
 	}
 	
 	
-	$('#view_gallery').click(function(){
+	$('#view_gallery, .close_gallery').click(function(){
 		$('.drawings').toggleClass('show');
+		$('.score_page').removeClass('show'); // Note: always hide the other box, just in case
 	});
 	
 	$('#view_score, .close_score').click(function(){
 		var scores = getScores();
 		viewModel.scores(scores);
 		$('.score_page').toggleClass('show');
+		$('.drawings').removeClass('show'); // Note: always hide the other box, just in case
 	});
 	
 	$('#save_score').click(function(){

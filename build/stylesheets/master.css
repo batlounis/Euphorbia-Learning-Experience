@@ -745,128 +745,121 @@ menu.general a, #skip_tutorial {
   #welcome_setting menu.general #in_portuguese {
     background-image: url(../images/welcome/bt_portuguese.png); }
 
-/* line 902, master.css.scss */
-.score_page {
+/* line 903, master.css.scss */
+.score_page, .drawings {
   position: absolute;
   bottom: -100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  height: 50%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 3000;
-  overflow: auto;
-  -webkit-transition: bottom 1s;
-  color: white; }
-  /* line 915, master.css.scss */
-  .score_page .save_box {
-    display: table;
-    margin: 1em auto; }
-    /* line 919, master.css.scss */
-    .score_page .save_box input[type=text] {
-      background-color: rgba(255, 255, 255, 0.4);
-      border-radius: 0;
-      border-style: none;
-      font-size: 1.5em;
-      width: 10em;
-      margin-right: 1em; }
-    /* line 928, master.css.scss */
-    .score_page .save_box #save_score {
-      background-color: gray;
-      padding: .5em;
-      display: table-cell;
-      vertical-align: middle;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.2); }
-  /* line 939, master.css.scss */
-  .score_page .close_score {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    position: relative;
-    top: 0;
-    display: block;
-    text-align: center;
-    text-decoration: none; }
-  /* line 950, master.css.scss */
-  .score_page.show {
-    bottom: 0; }
-  /* line 954, master.css.scss */
-  .score_page table {
-    margin: auto; }
-    /* line 957, master.css.scss */
-    .score_page table td {
-      border-bottom-style: solid;
-      border-width: 1px;
-      border-color: rgba(255, 255, 255, 0.7);
-      padding: 1em 0; }
-
-/* line 967, master.css.scss */
-.drawings {
-  position: absolute;
-  bottom: -100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  height: 50%;
+  height: 60%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 3000;
   overflow: hidden;
-  -webkit-transition: bottom 1s; }
-  /* line 982, master.css.scss */
-  .drawings.show {
+  -webkit-transition: bottom 1s;
+  color: white; }
+  /* line 916, master.css.scss */
+  .score_page.show, .drawings.show {
     bottom: 0; }
-  /* line 986, master.css.scss */
-  .drawings menu {
-    width: 10%;
-    height: 100%;
-    float: left;
-    text-align: right;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 5000; }
-  /* line 997, master.css.scss */
-  .drawings section {
-    top: 0;
-    width: 90%;
-    display: inline-block;
-    position: relative;
-    -webkit-transition: top .5s; }
-  /* line 1006, master.css.scss */
-  .drawings h3 {
-    color: rgba(255, 255, 255, 0.6);
-    text-align: right;
-    margin: 2% 2% 0 0; }
-  /* line 1012, master.css.scss */
-  .drawings figure {
-    width: 25%;
-    height: 50%;
-    margin: 2%;
-    padding: 0;
-    display: inline-block;
+
+/* line 922, master.css.scss */
+.close_score, .close_gallery {
+  width: 30%;
+  line-height: 2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(../images/bt_skip.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: white;
+  position: relative;
+  top: 0;
+  margin: auto;
+  display: block;
+  text-align: center;
+  text-decoration: none; }
+
+/* line 941, master.css.scss */
+.score_page .save_box {
+  display: table;
+  margin: 1em auto; }
+  /* line 945, master.css.scss */
+  .score_page .save_box input[type=text] {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    border-style: none;
+    font-size: 1.5em;
+    width: 10em;
+    margin-right: 1em; }
+  /* line 954, master.css.scss */
+  .score_page .save_box #save_score {
+    background-color: gray;
+    padding: .5em;
+    display: table-cell;
+    vertical-align: middle;
     color: white;
-    font-size: .8em;
-    text-align: left; }
-    /* line 1022, master.css.scss */
-    .drawings figure img {
-      width: 100%;
-      max-height: 100%; }
-  /* line 1028, master.css.scss */
-  .drawings #gallery_down, .drawings #gallery_up {
-    display: block;
-    width: 90%;
-    margin: auto;
-    height: 50%;
-    background-repeat: no-repeat;
-    background-position: center center; }
-  /* line 1037, master.css.scss */
-  .drawings #gallery_down {
-    background-image: url(../images/gallery_right.png); }
-  /* line 1041, master.css.scss */
-  .drawings #gallery_up {
-    background-image: url(../images/gallery_left.png); }
+    text-decoration: none;
+    box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.2); }
+/* line 965, master.css.scss */
+.score_page table {
+  margin: auto; }
+  /* line 968, master.css.scss */
+  .score_page table td {
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.7);
+    padding: 0 2em; }
+
+/* line 982, master.css.scss */
+.drawings menu {
+  width: 10%;
+  height: 100%;
+  float: left;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5000; }
+/* line 993, master.css.scss */
+.drawings section {
+  top: 0;
+  width: 90%;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: top .5s; }
+/* line 1002, master.css.scss */
+.drawings h3 {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  margin: 2% 2% 0 0; }
+/* line 1008, master.css.scss */
+.drawings figure {
+  width: 25%;
+  height: 50%;
+  margin: 2%;
+  padding: 0;
+  display: inline-block;
+  color: white;
+  font-size: .8em;
+  text-align: left; }
+  /* line 1018, master.css.scss */
+  .drawings figure img {
+    width: 100%;
+    max-height: 100%; }
+/* line 1024, master.css.scss */
+.drawings #gallery_down, .drawings #gallery_up {
+  display: block;
+  width: 90%;
+  margin: auto;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center center; }
+/* line 1033, master.css.scss */
+.drawings #gallery_down {
+  background-image: url(../images/gallery_right.png); }
+/* line 1037, master.css.scss */
+.drawings #gallery_up {
+  background-image: url(../images/gallery_left.png); }
 
 /* line 4, animations/farmer/0-common.css.scss */
 .farmer .vegetables {

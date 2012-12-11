@@ -898,19 +898,45 @@ menu.general a, #skip_tutorial{
 	}
 }
 
-// ** Score
-.score_page{
+// ** Score & Kids' drawings
+
+.score_page, .drawings{
 	position: absolute;
 	bottom: -100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	height: 50%;
+	height: 60%;
 	background-color: rgba(black, .8);
 	z-index: 3000;
-	overflow: auto;
+	overflow: hidden;
 	-webkit-transition: bottom 1s;
 	color: white;
+	
+	&.show{
+		bottom: 0;
+	}
+}
+
+
+.close_score, .close_gallery{
+	width: 30%;
+	line-height: 2em;
+	background-color: rgba(white, .2);
+	background-image: url(#{$url}/bt_skip.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: white;
+	position: relative;
+	top: 0;
+	margin: auto;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.score_page{
 	
 	.save_box{
 		display: table;
@@ -936,21 +962,6 @@ menu.general a, #skip_tutorial{
 		}
 	}
 	
-	.close_score{
-		width: 100%;
-		background-color: rgba(white, .2);
-		color: white;
-		position: relative;
-		top: 0;
-		display: block;
-		text-align: center;
-		text-decoration: none;
-	}
-	
-	&.show{
-		bottom: 0;
-	}
-	
 	table{
 		margin: auto;
 		
@@ -958,31 +969,16 @@ menu.general a, #skip_tutorial{
 			border-bottom-style: solid;
 			border-width: 1px;
 			border-color: rgba(white, .7);
-			padding: 1em 0;
+			padding: 0 2em;
 		}
 	}
 }
 
-// ** Kids' Drawings
 .drawings{
 	$menu_width: 10%;
 	$figure_margin: 2%;
 	
-	position: absolute;
-	bottom: -100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	height: 50%;
-	background-color: rgba(black, .8);
-	z-index: 3000;
-	overflow: hidden;
-	-webkit-transition: bottom 1s;
-	
-	&.show{
-		bottom: 0;
-	}
-	
+
 	menu{
 		width: $menu_width;
 		height: 100%;
