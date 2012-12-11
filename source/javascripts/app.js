@@ -131,7 +131,7 @@ $(document).ready(function(){
 		$('#throw_button').addClass('leave');
 		$('#score').hide();
 		$('#character').show();
-		playAudio($('.screen.tutorial audio').get(0);
+		playAudio($('.screen.tutorial audio').get(0));
 
 		anim = setTimeout(function(){
 			$('#character').hide();

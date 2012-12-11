@@ -83,13 +83,9 @@ body{
 		display: block;
 		
 		.choose_journey_button{
-			background-image: url(#{$url}/welcome/bt_play_pt.png);
-			background-size: contain;
-			background-position: center center;
 			left: 43.5%;
-			background-repeat: no-repeat;
 			width: 12%;
-			height: 35%;
+			height: 100%;
 			margin: 28% auto auto auto;
 			display: table;
 		}

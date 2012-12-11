@@ -18,7 +18,12 @@ $(document).ready(function(){
 	var step = 0;
 	
 	var playing_audio;
+	var mute = false;
 	playAudio = function(audio){
+		if(mute){
+			return;
+		}
+		
 		if(playing_audio){
 			playing_audio.pause();
 		}
@@ -32,6 +37,11 @@ $(document).ready(function(){
 			playing_audio.pause();
 		}
 	}
+	
+	$('#audio_status').click(function(){
+		mute = !mute;
+		$(this).toggleClass('off');
+	})
 	
 	// --- ONLOAD ---
 	
@@ -103,7 +113,7 @@ $(document).ready(function(){
 	
 	$('#play_tutorial').click(function(){
 		$('#continue_journey_button').trigger('click');
-		setTimeout(function(){play_tutorial();}, 2000);
+		play_tutorial();
 	})
 	
 	$('#just_play').click(function(){
@@ -117,14 +127,11 @@ $(document).ready(function(){
 		var tutorial_animations = [];
 		var anim;
 
-		anim = setTimeout(function(){
-			$('#control').removeClass('come');
-			$('#throw_button').addClass('leave');
-			$('#score').hide();
-			$('#character').show();
-			playAudio($('.screen.tutorial audio').get(0));
-		}, 0)
-		tutorial_animations.push(anim);
+		$('#control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		$('#score').hide();
+		$('#character').show();
+		playAudio($('.screen.tutorial audio').get(0));
 
 		anim = setTimeout(function(){
 			$('#character').hide();
