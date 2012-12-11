@@ -68,7 +68,7 @@ body{
 		background-image: url(#{$url}/welcome/background.jpg);
 		background-size: cover;
 		background-position: center bottom;
-		overflow: auto;
+		overflow: hidden;
 		position: absolute;
 		top: 0;
 		left: 0;
