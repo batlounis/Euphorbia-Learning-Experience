@@ -63,11 +63,15 @@ body{
 			}
 		}
 	}
+	.english #welcome_setting{
+		background-image: url(#{$url}/welcome/background-en.png);
+	}
 	
 	#welcome_setting{
-		background-image: url(#{$url}/welcome/background.jpg);
-		background-size: cover;
-		background-position: center bottom;
+		background-image: url(#{$url}/welcome/background.png);
+		background-color: #191714;
+		background-size: contain;
+		background-position: center center;
 		overflow: hidden;
 		position: absolute;
 		top: 0;
@@ -81,13 +85,12 @@ body{
 			background-image: url(#{$url}/welcome/bt_play_pt.png);
 			background-size: contain;
 			background-position: center center;
-			position: absolute;
-			bottom: 14%;
-			left: 35%;
+			left: 43.5%;
 			background-repeat: no-repeat;
-			width: 30%;
+			width: 13%;
 			height: 35%;
-			display: block;
+			margin: 15em auto auto auto;
+			display: table;
 		}
 	}
 	
