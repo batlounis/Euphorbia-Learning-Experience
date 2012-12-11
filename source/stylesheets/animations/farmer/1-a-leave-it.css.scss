@@ -48,6 +48,7 @@
 			background-position: center bottom;
 			left: 100%;
 			-webkit-transition: left 2s;
+			z-index: 2000;
 			
 			&.come{
 				left: 0;

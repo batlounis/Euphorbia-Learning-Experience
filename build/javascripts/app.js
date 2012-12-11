@@ -119,6 +119,7 @@ $(document).ready(function(){
 
 		anim = setTimeout(function(){
 			$('#control').removeClass('come');
+			$('#throw_button').addClass('leave');
 			$('#score').hide();
 			$('#character').show();
 			playAudio($('.screen.tutorial audio').get(0));

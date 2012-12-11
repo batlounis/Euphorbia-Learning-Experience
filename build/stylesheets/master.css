@@ -968,38 +968,39 @@ menu.general a, #skip_tutorial {
   background-image: url(../images/farmer/1-a-leave-it/truck.png);
   background-position: center bottom;
   left: 100%;
-  -webkit-transition: left 2s; }
-  /* line 52, animations/farmer/1-a-leave-it.css.scss */
+  -webkit-transition: left 2s;
+  z-index: 2000; }
+  /* line 53, animations/farmer/1-a-leave-it.css.scss */
   .farmer #animation_1_a .truck.come, .farmer #animation_1_b .truck.come, .farmer #animation_1_c .truck.come, .farmer #animation_6_a .truck.come, .farmer #animation_6_b .truck.come, .farmer #animation_6_c .truck.come, .farmer #animation_6_d .truck.come {
     left: 0; }
-/* line 57, animations/farmer/1-a-leave-it.css.scss */
+/* line 58, animations/farmer/1-a-leave-it.css.scss */
 .farmer #animation_1_a .trash-truck, .farmer #animation_1_b .trash-truck, .farmer #animation_1_c .trash-truck, .farmer #animation_6_a .trash-truck, .farmer #animation_6_b .trash-truck, .farmer #animation_6_c .trash-truck, .farmer #animation_6_d .trash-truck {
   background-image: url(../images/farmer/1-a-leave-it/trash-truck.png);
   background-position: center bottom; }
-/* line 62, animations/farmer/1-a-leave-it.css.scss */
+/* line 63, animations/farmer/1-a-leave-it.css.scss */
 .farmer #animation_1_a .trash-fire, .farmer #animation_1_b .trash-fire, .farmer #animation_1_c .trash-fire, .farmer #animation_6_a .trash-fire, .farmer #animation_6_b .trash-fire, .farmer #animation_6_c .trash-fire, .farmer #animation_6_d .trash-fire {
   background-image: url(../images/farmer/1-a-leave-it/trash-fire.png);
   background-position: center bottom;
   top: 100%;
   -webkit-transition: top 1s; }
-  /* line 68, animations/farmer/1-a-leave-it.css.scss */
+  /* line 69, animations/farmer/1-a-leave-it.css.scss */
   .farmer #animation_1_a .trash-fire.come, .farmer #animation_1_b .trash-fire.come, .farmer #animation_1_c .trash-fire.come, .farmer #animation_6_a .trash-fire.come, .farmer #animation_6_b .trash-fire.come, .farmer #animation_6_c .trash-fire.come, .farmer #animation_6_d .trash-fire.come {
     top: 0; }
-/* line 73, animations/farmer/1-a-leave-it.css.scss */
+/* line 74, animations/farmer/1-a-leave-it.css.scss */
 .farmer #animation_1_a .tree, .farmer #animation_1_b .tree, .farmer #animation_1_c .tree, .farmer #animation_6_a .tree, .farmer #animation_6_b .tree, .farmer #animation_6_c .tree, .farmer #animation_6_d .tree {
   background-image: url(../images/farmer/1-a-leave-it/tree.png);
   background-position: bottom left; }
-/* line 78, animations/farmer/1-a-leave-it.css.scss */
+/* line 79, animations/farmer/1-a-leave-it.css.scss */
 .farmer #animation_1_a .forest, .farmer #animation_1_b .forest, .farmer #animation_1_c .forest, .farmer #animation_6_a .forest, .farmer #animation_6_b .forest, .farmer #animation_6_c .forest, .farmer #animation_6_d .forest {
   background-image: url(../images/farmer/1-a-leave-it/forest.png);
   background-position: bottom left; }
-  /* line 82, animations/farmer/1-a-leave-it.css.scss */
+  /* line 83, animations/farmer/1-a-leave-it.css.scss */
   .farmer #animation_1_a .forest.burned, .farmer #animation_1_b .forest.burned, .farmer #animation_1_c .forest.burned, .farmer #animation_6_a .forest.burned, .farmer #animation_6_b .forest.burned, .farmer #animation_6_c .forest.burned, .farmer #animation_6_d .forest.burned {
     background-image: url(../images/farmer/1-a-leave-it/forest-burned.png); }
-/* line 87, animations/farmer/1-a-leave-it.css.scss */
+/* line 88, animations/farmer/1-a-leave-it.css.scss */
 .farmer #animation_1_a .vegetables, .farmer #animation_1_b .vegetables, .farmer #animation_1_c .vegetables, .farmer #animation_6_a .vegetables, .farmer #animation_6_b .vegetables, .farmer #animation_6_c .vegetables, .farmer #animation_6_d .vegetables {
   background-image: url(../images/farmer/1-a-leave-it/vegetables.png); }
-  /* line 90, animations/farmer/1-a-leave-it.css.scss */
+  /* line 91, animations/farmer/1-a-leave-it.css.scss */
   .farmer #animation_1_a .vegetables.future, .farmer #animation_1_b .vegetables.future, .farmer #animation_1_c .vegetables.future, .farmer #animation_6_a .vegetables.future, .farmer #animation_6_b .vegetables.future, .farmer #animation_6_c .vegetables.future, .farmer #animation_6_d .vegetables.future {
     background-image: url(../images/farmer/1-a-leave-it/vegetables-future.png); }
 

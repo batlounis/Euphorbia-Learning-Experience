@@ -35,7 +35,6 @@ $(document).ready(function(){
 	animation_1_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
@@ -47,7 +46,6 @@ $(document).ready(function(){
 	animation_1_c = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			future_count(2020, 2, sub_screen);
 		}, 2);
 		
 		playIn(function(){showConsequence(consequence)}, 5);		
@@ -170,17 +168,17 @@ $(document).ready(function(){
 		
 		playIn(function(){ 
 			sub_screen.find('.forest').addClass('future');
-		}, 5);
-		
-		playIn(function(){ 
-			sub_screen.find('.levada').addClass('future');
 		}, 6);
 		
 		playIn(function(){ 
-			sub_screen.find('.vegetable').addClass('future');
+			sub_screen.find('.levada').addClass('future');
 		}, 7);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetable').addClass('future');
+		}, 8);
 				
-		playIn(function(){showConsequence(consequence)}, 8);
+		playIn(function(){showConsequence(consequence)}, 9);
 	}
 	
 	animation_3_c = function(consequence, sub_screen){
@@ -353,7 +351,6 @@ $(document).ready(function(){
 	animation_6_a = function(consequence, sub_screen){
 		playIn(function(){ 
 			sub_screen.find('.vegetables').addClass('future');
-			future_count(2020, 2, sub_screen);
 		}, 2);
 		playIn(function(){showConsequence(consequence)}, 5);	
 	}
