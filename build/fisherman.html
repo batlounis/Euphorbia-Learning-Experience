@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- include this later: :manifest=>"/offline.manifest" -->
-<html>
+<html manifest='/offline.manifest'>
   <head>
     <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
+    <meta content='yes' name='apple-mobile-web-app-capable' />
     <title>Fisherman</title>
     <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
@@ -39,28 +40,26 @@
 </div>
 <div id='setting'>
   <div class='screen' id='tutorial_ask'>
-    <a href='#' id='play_tutorial'>Play Tutorial</a>
-    <a href='#' id='just_play'>Saltar</a>
+    <a href='#' id='play_tutorial'>Tutorial</a>
+    <a href='#' id='just_play'>Saltar Tutorial</a>
   </div>
   <div class='screen tutorial'>
-    <a href='#' id='skip_tutorial'>Saltar</a>
+    <a href='#' id='skip_tutorial'>Saltar Tutorial</a>
     <div class='screen character-intro'>
       <div class='indicator'></div>
       <div class='text'>Este é o Manel, o pescador</div>
-      <audio src='audio/fishermen/T1.m4a'></audio>
+      <audio src='audio/fishermen/tutorial.m4a'></audio>
     </div>
     <div class='screen advance-control-intro'>
       <div class='indicator'></div>
       <div class='continue_journey_button'></div>
       <div class='background'></div>
       <div class='text'>Para o Manel avançar na aventura tem de carregar aqui</div>
-      <audio src='audio/fishermen/T2.m4a'></audio>
     </div>
     <div class='screen sea-intro'>
       <div class='choices come'></div>
       <div class='text'>As decisões do Manel vão depender da sua pontaria. Em cada decisão existe um mar de opções... e uma cana para as pescar.</div>
       <div class='background'></div>
-      <audio src='audio/fishermen/T3.m4a'></audio>
     </div>
     <div class='screen arrow-intro'>
       <div class='choices come'></div>
@@ -69,19 +68,15 @@
       <div class='text'>Este botão controla a cana de pesca</div>
       <div class='background'></div>
       <div class='text-next'>Ao carregar no botão quando a cana tiver a inclinação certa vai conseguir selecionar a resposta.</div>
-      <audio src='audio/fishermen/T4.m4a'></audio>
-      <audio src='audio/fishermen/T5.m4a'></audio>
     </div>
     <div class='screen choice-illuminates'>
       <div class='background'></div>
       <div class='indicator fisherman'></div>
       <div class='text'>Ao lançar, a sua resposta vai ficar iluminada. Poderá depois ver o efeito da sua escolha.</div>
-      <audio src='audio/farmers/T6.m4a'></audio>
     </div>
     <div class='screen good-luck'>
       <div class='indicator'></div>
       <div class='text'>Boa Sorte!</div>
-      <audio src='audio/fishermen/T7.m4a'></audio>
     </div>
   </div>
   <div class='screen'>

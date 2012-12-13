@@ -363,10 +363,6 @@ $(document).ready(function(){
 		playIn(function(){ 
 			sub_screen.find('.trash-compost').addClass('come');
 		}, 2);
-
-		playIn(function(){ 
-			sub_screen.find('.levada').addClass('future');
-		}, 3);
 		
 		playIn(function(){showConsequence(consequence)}, 4);	
 	}
@@ -439,7 +435,6 @@ $(document).ready(function(){
 	animation_7_d = function(consequence, sub_screen){		
 		playIn(function(){ 
 			sub_screen.find('.abandoned-bubble').addClass('show');
-			future_count(2020, 3, sub_screen);
 		}, 0);
 		
 		playIn(function(){ 

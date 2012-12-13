@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v2
+# v33
 # useful terminal command: find . -type f  > stuff
 
 # NETWORK:
@@ -40,13 +40,7 @@ CACHE MANIFEST
 ./audio/farmers/endscore1.m4a
 ./audio/farmers/endscore2.m4a
 ./audio/farmers/endscore3.m4a
-./audio/farmers/T1.m4a
-./audio/farmers/T2.m4a
-./audio/farmers/T3.m4a
-./audio/farmers/T4.m4a
-./audio/farmers/T5.m4a
-./audio/farmers/T6.m4a
-./audio/farmers/T7.m4a
+./audio/farmers/tutorial.m4a
 ./audio/fishermen/1-1.m4a
 ./audio/fishermen/1-2.m4a
 ./audio/fishermen/1-3.m4a
@@ -80,24 +74,21 @@ CACHE MANIFEST
 ./audio/fishermen/endscore1.m4a
 ./audio/fishermen/endscore2.m4a
 ./audio/fishermen/endscore3.m4a
-./audio/fishermen/T1.m4a
-./audio/fishermen/T2.m4a
-./audio/fishermen/T3.m4a
-./audio/fishermen/T4.m4a
-./audio/fishermen/T5.m4a
-./audio/fishermen/T6.m4a
-./audio/fishermen/T7.m4a
+./audio/fishermen/tutorial.m4a
 ./choose_journey.html
 ./choose_journey_en.html
 ./farmer.html
 ./farmer_en.html
 ./fisherman.html
 ./fisherman_en.html
+./images/background-choose-adventure.jpg
 ./images/bt_exit.png
 ./images/bt_gallery.png
 ./images/bt_play_again.png
 ./images/bt_save.png
 ./images/bt_skip.png
+./images/bt_sound.png
+./images/bt_tutorial.png
 ./images/farmer/1-a-leave-it/compost.png
 ./images/farmer/1-a-leave-it/forest-burned.png
 ./images/farmer/1-a-leave-it/forest.png
@@ -326,15 +317,7 @@ CACHE MANIFEST
 ./images/fisherman/animation_bomb/seaweed4.png
 ./images/fisherman/animation_bomb/starfish.png
 ./images/fisherman/arrow.png
-./images/fisherman/background-1.jpg
-./images/fisherman/background-2.jpg
-./images/fisherman/background-3.jpg
-./images/fisherman/background-4.jpg
-./images/fisherman/background-5.jpg
-./images/fisherman/background-6.jpg
-./images/fisherman/background-7.jpg
-./images/fisherman/background-8.jpg
-./images/fisherman/background.jpg
+./images/fisherman/background-shorter.jpg
 ./images/fisherman/background_underwater.png
 ./images/fisherman/BOX.png
 ./images/fisherman/BOX_FEW.png
@@ -564,13 +547,14 @@ CACHE MANIFEST
 ./images/tutorial/frame5.png
 ./images/tutorial/frame5_farmer_range.png
 ./images/tutorial/frame5_rod_range.png
-./images/tutorial/frame6.png
+./images/tutorial/frame6-farmer.png
+./images/tutorial/frame6-fisherman.png
+./images/tutorial/frame7.png
+./images/welcome/background-en.jpg
 ./images/welcome/background.jpg
 ./images/welcome/bt_english.png
 ./images/welcome/bt_highscore.png
 ./images/welcome/bt_narration.png
-./images/welcome/bt_play_en.png
-./images/welcome/bt_play_pt.png
 ./images/welcome/bt_portuguese.png
 ./index.html
 ./index_en.html

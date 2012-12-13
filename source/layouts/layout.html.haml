@@ -1,8 +1,9 @@
 !!! 5
 / include this later: :manifest=>"/offline.manifest"
-%html{}
+%html{:manifest=>"/offline.manifest"}
 	%head
 		%meta{'http-equiv' => 'Content-Type', :content => 'text/html', :charset => 'utf-8'}
+		%meta{:content=>'yes', :name=>'apple-mobile-web-app-capable'}
 		%title= data.page.title || 'Euphorbia'
 		%link{:rel=>'stylesheet', :href=>'stylesheets/master.css', :type=>'text/css', :media=>'screen', :charset=>'utf-8' }
 		%script{:type=>'text/javascript', :src=>'javascripts/jquery-1.8.2.min.js', :charset=>'utf-8'}

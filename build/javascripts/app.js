@@ -67,6 +67,7 @@ $(document).ready(function(){
 	// shifts the screen up one whole screen each time the boat is clicked
 	$('#continue_journey_button').click(function(){
 		if(current_screen.next('.screen').hasClass('underwater')){
+			$('#score').show();
 			var underwater_screen = current_screen.next('.screen')
 			$('#character').removeClass('underwater');
 			underwater_screen.css('top', screen_height);
@@ -137,61 +138,52 @@ $(document).ready(function(){
 			$('#character').hide();
 			$('.tutorial .character-intro').hide();
 			$('.tutorial .advance-control-intro').show();
-			playAudio($('.screen.tutorial audio').get(1));
-		}, 4000);
+		}, 6000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .advance-control-intro').hide();
 			$('.tutorial .sea-intro').show();
-			playAudio($('.screen.tutorial audio').get(2));
 		}, 10000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .sea-intro').hide();
 			$('.tutorial .arrow-intro').show();
-			playAudio($('.screen.tutorial audio').get(3));
-		}, 20000);
+		}, 17000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .arrow-intro').addClass('next');
-			playAudio($('.screen.tutorial audio').get(4));
-		}, 27000);
+		}, 20000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .arrow-intro').hide();
 			$('.tutorial .choice-illuminates').show();
-			playAudio($('.screen.tutorial audio').get(5));
-		}, 37000);
+		}, 24000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .choice-illuminates').hide();
 			$('.tutorial .good-luck').show();
-			playAudio($('.screen.tutorial audio').get(6));
-		}, 45000);
+		}, 30000);
 		tutorial_animations.push(anim);
 
 		last_tutorial_step = function(){
-			$('#character').show();
-			$('.tutorial .good-luck').hide();
-			$('#score').show();
-			$('#continue_journey_button').trigger('click');
+			$('#continue_journey_button').addClass('come');
 		}
 
 		anim = setTimeout(function(){
 			last_tutorial_step();
-		}, 47000);
+		}, 32000);
 		tutorial_animations.push(anim);
 
 		$('#skip_tutorial').click(function(){
 			for(var i = 0; i < tutorial_animations.length; i++){
 				clearTimeout(tutorial_animations[i]);
 			}
-			last_tutorial_step();
+			$('#continue_journey_button').trigger('click');
 			return false;
 		});
 	}

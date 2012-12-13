@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- include this later: :manifest=>"/offline.manifest" -->
-<html>
+<html manifest='/offline.manifest'>
   <head>
     <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
+    <meta content='yes' name='apple-mobile-web-app-capable' />
     <title>Farmer</title>
     <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
@@ -40,28 +41,26 @@
 <div id='setting'>
   <div class='overlay'></div>
   <div class='screen' id='tutorial_ask'>
-    <a href='#' id='play_tutorial'>Play Tutorial</a>
-    <a href='#' id='just_play'>Saltar</a>
+    <a href='#' id='play_tutorial'>Tutorial</a>
+    <a href='#' id='just_play'>Saltar Tutorial</a>
   </div>
   <div class='screen tutorial'>
-    <a href='#' id='skip_tutorial'>Saltar</a>
+    <a href='#' id='skip_tutorial'>Saltar Tutorial</a>
     <div class='screen character-intro'>
       <div class='indicator'></div>
       <div class='text'>Este é o António, o agricultor</div>
-      <audio src='audio/farmers/T1.m4a'></audio>
+      <audio src='audio/farmers/tutorial.m4a'></audio>
     </div>
     <div class='screen advance-control-intro'>
       <div class='indicator'></div>
       <div class='continue_journey_button'></div>
       <div class='background'></div>
       <div class='text'>Para o António avançar na aventura tem de carregar aqui</div>
-      <audio src='audio/farmers/T2.m4a'></audio>
     </div>
     <div class='screen sea-intro'>
       <div class='choices come'></div>
       <div class='text'>As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.</div>
       <div class='background'></div>
-      <audio src='audio/farmers/T3.m4a'></audio>
     </div>
     <div class='screen arrow-intro'>
       <div class='choices come'></div>
@@ -70,19 +69,15 @@
       <div class='text'>Este botão controla o braço que lança sementes</div>
       <div class='background'></div>
       <div class='text-next'>Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.</div>
-      <audio src='audio/farmers/T4.m4a'></audio>
-      <audio src='audio/farmers/T5.m4a'></audio>
     </div>
     <div class='screen choice-illuminates'>
       <div class='background'></div>
       <div class='indicator farmer'></div>
       <div class='text'>Ao lançar, a sua resposta vai ficar iluminada. Poderá depois ver o efeito da sua escolha.</div>
-      <audio src='audio/farmers/T6.m4a'></audio>
     </div>
     <div class='screen good-luck'>
       <div class='indicator'></div>
       <div class='text'>Boa Sorte!</div>
-      <audio src='audio/farmers/T7.m4a'></audio>
     </div>
   </div>
   <div class='screen'>
@@ -154,6 +149,7 @@
             <div class='maracuja'></div>
             <div class='maracuja-later-1'></div>
             <div class='maracuja-later-2'></div>
+            <div class='clock'></div>
           </div>
           <div class='content'>
             <p>O maracujá banana é uma planta invasora, ou seja, ao crescer consegue eliminar outras plantas, ocupando todo o espaço.</p>
@@ -172,6 +168,7 @@
             <div class='vegetables'></div>
             <div class='maracuja'></div>
             <div class='bubble'></div>
+            <div class='clock'></div>
           </div>
           <div class='content'>
             <p>O maracujá banana não é uma planta natural da ilha da Madeira e tem carácter invasor. Esta planta cresce e multiplica-se rapidamente, matando as plantas à volta e ocupando todo o espaço.</p>
@@ -302,6 +299,7 @@
             <div class='forest'></div>
             <div class='poison-1'></div>
             <div class='poison-2'></div>
+            <div class='clock'></div>
           </div>
           <div class='content'>
             <p>Veneno é um produto muito perigoso para usar na agricultura.</p>
@@ -462,7 +460,7 @@
         <div class='title'>Coloca-os no compostor</div>
         <div class='consequence underwater'>
           <div class='screen underwater' id='animation_6_b'>
-            <div class='levada'></div>
+            <div class='levada future'></div>
             <div class='tree'></div>
             <div class='vegetables'></div>
             <div class='compost'></div>
@@ -530,6 +528,7 @@
             <div class='sea'></div>
             <div class='tree'></div>
             <div class='vegetables'></div>
+            <div class='clock'></div>
           </div>
           <div class='content'>
             <p>O plástico colocado na água demora mais de 50 anos a se decompor.</p>

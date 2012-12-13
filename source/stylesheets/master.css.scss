@@ -16,6 +16,12 @@ $url: '../images';
 	}
 }
 
+a{
+	font-family: 'Arial Black', 'ABeeZee-Regular';
+}
+
+
+
 // --- ENVIRONMENT ---
 *{
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -31,10 +37,9 @@ body{
 	font-size: 140%;
 	
 	&.english{
+		
 		#welcome_setting{
-			.choose_journey_button{
-				background-image: url(#{$url}/welcome/bt_play_en.png);
-			}			
+			background-image: url(#{$url}/welcome/background-en.jpg);
 		}
 		
 		#score:before{
@@ -64,9 +69,6 @@ body{
 		}
 	}
 	
-	.english #welcome_setting{
-		background-image: url(#{$url}/welcome/background-en.jpg);
-	}
 	
 	#welcome_setting{
 		background-image: url(#{$url}/welcome/background.jpg);
@@ -133,13 +135,25 @@ body{
 		}
 		
 		a{
-			margin: 10%;
+			margin: 10% 5%;
 			font-size: 2em;
 			background-color: rgba(black, .8);
 			color: rgba(white, .8);
 			display: inline-block;
-			text-decoration: none;
-			padding: .5em;
+			text-decoration: none;	
+			background-repeat: no-repeat;
+			background-size: auto 1.5em;
+			background-position: .5em;
+			padding: .5em .5em .5em 2em;
+		}
+		
+		#play_tutorial{
+			background-image: url(#{$url}/bt_tutorial.png);
+			padding: .5em .5em .5em 2.3em;
+		}
+
+		#just_play{
+			background-image: url(#{$url}/bt_skip.png);
 		}
 		
 	}
@@ -261,12 +275,12 @@ body{
 		background-image: url(#{$url}/bt_sound.png);
 		
 		&:after{
-			content: 'ON';
+			content: 'OFF';
 		}
 		
 		&.off{
 			&:after{
-				content: 'OFF';
+				content: 'ON';
 			}
 		}
 	}
@@ -284,6 +298,7 @@ body{
 		z-index: 5000;
 		right: 3%;
 		top: 3%;
+		white-space: nowrap;
 	}
 	
 	.screen{
@@ -485,7 +500,7 @@ body{
 	-webkit-transition: box-shadow 1s;
 	
 	&.future{
-		box-shadow: 0 0 7em 3em white inset;		
+		box-shadow: 0 0 7em 3em white inset;
 	}
 }
 
@@ -515,7 +530,7 @@ body{
 	table-layout: fixed;
 	position: relative;
 	width: 30em;
-	top: 5%;
+	top: 10%;
 }
 
 #score{
@@ -816,7 +831,7 @@ $sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 	
 	&.come{
 		right: 0;
-		-webkit-transition: right $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay + $sc_choices_go_down + $sc_continue_button_delay);
+		// -webkit-transition: right $sc_show_response ($sc_freeze + $sc_choices_go_down + $sc_delay + $sc_choices_go_down + $sc_continue_button_delay);
 	}
 }
 
@@ -973,7 +988,6 @@ menu.general a, #skip_tutorial, #audio_status, #journey_exit{
 	margin-bottom: .5em;
 	font-size: 1em;
 	color: rgba(white, .90);
-	font-family: 'Arial Black';
 	text-decoration: none;
 	display: inline-block;
 }
@@ -1035,6 +1049,7 @@ menu.general a, #skip_tutorial, #audio_status, #journey_exit{
 	display: block;
 	text-align: center;
 	text-decoration: none;
+	z-index: 3000;
 }
 
 .score_page{

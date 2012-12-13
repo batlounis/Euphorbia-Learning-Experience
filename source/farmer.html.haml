@@ -29,25 +29,23 @@ bodyClass: farmer
 #setting
 	.overlay
 	.screen#tutorial_ask
-		%a#play_tutorial{:href=>"#"} Play Tutorial
-		%a#just_play{:href=>"#"}Saltar
+		%a#play_tutorial{:href=>"#"} Tutorial
+		%a#just_play{:href=>"#"}Saltar Tutorial
 	.screen.tutorial
-		%a#skip_tutorial{:href=>"#"}Saltar
+		%a#skip_tutorial{:href=>"#"}Saltar Tutorial
 		.screen.character-intro
 			.indicator
 			.text Este é o António, o agricultor
-			%audio{:src=>'audio/farmers/T1.m4a', :autoplay=>false, :controls=>false}
+			%audio{:src=>'audio/farmers/tutorial.m4a', :autoplay=>false, :controls=>false}
 		.screen.advance-control-intro
 			.indicator
 			.continue_journey_button
 			.background
 			.text Para o António avançar na aventura tem de carregar aqui
-			%audio{:src=>'audio/farmers/T2.m4a', :autoplay=>false, :controls=>false}
 		.screen.sea-intro
 			.choices.come
 			.text As decisões do António vão depender da sua pontaria. Em cada decisão existe um terreno de opções... e uma mão para o plantar.
 			.background
-			%audio{:src=>'audio/farmers/T3.m4a', :autoplay=>false, :controls=>false}
 		.screen.arrow-intro
 			.choices.come
 			.indicator.farmer
@@ -55,17 +53,13 @@ bodyClass: farmer
 			.text Este botão controla o braço que lança sementes
 			.background
 			.text-next Ao carregar no botão quando o braço tiver a inclinação certa vai conseguir selecionar a resposta.
-			%audio{:src=>'audio/farmers/T4.m4a', :autoplay=>false, :controls=>false}
-			%audio{:src=>'audio/farmers/T5.m4a', :autoplay=>false, :controls=>false}
 		.screen.choice-illuminates
 			.background
 			.indicator.farmer
 			.text Ao lançar, a sua resposta vai ficar iluminada. Poderá depois ver o efeito da sua escolha.
-			%audio{:src=>'audio/farmers/T6.m4a', :autoplay=>false, :controls=>false}
 		.screen.good-luck
 			.indicator
 			.text Boa Sorte!
-			%audio{:src=>'audio/farmers/T7.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O António é agricultor e tem um terreno encostado à floresta Laurissilva. No início do dia, o António vai para o seu terreno e repara que a levada tem lixo. Ele deve...
 		%audio{:src=>'audio/farmers/1.m4a', :autoplay=>false, :controls=>false}
@@ -121,6 +115,7 @@ bodyClass: farmer
 						.maracuja
 						.maracuja-later-1
 						.maracuja-later-2
+						.clock
 					.content
 						%p O maracujá banana é uma planta invasora, ou seja, ao crescer consegue eliminar outras plantas, ocupando todo o espaço.
 						%p Esta planta trepadeira cresce sobre as plantas da floresta natural da Madeira, tapando-as totalmente e matando-as. 
@@ -135,6 +130,7 @@ bodyClass: farmer
 						.vegetables
 						.maracuja
 						.bubble
+						.clock
 					.content
 						%p O maracujá banana não é uma planta natural da ilha da Madeira e tem carácter invasor. Esta planta cresce e multiplica-se rapidamente, matando as plantas à volta e ocupando todo o espaço.
 						%p Se plantar espécies invasoras (como o maracujá banana, a acácia ou a bananilha) junto da sua casa ou no seu terreno tem de estar atento ao seu crescimento para evitar que cresça em cima de outras plantas e elas morram.
@@ -239,6 +235,7 @@ bodyClass: farmer
 						.forest
 						.poison-1
 						.poison-2
+						.clock
 					.content
 						%p Veneno é um produto muito perigoso para usar na agricultura.
 						%p O veneno não vai só matar o pombo mas vai matar também outros animais da floresta e até animais domésticos, como cães e gatos, e vai contaminar a água e a sua colheita.
@@ -361,7 +358,7 @@ bodyClass: farmer
 				.title Coloca-os no compostor
 				.consequence.underwater
 					.screen.underwater#animation_6_b
-						.levada
+						.levada.future
 						.tree
 						.vegetables
 						.compost
@@ -415,6 +412,7 @@ bodyClass: farmer
 						.sea
 						.tree
 						.vegetables
+						.clock
 					.content
 						%p O plástico colocado na água demora mais de 50 anos a se decompor. 
 						%p Na nossa ilha todo o lixo abandonado é arrastado para o mar, e vai contaminar o mar destruindo as plantas e animais marinhos, e afetando a vida dos pescadores.

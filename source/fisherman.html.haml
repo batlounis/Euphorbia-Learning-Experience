@@ -29,25 +29,23 @@ bodyClass: fisherman
 
 #setting
 	.screen#tutorial_ask
-		%a#play_tutorial{:href=>"#"} Play Tutorial
-		%a#just_play{:href=>"#"}Saltar
+		%a#play_tutorial{:href=>"#"} Tutorial
+		%a#just_play{:href=>"#"}Saltar Tutorial
 	.screen.tutorial
-		%a#skip_tutorial{:href=>"#"}Saltar
+		%a#skip_tutorial{:href=>"#"}Saltar Tutorial
 		.screen.character-intro			
 			.indicator
 			.text Este é o Manel, o pescador
-			%audio{:src=>'audio/fishermen/T1.m4a', :autoplay=>false, :controls=>false}
+			%audio{:src=>'audio/fishermen/tutorial.m4a', :autoplay=>false, :controls=>false}
 		.screen.advance-control-intro			
 			.indicator
 			.continue_journey_button
 			.background
 			.text Para o Manel avançar na aventura tem de carregar aqui
-			%audio{:src=>'audio/fishermen/T2.m4a', :autoplay=>false, :controls=>false}
 		.screen.sea-intro
 			.choices.come
 			.text As decisões do Manel vão depender da sua pontaria. Em cada decisão existe um mar de opções... e uma cana para as pescar.
 			.background
-			%audio{:src=>'audio/fishermen/T3.m4a', :autoplay=>false, :controls=>false}
 		.screen.arrow-intro
 			.choices.come
 			.indicator.fisherman
@@ -55,17 +53,13 @@ bodyClass: fisherman
 			.text Este botão controla a cana de pesca
 			.background
 			.text-next Ao carregar no botão quando a cana tiver a inclinação certa vai conseguir selecionar a resposta.
-			%audio{:src=>'audio/fishermen/T4.m4a', :autoplay=>false, :controls=>false}
-			%audio{:src=>'audio/fishermen/T5.m4a', :autoplay=>false, :controls=>false}
 		.screen.choice-illuminates
 			.background
 			.indicator.fisherman
 			.text Ao lançar, a sua resposta vai ficar iluminada. Poderá depois ver o efeito da sua escolha.
-			%audio{:src=>'audio/farmers/T6.m4a', :autoplay=>false, :controls=>false}
 		.screen.good-luck
 			.indicator
 			.text Boa Sorte!
-			%audio{:src=>'audio/fishermen/T7.m4a', :autoplay=>false, :controls=>false}
 	.screen
 		.question O Manel é pescador e vai começar o seu dia de pesca. Ele tem de decidir onde vai pescar.
 		%audio{:src=>'audio/fishermen/1.m4a', :autoplay=>false, :controls=>false}
