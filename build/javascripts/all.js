@@ -806,11 +806,19 @@ $(document).ready(function(){
 		}
 	});
 	
+	var lock_journey = false
 	continue_journey = function(){
+		if(lock_journey){
+			return;
+		}else{
+			lock_journey = true;
+		}
+		
 		step++;
 		$('#consequence').removeClass('come');
 		$('#character').addClass('walk');
 		playIn(function(){ $('#character').removeClass('walk'); }, 4);
+		playIn(function(){ lock_journey = false; }, 4);
 		$('#continue_journey_button').removeClass('come');
 		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
 
@@ -822,7 +830,9 @@ $(document).ready(function(){
 			$('#control .arrow').addClass('swing');
 			current_screen.find('.choices').addClass('come');
 			$('#control').addClass('come');
-			$('#throw_button').removeClass('leave');			
+			$('#throw_button').removeClass('leave');
+			$('#character').show();
+			$('#score').show();
 		}else{
 			$('#character').hide();
 			$('#score').hide();
@@ -884,13 +894,13 @@ $(document).ready(function(){
 		anim = setTimeout(function(){
 			$('.tutorial .arrow-intro').hide();
 			$('.tutorial .choice-illuminates').show();
-		}, 24000);
+		}, 25000);
 		tutorial_animations.push(anim);
 
 		anim = setTimeout(function(){
 			$('.tutorial .choice-illuminates').hide();
 			$('.tutorial .good-luck').show();
-		}, 30000);
+		}, 31000);
 		tutorial_animations.push(anim);
 
 		last_tutorial_step = function(){
@@ -899,8 +909,9 @@ $(document).ready(function(){
 
 		anim = setTimeout(function(){
 			last_tutorial_step();
-		}, 32000);
+		}, 33000);
 		tutorial_animations.push(anim);
+		
 
 		$('#skip_tutorial').click(function(){
 			for(var i = 0; i < tutorial_animations.length; i++){

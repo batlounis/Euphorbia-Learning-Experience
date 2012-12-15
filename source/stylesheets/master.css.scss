@@ -923,9 +923,9 @@ $sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 
 .final_score{
 	text-align: center;
-	margin-top: 3%;
+	margin-top: 2em;
 	font-size: 1.4em;
-	font-family: 'Arial Black';
+	font-family: 'Arial Black', 'ABeeZee-Regular';
 	color: black;
 	position: relative;
 	text-transform: uppercase;
@@ -957,7 +957,7 @@ body #character{ // had to keep all the tags for precedence (top is also applied
 // ** End Menu
 menu.general{
 	display: table;
-	margin: 2em auto 0 auto;
+	margin: 0 auto 0 auto;
 		
 	a{
 		&#view_score{

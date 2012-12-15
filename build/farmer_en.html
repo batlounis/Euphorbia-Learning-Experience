@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!-- include this later: :manifest=>"/offline.manifest" -->
-<html manifest='/offline.manifest'>
+<html>
   <head>
     <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
     <meta content='yes' name='apple-mobile-web-app-capable' />
+    <meta content='user-scalable = no' name='viewport' />
     <title>Farmer</title>
     <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
     <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
@@ -78,244 +79,322 @@
       <div class='text'>Good luck!</div>
     </div>
   </div>
-  <!-- .screen -->
-  <!-- .question António is a farmer and his farm is near the Laurissilva forest. At the beginning of the day António is walking to his farm and sees that there is trash in the levada. He should… -->
-  <!-- .choices.come -->
-  <!-- .choice{:score=>-10} -->
-  <!-- .title Leave it, whoever uses the water first should clean it -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_1_a -->
-  <!-- .levada -->
-  <!-- .trash -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .clock -->
-  <!-- .content -->
-  <!-- %p Water is a very valuable resource for farming, so it is important that people use it wisely. -->
-  <!-- %p If you leave garbage in the canal, you will be wasting some of the water and contaminating the water. You will get less water and that will affect the quality of your crops. -->
-  <!-- %p You lose 10 points -->
-  <!-- .choice{:score=>10} -->
-  <!-- .title Clean the levada -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_1_b -->
-  <!-- .levada.future -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .content -->
-  <!-- %p Water is a very valuable resource and it is everyone’s responsibility to make sure that it is not wasted and that it is not contaminated. By taking the trash out of the canal you are preventing the water from getting dirty and being wasted. You will have enough water and high quality water and therefore good crops. -->
-  <!-- %p You win 10 points -->
-  <!-- .choice{:score=>-10} -->
-  <!-- .title Leave it, whoever put the trash there should clean it -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_1_c -->
-  <!-- .levada -->
-  <!-- .trash -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .clock -->
-  <!-- .content -->
-  <!-- %p It is everyone’s responsibility to make sure that the water is not wasted or contaminated. Even though the garbage blocking the canal is not yours, the water will be contaminated and some of it will be wasted, if you don’t take it out. You will get less high quality water and this will affect your crops. -->
-  <!-- %p You lose 10 points -->
-  <!-- .screen -->
-  <!-- .question He sees that there is a maracuja banana plant growing between his farm and the forest. What should he do? -->
-  <!-- .choices -->
-  <!-- .choice{:score=>-10} -->
-  <!-- .title Let the plant grow, so it produces fruit and he can eat it -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_2_a -->
-  <!-- .trees -->
-  <!-- .vegetables -->
-  <!-- .maracuja -->
-  <!-- .maracuja-later-1 -->
-  <!-- .maracuja-later-2 -->
-  <!-- .content -->
-  <!-- %p The maracuja banana is an invasive plant. This plant grows and covers the plants around them. This is especially dangerous when it is the plants and trees from Madeira’s natural forest that are being eliminated from invasice species. If you don’t do anything, you will be helping the invasive plant to grow and the Laurissilva forest to decrease. -->
-  <!-- %p You lose 10 points -->
-  <!-- .choice{:score=>-5} -->
-  <!-- .title Take it out and plant it near your house -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_2_b -->
-  <!-- .trees -->
-  <!-- .vegetables -->
-  <!-- .maracuja -->
-  <!-- .bubble -->
-  <!-- .content -->
-  <!-- %p The maracuja banana is a plant that is not native to Madeira Island and  is considered an invasive plant. This plant grows and spreads at a very high rate, killing all the plants around it and taking over that space. If you plant it near your house or your farm you need to monitor its growth very carefully in order to prevent it from getting out of control. -->
-  <!-- %p It’s better that you choose another type of maracuja to plant. -->
-  <!-- %p You lose 5 points -->
-  <!-- .choice{:score=>-15} -->
-  <!-- .title Eat and throw away the peels -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_2_c -->
-  <!-- .trees -->
-  <!-- .vegetables -->
-  <!-- .rat-1 -->
-  <!-- .rat-2 -->
-  <!-- .peel -->
-  <!-- .maracuja-later-c -->
-  <!-- .content -->
-  <!-- %p The maracuja banana is an invasive plant. These plants grow and spread very fast. Each fruit has 30 to 200 seeds. When you throw away the peels, you may also be throwing away some of the seeds and these will grow new plants that will take over other locations. -->
-  <!-- %p Also, by leaving organic waste near farms you are attracting rats that will feed from the waste and harm both your crops and the Laurissilva forest. -->
-  <!-- %p You lose 15 points -->
-  <!-- .choice{:score=>10} -->
-  <!-- .title Extract the plant -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_2_d -->
-  <!-- .vegetables -->
-  <!-- .trees -->
-  <!-- .content -->
-  <!-- %p There are many invasive plants in Madeira, like the acacia, the isoplex and others that grow fast and kill the plants around them. It is necessary to destroy these plants, so they don´t take over and destroy the Laurissilva forest. The invasive plants are very resistant and it’s difficult to destroy them. Each one has to be destroyed in a specific way, if you need to learn how to kill invasive species please contact Parque Natural. -->
-  <!-- %p You win 10 points -->
-  <!-- .screen -->
-  <!-- .question Next, he is on his farm working, and he sees a pigeon eating his crop. What can he do? -->
-  <!-- .choices -->
-  <!-- .choice{:score=>15} -->
-  <!-- .title Let the pigeon eat the crops -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_3_a -->
-  <!-- .grass -->
-  <!-- .levada -->
-  <!-- .crap -->
-  <!-- .crap-tree -->
-  <!-- .pigeon -->
-  <!-- .vegetables -->
-  <!-- .cloud-1 -->
-  <!-- .cloud-2 -->
-  <!-- .forest -->
-  <!-- .drop -->
-  <!-- .content -->
-  <!-- %p The pigeon is one of the most important animals in the forest. -->
-  <!-- %p The pigeon eats seeds from the forest and helps the forest to renew, increasing the number of plants in the Laurissilva forest. -->
-  <!-- %p The Laurissilva forest is important because its plants capture water from the moisture in the air and puts that water in the soil and canal so it can be used for farming. -->
-  <!-- %p By letting the pigeon live, you are helping the forest to grow. -->
-  <!-- %p You win 15 points -->
-  <!-- .choice{:score=>-20} -->
-  <!-- .title Kill the pigeon -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_3_b -->
-  <!-- .grass -->
-  <!-- .levada -->
-  <!-- .pigeon -->
-  <!-- .vegetables -->
-  <!-- .forest -->
-  <!-- .rifle -->
-  <!-- .gunpowder -->
-  <!-- .content -->
-  <!-- %p The pigeon is important in the regeneration process of the forest, because it eats the seeds and helps to spread them. The Laurissilva forest is important because the plants absorb the water from the moisture in the air and channel that water into the soil and water canals. -->
-  <!-- %p If you kill the pigeon, the forest will not renew itself and there will be less water. So your crops will have lower quality. -->
-  <!-- %p The pigeon is an endangered species and you should protect it. -->
-  <!-- %p You lose 20 points -->
-  <!-- .choice{:score=>20} -->
-  <!-- .title Scare the pigeon away -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_3_c -->
-  <!-- .grass -->
-  <!-- .levada -->
-  <!-- .pigeon -->
-  <!-- .vegetables -->
-  <!-- .forest -->
-  <!-- .bomb -->
-  <!-- .scarecrow -->
-  <!-- .tape -->
-  <!-- .content -->
-  <!-- %p There are a lot of methods that can be used safely to keep the pigeon away from your farm. You can use a sound scarecrow that simulates the sound of a gunshot from time to time. You can use nets that cover your crops, reflecting tape or scare crows. However, animals do adapt to their environment and get used to these methods, so change methods often. Parque Natural can help you choose the best option. -->
-  <!-- %p You win 20 points -->
-  <!-- .choice{:score=>-15} -->
-  <!-- .title Put poison on the plants to kill the pigeon -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_3_d -->
-  <!-- .grass -->
-  <!-- .levada -->
-  <!-- .pigeon -->
-  <!-- .vegetables -->
-  <!-- .forest -->
-  <!-- .poison-1 -->
-  <!-- .poison-2 -->
-  <!-- .content -->
-  <!-- %p Poison is very dangerous and should not be used in farming. The poison will not only kill the pigeon, it can kill other animals that help you and even pets. It will also contaminate the water supply and your crops. Your crops will be of a bad quality and you will not be able to sell them. -->
-  <!-- %p You lose 15 points -->
-  <!-- .screen -->
-  <!-- .question He now finds a few bugs on his crop. The bugs are really big. In order to solve it... -->
-  <!-- .choices -->
-  <!-- .choice{:score=>-15} -->
-  <!-- .title He can use commercial pesticides but with a stronger concentration -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_4_a -->
-  <!-- .caterpillars-left -->
-  <!-- .caterpillars-right -->
-  <!-- .levada -->
-  <!-- .poison -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .content -->
-  <!-- %p Just because the bugs are big, you should not use more chemicals than the amount indicated on the package. The pesticides not only kill bugs, but will contaminate your crops and the water. If you use pesticides and do not follow the instructions, your soil will be contaminated even more and you won’t be able to sell your crops. Pesticides are also washed away by the rain and taken by the wind to contaminate farms nearby. It is best for everyone’s health not to use pesticides at all. -->
-  <!-- %p You lose 15 points -->
-  <!-- .choice{:score=>15} -->
-  <!-- .title Use plants and other animals to control the plagues -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_4_b -->
-  <!-- .caterpillars-left -->
-  <!-- .caterpillars-right -->
-  <!-- .birds-left -->
-  <!-- .birds-right -->
-  <!-- .levada -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .content -->
-  <!-- %p There are animals that eat some insects and can help you. A couple of birds and their chicks can eat up to 1000 insects a day; a ladybug eats 60 aphids a day and a bat can eat 3000 moths. Having hedges near your farm attracts birds that can make their nests there, and they will help you get rid of the bugs! -->
-  <!-- %p You win 15 points -->
-  <!-- .choice{:score=>5} -->
-  <!-- .title Use commercial products according to the instructions -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_4_c -->
-  <!-- .caterpillars-left -->
-  <!-- .caterpillars-right -->
-  <!-- .levada -->
-  <!-- .poison -->
-  <!-- .tree -->
-  <!-- .vegetables -->
-  <!-- .content -->
-  <!-- %p If you choose to use pesticides, you should follow the instructions and use it accordingly. You shouldn’t use pesticides when it is raining or windy, or the pesticide will spread to farms nearby, or get washed into the water supply. -->
-  <!-- %p Remember there are products that are specifically for organic farming and even though they are more expensive it pays in the long run to have no side effects for your crops. -->
-  <!-- %p You win 5 points -->
-  <!-- .screen -->
-  <!-- .question António is smoking a cigarette.  Once he finishes it, he… -->
-  <!-- .choices -->
-  <!-- .choice{:score=>10} -->
-  <!-- .title Puts it away and keeps it to throw in the garbage bin -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_5_a -->
-  <!-- .forest -->
-  <!-- .vegetables -->
-  <!-- .speech-bubble -->
-  <!-- .cigarette-1 -->
-  <!-- .content -->
-  <!-- %p The best thing for your health is to quit smoking. If you are a smoker you probably smoke 10 to 20 cigarettes a day, that means 3600 to 7200 a year. Now just multiply this number by the number of people that smoke and see the big picture. If you throw the cigarette butt in the garbage bin, you are preventing all this garbage from accumulating on land, much of which is washed to the ocean by the rain. It takes 2 to 5 years for a cigarette to decompose.  Once in the ocean, they look like food for the fish you eat. -->
-  <!-- %p You win 10 points -->
-  <!-- .choice{:score=>-10} -->
-  <!-- .title Throw it on the ground, in the levada or down a drain -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_5_b -->
-  <!-- .forest -->
-  <!-- .vegetables -->
-  <!-- .cigarette-2 -->
-  <!-- .fire -->
-  <!-- .content -->
-  <!-- %p Cigarette butts can start fires that destroy houses, plantations and forest. -->
-  <!-- %p Throwing them in the canal is not a better solution because it will eventually end up in the ocean contaminating the water, animals, and plants. It takes 2 to 5 years for a cigarette to decompose.  Once in the ocean, they look like food for the fish you eat. -->
-  <!-- %p You lose 10 points -->
-  <!-- .choice{:score=>-10} -->
-  <!-- .title Stick the cigarette butt under a rock -->
-  <!-- .consequence.underwater -->
-  <!-- .screen.underwater#animation_5_c -->
-  <!-- .forest -->
-  <!-- .vegetables -->
-  <!-- .cigarette-3 -->
-  <!-- .rock -->
-  <!-- .contamination -->
-  <!-- .content -->
-  <!-- %p Hiding the problem doesn’t make it ok. Hiding a cigarette butt has the same effect as throwing it on the ground or in the levada. It will contaminate the soil, the water and will affect the quality of your crops. -->
-  <!-- %p You lose 10 points -->
+  <div class='screen'>
+    <div class='question'>António is a farmer and his farm is near the Laurissilva forest. At the beginning of the day António is walking to his farm and sees that there is trash in the levada. He should…</div>
+    <div class='choices come'>
+      <div class='choice' score='-10'>
+        <div class='title'>Leave it, whoever uses the water first should clean it</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_a'>
+            <div class='levada'></div>
+            <div class='trash'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+            <div class='clock'></div>
+          </div>
+          <div class='content'>
+            <p>Water is a very valuable resource for farming, so it is important that people use it wisely.</p>
+            <p>If you leave garbage in the canal, you will be wasting some of the water and contaminating the water. You will get less water and that will affect the quality of your crops.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Clean the levada</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_b'>
+            <div class='levada future'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+          </div>
+          <div class='content'>
+            <p>Water is a very valuable resource and it is everyone’s responsibility to make sure that it is not wasted and that it is not contaminated. By taking the trash out of the canal you are preventing the water from getting dirty and being wasted. You will have enough water and high quality water and therefore good crops.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-10'>
+        <div class='title'>Leave it, whoever put the trash there should clean it</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_c'>
+            <div class='levada'></div>
+            <div class='trash'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+            <div class='clock'></div>
+          </div>
+          <div class='content'>
+            <p>It is everyone’s responsibility to make sure that the water is not wasted or contaminated. Even though the garbage blocking the canal is not yours, the water will be contaminated and some of it will be wasted, if you don’t take it out. You will get less high quality water and this will affect your crops.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>He sees that there is a maracuja banana plant growing between his farm and the forest. What should he do?</div>
+    <div class='choices'>
+      <div class='choice' score='-10'>
+        <div class='title'>Let the plant grow, so it produces fruit and he can eat it</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_a'>
+            <div class='trees'></div>
+            <div class='vegetables'></div>
+            <div class='maracuja'></div>
+            <div class='maracuja-later-1'></div>
+            <div class='maracuja-later-2'></div>
+          </div>
+          <div class='content'>
+            <p>The maracuja banana is an invasive plant. This plant grows and covers the plants around them. This is especially dangerous when it is the plants and trees from Madeira’s natural forest that are being eliminated from invasice species. If you don’t do anything, you will be helping the invasive plant to grow and the Laurissilva forest to decrease.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-5'>
+        <div class='title'>Take it out and plant it near your house</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_b'>
+            <div class='trees'></div>
+            <div class='vegetables'></div>
+            <div class='maracuja'></div>
+            <div class='bubble'></div>
+          </div>
+          <div class='content'>
+            <p>The maracuja banana is a plant that is not native to Madeira Island and  is considered an invasive plant. This plant grows and spreads at a very high rate, killing all the plants around it and taking over that space. If you plant it near your house or your farm you need to monitor its growth very carefully in order to prevent it from getting out of control.</p>
+            <p>It’s better that you choose another type of maracuja to plant.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-15'>
+        <div class='title'>Eat and throw away the peels</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_c'>
+            <div class='trees'></div>
+            <div class='vegetables'></div>
+            <div class='rat-1'></div>
+            <div class='rat-2'></div>
+            <div class='peel'></div>
+            <div class='maracuja-later-c'></div>
+          </div>
+          <div class='content'>
+            <p>The maracuja banana is an invasive plant. These plants grow and spread very fast. Each fruit has 30 to 200 seeds. When you throw away the peels, you may also be throwing away some of the seeds and these will grow new plants that will take over other locations.</p>
+            <p>Also, by leaving organic waste near farms you are attracting rats that will feed from the waste and harm both your crops and the Laurissilva forest.</p>
+            <p>You lose 15 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Extract the plant</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_d'>
+            <div class='vegetables'></div>
+            <div class='trees'></div>
+          </div>
+          <div class='content'>
+            <p>There are many invasive plants in Madeira, like the acacia, the isoplex and others that grow fast and kill the plants around them. It is necessary to destroy these plants, so they don´t take over and destroy the Laurissilva forest. The invasive plants are very resistant and it’s difficult to destroy them. Each one has to be destroyed in a specific way, if you need to learn how to kill invasive species please contact Parque Natural.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Next, he is on his farm working, and he sees a pigeon eating his crop. What can he do?</div>
+    <div class='choices'>
+      <div class='choice' score='15'>
+        <div class='title'>Let the pigeon eat the crops</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_a'>
+            <div class='grass'></div>
+            <div class='levada'></div>
+            <div class='crap'></div>
+            <div class='crap-tree'></div>
+            <div class='pigeon'></div>
+            <div class='vegetables'></div>
+            <div class='cloud-1'></div>
+            <div class='cloud-2'></div>
+            <div class='forest'></div>
+            <div class='drop'></div>
+          </div>
+          <div class='content'>
+            <p>The pigeon is one of the most important animals in the forest.</p>
+            <p>The pigeon eats seeds from the forest and helps the forest to renew, increasing the number of plants in the Laurissilva forest.</p>
+            <p>The Laurissilva forest is important because its plants capture water from the moisture in the air and puts that water in the soil and canal so it can be used for farming.</p>
+            <p>By letting the pigeon live, you are helping the forest to grow.</p>
+            <p>You win 15 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-20'>
+        <div class='title'>Kill the pigeon</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_b'>
+            <div class='grass'></div>
+            <div class='levada'></div>
+            <div class='pigeon'></div>
+            <div class='vegetables'></div>
+            <div class='forest'></div>
+            <div class='rifle'></div>
+            <div class='gunpowder'></div>
+          </div>
+          <div class='content'>
+            <p>The pigeon is important in the regeneration process of the forest, because it eats the seeds and helps to spread them. The Laurissilva forest is important because the plants absorb the water from the moisture in the air and channel that water into the soil and water canals.</p>
+            <p>If you kill the pigeon, the forest will not renew itself and there will be less water. So your crops will have lower quality.</p>
+            <p>The pigeon is an endangered species and you should protect it.</p>
+            <p>You lose 20 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='20'>
+        <div class='title'>Scare the pigeon away</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_c'>
+            <div class='grass'></div>
+            <div class='levada'></div>
+            <div class='pigeon'></div>
+            <div class='vegetables'></div>
+            <div class='forest'></div>
+            <div class='bomb'></div>
+            <div class='scarecrow'></div>
+            <div class='tape'></div>
+          </div>
+          <div class='content'>
+            <p>There are a lot of methods that can be used safely to keep the pigeon away from your farm. You can use a sound scarecrow that simulates the sound of a gunshot from time to time. You can use nets that cover your crops, reflecting tape or scare crows. However, animals do adapt to their environment and get used to these methods, so change methods often. Parque Natural can help you choose the best option.</p>
+            <p>You win 20 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-15'>
+        <div class='title'>Put poison on the plants to kill the pigeon</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_d'>
+            <div class='grass'></div>
+            <div class='levada'></div>
+            <div class='pigeon'></div>
+            <div class='vegetables'></div>
+            <div class='forest'></div>
+            <div class='poison-1'></div>
+            <div class='poison-2'></div>
+          </div>
+          <div class='content'>
+            <p>Poison is very dangerous and should not be used in farming. The poison will not only kill the pigeon, it can kill other animals that help you and even pets. It will also contaminate the water supply and your crops. Your crops will be of a bad quality and you will not be able to sell them.</p>
+            <p>You lose 15 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>He now finds a few bugs on his crop. The bugs are really big. In order to solve it...</div>
+    <div class='choices'>
+      <div class='choice' score='-15'>
+        <div class='title'>He can use commercial pesticides but with a stronger concentration</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_a'>
+            <div class='caterpillars-left'></div>
+            <div class='caterpillars-right'></div>
+            <div class='levada'></div>
+            <div class='poison'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+          </div>
+          <div class='content'>
+            <p>Just because the bugs are big, you should not use more chemicals than the amount indicated on the package. The pesticides not only kill bugs, but will contaminate your crops and the water. If you use pesticides and do not follow the instructions, your soil will be contaminated even more and you won’t be able to sell your crops. Pesticides are also washed away by the rain and taken by the wind to contaminate farms nearby. It is best for everyone’s health not to use pesticides at all.</p>
+            <p>You lose 15 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='15'>
+        <div class='title'>Use plants and other animals to control the plagues</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_b'>
+            <div class='caterpillars-left'></div>
+            <div class='caterpillars-right'></div>
+            <div class='birds-left'></div>
+            <div class='birds-right'></div>
+            <div class='levada'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+          </div>
+          <div class='content'>
+            <p>There are animals that eat some insects and can help you. A couple of birds and their chicks can eat up to 1000 insects a day; a ladybug eats 60 aphids a day and a bat can eat 3000 moths. Having hedges near your farm attracts birds that can make their nests there, and they will help you get rid of the bugs!</p>
+            <p>You win 15 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='5'>
+        <div class='title'>Use commercial products according to the instructions</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_c'>
+            <div class='caterpillars-left'></div>
+            <div class='caterpillars-right'></div>
+            <div class='levada'></div>
+            <div class='poison'></div>
+            <div class='tree'></div>
+            <div class='vegetables'></div>
+          </div>
+          <div class='content'>
+            <p>If you choose to use pesticides, you should follow the instructions and use it accordingly. You shouldn’t use pesticides when it is raining or windy, or the pesticide will spread to farms nearby, or get washed into the water supply.</p>
+            <p>Remember there are products that are specifically for organic farming and even though they are more expensive it pays in the long run to have no side effects for your crops.</p>
+            <p>You win 5 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>António is smoking a cigarette.  Once he finishes it, he…</div>
+    <div class='choices'>
+      <div class='choice' score='10'>
+        <div class='title'>Puts it away and keeps it to throw in the garbage bin</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_a'>
+            <div class='forest'></div>
+            <div class='vegetables'></div>
+            <div class='speech-bubble'></div>
+            <div class='cigarette-1'></div>
+          </div>
+          <div class='content'>
+            <p>The best thing for your health is to quit smoking. If you are a smoker you probably smoke 10 to 20 cigarettes a day, that means 3600 to 7200 a year. Now just multiply this number by the number of people that smoke and see the big picture. If you throw the cigarette butt in the garbage bin, you are preventing all this garbage from accumulating on land, much of which is washed to the ocean by the rain. It takes 2 to 5 years for a cigarette to decompose.  Once in the ocean, they look like food for the fish you eat.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-10'>
+        <div class='title'>Throw it on the ground, in the levada or down a drain</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_b'>
+            <div class='forest'></div>
+            <div class='vegetables'></div>
+            <div class='cigarette-2'></div>
+            <div class='fire'></div>
+          </div>
+          <div class='content'>
+            <p>Cigarette butts can start fires that destroy houses, plantations and forest.</p>
+            <p>Throwing them in the canal is not a better solution because it will eventually end up in the ocean contaminating the water, animals, and plants. It takes 2 to 5 years for a cigarette to decompose.  Once in the ocean, they look like food for the fish you eat.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-10'>
+        <div class='title'>Stick the cigarette butt under a rock</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_c'>
+            <div class='forest'></div>
+            <div class='vegetables'></div>
+            <div class='cigarette-3'></div>
+            <div class='rock'></div>
+            <div class='contamination'></div>
+          </div>
+          <div class='content'>
+            <p>Hiding the problem doesn’t make it ok. Hiding a cigarette butt has the same effect as throwing it on the ground or in the levada. It will contaminate the soil, the water and will affect the quality of your crops.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class='screen'>
     <div class='question'>He finished work and he has plants to throw away</div>
     <div class='choices'>
