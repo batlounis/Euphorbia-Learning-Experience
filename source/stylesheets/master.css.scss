@@ -937,7 +937,8 @@ $sc_underwater_start: $sc_freeze + $sc_choices_go_down + $c_transition;
 
 // ** Continue
 #setting{
-	-webkit-transition: top $c_transition ease-in-out $c_delay;
+	// used to have delay: $c_delay
+	-webkit-transition: top $c_transition ease-in-out;
 }
 
 // ** Underwater

@@ -1,6 +1,12 @@
 $(document).ready(function(){		
 	
 	
+
+	window.addEventListener('load', function() {
+	    new FastClick(document.body);
+	}, false);
+	
+	
 	// prevent scrolling on iOS
 	$(document).bind(
 	  'touchmove',
@@ -98,7 +104,7 @@ $(document).ready(function(){
 		playIn(function(){ lock_journey = false; }, 4);
 		$('#continue_journey_button').removeClass('come');
 		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
-
+		
 		current_screen = current_screen.next();
 		viewModel.reset();
 		
