@@ -1,57 +1,293 @@
-$(document).ready(function(){
+$(document).ready(function(){		
+	
+	
+
+	window.addEventListener('load', function() {
+	    new FastClick(document.body);
+	}, false);
+	
+	
+	// prevent scrolling on iOS
+	$(document).bind(
+	  'touchmove',
+	  function(e) {
+	    e.preventDefault();
+	  }
+	);
 	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
+	var screen_height;
 	var viewModel;
 	var handle;	// used in drawn path by knockout js
+	var c_transition = 3; // if you change this, change css also
+	var step = 0;
+	
+	var playing_audio;
+	var mute = false;
+	playAudio = function(audio){
+		if(mute){
+			return;
+		}
+		
+		if(playing_audio){
+			playing_audio.pause();
+		}
+		if(audio){
+			playing_audio = audio;
+			playing_audio.play();
+		}		
+	}
+	pauseAudio = function(){
+		if(playing_audio){
+			playing_audio.pause();
+		}
+	}
+	
+	$('#audio_status').click(function(){
+		mute = !mute;
+		$(this).toggleClass('off');
+	})
 	
 	// --- ONLOAD ---
 	
 	// set every screen div to take the whole screen
-	fillScreen = function(){
+	fillScreen = function(){ // TODO: this should be made in knockout
 		$('.screen').css('height', window.innerHeight+'px');
 		$('.screen').css('margin-bottom', window.innerHeight+'px');
+		screen_height = window.innerHeight;
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px');
 	};
 	fillScreen();
 	$(window).resize(function(){fillScreen()});
 	
 	current_screen = $('.screen:first');
 	
-	$('.arrow').click(function(){return selectAnswer();});
+	$('#throw_button').click(function(){
+		return selectAnswer();
+	});
 	
 	// --- --- --- ---
-	
-	// shows control for current question
-	// TODO: remove
-	showControl = function(){
-		current_screen.append('<div class="control-wrap"></div>')
-		$('.control-wrap').load('screens/control-fisherman', function(){
-			$('.arrow').click(function(){return selectAnswer();})		
-		});
-	}	
 
-
-	// hides question and answers, and shows response when a response is clicked
-	// TODO: remove
-	$('.choices a').click(function(){
-		var screen = $(this).closest('.screen');
-		screen.find('.question, .choices, .consequence, .continue').toggle();
-		return false;
-	})
 	
 	// shifts the screen up one whole screen each time the boat is clicked
-	var step = 1;
 	$('#continue_journey_button').click(function(){
-		$('#consequence').hide();
-		$('#consequence .content').html('');
+		if(current_screen.next('.screen').hasClass('underwater')){
+			$('#score').show();
+			var underwater_screen = current_screen.next('.screen')
+			$('#character').removeClass('underwater');
+			underwater_screen.css('top', screen_height);
+			
+			playIn(function(){
+				$('.screen').css('margin-bottom', window.innerHeight+'px');
+				underwater_screen.remove();
+				$('#setting').removeClass('underwater');
+				continue_journey();
+			}, .5);
+		}else{
+			continue_journey();
+		}
+	});
+	
+	var lock_journey = false
+	continue_journey = function(){
+		if(lock_journey){
+			return;
+		}else{
+			lock_journey = true;
+		}
 		
-		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
+		$('#consequence').removeClass('come');
+		$('#character').addClass('walk');
+		playIn(function(){ $('#character').removeClass('walk'); }, 4);
+		playIn(function(){ lock_journey = false; }, 4);
+		$('#continue_journey_button').removeClass('come');
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
+		
 		current_screen = current_screen.next();
 		viewModel.reset();
-		current_screen.find('.control').show();
+		
+		if(!current_screen.hasClass('special')){
+			$('#control .arrow').removeClass('stop');
+			$('#control .arrow').addClass('swing');
+			current_screen.find('.choices').addClass('come');
+			$('#control').addClass('come');
+			$('#throw_button').removeClass('leave');
+			$('#character').show();
+			$('#score').show();
+		}else{
+			$('#character').hide();
+			$('#score').hide();
+		}
+		
+		playAudio(current_screen.find('audio').get(0));
+
 		return false;
+	}
+	
+	// tutorial frame sequence
+	
+	$('#play_tutorial').click(function(){
+		$('#continue_journey_button').trigger('click');
+		play_tutorial();
+	})
+	
+	$('#just_play').click(function(){
+		$('.screen.tutorial').remove();
+		$('#character').show();
+		$('#score').show();
+		$('#continue_journey_button').trigger('click');
+	})
+	
+	play_tutorial = function(){
+		var tutorial_animations = [];
+		var anim;
+
+		$('#control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		$('#score').hide();
+		$('#character').show();
+		playAudio($('.screen.tutorial audio').get(0));
+
+		anim = setTimeout(function(){
+			$('#character').hide();
+			$('.tutorial .character-intro').hide();
+			$('.tutorial .advance-control-intro').show();
+		}, 6000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .advance-control-intro').hide();
+			$('.tutorial .sea-intro').show();
+		}, 10000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .sea-intro').hide();
+			$('.tutorial .arrow-intro').show();
+		}, 17000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').addClass('next');
+		}, 20000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').hide();
+			$('.tutorial .choice-illuminates').show();
+		}, 25000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .choice-illuminates').hide();
+			$('.tutorial .good-luck').show();
+		}, 31000);
+		tutorial_animations.push(anim);
+
+		last_tutorial_step = function(){
+			$('#continue_journey_button').addClass('come');
+		}
+
+		anim = setTimeout(function(){
+			last_tutorial_step();
+		}, 33000);
+		tutorial_animations.push(anim);
+		
+
+		$('#skip_tutorial').click(function(){
+			for(var i = 0; i < tutorial_animations.length; i++){
+				clearTimeout(tutorial_animations[i]);
+			}
+			$('#continue_journey_button').trigger('click');
+			return false;
+		});
+	}
+
+	
+	
+	// --- End Screen Functionality ---
+	
+	getScores = function(){
+		var journey_character = $('body').attr('class');
+		var stored_scores = localStorage[journey_character];
+		var scores;
+		
+		if(stored_scores){
+			scores = JSON.parse(localStorage[journey_character]);
+		}else{
+			scores = [];
+		}
+		
+		return scores;
+	}
+	
+	var score_saved = false; // Used to allow just one save per play
+	
+	addScore = function(name, score){
+		var journey_character = $('body').attr('class');
+		var scores = getScores();
+		if(!score_saved){
+			scores.unshift({'score':score, 'name':name});
+			localStorage[journey_character] = JSON.stringify(scores);
+			score_saved = true;
+		}		
+		return scores;		
+	}
+	
+	
+	$('#view_gallery, .close_gallery').click(function(){
+		$('.drawings').toggleClass('show');
+		$('.score_page').removeClass('show'); // Note: always hide the other box, just in case
 	});
+	
+	$('#view_score, .close_score').click(function(){
+		var scores = getScores();
+		viewModel.scores(scores);
+		$('.score_page').toggleClass('show');
+		$('.drawings').removeClass('show'); // Note: always hide the other box, just in case
+	});
+	
+	$('#save_score').click(function(){
+		
+		var score = viewModel.score();
+		var name = $('#score_name').attr('value');
+		var scores = addScore(name, score);
+		$('.save_box').html('');
+		
+		viewModel.scores(scores);
+	});
+	
+	
+	
+	// --- Gallery browsing ---
+	
+	// Go down
+	$('#gallery_down').click(function(){
+		var doc = $('.drawings section');
+		var doc_height = parseInt(doc.css('height'));
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(-current_top+window_height < doc_height){
+			doc.css('top', (current_top-window_height).toString()+'px');
+		}else{
+			doc.css('top', (-doc_height+window_height).toString()+'px');
+		}
+	})
+	
+	// Go up
+	$('#gallery_up').click(function(){
+		var doc = $('.drawings section');
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(current_top + window_height < 0){
+			doc.css('top', (current_top+window_height).toString()+'px');
+		}else{
+			doc.css('top', '0px');
+		}
+	})
+	
 	
 
 	  //
@@ -71,6 +307,11 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+		this.scores = ko.observableArray([]);
+	
+			this.score = ko.observable(0);
+			
 
 	     this.trails = ko.observableArray([]);
 	
@@ -91,10 +332,47 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-				findSelectedChoice(self.x());				
+							findSelectedChoice(self.x());				
 	            clearInterval(handle);
 	         }
 	     }
+	}
+	
+	viewModel = new ViewModel();
+	ko.applyBindings(viewModel);
+	
+	// Triggered on a selected choice
+	$('.choice').bind('select',function(e){
+		viewModel.score(viewModel.score()+parseInt($(this).attr('score')));
+		$(this).addClass('selected');
+	});
+	
+	
+	
+	goAboveWater = function(consequence){
+		var underwater_screen = current_screen.next('.screen')
+		$('#character').removeClass('underwater');
+		
+		// underwater goes down
+		underwater_screen.css('top', screen_height);
+		
+		
+		playIn(function(){
+			$('.screen').css('margin-bottom', window.innerHeight+'px');
+			underwater_screen.remove();
+			$('#setting').removeClass('underwater');
+			
+			$('#continue_journey_button').trigger('click');
+		}, .5);
+	}
+	
+	showConsequence = function(consequence){
+		var consequence_content = consequence.find('.content');
+		$('#consequence .content').html(consequence_content);
+		$('#consequence').addClass('come');
+		$('#continue_journey_button').addClass('come');
+		
+		playAudio(consequence_content.find('audio').get(0));
 	}
 	
 	// find which choice was selected based on the x of the path's end point. returns choice div
@@ -109,31 +387,55 @@ $(document).ready(function(){
 			choice = $(choices[i]);
 			left = choice.offset().left;
 			right = left+choice.width();
-			// alert(x+', '+left+', '+right);
-			if( x >= left && x <= right){
+			if( x < right){
 				found = true;
 			}
 		}
 		
-		$('#consequence .content').html(choice.find('.consequence'));
-		current_screen.find('.question, .choices, .control').addClass('fade');
-		$('#consequence').show()
+		$(choice).trigger('select');
+		
+		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
+
+		current_screen.find('.choices').removeClass('come');
+		current_screen.find('.question').addClass('leave');
+		$('#control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		
+		if(consequence.hasClass('underwater')){
+			var sub_screen = consequence.find('.screen')
+			sub_screen.insertAfter(current_screen);
+			current_screen.css('margin-bottom', '0px');
+			$('#setting').addClass('underwater');
+			$('#character').addClass('underwater');
+			$('#setting').css('top', '-'+((step)*2*screen_height+screen_height)+'px');
+			
+			// setTimeout(function(){bomb_animation(consequence, sub_screen)}, 7000);
+			
+			var pattern = /animation_/;
+			var animation_id = sub_screen.attr('id');
+			if(pattern.exec(animation_id)){
+				setTimeout(function(){eval(animation_id+'(consequence, sub_screen)');}, 7000);
+			}
+		}else{
+			showConsequence(consequence);
+		}
+
 	}
+
 	
 	
 	// selecting an answer by clicking the control
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
-		var rotation = -getRotation(current_screen.find('.arrow'));
+		pauseAudio();
+		$('#control .arrow').addClass('stop');
+		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
-		var selection = Math.ceil(rotation/answer_range);
-		$('.line').addClass('answer-'+selection);
-		current_screen.find('.arrow').addClass('stop');
-		viewModel = new ViewModel();
+		var selection = Math.ceil(rotation/answer_range);		
+
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);
-		ko.applyBindings(viewModel);
 		
 		clearInterval(handle); // stops a previous event
 		handle = setInterval(function() { viewModel.update() }, .01);

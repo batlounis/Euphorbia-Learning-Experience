@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!-- include this later: :manifest=>"/offline.manifest" -->
+<html manifest='offline.manifest'>
+  <head>
+    <meta charset='utf-8' content='text/html' http-equiv='Content-Type' />
+    <meta content='yes' name='apple-mobile-web-app-capable' />
+    <meta content='user-scalable = no' name='viewport' />
+    <title>Fisherman</title>
+    <link charset='utf-8' href='stylesheets/master.css' media='screen' rel='stylesheet' type='text/css' />
+    <script charset='utf-8' src='javascripts/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/knockout-2.2.0.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/fastclick.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/library.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/animations-fisherman.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/animations-farmer.js' type='text/javascript'></script>
+    <script charset='utf-8' src='javascripts/app.js' type='text/javascript'></script>
+  </head>
+  <body class='fisherman english'>
+    <div id='journey_buttons'>
+  <a href='index_en.html' id='journey_exit'>Exit</a>
+</div>
+<div id='character'></div>
+<div data-bind='text: score' id='score'></div>
+<div id='consequence'>
+  <div class='content'></div>
+</div>
+<div id='continue_journey_button'></div>
+<div class='leave' id='throw_button'></div>
+<div id='control'>
+  <div class='arrow swing first'></div>
+  <svg class='trajectory' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+    <!-- the initial velocity vector -->
+    <line data-bind='attr: {y2:(480-4*vy()),x2:4*vx()}' x1='0' y1='480'></line>
+    <!-- the trails of the trajectory motion -->
+    <!-- ko foreach:trails -->
+    <circle data-bind="attr: {cx:x+'%',cy:(100-y)+'%'}" r='4' style='stroke: white;'></circle>
+    <!-- /ko -->
+    <!-- the simulation object -->
+    <circle data-bind="attr: {cx:x()+'%',cy:(100-y())+'%'}" r='8' style='stroke: white;'></circle>
+  </svg>
+</div>
+<div id='setting'>
+  <div class='screen' id='tutorial_ask'>
+    <a href='#' id='play_tutorial'>Play Tutorial</a>
+    <a href='#' id='just_play'>Skip</a>
+  </div>
+  <div class='screen tutorial'>
+    <a href='#' id='skip_tutorial'>Skip</a>
+    <div class='screen character-intro'>
+      <div class='indicator'></div>
+      <div class='text'>This is Manel, the fisherman</div>
+    </div>
+    <div class='screen advance-control-intro'>
+      <div class='indicator'></div>
+      <div class='continue_journey_button'></div>
+      <div class='background'></div>
+      <div class='text'>In order for Manel to move through the adventure, please press here.</div>
+    </div>
+    <div class='screen sea-intro'>
+      <div class='choices come'></div>
+      <div class='text'>Manel's decisions will depend on how well you aim.  For every decision there is a sea of options, and a fishing rod to fish them.</div>
+      <div class='background'></div>
+    </div>
+    <div class='screen arrow-intro'>
+      <div class='choices come'></div>
+      <div class='indicator fisherman'></div>
+      <div class='throw_button'></div>
+      <div class='text'>This button controls the fishing rod.</div>
+      <div class='background'></div>
+      <div class='text-next'>By pressing the button when the rod is angled correctly, you will be able to select an answer.</div>
+    </div>
+    <div class='screen choice-illuminates'>
+      <div class='background'></div>
+      <div class='indicator fisherman'></div>
+      <div class='text'>Once you throw, your answer will light up. You can then see the consequence your choice has on nature.</div>
+    </div>
+    <div class='screen good-luck'>
+      <div class='indicator'></div>
+      <div class='text'>Good luck!</div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel the fisherman is about to start his day. He has to decide where to go fish.</div>
+    <div class='choices come'>
+      <div class='choice' score='-10'>
+        <div class='title'>Near a natural reserve</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_a'>
+            <div class='nature'></div>
+            <div class='net'></div>
+            <div class='clock'></div>
+            <div class='buoy'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+          </div>
+          <div class='content'>
+            <p>The water reserves are very important for the growth of the fish population. The amount of fish in the ocean has decreased as a result of overfishing and the use of non-selective fishing techniques. It is extremely important that we protect the water reserves, so the fish can reproduce and increase the amount of fish.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-5'>
+        <div class='title'>Where there are a lot of young fish</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_b'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='net'></div>
+            <div class='clock'></div>
+          </div>
+          <div class='content'>
+            <p>If you catch fish that are young, you are preventing them from maturing and breeding age. This will decrease the amount of fish in the future.</p>
+            <p>Although fish produce a lot of eggs, only a small percentage reaches the adult stage.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>In a place where there are fish that reach adult age</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_1_c'>
+            <div class='nature'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+          </div>
+          <div class='content'>
+            <p>If you catch adult fish it will be more profitable for you and at the same time you are promoting the future of the species.</p>
+            <p>It is important to remember that you shouldn’t fish during breeding season and you should not fish endangered species</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel, has selected the location, now he has to decide which technique to use</div>
+    <div class='choices'>
+      <div class='choice' score='-5'>
+        <div class='title'>He uses a net</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_a'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='arrasto'></div>
+          </div>
+          <div class='content'>
+            <p>When fishing with a net, a big part of what you take from the sea can end up not being good. You just caught a large amount of waste and fish that are not worth a lot, and also seriously damaged the bottom of the ocean and rocks where your net was dragged.</p>
+            <p>It is more profitable and better for the environment if you use selective fishing techniques.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-15'>
+        <div class='title'>Use bombs</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_b'>
+            <div class='nature special'></div>
+            <div id='a1-bomb'></div>
+            <div id='a1-fish-1'></div>
+            <div id='a1-fish-2'></div>
+            <div id='a1-fish-3'></div>
+            <div id='a1-fish-4'></div>
+            <div id='a1-fish-5'></div>
+            <div id='a1-fish-6'></div>
+            <div id='a1-fish-7'></div>
+            <div id='a1-fish-8'></div>
+            <div id='a1-after-fish-1'></div>
+            <div class='clock'></div>
+          </div>
+          <div class='content'>
+            <p>Bombs kill the fish in a very violent way, and also kill all the other species of animals and plants that are nearby.</p>
+            <p>The use of explosives destroys the bottom of the ocean, and results in a huge decrease in the amount of fish. The fish that are caught using explosives don’t look good and are worth less because of it.</p>
+            <p>Locations that have been bombed require many years even decades to recover and have species living there again. The use of this technique is illegal in Portugal.</p>
+            <p>You lose 15 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Use a selective technique (e.g. fishing pole, dropline)</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_2_c'>
+            <div class='nature special'></div>
+            <div class='hooks'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='fished-1'></div>
+            <div class='fished-2'></div>
+          </div>
+          <div class='content'>
+            <p>Selective fishing techniques are better because they decrease the amount of accidental fishing and they contribute to keeping fish populations up, ensuring there will be fishing activity in the future.</p>
+            <p>Choosing the right bait, size of the hook and depth, can decrease the number of unwanted fish or fish with no commercial value that you catch.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel is fishing and it is breeding season for some species. He decides to…</div>
+    <div class='choices'>
+      <div class='choice' score='-5'>
+        <div class='title'>Fish all the fish</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_a'>
+            <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish'></div>
+            <div class='egg'></div>
+          </div>
+          <div class='content'>
+            <p>Fishing a species during the breeding season will prevent the population from growing and recovering from fishing activity. When you catch fish with eggs you are decreasing the number of fish that will be born and will result in a decrease in the profit for the fishing activity in the future.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='5'>
+        <div class='title'>Choose another time to fish this species</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_b'>
+            <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='calendar'></div>
+          </div>
+          <div class='content'>
+            <p>By choosing another time to fish this species you are not harming the species while breeding and you are contributing to the increase in the amount of fish that will be available in the future.</p>
+            <p>You win 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='5'>
+        <div class='title'>Choose another location to fish</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_3_c'>
+            <div class='clock'></div>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+          </div>
+          <div class='content'>
+            <p>By choosing another location, where you know you are not going to catch the species that are breeding, you are contributing to the increase in the amount of fish that will be available in the future.</p>
+            <p>You win 5 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>While Manel is fishing, he eats his lunch. After he finishes eating, he takes the leftovers and…</div>
+    <div class='choices'>
+      <div class='choice' score='-5'>
+        <div class='title'>Throws it in the water</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_a'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='birds-left'></div>
+            <div class='birds-right'></div>
+            <div class='organic'></div>
+          </div>
+          <div class='content'>
+            <p>Organic waste like food leftovers decomposes easily in the ocean.</p>
+            <p>Nevertheless when you throw it in the water you are attracting other fish, sea birds and other animals that will interfere with your fishing and that you may catch by accident. Keep the organic waste away from fishing areas.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Keep the leftovers on the boat</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_4_b'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+          </div>
+          <div class='content'>
+            <p>By keeping the organic waste in the boat you are not attracting sea birds or sea mammals to the location where you are fishing. So these animals are not going to interfere with your fishing and will not be caught by accident.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel is fishing and sees a monkey seal nearby</div>
+    <div class='choices'>
+      <div class='choice' score='-10'>
+        <div class='title'>Throw a bomb to scare the monk seal away</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_a'>
+            <div class='bomb'></div>
+            <div class='fish'></div>
+            <div class='monk-seal'></div>
+          </div>
+          <div class='content'>
+            <p>Throwing a bomb at a monk seal is not the wisest thing to do because you can end up injuring or killing it. Monk seals are an endangered species and you should protect it.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Take the fish that you have and go fish elsewhere</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_b'>
+            <div class='net'></div>
+            <div class='fish-group'>
+              <div class='num1'></div>
+              <div class='num2'></div>
+              <div class='num3'></div>
+              <div class='num4'></div>
+            </div>
+            <div class='monk-seal'></div>
+          </div>
+          <div class='content'>
+            <p>The monk seal is a sneaky animal and it will try and catch the fish that you are fishing. By changing location you are preventing it from bothering your fishing activity.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-5'>
+        <div class='title'>Continue fishing</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_5_c'>
+            <div class='net'></div>
+            <div class='fish-group'>
+              <div class='num1'></div>
+              <div class='num2'></div>
+              <div class='num3'></div>
+              <div class='num4'></div>
+            </div>
+            <div class='monk-seal'></div>
+          </div>
+          <div class='content'>
+            <p>If you continue fishing in the same spot, the monk seal will eat part of the fish that you catch, and you can also put this endangered species’ life in danger.</p>
+            <p>You lose 5 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel is fishing using a net. He takes the net and just realizes that not all the catch is profitable…</div>
+    <div class='choices'>
+      <div class='choice' score='-10'>
+        <div class='title'>Keeps all the fish, even the ones with no commercial value</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_6_a'>
+            <div class='nature'></div>
+            <div class='fish-profitable'></div>
+            <div class='fish-non-profitable'></div>
+            <div class='money'></div>
+            <div class='net'></div>
+          </div>
+          <div class='content'>
+            <p>By keeping the fish that aren’t the minimum legal size, you are preventing them from breeding and therefore decreasing the amount of fish available in the future.</p>
+            <p>By keeping the species with no commercial value, you are promoting an unbalanced ecosystem and not getting any profit from it.</p>
+            <p>By doing this you are harming future fishing activity and damaging marine life.</p>
+            <p>The fish that are too young or that are not profitable should be thrown back to the sea as soon as possible to continue their life cycle.</p>
+            <p>You lose 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Throw the young ones in the ocean</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_6_b'>
+            <div class='nature'></div>
+            <div class='net'></div>
+            <div class='clock'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='fish-group'>
+              <div class='num1'></div>
+              <div class='num2'></div>
+              <div class='num3'></div>
+              <div class='num4'></div>
+              <div class='num5'></div>
+              <div class='num6'></div>
+            </div>
+          </div>
+          <div class='content'>
+            <p>There are minimum sizes for fish that can be caught and sold. Remember that you should not catch marine life that has not yet reached maturity. When you see that your catch does not meet the requirements for selling, it is important that you throw it back immediately so they can recover and grow.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>Manel sees that the net is broken, and…</div>
+    <div class='choices'>
+      <div class='choice' score='-10'>
+        <div class='title'>Throw it in the ocean</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_7_a'>
+            <div class='nature special'></div>
+            <div class='shredded-net'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='tangled-fish'></div>
+            <div class='passing-boat'></div>
+          </div>
+          <div class='content'>
+            <p>Fishing lines and nets remain in the ocean for many years after they have been abandoned, trapping, injuring and even killing many sea animals. Monk seals, dolphins, whales and birds are examples of animals that can be harmed by this bad practice.</p>
+            <p>These materials also cause damage to boats because they get stuck in the propeller and damage the motor. Studies show more than 6 in 10 boats from Madeira have suffered damages because of garbage in the ocean.</p>
+            <P>You lose 10 points</P>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='10'>
+        <div class='title'>Take the net and fix it on land</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_7_b'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='broken-net'></div>
+            <div class='thought-bubble'></div>
+          </div>
+          <div class='content'>
+            <p>After you are done fishing, you should bring back with you all your fishing gear. The best option is to fix the net and reuse it, in this way you are not contributing to the increase of waste on land.</p>
+            <p>Leaving the net in the ocean will kill marine life and will affect the future of fishing activity. When you leave nets and covos in the ocean, they keep on trapping animals and lead to the death of many fish and other sea animals.</p>
+            <p>You win 10 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='5'>
+        <div class='title'>Bring the net to land and throw it in the garbage bin</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_7_c'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='broken-net'></div>
+            <div class='thought-bubble'></div>
+            <div class='trashcan'></div>
+            <div class='trashcan-lid'></div>
+          </div>
+          <div class='content'>
+            <p>When nets cannot be reused they should be brought to land and placed in the garbage. Even fishing gear stuck on the bottom of the ocean should be recovered at all cost. When fishing gear is left in the ocean it results in the death of a large number of animals and damages boats. Not only the waste that results from fishing, but all the waste that is found in the ocean should be brought to land.</p>
+            <p>You win 5 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen'>
+    <div class='question'>It’s the end of the day and Manel has garbage on the boat. He doesn’t know what to do with the waste.</div>
+    <div class='choices'>
+      <div class='choice' score='-20'>
+        <div class='title'>Throws plastic in the ocean</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_a'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='trash num1'></div>
+            <div class='trash num2'></div>
+            <div class='trash num3'></div>
+            <div class='trash num4'></div>
+            <div class='trash num5'></div>
+          </div>
+          <div class='content'>
+            <p>Garbage is the main problem for marine life.</p>
+            <p>Plastic constitutes 90% of the garbage found in the ocean and it seriously affects marine life and the ocean.</p>
+            <p>Sea animals see the plastic as food (turtles, whales, fish and sea birds) and when they eat it, it causes them to asphyxiate, it blocks their digestive system and can cause death. The plastic also contains toxic substances that contaminate the water and the animals that life in the ocean.</p>
+            <p>You lose 20 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='25'>
+        <div class='title'>Take the garbage to land and place it in the recycling bins</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_b'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='thought-bubble'></div>
+          </div>
+          <div class='content'>
+            <p>A boat in Madeira typically produces the following garbage: 2 plastic bottles, 8 plastic bags, 4 glass bottles, 29 packages and 12 batteries. Now think about all the boats that fish near the Island and the number of days they fish and you will understand the amount of trash that is produced and dumped in the sea!</p>
+            <P>It is important that you bring back all the trash and recycling it. By doing this you are ensuring the future and health of the ocean and fishing activity.</P>
+            <p>You win 25 points</p>
+          </div>
+        </div>
+      </div>
+      <div class='choice' score='-20'>
+        <div class='title'>Throw the batteries in the ocean</div>
+        <div class='consequence underwater'>
+          <div class='screen underwater' id='animation_8_c'>
+            <div class='nature special'></div>
+            <div class='fish-left'></div>
+            <div class='fish-right'></div>
+            <div class='battery num1'></div>
+            <div class='battery num2'></div>
+            <div class='battery num3'></div>
+            <div class='chemicals'></div>
+          </div>
+          <div class='content'>
+            <p>Batteries contain toxic substances that are transferred to water and marine life. These toxic substances kill fish, sea plants and other animals, and have serious consequences for fishing activity on the island.</p>
+            <p>Batteries have mercury that contaminates fish, such as black swordfish, and this can cause health problems when people consume these fish. You should bring all batteries to land and dispose of them properly.</p>
+            <p>You lose 20 points</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='screen special'>
+    <div class='question' data-bind='visible: score() &lt;= 0'>Wow! If you keep doing this, your children will not have fish to eat. You need to be eco compatible!</div>
+    <div class='audio_content' data-bind='if: score()&lt;=0'></div>
+    <div class='question' data-bind='visible: score() &gt; 0 &amp;&amp; score() &lt; 40'>Congrats! You are on the right path to become an eco compatible fisherman, if you are a little more careful our future is going to be better.</div>
+    <div class='audio_content' data-bind='if: score() &gt; 0 &amp;&amp; score() &lt; 40'></div>
+    <div class='question' data-bind='visible: score() &gt;= 40'>Congrats! You were an excellent fisherman and the future of the fishing industry and marine life are guaranteed.</div>
+    <div class='audio_content' data-bind='if: score() &gt;= 40'></div>
+    <div class='final_score'>
+      <span data-bind='text: score'></span>
+      Points
+    </div>
+    <menu class='general'>
+      <a href='#' id='view_score'>Save Score</a>
+      <a href='fisherman_en.html' id='play_again'>Play Again</a>
+      <a href='#' id='view_gallery'>Drawings</a>
+      <a href='index.html' id='exit'>Exit</a>
+    </menu>
+    <div class='pier'></div>
+    <div class='catch' data-bind='css: {"good": score() &gt; 0, "great": score() &gt; 20, "amazing": score() &gt; 40}'></div>
+    <div class='score_page'>
+      <a class='close_score' href='#'>Close</a>
+      <div class='save_box'>
+        <input id='score_name' type='text' />
+        <a href='#' id='save_score'>Save</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody data-bind='foreach: scores'>
+          <tr>
+            <td data-bind='text: name'></td>
+            <td data-bind='text: score'></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='drawings'>
+      <a class='close_gallery' href='#'>Close</a>
+      <menu>
+        <a href='#' id='gallery_up'></a>
+        <a href='#' id='gallery_down'></a>
+      </menu>
+      <section>
+        <h3>EB1/PE do Caniçal</h3>
+        <figure>
+          <img src='images/gallery/CAN_3B_grupo1.jpg' />
+          <figcaption>Grupo1</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_3B_grupo2.jpg' />
+          <figcaption>Grupo2</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_beatriz_alves_moreira.jpg' />
+          <figcaption>Beatriz Alves Moreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_bruna_maria_nunes_gomes.jpg' />
+          <figcaption>Bruna Maria Nunes Gomes</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_bruno_jose_alves_moreira.jpg' />
+          <figcaption>Bruno José Alves Moreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_joao_davide_alves_da_silva.jpg' />
+          <figcaption>João Davide Alves da Silva</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_joao_duarte_santos_costa.jpg' />
+          <figcaption>João Duarte Santos Costa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_joao_fernando_nunes_alves.jpg' />
+          <figcaption>João Fernando Nunes Alves</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_joao_gabriel.jpg' />
+          <figcaption>João Gabriel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_joao_lourenco_franco_moniz.jpg' />
+          <figcaption>João Lourenço Franco Moniz</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_jose_francisco_silva_dos_santos.jpg' />
+          <figcaption>José Francisco Silva dos Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_leandro_catinho_colaco.jpg' />
+          <figcaption>Leandro Catinho Colaço</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_luis_filipe_moniz_da_silva.jpg' />
+          <figcaption>Luís Filipe Moniz da Silva</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_luisa.jpg' />
+          <figcaption>Luísa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_maria_carlota_freitas_sousa.jpg' />
+          <figcaption>Maria Carlota Freitas Sousa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_maria_luisa_moreira_de_menezes.jpg' />
+          <figcaption>Maria Luísa Moreira De Menezes</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_marilia_leticia_moniz_teles.jpg' />
+          <figcaption>Marilia Letícia Moniz Teles</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_miguel_lomelino_calaca.jpg' />
+          <figcaption>Miguel Lomelino Calaça</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_nelson_bernardo_nunes_dos_santos.jpg' />
+          <figcaption>Nelson Bernardo Nunes dos Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_pedro_henrique.jpg' />
+          <figcaption>Pedro Henrique</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_sofia_alves_dos_santos.jpg' />
+          <figcaption>Sofia Alves dos Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_tiago_nunes_alves_melim.jpg' />
+          <figcaption>Tiago Nunes Alves Melim</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4A_tomas_jorge_dos_santos_delgado.jpg' />
+          <figcaption>Tomás Jorge dos Santos Delgado</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_Elsio_andre_nuno_santos.jpg' />
+          <figcaption>Elsio André Nuno Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_ana_sofia_santos_alves.jpg' />
+          <figcaption>Ana Sofia Santos Alves</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_daniela.jpg' />
+          <figcaption>Daniela</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_hugo.jpg' />
+          <figcaption>Hugo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_joao_duarte_costa_colaco.jpg' />
+          <figcaption>João Duarte Costa Colaço</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_joao_luis_alves_silva.jpg' />
+          <figcaption>João Luís Alves Silva</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_joao_rodrigo.jpg' />
+          <figcaption>João Rodrigo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_linda_sofia.jpg' />
+          <figcaption>Linda Sofia</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_luis_fernando_gouveia_silva.jpg' />
+          <figcaption>Luís Fernando Gouveia Silva</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_luis_filipe_silva_alves.jpg' />
+          <figcaption>Luís Filipe Silva Alves</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_marco_alexandre_remesso_moreira.jpg' />
+          <figcaption>Marco Alexandre Remesso Moreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_maria_elisa.jpg' />
+          <figcaption>Maria Elisa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_nicole_maria_fernandes_sousa.jpg' />
+          <figcaption>Nicole Maria Fernandes Sousa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_nuno_goncalo_lopes_camara.jpg' />
+          <figcaption>Nuno Gonçalo Lopes Câmara</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_pedro_jacinto_diogo_santos_sousa_vieira.jpg' />
+          <figcaption>Pedro Jacinto Diogo Santos Sousa Vieira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_pedro_miguel_vieira_nunes.jpg' />
+          <figcaption>Pedro Miguel Vieira Nunes</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_ricardina.jpg' />
+          <figcaption>Ricardina</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_rodrigo_daniel.jpg' />
+          <figcaption>Rodrigo Daniel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4B_sara_filipa_colaco_vidinha.jpg' />
+          <figcaption>Sara Filipa Colaço Vidinha</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_Sandra.jpg' />
+          <figcaption>Sandra</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_alice_maria_sousa_calaca.jpg' />
+          <figcaption>Alice Maria Sousa Calaça</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_diogo.jpg' />
+          <figcaption>Diogo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_egidio.jpg' />
+          <figcaption>Egídio</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_fabiana_cristina_santos_pereira.jpeg' />
+          <figcaption>Fabiana Cristina Santos Pereira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_goncalo_sousa.jpg' />
+          <figcaption>Gonçalo Sousa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_joao_andre.jpg' />
+          <figcaption>João Andre</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_joao_carlos.jpg' />
+          <figcaption>João Carlos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_joao_nicolau_da_silva_roque.jpg' />
+          <figcaption>João Nicolau Da Silva Roque</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_julia_maria_sousa_moniz.jpg' />
+          <figcaption>Júlia Maria Sousa Moniz</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_maria_catarina_dos_santos_sousa.jpg' />
+          <figcaption>Maria Catarina dos Santos Sousa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_matilde_alves_viveiros.jpeg' />
+          <figcaption>Matilde Alves Viveiros</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_miguel.jpg' />
+          <figcaption>Miguel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_raquel_martins.jpg' />
+          <figcaption>Raquel Martins</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_ricardo_magalhaes.jpg' />
+          <figcaption>Ricardo Magalhães</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_ruben.jpg' />
+          <figcaption>Ruben</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_sandra2.jpg' />
+          <figcaption>Sandra</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_sara_alexandra_lucas_levezinho_bibanio.jpg' />
+          <figcaption>Sara Alexandra Lucas Levezinho Bibanio</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_sofia.jpg' />
+          <figcaption>Sofia</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CAN_4C_susana.jpg' />
+          <figcaption>Susana</figcaption>
+        </figure>
+        <h3>EB1/PE de Câmara de Lobos</h3>
+        <figure>
+          <img src='images/gallery/CL_3A_andre_miguel.jpeg' />
+          <figcaption>André Miguel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_bruna_margarida_oliveira_faria.jpeg' />
+          <figcaption>Bruna Margarida Oliveira Faria</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_bruno_afonso_nunes_colonho.jpeg' />
+          <figcaption>Bruno Afonso Nunes Colonho</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_eduarda_carolina_atanasio_caires.jpeg' />
+          <figcaption>Eduarda Carolina Atanásio Caires</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_ema_filipa_carvalho_freitas.jpeg' />
+          <figcaption>Ema Filipa Carvalho Freitas</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_emanuel.jpeg' />
+          <figcaption>Emanuel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_fatima_carolina_ferreira.jpeg' />
+          <figcaption>Fátima Carolina Ferreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_francisco_jose_dos_reis_brito.jpeg' />
+          <figcaption>Francisco José dos Reis Brito</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_ines_andrade_rodrigues.jpeg' />
+          <figcaption>Inês Andrade Rodrigues</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_joana_filipa_olival_dos_santos_ferreira.jpeg' />
+          <figcaption>Joana Filipa Olival dos Santos Ferreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_joana_raquel_sousa_coelho_belo.jpeg' />
+          <figcaption>Joana Raquel Sousa Coelho Belo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_joao_pedro_oliveira.jpeg' />
+          <figcaption>João Pedro Oliveira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_luana.jpeg' />
+          <figcaption>Luana</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_mario_nelson_silva_goncalves.jpeg' />
+          <figcaption>Mário Nelson Silva Gonçalves</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_miguel_henrique_freitas_goncalves_de_barros.jpeg' />
+          <figcaption>Miguel Henrique Freitas Gonçalves de Barros</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_soraia.jpeg' />
+          <figcaption>Soraia</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3A_tiago.jpeg' />
+          <figcaption>Tiago</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_ana_dulce_henriques_andrade.jpeg' />
+          <figcaption>Ana Dulce Henriques Andrade</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_andreina_beatriz_freitas_da_silva.jpeg' />
+          <figcaption>Andreina Beatriz Freitas da Silva</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_carolina.jpeg' />
+          <figcaption>Carolina</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_clara.jpeg' />
+          <figcaption>Clara</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_clara_goncalves-dos_santos.jpeg' />
+          <figcaption>Clara Gonçalves dos Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_claudia_patricia_silva_brito.jpeg' />
+          <figcaption>Cláudia Patrícia Silva Brito</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_david.jpeg' />
+          <figcaption>David</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_deise.jpeg' />
+          <figcaption>Deise</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_duarte.jpeg' />
+          <figcaption>Duarte</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_enio.jpeg' />
+          <figcaption>Énio</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_isabel.jpeg' />
+          <figcaption>Isabel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_jose_nuno.jpeg' />
+          <figcaption>José Nuno</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_pedro_afonso_silva_henriques.jpeg' />
+          <figcaption>Pedro Afonso Silva Henriques</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_rodrigo.jpeg' />
+          <figcaption>Rodrigo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3B_sirla.jpeg' />
+          <figcaption>Sírla</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3_jessica_patricia_reis_nunes.jpeg' />
+          <figcaption>Jessica Patrícia Reis Nunes</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3_luis.jpeg' />
+          <figcaption>Luís</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_3_sergio_antonio.jpeg' />
+          <figcaption>Sérgio António</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_daniel_guilherme_ferreira.jpeg' />
+          <figcaption>Daniel Guilherme Ferreira</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_diogo_antonio.jpeg' />
+          <figcaption>Diogo António</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_ema_n.jpeg' />
+          <figcaption>Ema N</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_erico.jpeg' />
+          <figcaption>Erico</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_fabricio.jpeg' />
+          <figcaption>Fabrício</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_fatima.jpeg' />
+          <figcaption>Fátima</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_goncalo_teles.jpeg' />
+          <figcaption>Gonçalo Teles</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_hugo_calisto.jpeg' />
+          <figcaption>Hugo Calisto</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_hugo_calisto.jpg' />
+          <figcaption>Hugo Calisto</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_hugo_miguel.jpeg' />
+          <figcaption>Hugo Miguel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_joana_isabel.jpeg' />
+          <figcaption>Joana Isabel</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_joana_raquel_sousa.jpeg' />
+          <figcaption>Joana Raquel Sousa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_joao_leonardo_sa.jpeg' />
+          <figcaption>João Leonardo Sá</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_leonardo_f.jpeg' />
+          <figcaption>Leonardo F</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_micaela.jpeg' />
+          <figcaption>Micaela</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_nidia_deise_nunes_freitas.jpeg' />
+          <figcaption>Nídia Deise Nunes Freitas</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_pedro.jpeg' />
+          <figcaption>Pedro</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_pedro_abreu.jpeg' />
+          <figcaption>Pedro Abreu</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_rafael_luis.jpeg' />
+          <figcaption>Rafael Luís</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_ruben_santos.jpeg' />
+          <figcaption>Ruben Santos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_sara_sofia_reis_rodrigues.jpeg' />
+          <figcaption>Sara Sofia Reis Rodrigues</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_silvia_paixao.jpeg' />
+          <figcaption>Sílvia Paixão</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_tiago.jpeg' />
+          <figcaption>Tiago</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4A_vanessa.jpeg' />
+          <figcaption>Vanessa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_ana_beatriz.jpeg' />
+          <figcaption>Ana Beatriz</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_ana_daniela.jpeg' />
+          <figcaption>Ana Daniela</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_ana_isa.jpeg' />
+          <figcaption>Ana Isa</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_ana_margarida.jpeg' />
+          <figcaption>Ana Margarida</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_andre_bruno_goncalves_brito.jpeg' />
+          <figcaption>André Bruno Gonçalves Brito</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_carlos.jpeg' />
+          <figcaption>Carlos</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_catarina.jpeg' />
+          <figcaption>Catarina</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_eduardo.jpeg' />
+          <figcaption>Eduardo</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_enio.jpeg' />
+          <figcaption>Énio</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_fatima.jpeg' />
+          <figcaption>Fátima</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_francisco.jpeg' />
+          <figcaption>Francisco</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_gabriela.jpeg' />
+          <figcaption>Gabriela</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_janete.jpeg' />
+          <figcaption>Janete</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_laura.jpeg' />
+          <figcaption>Laura</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_leandra.jpeg' />
+          <figcaption>Leandra</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_nuno_roberto.jpeg' />
+          <figcaption>Nuno Roberto</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4B_vitor.jpeg' />
+          <figcaption>Vitor</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4_alexadre.jpeg' />
+          <figcaption>Alexandre</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4_leandro.jpeg' />
+          <figcaption>Leandro</figcaption>
+        </figure>
+        <figure>
+          <img src='images/gallery/CL_4_leandro2.jpeg' />
+          <figcaption>Leandro</figcaption>
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

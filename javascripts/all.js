@@ -1,57 +1,1016 @@
 $(document).ready(function(){
+	if(!$('body').hasClass('farmer')){
+		return;
+	}
+	
+	// useful function to count years on screen
+	future_count = function(to_year, in_seconds, screen){
+		var appear_time = 1;
+		screen.addClass('future');
+		var elem = screen.find('.clock');
+		var from_year = new Date().getFullYear();
+		elem.html(from_year);
+		
+		elem.addClass('show');
+		var sec_per_year = in_seconds / (to_year - from_year + 1);
+		
+		update_count = function(current_year, target_year, sec_per_year){
+
+			current_year++;
+			elem.html(current_year);
+			
+			if(current_year < target_year){
+				playIn(function(){update_count(current_year, target_year, sec_per_year)}, sec_per_year);
+			}
+		}
+		
+		playIn(function(){update_count(from_year, to_year, sec_per_year)}, sec_per_year + appear_time);
+		
+	}
+	
+	
+	
+	// ANIMATIONS:
+
+	animation_1_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 2);
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_1_b = function(consequence, sub_screen){		
+		playIn(function(){showConsequence(consequence)}, 2);		
+	}
+	
+	animation_1_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 2);
+		
+		playIn(function(){showConsequence(consequence)}, 5);		
+	}
+	
+	animation_2_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.maracuja-later-1').addClass('pop');
+			future_count(2020, 2, sub_screen);
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.maracuja-later-2').addClass('pop');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 4);
+	}
+	
+	animation_2_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.bubble').addClass('show');
+			future_count(2020, 2, sub_screen);
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.bubble').addClass('second');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.bubble').addClass('third');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.bubble').addClass('fourth');
+		}, 4);
+		
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_2_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.peel').addClass('drop');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.rat-1').addClass('come');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.rat-2').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 4);
+		
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_2_d = function(consequence, sub_screen){
+		playIn(function(){showConsequence(consequence)}, 1);
+	}
+	
+	animation_3_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.crap').addClass('come');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.crap-tree').addClass('grow');
+		}, 9);
+		
+		playIn(function(){ 
+			sub_screen.find('.cloud-1').addClass('go');
+			sub_screen.find('.pigeon').addClass('leave');
+		}, 10);
+		
+		playIn(function(){ 
+			sub_screen.find('.cloud-2').addClass('come');
+		}, 11);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('appear');
+		}, 13);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('second');
+		}, 14);
+		
+		playIn(function(){ 
+			sub_screen.find('.drop').addClass('third');
+		}, 15);
+				
+		playIn(function(){showConsequence(consequence)}, 16);
+	}
+	
+	
+	animation_3_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.rifle').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.gunpowder').addClass('appear');
+			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 7);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetable').addClass('future');
+		}, 8);
+				
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_3_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.bomb').addClass('show');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.bomb').removeClass('show');
+			sub_screen.find('.scarecrow').addClass('show');
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.scarecrow').removeClass('show');
+			sub_screen.find('.tape').addClass('show');
+		}, 5);
+		
+				
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_3_d = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.rifle').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison-1').addClass('show');
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison-2').addClass('show');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.pigeon').addClass('dead');
+			future_count(2020, 2, sub_screen);
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 7);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 8);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetable').addClass('future');
+		}, 9);
+				
+		playIn(function(){showConsequence(consequence)}, 11);
+	}
+	
+	animation_4_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('show');
+			future_count(2020, 2, sub_screen);
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('future');
+			sub_screen.find('.caterpillars-left').hide();
+			sub_screen.find('.caterpillars-right').hide();
+		}, 4);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 5);
+		
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 6);
+		
+		playIn(function(){ 
+			sub_screen.find('.tree').addClass('future');
+		}, 7);
+				
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_4_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.birds-left').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.birds-right').addClass('come');
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_4_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').addClass('move');
+			sub_screen.find('.caterpillars-right').addClass('move');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.poison').addClass('show');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.caterpillars-left').hide();
+			sub_screen.find('.caterpillars-right').hide();
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_5_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.speech-bubble').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.cigarette-1').addClass('come');
+		}, 2);
+				
+		playIn(function(){showConsequence(consequence)}, 4);
+	}
+	
+	animation_5_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.cigarette-2').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.fire').addClass('come');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('future');
+		}, 4);
+				
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_5_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.cigarette-3').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.contamination').addClass('appear');
+		}, 3);
+				
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_6_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.vegetables').addClass('future');
+		}, 2);
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_6_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.compost').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.trash-compost').addClass('come');
+		}, 2);
+		
+		playIn(function(){showConsequence(consequence)}, 4);	
+	}
+	
+	animation_6_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.truck').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.trash-truck').addClass('come');
+		}, 3);
+		
+		playIn(function(){ 
+			sub_screen.find('.levada').addClass('future');
+		}, 5);
+		
+		playIn(function(){showConsequence(consequence)}, 6);	
+	}
+	
+	animation_6_d = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.trash-fire').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.forest').addClass('burned');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_a = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.plastic').addClass('come');
+			future_count(2020, 2, sub_screen);
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.sea').addClass('appear');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_b = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.truck').addClass('come');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.plastic-truck').addClass('come');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_c = function(consequence, sub_screen){
+		playIn(function(){ 
+			sub_screen.find('.trash-group').addClass('show');
+		}, 1);
+		
+		playIn(function(){ 
+			sub_screen.find('.recycle-bubble').addClass('show');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 5);	
+	}
+	
+	animation_7_d = function(consequence, sub_screen){		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-bubble').addClass('show');
+		}, 0);
+		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-trash').addClass('show');
+		}, 2);
+		
+		playIn(function(){ 
+			sub_screen.find('.abandoned-bubble').addClass('future');
+		}, 4);
+		
+		playIn(function(){showConsequence(consequence)}, 6);	
+	}
+	
+	
+});
+$(document).ready(function(){
+	if(!$('body').hasClass('fisherman')){
+		return;
+	}
+	
+	// useful function to count years on screen
+	future_count = function(to_year, in_seconds, screen){
+		var appear_time = 1;
+		screen.addClass('future');
+		var elem = screen.find('.clock');
+		var from_year = new Date().getFullYear();
+		elem.html(from_year);
+		
+		elem.addClass('show');
+		var sec_per_year = in_seconds / (to_year - from_year + 1);
+		
+		update_count = function(current_year, target_year, sec_per_year){
+
+			current_year++;
+			elem.html(current_year);
+			
+			if(current_year < target_year){
+				playIn(function(){update_count(current_year, target_year, sec_per_year)}, sec_per_year);
+			}
+		}
+		
+		playIn(function(){update_count(from_year, to_year, sec_per_year)}, sec_per_year + appear_time);
+		
+	}
+	
+	
+	
+	// ANIMATIONS:
+
+	animation_1_a = function(consequence, sub_screen){
+
+		playIn(function(){ 
+			sub_screen.find('.net').addClass('throw');
+			sub_screen.find('.fish-left, .fish-right').addClass('swim');
+		}, 0);
+		
+		playIn(function(){ 
+			sub_screen.find('.net').removeClass('throw');
+			future_count(2030, 5, sub_screen);
+		}, 2);
+		
+		playIn(function(){
+			sub_screen.find('.fish-left, .fish-right').addClass('future');
+		}, 4);
+		
+		
+		playIn(function(){showConsequence(consequence)}, 7);
+		
+	}
+	
+	animation_1_b = function(consequence, sub_screen){
+
+		playIn(function(){
+			sub_screen.find('.net').addClass('throw');
+			sub_screen.find('.fish-left, .fish-right').addClass('swim');
+		}, 0);
+		
+		playIn(function(){ future_count(2030, 5, sub_screen) }, 1);
+		
+		playIn(function(){
+			sub_screen.find('.fish-left, .fish-right').addClass('future');
+		}, 3);
+		
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_1_c = function(consequence, sub_screen){
+		playIn(function(){
+			sub_screen.find('.fish-left, .fish-right').addClass('swim');
+		}, 0);
+		
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_2_a = function(consequence, sub_screen){
+		playIn(function(){
+			sub_screen.find('.fish-right').addClass('swim');
+		}, 0);
+		
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_2_b = function(consequence, sub_screen){
+		
+		playIn(function(){ $('#a1-bomb').show(); }, 1.5);
+		
+		playIn(function(){ $('#a1-fish-1').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-2').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-3').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-4').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-5').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-6').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-7').addClass('swim') }, 0);
+		playIn(function(){ $('#a1-fish-8').addClass('swim') }, 0);
+		
+		playIn(function(){ $('#a1-bomb').addClass('drop'); }, 2);
+		playIn(function(){ $('#a1-bomb').addClass('bomb-1'); }, 5);
+		playIn(function(){ $('#a1-bomb').addClass('bomb-2'); }, 5.2);
+		
+		
+		playIn(function(){ $('#a1-fish-1').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-2').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-3').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-4').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-5').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-6').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-7').addClass('die') }, 5.2);
+		playIn(function(){ $('#a1-fish-8').addClass('die') }, 5.2);
+		
+		playIn(function(){ future_count(2030, 5, sub_screen); }, 6);
+		playIn(function(){ $('#a1-bomb').hide(); }, 6);
+		playIn(function(){ $('#a1-after-fish-1').addClass('swim'); }, 6);
+		
+				
+		playIn(function(){showConsequence(consequence)}, 14.2);
+
+	}
+	
+	animation_2_c = function(consequence, sub_screen){
+		playIn(function(){
+			sub_screen.find('.fish-left, .fish-right').addClass('swim');
+		}, 0);
+		
+		playIn(function(){
+			sub_screen.find('.hooks').addClass('show');
+			sub_screen.find('.fished-1, .fished-2').addClass('fished');
+		}, 1);
+		
+		
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_3_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.egg').addClass('drop')}, 1);
+		playIn(function(){sub_screen.find('.fish, .nature').addClass('future')}, 4);		
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 3);
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_3_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.calendar').addClass('come')}, 0);
+		playIn(function(){sub_screen.find('.calendar').removeClass('come')}, 2);
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 2);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 4);
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_3_c = function(consequence, sub_screen){
+		playIn(function(){ future_count(2020, 2, sub_screen) }, 2);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 4);
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_4_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.fish-left, .fish-right').addClass('swim'); }, 0);
+		playIn(function(){ sub_screen.find('.organic').addClass('throw'); }, 0);
+		playIn(function(){ sub_screen.find('.birds-left').addClass('come'); }, 1);
+		playIn(function(){ sub_screen.find('.birds-right').addClass('come'); }, 1.5);
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+
+	animation_4_b = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.fish-left, .fish-right').addClass('swim'); }, 0);
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_5_a = function(consequence, sub_screen){
+		playIn(function(){ sub_screen.find('.fish, .monk-seal').addClass('swim'); }, 0);
+		
+		playIn(function(){ sub_screen.find('.bomb').show(); }, 1.5);
+		
+		playIn(function(){ sub_screen.find('.bomb').addClass('drop'); }, 2);
+		playIn(function(){ sub_screen.find('.bomb').addClass('bomb-1'); }, 5);
+		playIn(function(){ sub_screen.find('.bomb').addClass('bomb-2'); }, 5.2);
+		
+		playIn(function(){ sub_screen.find('.monk-seal').addClass('scared'); }, 5.2);
+		
+		playIn(function(){ $('#5a-bomb').hide(); }, 6);
+		
+		playIn(function(){showConsequence(consequence)}, 9);
+	}
+	
+	animation_5_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.net, .fish-group').addClass('net-2')}, 2);
+		playIn(function(){sub_screen.find('.net, .fish-group').removeClass('net-2'); 
+											sub_screen.find('.net, .fish-group').addClass('net-3');}, 3);
+		playIn(function(){showConsequence(consequence)}, 7);
+	}
+	
+	animation_5_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){showConsequence(consequence)}, 4);
+	}
+	
+	animation_6_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-non-profitable').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.money').addClass('show');}, 3);
+		playIn(function(){sub_screen.find('.fish-non-profitable').addClass('future')}, 3);
+		playIn(function(){sub_screen.find('.money').addClass('less');}, 4);
+		playIn(function(){sub_screen.find('.money').removeClass('less'); $('.money').addClass('and-less');}, 5);
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_6_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.net').addClass('throw')}, 1);
+		playIn(function(){sub_screen.find('.net, .fish-group').addClass('net-2')}, 2);
+		playIn(function(){sub_screen.find('.net, .fish-group').removeClass('net-2'); $('.net, .fish-group').addClass('net-3');}, 3);
+		playIn(function(){future_count(2020, 2, sub_screen);}, 3);		
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')},5);
+		playIn(function(){showConsequence(consequence)}, 7);
+	}
+	
+	animation_7_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.tangled-fish').addClass('pass')}, 1);
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('future')}, 5);
+		playIn(function(){sub_screen.find('.passing-boat').addClass('drive')}, 6);
+		playIn(function(){sub_screen.find('.shredded-net').addClass('tangle')}, 6);
+		playIn(function(){showConsequence(consequence)}, 12);
+	}
+	
+	animation_7_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
+		playIn(function(){showConsequence(consequence)}, 6);
+	}
+	
+	animation_7_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.broken-net').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.trashcan').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.trashcan-lid').addClass('show')}, 4);
+		playIn(function(){showConsequence(consequence)}, 7);
+	}
+	
+	animation_8_a = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.trash.num1').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.trash.num2').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.trash.num3').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.trash.num4').addClass('show')}, 4);
+		playIn(function(){sub_screen.find('.trash.num5').addClass('show')}, 5);
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+	animation_8_b = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.thought-bubble').addClass('show')}, 1);
+		playIn(function(){showConsequence(consequence)}, 5);
+	}
+	
+	animation_8_c = function(consequence, sub_screen){
+		playIn(function(){sub_screen.find('.fish-left, .fish-right').addClass('swim')}, 0);
+		playIn(function(){sub_screen.find('.battery.num1').addClass('show')}, 1);
+		playIn(function(){sub_screen.find('.battery.num2').addClass('show')}, 2);
+		playIn(function(){sub_screen.find('.battery.num3').addClass('show')}, 3);
+		playIn(function(){sub_screen.find('.chemicals').addClass('show')}, 4);
+		playIn(function(){showConsequence(consequence)}, 8);
+	}
+	
+});
+$(document).ready(function(){		
+	
+	
+
+	window.addEventListener('load', function() {
+	    new FastClick(document.body);
+	}, false);
+	
+	
+	// prevent scrolling on iOS
+	$(document).bind(
+	  'touchmove',
+	  function(e) {
+	    e.preventDefault();
+	  }
+	);
 	
 	var num_answers = 3; // specifies number of answers for current question
 	var current_screen = null;
+	var screen_height;
 	var viewModel;
 	var handle;	// used in drawn path by knockout js
+	var c_transition = 3; // if you change this, change css also
+	var step = 0;
+	
+	var playing_audio;
+	var mute = false;
+	playAudio = function(audio){
+		if(mute){
+			return;
+		}
+		
+		if(playing_audio){
+			playing_audio.pause();
+		}
+		if(audio){
+			playing_audio = audio;
+			playing_audio.play();
+		}		
+	}
+	pauseAudio = function(){
+		if(playing_audio){
+			playing_audio.pause();
+		}
+	}
+	
+	$('#audio_status').click(function(){
+		mute = !mute;
+		$(this).toggleClass('off');
+	})
 	
 	// --- ONLOAD ---
 	
 	// set every screen div to take the whole screen
-	fillScreen = function(){
+	fillScreen = function(){ // TODO: this should be made in knockout
 		$('.screen').css('height', window.innerHeight+'px');
 		$('.screen').css('margin-bottom', window.innerHeight+'px');
+		screen_height = window.innerHeight;
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px');
 	};
 	fillScreen();
 	$(window).resize(function(){fillScreen()});
 	
 	current_screen = $('.screen:first');
 	
-	$('.arrow').click(function(){return selectAnswer();});
+	$('#throw_button').click(function(){
+		return selectAnswer();
+	});
 	
 	// --- --- --- ---
-	
-	// shows control for current question
-	// TODO: remove
-	showControl = function(){
-		current_screen.append('<div class="control-wrap"></div>')
-		$('.control-wrap').load('screens/control-fisherman', function(){
-			$('.arrow').click(function(){return selectAnswer();})		
-		});
-	}	
 
-
-	// hides question and answers, and shows response when a response is clicked
-	// TODO: remove
-	$('.choices a').click(function(){
-		var screen = $(this).closest('.screen');
-		screen.find('.question, .choices, .consequence, .continue').toggle();
-		return false;
-	})
 	
 	// shifts the screen up one whole screen each time the boat is clicked
-	var step = 1;
 	$('#continue_journey_button').click(function(){
-		$('#consequence').hide();
-		$('#consequence .content').html('');
+		if(current_screen.next('.screen').hasClass('underwater')){
+			$('#score').show();
+			var underwater_screen = current_screen.next('.screen')
+			$('#character').removeClass('underwater');
+			underwater_screen.css('top', screen_height);
+			
+			playIn(function(){
+				$('.screen').css('margin-bottom', window.innerHeight+'px');
+				underwater_screen.remove();
+				$('#setting').removeClass('underwater');
+				continue_journey();
+			}, .5);
+		}else{
+			continue_journey();
+		}
+	});
+	
+	var lock_journey = false
+	continue_journey = function(){
+		if(lock_journey){
+			return;
+		}else{
+			lock_journey = true;
+		}
 		
-		$('#setting').css('top', '-'+(step*200)+'%');
 		step++;
+		$('#consequence').removeClass('come');
+		$('#character').addClass('walk');
+		playIn(function(){ $('#character').removeClass('walk'); }, 4);
+		playIn(function(){ lock_journey = false; }, 4);
+		$('#continue_journey_button').removeClass('come');
+		$('#setting').css('top', '-'+(step*2*screen_height)+'px'); // TODO: fix other places where this is used
+		
 		current_screen = current_screen.next();
 		viewModel.reset();
-		current_screen.find('.control').show();
+		
+		if(!current_screen.hasClass('special')){
+			$('#control .arrow').removeClass('stop');
+			$('#control .arrow').addClass('swing');
+			current_screen.find('.choices').addClass('come');
+			$('#control').addClass('come');
+			$('#throw_button').removeClass('leave');
+			$('#character').show();
+			$('#score').show();
+		}else{
+			$('#character').hide();
+			$('#score').hide();
+		}
+		
+		playAudio(current_screen.find('audio').get(0));
+
 		return false;
+	}
+	
+	// tutorial frame sequence
+	
+	$('#play_tutorial').click(function(){
+		$('#continue_journey_button').trigger('click');
+		play_tutorial();
+	})
+	
+	$('#just_play').click(function(){
+		$('.screen.tutorial').remove();
+		$('#character').show();
+		$('#score').show();
+		$('#continue_journey_button').trigger('click');
+	})
+	
+	play_tutorial = function(){
+		var tutorial_animations = [];
+		var anim;
+
+		$('#control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		$('#score').hide();
+		$('#character').show();
+		playAudio($('.screen.tutorial audio').get(0));
+
+		anim = setTimeout(function(){
+			$('#character').hide();
+			$('.tutorial .character-intro').hide();
+			$('.tutorial .advance-control-intro').show();
+		}, 6000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .advance-control-intro').hide();
+			$('.tutorial .sea-intro').show();
+		}, 10000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .sea-intro').hide();
+			$('.tutorial .arrow-intro').show();
+		}, 17000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').addClass('next');
+		}, 20000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .arrow-intro').hide();
+			$('.tutorial .choice-illuminates').show();
+		}, 25000);
+		tutorial_animations.push(anim);
+
+		anim = setTimeout(function(){
+			$('.tutorial .choice-illuminates').hide();
+			$('.tutorial .good-luck').show();
+		}, 31000);
+		tutorial_animations.push(anim);
+
+		last_tutorial_step = function(){
+			$('#continue_journey_button').addClass('come');
+		}
+
+		anim = setTimeout(function(){
+			last_tutorial_step();
+		}, 33000);
+		tutorial_animations.push(anim);
+		
+
+		$('#skip_tutorial').click(function(){
+			for(var i = 0; i < tutorial_animations.length; i++){
+				clearTimeout(tutorial_animations[i]);
+			}
+			$('#continue_journey_button').trigger('click');
+			return false;
+		});
+	}
+
+	
+	
+	// --- End Screen Functionality ---
+	
+	getScores = function(){
+		var journey_character = $('body').attr('class');
+		var stored_scores = localStorage[journey_character];
+		var scores;
+		
+		if(stored_scores){
+			scores = JSON.parse(localStorage[journey_character]);
+		}else{
+			scores = [];
+		}
+		
+		return scores;
+	}
+	
+	var score_saved = false; // Used to allow just one save per play
+	
+	addScore = function(name, score){
+		var journey_character = $('body').attr('class');
+		var scores = getScores();
+		if(!score_saved){
+			scores.unshift({'score':score, 'name':name});
+			localStorage[journey_character] = JSON.stringify(scores);
+			score_saved = true;
+		}		
+		return scores;		
+	}
+	
+	
+	$('#view_gallery, .close_gallery').click(function(){
+		$('.drawings').toggleClass('show');
+		$('.score_page').removeClass('show'); // Note: always hide the other box, just in case
 	});
+	
+	$('#view_score, .close_score').click(function(){
+		var scores = getScores();
+		viewModel.scores(scores);
+		$('.score_page').toggleClass('show');
+		$('.drawings').removeClass('show'); // Note: always hide the other box, just in case
+	});
+	
+	$('#save_score').click(function(){
+		
+		var score = viewModel.score();
+		var name = $('#score_name').attr('value');
+		var scores = addScore(name, score);
+		$('.save_box').html('');
+		
+		viewModel.scores(scores);
+	});
+	
+	
+	
+	// --- Gallery browsing ---
+	
+	// Go down
+	$('#gallery_down').click(function(){
+		var doc = $('.drawings section');
+		var doc_height = parseInt(doc.css('height'));
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(-current_top+window_height < doc_height){
+			doc.css('top', (current_top-window_height).toString()+'px');
+		}else{
+			doc.css('top', (-doc_height+window_height).toString()+'px');
+		}
+	})
+	
+	// Go up
+	$('#gallery_up').click(function(){
+		var doc = $('.drawings section');
+		var window_height = parseInt($('.drawings').css('height'), 10);
+		var current_top = parseInt(doc.css('top'), 10);
+		if(current_top + window_height < 0){
+			doc.css('top', (current_top+window_height).toString()+'px');
+		}else{
+			doc.css('top', '0px');
+		}
+	})
+	
 	
 
 	  //
@@ -71,6 +1030,11 @@ $(document).ready(function(){
 	     this.vx = ko.observable(20);
 	     this.vy = ko.observable(18);
 	     this.g = ko.observable(10);
+	
+		this.scores = ko.observableArray([]);
+	
+			this.score = ko.observable(0);
+			
 
 	     this.trails = ko.observableArray([]);
 	
@@ -91,10 +1055,47 @@ $(document).ready(function(){
 	         this.trails.push({ x: self.x(), y: self.y() });
 
 	         if (self.y() < 0) {
-				findSelectedChoice(self.x());				
+							findSelectedChoice(self.x());				
 	            clearInterval(handle);
 	         }
 	     }
+	}
+	
+	viewModel = new ViewModel();
+	ko.applyBindings(viewModel);
+	
+	// Triggered on a selected choice
+	$('.choice').bind('select',function(e){
+		viewModel.score(viewModel.score()+parseInt($(this).attr('score')));
+		$(this).addClass('selected');
+	});
+	
+	
+	
+	goAboveWater = function(consequence){
+		var underwater_screen = current_screen.next('.screen')
+		$('#character').removeClass('underwater');
+		
+		// underwater goes down
+		underwater_screen.css('top', screen_height);
+		
+		
+		playIn(function(){
+			$('.screen').css('margin-bottom', window.innerHeight+'px');
+			underwater_screen.remove();
+			$('#setting').removeClass('underwater');
+			
+			$('#continue_journey_button').trigger('click');
+		}, .5);
+	}
+	
+	showConsequence = function(consequence){
+		var consequence_content = consequence.find('.content');
+		$('#consequence .content').html(consequence_content);
+		$('#consequence').addClass('come');
+		$('#continue_journey_button').addClass('come');
+		
+		playAudio(consequence_content.find('audio').get(0));
 	}
 	
 	// find which choice was selected based on the x of the path's end point. returns choice div
@@ -109,31 +1110,55 @@ $(document).ready(function(){
 			choice = $(choices[i]);
 			left = choice.offset().left;
 			right = left+choice.width();
-			// alert(x+', '+left+', '+right);
-			if( x >= left && x <= right){
+			if( x < right){
 				found = true;
 			}
 		}
 		
-		$('#consequence .content').html(choice.find('.consequence'));
-		current_screen.find('.question, .choices, .control').addClass('fade');
-		$('#consequence').show()
+		$(choice).trigger('select');
+		
+		var consequence = choice.find('.consequence:first'); // this is not only used for underwater
+
+		current_screen.find('.choices').removeClass('come');
+		current_screen.find('.question').addClass('leave');
+		$('#control').removeClass('come');
+		$('#throw_button').addClass('leave');
+		
+		if(consequence.hasClass('underwater')){
+			var sub_screen = consequence.find('.screen')
+			sub_screen.insertAfter(current_screen);
+			current_screen.css('margin-bottom', '0px');
+			$('#setting').addClass('underwater');
+			$('#character').addClass('underwater');
+			$('#setting').css('top', '-'+((step)*2*screen_height+screen_height)+'px');
+			
+			// setTimeout(function(){bomb_animation(consequence, sub_screen)}, 7000);
+			
+			var pattern = /animation_/;
+			var animation_id = sub_screen.attr('id');
+			if(pattern.exec(animation_id)){
+				setTimeout(function(){eval(animation_id+'(consequence, sub_screen)');}, 7000);
+			}
+		}else{
+			showConsequence(consequence);
+		}
+
 	}
+
 	
 	
 	// selecting an answer by clicking the control
 	// TODO: it seems that the answers are unfairly distributed... the first one gets chosen more.. 
 	// OR maybe the angle should start from a random location
 	selectAnswer = function(){
-		var rotation = -getRotation(current_screen.find('.arrow'));
+		pauseAudio();
+		$('#control .arrow').addClass('stop');
+		var rotation = -getRotation($('#control .arrow'));
 		var answer_range = 90/num_answers;
-		var selection = Math.ceil(rotation/answer_range);
-		$('.line').addClass('answer-'+selection);
-		current_screen.find('.arrow').addClass('stop');
-		viewModel = new ViewModel();
+		var selection = Math.ceil(rotation/answer_range);		
+
 		var vy = Math.tan(rotation*Math.PI/180)*viewModel.vx();
 		viewModel.vy(vy);
-		ko.applyBindings(viewModel);
 		
 		clearInterval(handle); // stops a previous event
 		handle = setInterval(function() { viewModel.update() }, .01);
@@ -142,6 +1167,382 @@ $(document).ready(function(){
 	}
 
 })
+;
+/**
+ * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
+ *
+ * @version 0.3.6
+ * @codingstandard ftlabs-jslint
+ * @copyright The Financial Times Limited [All Rights Reserved]
+ * @license MIT License (see LICENSE.txt)
+ */
+
+/*jslint browser:true*/
+/*global define*/
+
+
+/**
+ * Instantiate fast-clicking listeners on the specificed layer.
+ *
+ * @constructor
+ * @param {Element} layer The layer to listen on
+ */
+
+function FastClick(layer) {
+	'use strict';
+	var oldOnClick, that = this;
+
+
+	/**
+	 * Whether a click is currently being tracked.
+	 *
+	 * @type boolean
+	 */
+	this.trackingClick = false;
+
+
+	/**
+	 * The element being tracked for a click.
+	 *
+	 * @type Element
+	 */
+	this.targetElement = null;
+
+
+	/**
+	 * The FastClick layer.
+	 *
+	 * @type Element
+	 */
+	this.layer = layer;
+
+	if (!layer || !layer.nodeType) {
+		throw new TypeError('Layer must be a document node');
+	}
+
+	// Bind handlers to this instance
+	this.onClick = function() { FastClick.prototype.onClick.apply(that, arguments); };
+	this.onTouchStart = function() { FastClick.prototype.onTouchStart.apply(that, arguments); };
+	this.onTouchMove = function() { FastClick.prototype.onTouchMove.apply(that, arguments); };
+	this.onTouchEnd = function() { FastClick.prototype.onTouchEnd.apply(that, arguments); };
+	this.onTouchCancel = function() { FastClick.prototype.onTouchCancel.apply(that, arguments); };
+
+	// Devices that don't support touch don't need FastClick
+	if (typeof window.ontouchstart === 'undefined') {
+		return;
+	}
+
+	// Set up event handlers as required
+	layer.addEventListener('click', this.onClick, true);
+	layer.addEventListener('touchstart', this.onTouchStart, true);
+	layer.addEventListener('touchmove', this.onTouchMove, true);
+	layer.addEventListener('touchend', this.onTouchEnd, true);
+	layer.addEventListener('touchcancel', this.onTouchCancel, true);
+
+	// If a handler is already declared in the element's onclick attribute, it will be fired before
+	// FastClick's onClick handler. Fix this by pulling out the user-defined handler function and
+	// adding it as listener.
+	if (typeof layer.onclick === 'function') {
+
+		// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
+		// - the old one won't work if passed to addEventListener directly.
+		oldOnClick = layer.onclick;
+		layer.addEventListener('click', function(event) {
+			oldOnClick(event);
+		}, false);
+		layer.onclick = null;
+	}
+}
+
+
+/**
+ * Android requires an exception for labels.
+ *
+ * @type boolean
+ */
+FastClick.prototype.deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0;
+
+
+/**
+ * Determine whether a given element requires a native click.
+ *
+ * @param {Element} target DOM element
+ * @returns {boolean} Returns true if the element needs a native click
+ */
+FastClick.prototype.needsClick = function(target) {
+	'use strict';
+	switch (target.nodeName.toLowerCase()) {
+	case 'label':
+	case 'video':
+		return true;
+	default:
+		return (/\bneedsclick\b/).test(target.className);
+	}
+};
+
+
+/**
+ * Determine whether a given element requires a call to focus to simulate click into element.
+ *
+ * @param {Element} target target DOM element.
+ * @returns {boolean} Returns true if the element requires a call to focus to simulate native click.
+ */
+FastClick.prototype.needsFocus = function(target) {
+	'use strict';
+	switch (target.nodeName.toLowerCase()) {
+	case 'textarea':
+	case 'select':
+		return true;
+	case 'input':
+		switch (target.type) {
+		case 'button':
+		case 'checkbox':
+		case 'file':
+		case 'image':
+		case 'radio':
+		case 'submit':
+			return false;
+		}
+		return true;
+	default:
+		return (/\bneedsfocus\b/).test(target.className);
+	}
+};
+
+
+/**
+ * Send a click event to the element if it needs it.
+ *
+ * @returns {boolean} Whether the click was sent or not
+ */
+FastClick.prototype.maybeSendClick = function(targetElement, event) {
+	'use strict';
+	var clickEvent, touch;
+
+	// Prevent the actual click from going though - unless the target node is marked as requiring
+	// real clicks or if it is in the whitelist in which case only non-programmatic clicks are permitted
+	// to open the options list and so the original event is required.
+	if (this.needsClick(targetElement)) {
+		return false;
+	}
+
+	// On some Android devices activeElement needs to be blurred otherwise the synthetic click will have no effect (#24)
+	if (document.activeElement && document.activeElement !== targetElement) {
+		document.activeElement.blur();
+	}
+
+	touch = event.changedTouches[0];
+
+	// Synthesise a click event, with an extra attribute so it can be tracked
+	clickEvent = document.createEvent('MouseEvents');
+	clickEvent.initMouseEvent('click', true, true, window, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, false, false, false, false, 0, null);
+	clickEvent.forwardedTouchEvent = true;
+	targetElement.dispatchEvent(clickEvent);
+
+	return true;
+};
+
+
+/**
+ * On touch start, record the position and scroll offset.
+ *
+ * @param {Event} event
+ * @returns {boolean}
+ */
+FastClick.prototype.onTouchStart = function(event) {
+	'use strict';
+	var touch = event.targetTouches[0];
+
+	this.trackingClick = true;
+	this.targetElement = event.target;
+
+	this.touchStartX = touch.pageX;
+	this.touchStartY = touch.pageY;
+
+	return true;
+};
+
+
+/**
+ * Based on a touchmove event object, check whether the touch has moved past a boundary since it started.
+ *
+ * @param {Event} event
+ * @returns {boolean}
+ */
+FastClick.prototype.touchHasMoved = function(event) {
+	'use strict';
+	var touch = event.targetTouches[0];
+
+	if (Math.abs(touch.pageX - this.touchStartX) > 10 || Math.abs(touch.pageY - this.touchStartY) > 10) {
+		return true;
+	}
+
+	return false;
+};
+
+
+/**
+ * Update the last position.
+ *
+ * @param {Event} event
+ * @returns {boolean}
+ */
+FastClick.prototype.onTouchMove = function(event) {
+	'use strict';
+	if (!this.trackingClick) {
+		return true;
+	}
+
+	// If the touch has moved, cancel the click tracking
+	if (this.targetElement !== event.target || this.touchHasMoved(event)) {
+		this.trackingClick = false;
+		this.targetElement = null;
+	}
+
+	return true;
+};
+
+
+/**
+ * On touch end, determine whether to send a click event at once.
+ *
+ * @param {Event} event
+ * @returns {boolean}
+ */
+FastClick.prototype.onTouchEnd = function(event) {
+	'use strict';
+	var forElement, targetElement = this.targetElement;
+
+	if (!this.trackingClick) {
+		return true;
+	}
+
+	this.trackingClick = false;
+
+	if (targetElement.nodeName.toLowerCase() === 'label' && targetElement.htmlFor) {
+		forElement = document.getElementById(targetElement.htmlFor);
+		if (forElement) {
+			targetElement.focus();
+			if (this.deviceIsAndroid) {
+				return false;
+			}
+
+			if (this.maybeSendClick(forElement, event)) {
+				event.preventDefault();
+			}
+
+			return false;
+		}
+	} else if (this.needsFocus(targetElement)) {
+		targetElement.focus();
+		if (targetElement.tagName.toLowerCase() !== 'select') {
+			event.preventDefault();
+		}
+		return false;
+	}
+
+	if (!this.maybeSendClick(targetElement, event)) {
+		return false;
+	}
+
+	event.preventDefault();
+	return false;
+};
+
+
+/**
+ * On touch cancel, stop tracking the click.
+ *
+ * @returns {void}
+ */
+FastClick.prototype.onTouchCancel = function() {
+	'use strict';
+	this.trackingClick = false;
+	this.targetElement = null;
+};
+
+
+/**
+ * On actual clicks, determine whether this is a touch-generated click, a click action occurring
+ * naturally after a delay after a touch (which needs to be cancelled to avoid duplication), or
+ * an actual click which should be permitted.
+ *
+ * @param {Event} event
+ * @returns {boolean}
+ */
+FastClick.prototype.onClick = function(event) {
+	'use strict';
+	var oldTargetElement;
+
+	if (event.forwardedTouchEvent) {
+		return true;
+	}
+
+	// If a target element was never set (because a touch event was never fired) allow the click
+	if (!this.targetElement) {
+		return true;
+	}
+
+	oldTargetElement = this.targetElement;
+	this.targetElement = null;
+
+	// Programmatically generated events targeting a specific element should be permitted
+	if (!event.cancelable) {
+		return true;
+	}
+
+	// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
+	if (event.target.type === 'submit' && event.detail === 0) {
+		return true;
+	}
+
+	// Derive and check the target element to see whether the click needs to be permitted;
+	// unless explicitly enabled, prevent non-touch click events from triggering actions,
+	// to prevent ghost/doubleclicks.
+	if (!this.needsClick(oldTargetElement)) {
+
+		// Prevent any user-added listeners declared on FastClick element from being fired.
+		if (event.stopImmediatePropagation) {
+			event.stopImmediatePropagation();
+		}
+
+		// Cancel the event
+		event.stopPropagation();
+		event.preventDefault();
+
+		return false;
+	}
+
+	// If clicks are permitted, return true for the action to go through.
+	return true;
+};
+
+
+/**
+ * Remove all FastClick's event listeners.
+ *
+ * @returns {void}
+ */
+FastClick.prototype.destroy = function() {
+	'use strict';
+	var layer = this.layer;
+
+	layer.removeEventListener('click', this.onClick, true);
+	layer.removeEventListener('touchstart', this.onTouchStart, true);
+	layer.removeEventListener('touchmove', this.onTouchMove, true);
+	layer.removeEventListener('touchend', this.onTouchEnd, true);
+	layer.removeEventListener('touchcancel', this.onTouchCancel, true);
+};
+
+
+if (typeof define === 'function' && define.amd) {
+
+	// AMD. Register as an anonymous module.
+	define(function() {
+		'use strict';
+		return FastClick;
+	});
+}
 ;
 /*! jQuery v1.8.2 jquery.com | jquery.org/license */
 
@@ -264,4 +1665,15 @@ getRotation = function(element){
 	return angle;
 	
 }
+
+// used as such:
+// playIn(function(){ code_goes_here }, in_seconds)
+playIn = function(func, in_seconds){
+	setTimeout(func, in_seconds*1000);
+}
+
+
+
+
+
 ;

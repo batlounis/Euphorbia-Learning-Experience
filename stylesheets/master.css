@@ -1,20 +1,162 @@
+@charset "UTF-8";
+@font-face {
+  font-family: ABeeZee-Regular;
+  src: url("ABeeZee-Regular.ttf"); }
+
+@font-face {
+  font-family: ABeeZee-Italic;
+  src: url("ABeeZee-Italic.ttf"); }
+
 @media only screen and (max-width: 600px), only screen and (max-height: 400px) {
-  /* line 2, master.css.scss */
+  /* line 14, master.css.scss */
   body {
     font-size: 100% !important; } }
-/* line 8, master.css.scss */
+/* line 19, master.css.scss */
+a {
+  font-family: 'Arial Black', 'ABeeZee-Regular'; }
+
+/* line 26, master.css.scss */
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+/* line 30, master.css.scss */
 body {
   width: 100%;
   height: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font-family: ABeeZee-Regular, "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   font-size: 140%; }
-  /* line 17, master.css.scss */
-  body.fisherman #character {
+  /* line 41, master.css.scss */
+  body.english #welcome_setting {
+    background-image: url(../images/welcome/background-en.jpg); }
+  /* line 45, master.css.scss */
+  body.english #score:before {
+    content: 'Points:'; }
+  /* line 49, master.css.scss */
+  body.english.fisherman #continue_journey_button, body.english .fisherman .continue_journey_button {
+    background-image: url(../images/fisherman/continue-button-en.png); }
+  /* line 53, master.css.scss */
+  body.english.farmer #continue_journey_button, body.english .farmer .continue_journey_button {
+    background-image: url(../images/farmer/continue-button-en.png); }
+  /* line 57, master.css.scss */
+  body.english.fisherman #throw_button, body.english .fisherman .throw_button {
+    background-image: url(../images/fisherman/throw-button-en.png); }
+  /* line 61, master.css.scss */
+  body.english.farmer #throw_button, body.english .farmer .throw_button {
+    background-image: url(../images/farmer/throw-button-en.png); }
+  /* line 66, master.css.scss */
+  body.english .screen .clock {
+    background-image: url(../images/fisherman/clock-en.png); }
+  /* line 73, master.css.scss */
+  body #welcome_setting {
+    background-image: url(../images/welcome/background.jpg);
+    background-color: #191714;
+    background-size: auto 100%;
+    background-position: center center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block; }
+    /* line 87, master.css.scss */
+    body #welcome_setting .choose_journey_button {
+      left: 43.5%;
+      width: 12%;
+      height: 100%;
+      margin: 28% auto auto auto;
+      display: table; }
+  /* line 96, master.css.scss */
+  body #choose_journey {
+    background-image: url(../images/background-choose-adventure.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center; }
+    /* line 110, master.css.scss */
+    body #choose_journey p {
+      font-size: 1.5em;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8); }
+    /* line 116, master.css.scss */
+    body #choose_journey a {
+      margin: 10%;
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      text-decoration: none;
+      padding: .5em; }
+  /* line 128, master.css.scss */
+  body #tutorial_ask {
+    text-align: center; }
+    /* line 131, master.css.scss */
+    body #tutorial_ask p {
+      font-size: 1.5em;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8); }
+    /* line 137, master.css.scss */
+    body #tutorial_ask a {
+      margin: 10% 5%;
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      text-decoration: none;
+      background-repeat: no-repeat;
+      background-size: auto 1.5em;
+      background-position: .5em;
+      padding: .5em .5em .5em 2em; }
+    /* line 150, master.css.scss */
+    body #tutorial_ask #play_tutorial {
+      background-image: url(../images/bt_tutorial.png);
+      padding: .5em .5em .5em 2.3em; }
+    /* line 155, master.css.scss */
+    body #tutorial_ask #just_play {
+      background-image: url(../images/bt_skip.png); }
+  /* line 161, master.css.scss */
+  body #setting {
+    z-index: 0;
+    background-size: 100%;
+    width: 100%;
+    overflow: auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 0; }
+  /* line 174, master.css.scss */
+  body.fisherman #setting {
+    background-image: url(../images/fisherman/background-shorter.jpg); }
+  /* line 179, master.css.scss */
+  body.farmer #setting {
+    background-image: url(../images/farmer/background.jpg); }
+    /* line 182, master.css.scss */
+    body.farmer #setting .overlay {
+      background-image: url(../images/farmer/background_overlay.png);
+      background-repeat: repeat;
+      background-size: contain;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  /* line 195, master.css.scss */
+  body #character {
     z-index: 100;
-    background-image: url(/images/fisherman/character.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -22,174 +164,2662 @@ body {
     position: fixed;
     top: 20%;
     width: 100%;
-    display: block; }
-  /* line 30, master.css.scss */
-  body.fisherman #setting {
-    z-index: 0;
-    background-image: url(/images/fisherman/background.jpg);
-    width: 100%;
-    overflow: auto;
-    background-position: top center;
-    position: relative;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    transition: top 2s;
-    -webkit-transition: top 3s;
-    -webkit-transition-timing-function: ease-in-out; }
+    display: none; }
+  /* line 207, master.css.scss */
+  body.fisherman #character {
+    background-image: url(../images/fisherman/character.png); }
+  /* line 211, master.css.scss */
+  body.farmer #character {
+    background-image: url(../images/farmer/character-2.png); }
+    /* line 214, master.css.scss */
+    body.farmer #character.walk {
+      -webkit-animation: walk 1s ease-in-out infinite alternate; }
+    /* line 218, master.css.scss */
+    body.farmer #character.underwater {
+      top: 0%; }
 
-/* line 49, master.css.scss */
+@-webkit-keyframes walk {
+  /* line 228, master.css.scss */
+  0% {
+    background-image: url(../images/farmer/character-1.png); }
+
+  /* line 229, master.css.scss */
+  50% {
+    background-image: url(../images/farmer/character-2.png); }
+
+  /* line 230, master.css.scss */
+  100% {
+    background-image: url(../images/farmer/character-3.png); } }
+
+/* line 233, master.css.scss */
 .screen {
   width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: top 1.5s; }
+  /* line 239, master.css.scss */
+  .screen .clock {
+    background-image: url(../images/fisherman/clock.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 40%;
+    height: 14.65263%;
+    padding-top: 5%;
+    padding-left: 7%;
+    z-index: 500;
+    position: absolute;
+    left: 10%;
+    bottom: -100%;
+    -webkit-transition: bottom 1s;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    z-index: 2000; }
+    /* line 262, master.css.scss */
+    .screen .clock.show {
+      bottom: 0; }
 
-/* line 56, master.css.scss */
-#continue_journey_button {
-  font-size: 1.5em; }
-
-/* line 60, master.css.scss */
-.fisherman .arrow, .trajectory, .choices, .continue {
+/* line 268, master.css.scss */
+#journey_buttons {
   position: absolute;
-  bottom: 10%; }
+  z-index: 5000;
+  left: 1%;
+  top: 3%; }
+  /* line 274, master.css.scss */
+  #journey_buttons #audio_status {
+    background-image: url(../images/bt_sound.png); }
+    /* line 277, master.css.scss */
+    #journey_buttons #audio_status:after {
+      content: 'OFF'; }
+    /* line 282, master.css.scss */
+    #journey_buttons #audio_status.off:after {
+      content: 'ON'; }
+  /* line 288, master.css.scss */
+  #journey_buttons #journey_exit {
+    background-image: url(../images/bt_exit.png); }
 
-/* line 65, master.css.scss */
-.question, .choices .choice .title, .consequence, .continue a {
-  background-color: white;
-  border: 1px solid #E2E2E2;
-  border-radius: 1em;
-  padding: .5em;
-  margin: 0 auto; }
-
-/* line 73, master.css.scss */
-.question, .choices, .control {
-  -webkit-transition: opacity 2s;
-  -webkit-transition-delay: 1s; }
-  /* line 77, master.css.scss */
-  .question.fade, .choices.fade, .control.fade {
-    opacity: 0; }
-
-/* line 83, master.css.scss */
-.choices .choice .title {
+/* line 296, master.css.scss */
+.tutorial #skip_tutorial {
+  position: absolute;
+  z-index: 5000;
+  right: 3%;
+  top: 3%;
+  white-space: nowrap; }
+/* line 304, master.css.scss */
+.tutorial .screen {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: center center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 316, master.css.scss */
+  .tutorial .screen.character-intro {
+    display: block; }
+/* line 321, master.css.scss */
+.tutorial * {
+  color: white; }
+/* line 325, master.css.scss */
+.tutorial .text {
+  width: 30%;
+  z-index: 4000; }
+/* line 330, master.css.scss */
+.tutorial .background {
+  background-image: url(../images/tutorial/frame7.png);
+  background-size: contain;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 900;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 344, master.css.scss */
+.tutorial .indicator {
+  background-size: contain;
+  background-position: top center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3100;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 358, master.css.scss */
+.tutorial .character-intro .indicator {
+  background-image: url(../images/tutorial/frame1.png); }
+/* line 362, master.css.scss */
+.tutorial .character-intro .text {
+  position: absolute;
+  left: 10%;
+  top: 10%; }
+/* line 370, master.css.scss */
+.tutorial .advance-control-intro .indicator {
+  background-image: url(../images/tutorial/frame2_arrow.png);
+  background-position: bottom right;
+  z-index: 1100; }
+/* line 376, master.css.scss */
+.tutorial .advance-control-intro .continue_journey_button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom right; }
+/* line 388, master.css.scss */
+.tutorial .advance-control-intro .text {
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+  text-align: right; }
+/* line 397, master.css.scss */
+.tutorial .sea-intro .indicator {
+  background-image: url(../images/tutorial/frame3.png);
+  background-position: bottom center; }
+/* line 402, master.css.scss */
+.tutorial .sea-intro .text {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 40%; }
+/* line 411, master.css.scss */
+.tutorial .arrow-intro .indicator {
+  background-position: bottom center;
+  background-size: cover; }
+  /* line 415, master.css.scss */
+  .tutorial .arrow-intro .indicator.fisherman {
+    background-image: url(../images/tutorial/frame4_rod_arrow.png); }
+  /* line 419, master.css.scss */
+  .tutorial .arrow-intro .indicator.farmer {
+    background-image: url(../images/tutorial/frame4_farmer_arrow.png); }
+/* line 424, master.css.scss */
+.tutorial .arrow-intro.next .indicator {
+  background-position: bottom center;
+  background-size: cover; }
+  /* line 428, master.css.scss */
+  .tutorial .arrow-intro.next .indicator.fisherman {
+    background-image: url(../images/tutorial/frame5_rod_range.png); }
+  /* line 432, master.css.scss */
+  .tutorial .arrow-intro.next .indicator.farmer {
+    background-image: url(../images/tutorial/frame5_farmer_range.png); }
+/* line 437, master.css.scss */
+.tutorial .arrow-intro .text-next {
+  display: none; }
+/* line 439, master.css.scss */
+.tutorial .arrow-intro.next .text {
+  display: none; }
+/* line 443, master.css.scss */
+.tutorial .arrow-intro.next .text-next {
+  display: block;
+  position: absolute;
+  left: 20%;
+  top: 23%;
+  z-index: 2000; }
+/* line 451, master.css.scss */
+.tutorial .arrow-intro .text {
+  position: absolute;
+  left: 20%;
+  top: 40%; }
+/* line 459, master.css.scss */
+.tutorial .choice-illuminates .indicator {
+  background-position: bottom center; }
+  /* line 462, master.css.scss */
+  .tutorial .choice-illuminates .indicator.farmer {
+    background-image: url(../images/tutorial/frame6-farmer.png); }
+  /* line 466, master.css.scss */
+  .tutorial .choice-illuminates .indicator.fisherman {
+    background-image: url(../images/tutorial/frame6-fisherman.png); }
+/* line 471, master.css.scss */
+.tutorial .choice-illuminates .text {
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  width: 40%; }
+/* line 480, master.css.scss */
+.tutorial .good-luck .indicator {
+  background-image: url(../images/tutorial/frame7.png);
+  background-position: bottom center;
+  background-size: cover; }
+/* line 486, master.css.scss */
+.tutorial .good-luck .text {
+  position: absolute;
+  left: 0%;
+  width: 100%;
   text-align: center;
-  vertical-align: top; }
+  top: 10%; }
 
-/* line 88, master.css.scss */
-.question, .continue a {
-  display: table;
-  table-layout: fixed; }
+/* line 497, master.css.scss */
+.underwater.screen {
+  background-size: cover;
+  background-position: top;
+  -webkit-transition: box-shadow 1s; }
+  /* line 502, master.css.scss */
+  .underwater.screen.future {
+    box-shadow: 0 0 7em 3em white inset; }
 
-/* line 94, master.css.scss */
-.choices .choice {
-  display: table-cell;
-  width: 2%;
-  /*used to force fixed table layout*/ }
+/* line 507, master.css.scss */
+.fisherman .underwater.screen {
+  background-image: url(../images/fisherman/background_underwater.png); }
 
-/* line 99, master.css.scss */
+/* line 511, master.css.scss */
+.farmer .underwater.screen {
+  background-image: url(../images/farmer/background_underwater.png); }
+
+/* line 517, master.css.scss */
+.question, #consequence p {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: .5em;
+  margin: 0 auto;
+  font-size: .9em; }
+
+/* line 528, master.css.scss */
 .question {
+  display: table;
+  table-layout: fixed;
   position: relative;
   width: 30em;
-  top: 5%; }
+  top: 10%; }
 
-/* line 106, master.css.scss */
-.continue {
-  width: 100%; }
+/* line 536, master.css.scss */
+#score {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 1em;
+  display: none;
+  width: 8%;
+  font-size: 1.5em;
+  text-align: center;
+  padding: .2em;
+  z-index: 500; }
+  /* line 550, master.css.scss */
+  #score:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    content: 'Pontuação:';
+    text-transform: uppercase;
+    font-size: .4em;
+    padding: .2em 0;
+    position: absolute;
+    top: -45%;
+    left: 0;
+    text-align: center;
+    width: 100%; }
 
-/* line 110, master.css.scss */
+/* line 569, master.css.scss */
+footer {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left;
+  display: block;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+
+/* line 580, master.css.scss */
+.fisherman .choices {
+  background-image: url(../images/fisherman/choices-background.png); }
+
+/* line 584, master.css.scss */
+.farmer .choices {
+  background-image: url(../images/farmer/choices-background.png); }
+
+/* line 588, master.css.scss */
 .choices {
-  float: none;
-  clear: both;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
   width: 75%;
-  left: 25%; }
+  padding-left: 25%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  counter-reset: choice;
+  z-index: 1100; }
+  /* line 602, master.css.scss */
+  .choices .choice {
+    display: table-cell;
+    width: 2%;
+    padding: .5em .5em 1.2em .5em;
+    margin: 0 auto;
+    color: white;
+    position: relative; }
+    /* line 612, master.css.scss */
+    .choices .choice:after {
+      content: '';
+      width: 90%;
+      margin-left: 5%;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      padding-top: 1em;
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+      background-position: bottom center;
+      height: 0.3em;
+      background-size: 100% 0.3em;
+      background-repeat: no-repeat; }
+    /* line 630, master.css.scss */
+    .choices .choice.selected:after {
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(../images/fisherman/selected-choice.png);
+      background-position: bottom center, 0.3em center;
+      background-size: 100% 0.3em, 100% 100%;
+      background-repeat: no-repeat; }
+    /* line 638, master.css.scss */
+    .choices .choice .title {
+      text-align: center;
+      vertical-align: top; }
+      /* line 642, master.css.scss */
+      .choices .choice .title:before {
+        content: counter(choice) ".";
+        counter-increment: choice;
+        margin-right: .5em; }
+    /* line 649, master.css.scss */
+    .choices .choice .consequence {
+      display: none;
+      font-size: .8em; }
 
-/* line 120, master.css.scss */
+/* line 657, master.css.scss */
+.arrow, .trajectory {
+  position: absolute;
+  bottom: 10%;
+  -webkit-backface-visibility: hidden; }
+
+/* line 666, master.css.scss */
 #consequence {
   width: 50%;
   left: 25%;
-  top: 25%;
   position: fixed;
-  display: none;
   z-index: 500; }
 
-/* line 129, master.css.scss */
-.choices .choice .consequence {
-  display: none; }
+/* line 675, master.css.scss */
+.fisherman #continue_journey_button, .fisherman .continue_journey_button {
+  background-image: url(../images/fisherman/continue-button.png); }
 
-/* line 133, master.css.scss */
-.consequence {
-  font-size: .8em; }
+/* line 679, master.css.scss */
+.farmer #continue_journey_button, .farmer .continue_journey_button {
+  background-image: url(../images/farmer/continue-button.png); }
 
-/* line 137, master.css.scss */
-.continue {
-  display: none; }
+/* line 683, master.css.scss */
+#continue_journey_button {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  position: fixed;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 3000;
+  cursor: pointer; }
 
-/*fisherman control styling*/
-/* line 142, master.css.scss */
-.control {
+/* line 699, master.css.scss */
+#control {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%; }
 
-/* line 149, master.css.scss */
-.line {
-  background-image: url("/images/fisherman/line.svg");
-  width: 14px;
-  height: 266px;
-  display: none;
-  position: absolute;
-  left: 200px;
-  bottom: 50px;
-  -webkit-transition: -webkit-transform 1s;
-  -webkit-transform-origin: 0 0; }
+/* line 706, master.css.scss */
+.fisherman #throw_button, .fisherman .throw_button {
+  background-image: url(../images/fisherman/throw-button.png); }
 
-/* line 161, master.css.scss */
-#line.answer-1 {
-  -webkit-transform: rotate(-40deg) scale(1.1); }
+/* line 710, master.css.scss */
+.farmer #throw_button, .farmer .throw_button {
+  background-image: url(../images/farmer/throw-button.png); }
 
-/* line 165, master.css.scss */
-#line.answer-2 {
-  -webkit-transform: rotate(-60deg) scale(1.8); }
-
-/* line 169, master.css.scss */
-#line.answer-3 {
-  -webkit-transform: rotate(-70deg) scale(2.5); }
-
-/* line 174, master.css.scss */
-.fisherman .arrow {
-  background-image: url("/images/fisherman/arrow.png");
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 38px;
+/* line 714, master.css.scss */
+#throw_button, .throw_button {
   display: block;
-  -webkit-transform-origin: 0 50%;
-  -webkit-animation: swing 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-direction: alternate;
-  z-index: 400; }
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  position: fixed;
+  bottom: 40%;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 1500;
+  cursor: pointer; }
 
-/* line 188, master.css.scss */
-.fisherman .arrow.stop {
-  -webkit-animation-play-state: paused; }
+/* line 728, master.css.scss */
+.fisherman .arrow {
+  background-image: url(../images/fisherman/control.png); }
+
+/* line 732, master.css.scss */
+.farmer .arrow {
+  background-image: url(../images/farmer/control.png); }
+
+/* line 736, master.css.scss */
+.arrow {
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  bottom: -5%;
+  background-size: contain;
+  display: none;
+  z-index: 400; }
 
 @-webkit-keyframes swing {
   /*	TODO: figure the exact angles to fit in the 25% --- 100% range*/
-  /* line 194, master.css.scss */
+  /* line 748, master.css.scss */
   0% {
     -webkit-transform: rotate(-52deg); }
 
-  /* line 195, master.css.scss */
+  /* line 749, master.css.scss */
   100% {
     -webkit-transform: rotate(-15deg); } }
 
-/* line 198, master.css.scss */
+/* line 752, master.css.scss */
 .trajectory {
   width: 100%;
   height: 100%;
   margin-bottom: 19px;
   left: 0;
   z-index: 50; }
+
+/* line 782, master.css.scss */
+.choices {
+  -webkit-transition: bottom 2s 3s;
+  bottom: -100%; }
+  /* line 786, master.css.scss */
+  .choices.come {
+    -webkit-transition: bottom 2s 4s;
+    bottom: 0; }
+
+/* line 792, master.css.scss */
+#throw_button {
+  -webkit-transition: left 2s 4s; }
+  /* line 795, master.css.scss */
+  #throw_button.leave {
+    -webkit-transition: left 2s 3s;
+    left: -100%; }
+
+/* line 801, master.css.scss */
+#control {
+  -webkit-transition: left 2s 3s;
+  left: -100%; }
+  /* line 805, master.css.scss */
+  #control.come {
+    -webkit-transition: left 2s 4s;
+    left: 0; }
+
+/* line 813, master.css.scss */
+.question.leave {
+  -webkit-transition: top 2s 3s;
+  top: -100%; }
+
+/* line 819, master.css.scss */
+#consequence {
+  -webkit-transition: top 1s 0;
+  top: -100%; }
+  /* line 823, master.css.scss */
+  #consequence.come {
+    top: 15%; }
+
+/* line 828, master.css.scss */
+#continue_journey_button {
+  -webkit-transition: right 1s 0;
+  right: -100%; }
+  /* line 832, master.css.scss */
+  #continue_journey_button.come {
+    right: 0; }
+
+/* line 839, master.css.scss */
+.arrow.swing {
+  display: block;
+  -webkit-transform-origin: 0 50%;
+  -webkit-animation: swing 1s;
+  -webkit-transform: rotate(-20deg);
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-direction: alternate; }
+  /* line 849, master.css.scss */
+  .arrow.swing.stop {
+    -webkit-animation-play-state: paused; }
+
+/* line 855, master.css.scss */
+.pier {
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  background-position: bottom center;
+  position: absolute;
+  bottom: 0%;
+  left: 0%; }
+
+/* line 867, master.css.scss */
+.fisherman .pier {
+  background-image: url(../images/fisherman/pier.png); }
+
+/* line 871, master.css.scss */
+.farmer .pier {
+  background-image: url(../images/farmer/pier.png);
+  width: 100%;
+  height: 50%; }
+
+/* line 877, master.css.scss */
+.catch {
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  bottom: 0%;
+  left: 0%; }
+
+/* line 889, master.css.scss */
+.fisherman .catch {
+  background-image: url(../images/fisherman/BOX.png);
+  background-position: top center; }
+  /* line 893, master.css.scss */
+  .fisherman .catch.good {
+    background-image: url(../images/fisherman/BOX_FEW.png); }
+    /* line 896, master.css.scss */
+    .fisherman .catch.good.great {
+      background-image: url(../images/fisherman/BOX_MEDIUM.png); }
+      /* line 899, master.css.scss */
+      .fisherman .catch.good.great.amazing {
+        background-image: url(../images/fisherman/BOX_LOT.png); }
+
+/* line 906, master.css.scss */
+.farmer .catch {
+  background-image: url(../images/farmer/BOX.png);
+  background-position: top center;
+  bottom: 10%; }
+  /* line 911, master.css.scss */
+  .farmer .catch.good {
+    background-image: url(../images/farmer/BOX_FEW.png); }
+    /* line 914, master.css.scss */
+    .farmer .catch.good.great {
+      background-image: url(../images/farmer/BOX_MEDIUM.png); }
+      /* line 917, master.css.scss */
+      .farmer .catch.good.great.amazing {
+        background-image: url(../images/farmer/BOX_LOT.png); }
+
+/* line 924, master.css.scss */
+.final_score {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.4em;
+  font-family: 'Arial Black', 'ABeeZee-Regular';
+  color: black;
+  position: relative;
+  text-transform: uppercase; }
+
+/* line 934, master.css.scss */
+.screen:first .arrow.first {
+  -webkit-animation-delay: 0; }
+
+/* line 939, master.css.scss */
+#setting {
+  -webkit-transition: top 3s ease-in-out; }
+
+/* line 945, master.css.scss */
+#setting.underwater {
+  -webkit-transition: top 3s ease-in-out 5s; }
+
+/* line 949, master.css.scss */
+body #character {
+  -webkit-transition: top 3s ease-in-out 1s; }
+  /* line 952, master.css.scss */
+  body #character.underwater {
+    top: -25%;
+    -webkit-transition: top 3s ease-in-out 5s; }
+
+/* line 959, master.css.scss */
+menu.general {
+  display: table;
+  margin: 0 auto 0 auto; }
+  /* line 964, master.css.scss */
+  menu.general a#view_score {
+    background-image: url(../images/bt_save.png); }
+  /* line 968, master.css.scss */
+  menu.general a#play_again {
+    background-image: url(../images/bt_play_again.png); }
+  /* line 972, master.css.scss */
+  menu.general a#exit {
+    background-image: url(../images/bt_exit.png); }
+  /* line 976, master.css.scss */
+  menu.general a#view_gallery {
+    background-image: url(../images/bt_gallery.png); }
+
+/* line 982, master.css.scss */
+menu.general a, #skip_tutorial, #audio_status, #journey_exit {
+  background-color: rgba(0, 0, 0, 0.9);
+  background-repeat: no-repeat;
+  background-size: auto 1.5em;
+  background-position: .3em;
+  padding: .2em .5em .2em 2em;
+  margin-right: .4em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  display: inline-block; }
+
+/* line 996, master.css.scss */
+#skip_tutorial {
+  background-image: url(../images/bt_skip.png); }
+
+/* line 1000, master.css.scss */
+#welcome_setting menu.general {
+  position: absolute;
+  bottom: 2%; }
+  /* line 1004, master.css.scss */
+  #welcome_setting menu.general #view_score {
+    background-image: url(../images/welcome/bt_highscore.png); }
+  /* line 1008, master.css.scss */
+  #welcome_setting menu.general #in_english {
+    background-image: url(../images/welcome/bt_english.png); }
+  /* line 1012, master.css.scss */
+  #welcome_setting menu.general #in_portuguese {
+    background-image: url(../images/welcome/bt_portuguese.png); }
+
+/* line 1019, master.css.scss */
+.score_page, .drawings {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3000;
+  overflow: hidden;
+  -webkit-transition: bottom 1s;
+  color: white; }
+  /* line 1032, master.css.scss */
+  .score_page.show, .drawings.show {
+    bottom: 0; }
+
+/* line 1038, master.css.scss */
+.close_score, .close_gallery {
+  width: 30%;
+  line-height: 2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url(../images/bt_skip.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: white;
+  position: relative;
+  top: 0;
+  margin: auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  z-index: 3000; }
+
+/* line 1058, master.css.scss */
+.score_page .save_box {
+  display: table;
+  margin: 1em auto; }
+  /* line 1062, master.css.scss */
+  .score_page .save_box input[type=text] {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    border-style: none;
+    font-size: 1.5em;
+    width: 10em;
+    margin-right: 1em; }
+  /* line 1071, master.css.scss */
+  .score_page .save_box #save_score {
+    background-color: gray;
+    padding: .5em;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.2); }
+/* line 1082, master.css.scss */
+.score_page table {
+  margin: auto; }
+  /* line 1085, master.css.scss */
+  .score_page table td {
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.7);
+    padding: 0 2em; }
+
+/* line 1099, master.css.scss */
+.drawings menu {
+  width: 10%;
+  height: 100%;
+  float: left;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5000; }
+/* line 1110, master.css.scss */
+.drawings section {
+  top: 0;
+  width: 90%;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: top .5s; }
+/* line 1119, master.css.scss */
+.drawings h3 {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  margin: 2% 2% 0 0; }
+/* line 1125, master.css.scss */
+.drawings figure {
+  width: 25%;
+  height: 50%;
+  margin: 2%;
+  padding: 0;
+  display: inline-block;
+  color: white;
+  font-size: .8em;
+  text-align: left; }
+  /* line 1135, master.css.scss */
+  .drawings figure img {
+    width: 100%;
+    max-height: 100%; }
+/* line 1141, master.css.scss */
+.drawings #gallery_down, .drawings #gallery_up {
+  display: block;
+  width: 90%;
+  margin: auto;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center center; }
+/* line 1150, master.css.scss */
+.drawings #gallery_down {
+  background-image: url(../images/gallery_right.png); }
+/* line 1154, master.css.scss */
+.drawings #gallery_up {
+  background-image: url(../images/gallery_left.png); }
+
+/* line 4, animations/farmer/0-common.css.scss */
+.farmer .vegetables {
+  z-index: 900 !important; }
+
+/* line 5, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a *:not(.clock), .farmer #animation_1_b *:not(.clock), .farmer #animation_1_c *:not(.clock), .farmer #animation_6_a *:not(.clock), .farmer #animation_6_b *:not(.clock), .farmer #animation_6_c *:not(.clock), .farmer #animation_6_d *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .levada, .farmer #animation_1_b .levada, .farmer #animation_1_c .levada, .farmer #animation_6_a .levada, .farmer #animation_6_b .levada, .farmer #animation_6_c .levada, .farmer #animation_6_d .levada {
+  background-image: url(../images/farmer/1-a-leave-it/levada.png); }
+  /* line 20, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .levada.future, .farmer #animation_1_b .levada.future, .farmer #animation_1_c .levada.future, .farmer #animation_6_a .levada.future, .farmer #animation_6_b .levada.future, .farmer #animation_6_c .levada.future, .farmer #animation_6_d .levada.future {
+    background-image: url(../images/farmer/1-a-leave-it/levada-future.png); }
+/* line 25, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .trash, .farmer #animation_1_b .trash, .farmer #animation_1_c .trash, .farmer #animation_6_a .trash, .farmer #animation_6_b .trash, .farmer #animation_6_c .trash, .farmer #animation_6_d .trash {
+  background-image: url(../images/farmer/1-a-leave-it/trash.png); }
+/* line 29, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .compost, .farmer #animation_1_a .trash-compost, .farmer #animation_1_a .trash-truck, .farmer #animation_1_b .compost, .farmer #animation_1_b .trash-compost, .farmer #animation_1_b .trash-truck, .farmer #animation_1_c .compost, .farmer #animation_1_c .trash-compost, .farmer #animation_1_c .trash-truck, .farmer #animation_6_a .compost, .farmer #animation_6_a .trash-compost, .farmer #animation_6_a .trash-truck, .farmer #animation_6_b .compost, .farmer #animation_6_b .trash-compost, .farmer #animation_6_b .trash-truck, .farmer #animation_6_c .compost, .farmer #animation_6_c .trash-compost, .farmer #animation_6_c .trash-truck, .farmer #animation_6_d .compost, .farmer #animation_6_d .trash-compost, .farmer #animation_6_d .trash-truck {
+  top: -100%;
+  -webkit-transition: top 2s; }
+  /* line 33, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .compost.come, .farmer #animation_1_a .trash-compost.come, .farmer #animation_1_a .trash-truck.come, .farmer #animation_1_b .compost.come, .farmer #animation_1_b .trash-compost.come, .farmer #animation_1_b .trash-truck.come, .farmer #animation_1_c .compost.come, .farmer #animation_1_c .trash-compost.come, .farmer #animation_1_c .trash-truck.come, .farmer #animation_6_a .compost.come, .farmer #animation_6_a .trash-compost.come, .farmer #animation_6_a .trash-truck.come, .farmer #animation_6_b .compost.come, .farmer #animation_6_b .trash-compost.come, .farmer #animation_6_b .trash-truck.come, .farmer #animation_6_c .compost.come, .farmer #animation_6_c .trash-compost.come, .farmer #animation_6_c .trash-truck.come, .farmer #animation_6_d .compost.come, .farmer #animation_6_d .trash-compost.come, .farmer #animation_6_d .trash-truck.come {
+    top: 0; }
+/* line 38, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .compost, .farmer #animation_1_b .compost, .farmer #animation_1_c .compost, .farmer #animation_6_a .compost, .farmer #animation_6_b .compost, .farmer #animation_6_c .compost, .farmer #animation_6_d .compost {
+  background-image: url(../images/farmer/1-a-leave-it/compost.png); }
+/* line 42, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .trash-compost, .farmer #animation_1_b .trash-compost, .farmer #animation_1_c .trash-compost, .farmer #animation_6_a .trash-compost, .farmer #animation_6_b .trash-compost, .farmer #animation_6_c .trash-compost, .farmer #animation_6_d .trash-compost {
+  background-image: url(../images/farmer/1-a-leave-it/trash-compost.png); }
+/* line 46, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .truck, .farmer #animation_1_b .truck, .farmer #animation_1_c .truck, .farmer #animation_6_a .truck, .farmer #animation_6_b .truck, .farmer #animation_6_c .truck, .farmer #animation_6_d .truck {
+  background-image: url(../images/farmer/1-a-leave-it/truck.png);
+  background-position: center bottom;
+  left: 100%;
+  -webkit-transition: left 2s;
+  z-index: 2000; }
+  /* line 53, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .truck.come, .farmer #animation_1_b .truck.come, .farmer #animation_1_c .truck.come, .farmer #animation_6_a .truck.come, .farmer #animation_6_b .truck.come, .farmer #animation_6_c .truck.come, .farmer #animation_6_d .truck.come {
+    left: 0; }
+/* line 58, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .trash-truck, .farmer #animation_1_b .trash-truck, .farmer #animation_1_c .trash-truck, .farmer #animation_6_a .trash-truck, .farmer #animation_6_b .trash-truck, .farmer #animation_6_c .trash-truck, .farmer #animation_6_d .trash-truck {
+  background-image: url(../images/farmer/1-a-leave-it/trash-truck.png);
+  background-position: center bottom; }
+/* line 63, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .trash-fire, .farmer #animation_1_b .trash-fire, .farmer #animation_1_c .trash-fire, .farmer #animation_6_a .trash-fire, .farmer #animation_6_b .trash-fire, .farmer #animation_6_c .trash-fire, .farmer #animation_6_d .trash-fire {
+  background-image: url(../images/farmer/1-a-leave-it/trash-fire.png);
+  background-position: center bottom;
+  top: 100%;
+  -webkit-transition: top 1s; }
+  /* line 69, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .trash-fire.come, .farmer #animation_1_b .trash-fire.come, .farmer #animation_1_c .trash-fire.come, .farmer #animation_6_a .trash-fire.come, .farmer #animation_6_b .trash-fire.come, .farmer #animation_6_c .trash-fire.come, .farmer #animation_6_d .trash-fire.come {
+    top: 0; }
+/* line 74, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .tree, .farmer #animation_1_b .tree, .farmer #animation_1_c .tree, .farmer #animation_6_a .tree, .farmer #animation_6_b .tree, .farmer #animation_6_c .tree, .farmer #animation_6_d .tree {
+  background-image: url(../images/farmer/1-a-leave-it/tree.png);
+  background-position: bottom left; }
+/* line 79, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .forest, .farmer #animation_1_b .forest, .farmer #animation_1_c .forest, .farmer #animation_6_a .forest, .farmer #animation_6_b .forest, .farmer #animation_6_c .forest, .farmer #animation_6_d .forest {
+  background-image: url(../images/farmer/1-a-leave-it/forest.png);
+  background-position: bottom left; }
+  /* line 83, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .forest.burned, .farmer #animation_1_b .forest.burned, .farmer #animation_1_c .forest.burned, .farmer #animation_6_a .forest.burned, .farmer #animation_6_b .forest.burned, .farmer #animation_6_c .forest.burned, .farmer #animation_6_d .forest.burned {
+    background-image: url(../images/farmer/1-a-leave-it/forest-burned.png); }
+/* line 88, animations/farmer/1-a-leave-it.css.scss */
+.farmer #animation_1_a .vegetables, .farmer #animation_1_b .vegetables, .farmer #animation_1_c .vegetables, .farmer #animation_6_a .vegetables, .farmer #animation_6_b .vegetables, .farmer #animation_6_c .vegetables, .farmer #animation_6_d .vegetables {
+  background-image: url(../images/farmer/1-a-leave-it/vegetables.png); }
+  /* line 91, animations/farmer/1-a-leave-it.css.scss */
+  .farmer #animation_1_a .vegetables.future, .farmer #animation_1_b .vegetables.future, .farmer #animation_1_c .vegetables.future, .farmer #animation_6_a .vegetables.future, .farmer #animation_6_b .vegetables.future, .farmer #animation_6_c .vegetables.future, .farmer #animation_6_d .vegetables.future {
+    background-image: url(../images/farmer/1-a-leave-it/vegetables-future.png); }
+
+/* line 5, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a *:not(.clock), .farmer #animation_2_b *:not(.clock), .farmer #animation_2_c *:not(.clock), .farmer #animation_2_d *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .trees, .farmer #animation_2_b .trees, .farmer #animation_2_c .trees, .farmer #animation_2_d .trees {
+  background-image: url(../images/farmer/2-a-let-it-grow/trees.png); }
+/* line 21, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .vegetables, .farmer #animation_2_b .vegetables, .farmer #animation_2_c .vegetables, .farmer #animation_2_d .vegetables {
+  background-image: url(../images/farmer/2-a-let-it-grow/vegetables.png); }
+  /* line 24, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .vegetables.future, .farmer #animation_2_b .vegetables.future, .farmer #animation_2_c .vegetables.future, .farmer #animation_2_d .vegetables.future {
+    background-image: url(../images/farmer/2-a-let-it-grow/vegetables-future.png); }
+/* line 29, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .maracuja, .farmer #animation_2_b .maracuja, .farmer #animation_2_c .maracuja, .farmer #animation_2_d .maracuja {
+  background-image: url(../images/farmer/2-a-let-it-grow/maracuja.png); }
+/* line 33, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .maracuja-later-1, .farmer #animation_2_a .maracuja-later-2, .farmer #animation_2_b .maracuja-later-1, .farmer #animation_2_b .maracuja-later-2, .farmer #animation_2_c .maracuja-later-1, .farmer #animation_2_c .maracuja-later-2, .farmer #animation_2_d .maracuja-later-1, .farmer #animation_2_d .maracuja-later-2 {
+  top: 100%;
+  -webkit-transition: top .5s; }
+  /* line 37, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .maracuja-later-1.pop, .farmer #animation_2_a .maracuja-later-2.pop, .farmer #animation_2_b .maracuja-later-1.pop, .farmer #animation_2_b .maracuja-later-2.pop, .farmer #animation_2_c .maracuja-later-1.pop, .farmer #animation_2_c .maracuja-later-2.pop, .farmer #animation_2_d .maracuja-later-1.pop, .farmer #animation_2_d .maracuja-later-2.pop {
+    top: 0; }
+/* line 42, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .maracuja-later-1, .farmer #animation_2_b .maracuja-later-1, .farmer #animation_2_c .maracuja-later-1, .farmer #animation_2_d .maracuja-later-1 {
+  background-image: url(../images/farmer/2-a-let-it-grow/maracuja-later-1.png); }
+/* line 46, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .maracuja-later-2, .farmer #animation_2_b .maracuja-later-2, .farmer #animation_2_c .maracuja-later-2, .farmer #animation_2_d .maracuja-later-2 {
+  background-image: url(../images/farmer/2-a-let-it-grow/maracuja-later-c.png); }
+/* line 50, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .maracuja-later-c, .farmer #animation_2_b .maracuja-later-c, .farmer #animation_2_c .maracuja-later-c, .farmer #animation_2_d .maracuja-later-c {
+  background-image: url(../images/farmer/2-a-let-it-grow/maracuja-later-2.png); }
+/* line 54, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .bubble, .farmer #animation_2_b .bubble, .farmer #animation_2_c .bubble, .farmer #animation_2_d .bubble {
+  background-image: url(../images/farmer/2-a-let-it-grow/bubble-1.png);
+  top: -100%;
+  -webkit-transition: top .5s;
+  background-position: top center; }
+  /* line 60, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .bubble.show, .farmer #animation_2_b .bubble.show, .farmer #animation_2_c .bubble.show, .farmer #animation_2_d .bubble.show {
+    top: 0; }
+  /* line 64, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .bubble.second, .farmer #animation_2_b .bubble.second, .farmer #animation_2_c .bubble.second, .farmer #animation_2_d .bubble.second {
+    background-image: url(../images/farmer/2-a-let-it-grow/bubble-2.png); }
+  /* line 68, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .bubble.third, .farmer #animation_2_b .bubble.third, .farmer #animation_2_c .bubble.third, .farmer #animation_2_d .bubble.third {
+    background-image: url(../images/farmer/2-a-let-it-grow/bubble-3.png); }
+  /* line 72, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .bubble.fourth, .farmer #animation_2_b .bubble.fourth, .farmer #animation_2_c .bubble.fourth, .farmer #animation_2_d .bubble.fourth {
+    background-image: url(../images/farmer/2-a-let-it-grow/bubble-4.png); }
+/* line 77, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .rat-1, .farmer #animation_2_b .rat-1, .farmer #animation_2_c .rat-1, .farmer #animation_2_d .rat-1 {
+  background-image: url(../images/farmer/2-a-let-it-grow/rat-1.png);
+  left: -100%;
+  -webkit-transition: left 1s; }
+  /* line 82, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .rat-1.come, .farmer #animation_2_b .rat-1.come, .farmer #animation_2_c .rat-1.come, .farmer #animation_2_d .rat-1.come {
+    left: 0; }
+/* line 87, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .rat-2, .farmer #animation_2_b .rat-2, .farmer #animation_2_c .rat-2, .farmer #animation_2_d .rat-2 {
+  background-image: url(../images/farmer/2-a-let-it-grow/rat-2.png);
+  left: 100%;
+  -webkit-transition: left 1s; }
+  /* line 92, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .rat-2.come, .farmer #animation_2_b .rat-2.come, .farmer #animation_2_c .rat-2.come, .farmer #animation_2_d .rat-2.come {
+    left: 0; }
+/* line 97, animations/farmer/2-a-let-it-grow.css.scss */
+.farmer #animation_2_a .peel, .farmer #animation_2_b .peel, .farmer #animation_2_c .peel, .farmer #animation_2_d .peel {
+  background-image: url(../images/farmer/2-a-let-it-grow/peel.png);
+  top: -100%;
+  -webkit-transition: top .5s; }
+  /* line 102, animations/farmer/2-a-let-it-grow.css.scss */
+  .farmer #animation_2_a .peel.drop, .farmer #animation_2_b .peel.drop, .farmer #animation_2_c .peel.drop, .farmer #animation_2_d .peel.drop {
+    top: 0; }
+
+/* line 5, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a *:not(.clock), .farmer #animation_3_b *:not(.clock), .farmer #animation_3_c *:not(.clock), .farmer #animation_3_d *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .grass, .farmer #animation_3_b .grass, .farmer #animation_3_c .grass, .farmer #animation_3_d .grass {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/grass.png);
+  background-position: bottom left; }
+/* line 22, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .bomb, .farmer #animation_3_b .bomb, .farmer #animation_3_c .bomb, .farmer #animation_3_d .bomb {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/bomb.png);
+  background-position: bottom left;
+  display: none; }
+  /* line 27, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .bomb.show, .farmer #animation_3_b .bomb.show, .farmer #animation_3_c .bomb.show, .farmer #animation_3_d .bomb.show {
+    display: block; }
+/* line 32, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .scarecrow, .farmer #animation_3_b .scarecrow, .farmer #animation_3_c .scarecrow, .farmer #animation_3_d .scarecrow {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/scarecrow.png);
+  background-position: bottom left;
+  display: none; }
+  /* line 37, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .scarecrow.show, .farmer #animation_3_b .scarecrow.show, .farmer #animation_3_c .scarecrow.show, .farmer #animation_3_d .scarecrow.show {
+    display: block; }
+/* line 42, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .tape, .farmer #animation_3_b .tape, .farmer #animation_3_c .tape, .farmer #animation_3_d .tape {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/tape.png);
+  background-position: bottom left;
+  -webkit-transition: opacity .5s;
+  display: none; }
+  /* line 48, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .tape.show, .farmer #animation_3_b .tape.show, .farmer #animation_3_c .tape.show, .farmer #animation_3_d .tape.show {
+    display: block; }
+/* line 53, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .poison-1, .farmer #animation_3_b .poison-1, .farmer #animation_3_c .poison-1, .farmer #animation_3_d .poison-1 {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/poison-1.png);
+  background-position: bottom left;
+  display: none; }
+  /* line 58, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .poison-1.show, .farmer #animation_3_b .poison-1.show, .farmer #animation_3_c .poison-1.show, .farmer #animation_3_d .poison-1.show {
+    display: block; }
+/* line 63, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .poison-2, .farmer #animation_3_b .poison-2, .farmer #animation_3_c .poison-2, .farmer #animation_3_d .poison-2 {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/poison-2.png);
+  background-position: bottom left;
+  display: none; }
+  /* line 68, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .poison-2.show, .farmer #animation_3_b .poison-2.show, .farmer #animation_3_c .poison-2.show, .farmer #animation_3_d .poison-2.show {
+    display: block; }
+/* line 73, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .rifle, .farmer #animation_3_b .rifle, .farmer #animation_3_c .rifle, .farmer #animation_3_d .rifle {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/rifle.png);
+  background-position: bottom right;
+  left: 100%;
+  -webkit-transition: left 1s; }
+  /* line 79, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .rifle.come, .farmer #animation_3_b .rifle.come, .farmer #animation_3_c .rifle.come, .farmer #animation_3_d .rifle.come {
+    left: 0; }
+/* line 84, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .gunpowder, .farmer #animation_3_b .gunpowder, .farmer #animation_3_c .gunpowder, .farmer #animation_3_d .gunpowder {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/gunpowder.png);
+  background-position: bottom right;
+  display: none; }
+  /* line 89, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .gunpowder.appear, .farmer #animation_3_b .gunpowder.appear, .farmer #animation_3_c .gunpowder.appear, .farmer #animation_3_d .gunpowder.appear {
+    display: block; }
+/* line 94, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .levada, .farmer #animation_3_b .levada, .farmer #animation_3_c .levada, .farmer #animation_3_d .levada {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/levada.png); }
+  /* line 97, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .levada.future, .farmer #animation_3_b .levada.future, .farmer #animation_3_c .levada.future, .farmer #animation_3_d .levada.future {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/levada-future.png); }
+/* line 102, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .crap, .farmer #animation_3_b .crap, .farmer #animation_3_c .crap, .farmer #animation_3_d .crap {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/crap.png);
+  background-position: bottom left;
+  opacity: 0;
+  top: -5%;
+  -webkit-animation-name: opacity, top;
+  -webkit-duration: .5s;
+  z-index: 2000; }
+  /* line 111, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .crap.come, .farmer #animation_3_b .crap.come, .farmer #animation_3_c .crap.come, .farmer #animation_3_d .crap.come {
+    opacity: 1;
+    top: 0; }
+/* line 117, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .crap-tree, .farmer #animation_3_b .crap-tree, .farmer #animation_3_c .crap-tree, .farmer #animation_3_d .crap-tree {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/crap-tree.png);
+  background-position: bottom left;
+  top: 100%;
+  opacity: 0;
+  -webkit-transition-name: opacity top;
+  -webkit-transition-duration: 1s;
+  z-index: 2000; }
+  /* line 126, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .crap-tree.grow, .farmer #animation_3_b .crap-tree.grow, .farmer #animation_3_c .crap-tree.grow, .farmer #animation_3_d .crap-tree.grow {
+    opacity: 1;
+    top: 0; }
+/* line 132, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .pigeon, .farmer #animation_3_b .pigeon, .farmer #animation_3_c .pigeon, .farmer #animation_3_d .pigeon {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/pigeon.png);
+  background-position: bottom left;
+  left: -100%;
+  -webkit-transition: left 2s;
+  z-index: 2000; }
+  /* line 139, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .pigeon.come, .farmer #animation_3_b .pigeon.come, .farmer #animation_3_c .pigeon.come, .farmer #animation_3_d .pigeon.come {
+    left: -30%; }
+  /* line 143, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .pigeon.move, .farmer #animation_3_b .pigeon.move, .farmer #animation_3_c .pigeon.move, .farmer #animation_3_d .pigeon.move {
+    left: 0; }
+  /* line 147, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .pigeon.leave, .farmer #animation_3_b .pigeon.leave, .farmer #animation_3_c .pigeon.leave, .farmer #animation_3_d .pigeon.leave {
+    left: 100%; }
+  /* line 151, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .pigeon.dead, .farmer #animation_3_b .pigeon.dead, .farmer #animation_3_c .pigeon.dead, .farmer #animation_3_d .pigeon.dead {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/pigeon-dead.png); }
+/* line 156, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .vegetables, .farmer #animation_3_b .vegetables, .farmer #animation_3_c .vegetables, .farmer #animation_3_d .vegetables {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/vegetables.png); }
+  /* line 159, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .vegetables.future, .farmer #animation_3_b .vegetables.future, .farmer #animation_3_c .vegetables.future, .farmer #animation_3_d .vegetables.future {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/vegetables-future.png); }
+/* line 164, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .cloud-1, .farmer #animation_3_b .cloud-1, .farmer #animation_3_c .cloud-1, .farmer #animation_3_d .cloud-1 {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/cloud-1.png);
+  z-index: 1500;
+  -webkit-transition: left 2s; }
+  /* line 169, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .cloud-1.go, .farmer #animation_3_b .cloud-1.go, .farmer #animation_3_c .cloud-1.go, .farmer #animation_3_d .cloud-1.go {
+    left: -100%; }
+/* line 174, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .cloud-2, .farmer #animation_3_b .cloud-2, .farmer #animation_3_c .cloud-2, .farmer #animation_3_d .cloud-2 {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/cloud-2.png);
+  z-index: 1500;
+  left: -100%;
+  -webkit-transition: left 2s; }
+  /* line 180, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .cloud-2.come, .farmer #animation_3_b .cloud-2.come, .farmer #animation_3_c .cloud-2.come, .farmer #animation_3_d .cloud-2.come {
+    left: 0; }
+/* line 185, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .forest, .farmer #animation_3_b .forest, .farmer #animation_3_c .forest, .farmer #animation_3_d .forest {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/forest.png);
+  background-position: bottom left; }
+  /* line 189, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .forest.future, .farmer #animation_3_b .forest.future, .farmer #animation_3_c .forest.future, .farmer #animation_3_d .forest.future {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/forest-future.png); }
+/* line 194, animations/farmer/3-a-let-pigeons-eat.css.scss */
+.farmer #animation_3_a .drop, .farmer #animation_3_b .drop, .farmer #animation_3_c .drop, .farmer #animation_3_d .drop {
+  background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-1.png);
+  display: none; }
+  /* line 198, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .drop.appear, .farmer #animation_3_b .drop.appear, .farmer #animation_3_c .drop.appear, .farmer #animation_3_d .drop.appear {
+    display: block; }
+  /* line 202, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .drop.second, .farmer #animation_3_b .drop.second, .farmer #animation_3_c .drop.second, .farmer #animation_3_d .drop.second {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-2.png); }
+  /* line 206, animations/farmer/3-a-let-pigeons-eat.css.scss */
+  .farmer #animation_3_a .drop.third, .farmer #animation_3_b .drop.third, .farmer #animation_3_c .drop.third, .farmer #animation_3_d .drop.third {
+    background-image: url(../images/farmer/3-a-let-pigeons-eat/drop-3.png); }
+
+/* line 5, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a *:not(.clock), .farmer #animation_4_b *:not(.clock), .farmer #animation_4_c *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .caterpillars-left, .farmer #animation_4_b .caterpillars-left, .farmer #animation_4_c .caterpillars-left {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/caterpillars-left.png);
+  background-position: bottom left;
+  -webkit-transition: left 2s;
+  z-index: 2000; }
+  /* line 23, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .caterpillars-left.move, .farmer #animation_4_b .caterpillars-left.move, .farmer #animation_4_c .caterpillars-left.move {
+    left: 5%; }
+/* line 28, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .caterpillars-right, .farmer #animation_4_b .caterpillars-right, .farmer #animation_4_c .caterpillars-right {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/caterpillars-right.png);
+  background-position: bottom left;
+  -webkit-transition: left 2s;
+  z-index: 2000; }
+  /* line 34, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .caterpillars-right.move, .farmer #animation_4_b .caterpillars-right.move, .farmer #animation_4_c .caterpillars-right.move {
+    left: -5%; }
+/* line 39, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .birds-left, .farmer #animation_4_b .birds-left, .farmer #animation_4_c .birds-left {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/birds-left.png);
+  background-position: bottom left;
+  -webkit-transition: left 2s;
+  z-index: 2000;
+  left: -100%; }
+  /* line 46, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .birds-left.come, .farmer #animation_4_b .birds-left.come, .farmer #animation_4_c .birds-left.come {
+    left: 0%; }
+/* line 51, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .birds-right, .farmer #animation_4_b .birds-right, .farmer #animation_4_c .birds-right {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/birds-right.png);
+  background-position: bottom left;
+  -webkit-transition: left 2s;
+  z-index: 2000;
+  left: 100%; }
+  /* line 58, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .birds-right.come, .farmer #animation_4_b .birds-right.come, .farmer #animation_4_c .birds-right.come {
+    left: 0%; }
+/* line 64, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .poison, .farmer #animation_4_b .poison, .farmer #animation_4_c .poison {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/poison.png);
+  background-position: bottom left;
+  -webkit-transition: opacity .5s;
+  opacity: 0;
+  z-index: 3000; }
+  /* line 71, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .poison.show, .farmer #animation_4_b .poison.show, .farmer #animation_4_c .poison.show {
+    opacity: 1; }
+  /* line 75, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .poison.future, .farmer #animation_4_b .poison.future, .farmer #animation_4_c .poison.future {
+    background-image: url(../images/farmer/4-a-poison-caterpillars/poison-future.png); }
+/* line 80, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .levada, .farmer #animation_4_b .levada, .farmer #animation_4_c .levada {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/levada.png); }
+  /* line 83, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .levada.future, .farmer #animation_4_b .levada.future, .farmer #animation_4_c .levada.future {
+    background-image: url(../images/farmer/4-a-poison-caterpillars/levada-future.png); }
+/* line 88, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .vegetables, .farmer #animation_4_b .vegetables, .farmer #animation_4_c .vegetables {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/vegetables.png); }
+  /* line 91, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .vegetables.future, .farmer #animation_4_b .vegetables.future, .farmer #animation_4_c .vegetables.future {
+    background-image: url(../images/farmer/4-a-poison-caterpillars/vegetables-future.png); }
+/* line 97, animations/farmer/4-a-poison-caterpillars.css.scss */
+.farmer #animation_4_a .tree, .farmer #animation_4_b .tree, .farmer #animation_4_c .tree {
+  background-image: url(../images/farmer/4-a-poison-caterpillars/tree.png); }
+  /* line 100, animations/farmer/4-a-poison-caterpillars.css.scss */
+  .farmer #animation_4_a .tree.future, .farmer #animation_4_b .tree.future, .farmer #animation_4_c .tree.future {
+    background-image: url(../images/farmer/4-a-poison-caterpillars/tree-future.png); }
+
+/* line 5, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a *:not(.clock), .farmer #animation_5_b *:not(.clock), .farmer #animation_5_c *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .speech-bubble, .farmer #animation_5_a .cigarette-1, .farmer #animation_5_a .cigarette-2, .farmer #animation_5_b .speech-bubble, .farmer #animation_5_b .cigarette-1, .farmer #animation_5_b .cigarette-2, .farmer #animation_5_c .speech-bubble, .farmer #animation_5_c .cigarette-1, .farmer #animation_5_c .cigarette-2 {
+  background-position: top center;
+  -webkit-transition: top 2s;
+  top: -100%; }
+  /* line 22, animations/farmer/5-a-ashtray.css.scss */
+  .farmer #animation_5_a .speech-bubble.come, .farmer #animation_5_a .cigarette-1.come, .farmer #animation_5_a .cigarette-2.come, .farmer #animation_5_b .speech-bubble.come, .farmer #animation_5_b .cigarette-1.come, .farmer #animation_5_b .cigarette-2.come, .farmer #animation_5_c .speech-bubble.come, .farmer #animation_5_c .cigarette-1.come, .farmer #animation_5_c .cigarette-2.come {
+    top: 0%; }
+/* line 28, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .speech-bubble, .farmer #animation_5_b .speech-bubble, .farmer #animation_5_c .speech-bubble {
+  background-image: url(../images/farmer/5-a-ashtray/speech-bubble.png); }
+/* line 32, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .cigarette-1, .farmer #animation_5_b .cigarette-1, .farmer #animation_5_c .cigarette-1 {
+  background-image: url(../images/farmer/5-a-ashtray/cigarette-1.png); }
+/* line 36, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .cigarette-2, .farmer #animation_5_b .cigarette-2, .farmer #animation_5_c .cigarette-2 {
+  background-image: url(../images/farmer/5-a-ashtray/cigarette-2.png); }
+/* line 40, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .cigarette-3, .farmer #animation_5_b .cigarette-3, .farmer #animation_5_c .cigarette-3 {
+  background-image: url(../images/farmer/5-a-ashtray/cigarette-3.png);
+  background-position: bottom center;
+  -webkit-transition: top 2s;
+  top: 100%; }
+  /* line 46, animations/farmer/5-a-ashtray.css.scss */
+  .farmer #animation_5_a .cigarette-3.come, .farmer #animation_5_b .cigarette-3.come, .farmer #animation_5_c .cigarette-3.come {
+    top: 0%; }
+/* line 51, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .rock, .farmer #animation_5_b .rock, .farmer #animation_5_c .rock {
+  background-image: url(../images/farmer/5-a-ashtray/rock.png); }
+/* line 55, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .contamination, .farmer #animation_5_b .contamination, .farmer #animation_5_c .contamination {
+  background-image: url(../images/farmer/5-a-ashtray/contamination.png);
+  opacity: 0;
+  -webkit-transition: opacity 1s; }
+  /* line 60, animations/farmer/5-a-ashtray.css.scss */
+  .farmer #animation_5_a .contamination.appear, .farmer #animation_5_b .contamination.appear, .farmer #animation_5_c .contamination.appear {
+    opacity: 1; }
+/* line 65, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .fire, .farmer #animation_5_b .fire, .farmer #animation_5_c .fire {
+  background-image: url(../images/farmer/5-a-ashtray/fire.png);
+  background-position: bottom left;
+  top: 100%;
+  -webkit-transition: top 2s; }
+  /* line 71, animations/farmer/5-a-ashtray.css.scss */
+  .farmer #animation_5_a .fire.come, .farmer #animation_5_b .fire.come, .farmer #animation_5_c .fire.come {
+    top: 0; }
+/* line 76, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .forest, .farmer #animation_5_b .forest, .farmer #animation_5_c .forest {
+  background-image: url(../images/farmer/5-a-ashtray/forest.png);
+  background-position: bottom left; }
+  /* line 80, animations/farmer/5-a-ashtray.css.scss */
+  .farmer #animation_5_a .forest.future, .farmer #animation_5_b .forest.future, .farmer #animation_5_c .forest.future {
+    background-image: url(../images/farmer/5-a-ashtray/forest-future.png); }
+/* line 85, animations/farmer/5-a-ashtray.css.scss */
+.farmer #animation_5_a .vegetables, .farmer #animation_5_b .vegetables, .farmer #animation_5_c .vegetables {
+  background-image: url(../images/farmer/5-a-ashtray/vegetables.png); }
+
+/* line 5, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a *:not(.clock), .farmer #animation_7_b *:not(.clock), .farmer #animation_7_c *:not(.clock), .farmer #animation_7_d *:not(.clock) {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 17, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .levada, .farmer #animation_7_b .levada, .farmer #animation_7_c .levada, .farmer #animation_7_d .levada {
+  background-image: url(../images/farmer/7-a-put-in-water/levada.png); }
+/* line 21, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .vegetables, .farmer #animation_7_b .vegetables, .farmer #animation_7_c .vegetables, .farmer #animation_7_d .vegetables {
+  background-image: url(../images/farmer/7-a-put-in-water/vegetables.png); }
+/* line 26, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .tree, .farmer #animation_7_b .tree, .farmer #animation_7_c .tree, .farmer #animation_7_d .tree {
+  background-image: url(../images/farmer/7-a-put-in-water/tree.png);
+  background-position: bottom left; }
+/* line 31, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .sea, .farmer #animation_7_b .sea, .farmer #animation_7_c .sea, .farmer #animation_7_d .sea {
+  background-image: url(../images/farmer/7-a-put-in-water/sea.png);
+  top: 100%;
+  -webkit-transition: top 2s; }
+  /* line 36, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .sea.appear, .farmer #animation_7_b .sea.appear, .farmer #animation_7_c .sea.appear, .farmer #animation_7_d .sea.appear {
+    top: 0; }
+/* line 41, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .plastic, .farmer #animation_7_b .plastic, .farmer #animation_7_c .plastic, .farmer #animation_7_d .plastic {
+  top: -100%;
+  -webkit-transition: top 2s; }
+  /* line 45, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .plastic.come, .farmer #animation_7_b .plastic.come, .farmer #animation_7_c .plastic.come, .farmer #animation_7_d .plastic.come {
+    top: 0; }
+  /* line 49, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .plastic.first, .farmer #animation_7_b .plastic.first, .farmer #animation_7_c .plastic.first, .farmer #animation_7_d .plastic.first {
+    background-image: url(../images/farmer/7-a-put-in-water/plastic-1.png);
+    -webkit-transition-delay: 0; }
+  /* line 54, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .plastic.second, .farmer #animation_7_b .plastic.second, .farmer #animation_7_c .plastic.second, .farmer #animation_7_d .plastic.second {
+    background-image: url(../images/farmer/7-a-put-in-water/plastic-2.png);
+    -webkit-transition-delay: .5s; }
+  /* line 59, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .plastic.third, .farmer #animation_7_b .plastic.third, .farmer #animation_7_c .plastic.third, .farmer #animation_7_d .plastic.third {
+    background-image: url(../images/farmer/7-a-put-in-water/plastic-3.png);
+    -webkit-transition-delay: 1s; }
+/* line 66, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .plastic-truck, .farmer #animation_7_b .plastic-truck, .farmer #animation_7_c .plastic-truck, .farmer #animation_7_d .plastic-truck {
+  top: -100%;
+  -webkit-transition: top 2s;
+  background-image: url(../images/farmer/7-a-put-in-water/plastic-truck.png);
+  background-position: center bottom;
+  z-index: 2000; }
+  /* line 73, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .plastic-truck.come, .farmer #animation_7_b .plastic-truck.come, .farmer #animation_7_c .plastic-truck.come, .farmer #animation_7_d .plastic-truck.come {
+    top: 0; }
+/* line 79, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .truck, .farmer #animation_7_b .truck, .farmer #animation_7_c .truck, .farmer #animation_7_d .truck {
+  background-image: url(../images/farmer/7-a-put-in-water/truck.png);
+  background-position: center bottom;
+  left: -100%;
+  -webkit-transition: left 2s;
+  z-index: 2300; }
+  /* line 86, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .truck.come, .farmer #animation_7_b .truck.come, .farmer #animation_7_c .truck.come, .farmer #animation_7_d .truck.come {
+    left: 0; }
+/* line 91, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .recycle-bubble, .farmer #animation_7_a .trash-group, .farmer #animation_7_a .abandoned-trash, .farmer #animation_7_a .abandoned-bubble, .farmer #animation_7_b .recycle-bubble, .farmer #animation_7_b .trash-group, .farmer #animation_7_b .abandoned-trash, .farmer #animation_7_b .abandoned-bubble, .farmer #animation_7_c .recycle-bubble, .farmer #animation_7_c .trash-group, .farmer #animation_7_c .abandoned-trash, .farmer #animation_7_c .abandoned-bubble, .farmer #animation_7_d .recycle-bubble, .farmer #animation_7_d .trash-group, .farmer #animation_7_d .abandoned-trash, .farmer #animation_7_d .abandoned-bubble {
+  top: -100%;
+  -webkit-transition: top .5s;
+  background-position: top center; }
+  /* line 96, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .recycle-bubble.show, .farmer #animation_7_a .trash-group.show, .farmer #animation_7_a .abandoned-trash.show, .farmer #animation_7_a .abandoned-bubble.show, .farmer #animation_7_b .recycle-bubble.show, .farmer #animation_7_b .trash-group.show, .farmer #animation_7_b .abandoned-trash.show, .farmer #animation_7_b .abandoned-bubble.show, .farmer #animation_7_c .recycle-bubble.show, .farmer #animation_7_c .trash-group.show, .farmer #animation_7_c .abandoned-trash.show, .farmer #animation_7_c .abandoned-bubble.show, .farmer #animation_7_d .recycle-bubble.show, .farmer #animation_7_d .trash-group.show, .farmer #animation_7_d .abandoned-trash.show, .farmer #animation_7_d .abandoned-bubble.show {
+    top: 0; }
+/* line 101, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .recycle-bubble, .farmer #animation_7_b .recycle-bubble, .farmer #animation_7_c .recycle-bubble, .farmer #animation_7_d .recycle-bubble {
+  background-image: url(../images/farmer/7-a-put-in-water/recycle-bubble.png); }
+/* line 105, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .trash-group, .farmer #animation_7_b .trash-group, .farmer #animation_7_c .trash-group, .farmer #animation_7_d .trash-group {
+  background-image: url(../images/farmer/7-a-put-in-water/trash-group.png); }
+/* line 109, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .abandoned-trash, .farmer #animation_7_b .abandoned-trash, .farmer #animation_7_c .abandoned-trash, .farmer #animation_7_d .abandoned-trash {
+  background-image: url(../images/farmer/7-a-put-in-water/abandoned-trash.png); }
+/* line 113, animations/farmer/7-a-put-in-water.css.scss */
+.farmer #animation_7_a .abandoned-bubble, .farmer #animation_7_b .abandoned-bubble, .farmer #animation_7_c .abandoned-bubble, .farmer #animation_7_d .abandoned-bubble {
+  background-image: url(../images/farmer/7-a-put-in-water/abandoned-bubble.png); }
+  /* line 116, animations/farmer/7-a-put-in-water.css.scss */
+  .farmer #animation_7_a .abandoned-bubble.future, .farmer #animation_7_b .abandoned-bubble.future, .farmer #animation_7_c .abandoned-bubble.future, .farmer #animation_7_d .abandoned-bubble.future {
+    background-image: url(../images/farmer/7-a-put-in-water/abandoned-bubble-future.png); }
+
+/* line 4, animations/fisherman/1-a-reserva.css.scss */
+.english.fisherman #animation_1_a .buoy {
+  background-image: url(../images/fisherman/1-a-reserva/buoy-en.png); }
+
+/* line 12, animations/fisherman/1-a-reserva.css.scss */
+.fisherman #animation_1_a .buoy {
+  background-image: url(../images/fisherman/1-a-reserva/buoy.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+/* line 25, animations/fisherman/1-a-reserva.css.scss */
+.fisherman #animation_1_a .fish-left, .fisherman #animation_1_a .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 35, animations/fisherman/1-a-reserva.css.scss */
+.fisherman #animation_1_a .fish-left {
+  background-image: url(../images/fisherman/1-a-reserva/fish-left.png); }
+  /* line 38, animations/fisherman/1-a-reserva.css.scss */
+  .fisherman #animation_1_a .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+  /* line 43, animations/fisherman/1-a-reserva.css.scss */
+  .fisherman #animation_1_a .fish-left.future {
+    background-image: url(../images/fisherman/1-a-reserva/fish-left-future.png); }
+/* line 48, animations/fisherman/1-a-reserva.css.scss */
+.fisherman #animation_1_a .fish-right {
+  background-image: url(../images/fisherman/1-a-reserva/fish-right.png); }
+  /* line 51, animations/fisherman/1-a-reserva.css.scss */
+  .fisherman #animation_1_a .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+  /* line 57, animations/fisherman/1-a-reserva.css.scss */
+  .fisherman #animation_1_a .fish-right.future {
+    background-image: url(../images/fisherman/1-a-reserva/fish-right-future.png); }
+
+@-webkit-keyframes fade {
+  /* line 64, animations/fisherman/1-a-reserva.css.scss */
+  50% {
+    margin-top: 2%; } }
+
+@-webkit-keyframes fade2 {
+  /* line 68, animations/fisherman/1-a-reserva.css.scss */
+  50% {
+    margin-top: 2%; } }
+
+/* line 5, animations/fisherman/1-b-young-fish.css.scss */
+.fisherman #animation_1_b .fish-left, .fisherman #animation_1_b .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 15, animations/fisherman/1-b-young-fish.css.scss */
+.fisherman #animation_1_b .fish-left {
+  background-image: url(../images/fisherman/1-b-young-fish/fish-left.png); }
+  /* line 18, animations/fisherman/1-b-young-fish.css.scss */
+  .fisherman #animation_1_b .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+  /* line 23, animations/fisherman/1-b-young-fish.css.scss */
+  .fisherman #animation_1_b .fish-left.future {
+    background-image: url(../images/fisherman/1-b-young-fish/fish-left-future.png); }
+/* line 28, animations/fisherman/1-b-young-fish.css.scss */
+.fisherman #animation_1_b .fish-right {
+  background-image: url(../images/fisherman/1-b-young-fish/fish-right.png); }
+  /* line 31, animations/fisherman/1-b-young-fish.css.scss */
+  .fisherman #animation_1_b .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+  /* line 37, animations/fisherman/1-b-young-fish.css.scss */
+  .fisherman #animation_1_b .fish-right.future {
+    background-image: url(../images/fisherman/1-b-young-fish/fish-right-future.png); }
+
+/* line 5, animations/fisherman/1-c-grown-fish.css.scss */
+.fisherman #animation_1_c .fish-left, .fisherman #animation_1_c .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 15, animations/fisherman/1-c-grown-fish.css.scss */
+.fisherman #animation_1_c .fish-left {
+  background-image: url(../images/fisherman/1-c-grown-fish/fish-left.png); }
+  /* line 18, animations/fisherman/1-c-grown-fish.css.scss */
+  .fisherman #animation_1_c .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 24, animations/fisherman/1-c-grown-fish.css.scss */
+.fisherman #animation_1_c .fish-right {
+  background-image: url(../images/fisherman/1-c-grown-fish/fish-right.png); }
+  /* line 27, animations/fisherman/1-c-grown-fish.css.scss */
+  .fisherman #animation_1_c .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+
+/* line 4, animations/fisherman/2-a-net.css.scss */
+.fisherman #animation_2_a .nature.special, .fisherman #animation_2_b .nature.special, .fisherman #animation_2_c .nature.special, .fisherman #animation_7_a .nature.special, .fisherman #animation_7_b .nature.special, .fisherman #animation_7_c .nature.special {
+  background-image: url(../images/fisherman/2-a-net/nature.png); }
+
+/* line 13, animations/fisherman/2-a-net.css.scss */
+.fisherman #animation_2_a .fish-left, .fisherman #animation_2_a .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 23, animations/fisherman/2-a-net.css.scss */
+.fisherman #animation_2_a .fish-left {
+  background-image: url(../images/fisherman/2-a-net/fish-left.png); }
+  /* line 26, animations/fisherman/2-a-net.css.scss */
+  .fisherman #animation_2_a .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 32, animations/fisherman/2-a-net.css.scss */
+.fisherman #animation_2_a .fish-right {
+  background-image: url(../images/fisherman/2-a-net/fish-right.png); }
+  /* line 35, animations/fisherman/2-a-net.css.scss */
+  .fisherman #animation_2_a .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+/* line 41, animations/fisherman/2-a-net.css.scss */
+.fisherman #animation_2_a .arrasto {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/2-a-net/arrasto.png); }
+
+/* line 4, animations/fisherman/2-b-bomb.css.scss */
+.fisherman #a1-bomb, .fisherman .bomb {
+  width: 80%;
+  height: 100%;
+  left: 10%;
+  top: -40%;
+  position: absolute;
+  display: none;
+  background-image: url(../images/fisherman/animation_bomb/bomb.png);
+  background-size: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: top 3s ease-in-out;
+  z-index: 2000; }
+  /* line 18, animations/fisherman/2-b-bomb.css.scss */
+  .fisherman #a1-bomb.drop, .fisherman .bomb.drop {
+    top: 20%; }
+  /* line 22, animations/fisherman/2-b-bomb.css.scss */
+  .fisherman #a1-bomb.bomb-1, .fisherman .bomb.bomb-1 {
+    background-size: contain;
+    background-image: url(../images/fisherman/animation_bomb/blast_1.png);
+    background-repeat: no-repeat; }
+  /* line 29, animations/fisherman/2-b-bomb.css.scss */
+  .fisherman #a1-bomb.bomb-2, .fisherman .bomb.bomb-2 {
+    background-size: contain;
+    background-image: url(../images/fisherman/animation_bomb/blast_2.png);
+    background-repeat: no-repeat; }
+
+/* line 36, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-1 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish1.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60%;
+  -webkit-transition: left 8s;
+  left: 80%; }
+  /* line 48, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-1.swim {
+    left: 10%; }
+  /* line 53, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-1.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 59, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-2 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 80%;
+  -webkit-transition: left 8s;
+  left: 90%; }
+  /* line 71, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-2.swim {
+    left: 10%; }
+  /* line 76, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-2.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 83, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-3 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish3.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 90%;
+  -webkit-transition: left 8s;
+  left: 10%; }
+  /* line 95, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-3.swim {
+    left: 70%; }
+  /* line 100, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-3.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 106, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-4 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish4.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: left 8s;
+  left: 30%; }
+  /* line 118, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-4.swim {
+    left: 90%; }
+  /* line 123, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-4.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 129, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-5 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish5.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60%;
+  -webkit-transition: left 8s;
+  left: 20%; }
+  /* line 141, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-5.swim {
+    left: 70%; }
+  /* line 146, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-5.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 152, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-6 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish6.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  -webkit-transition: left 8s;
+  left: 50%; }
+  /* line 164, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-6.swim {
+    left: 10%; }
+  /* line 169, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-6.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 175, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-7 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish7.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 80%;
+  -webkit-transition: left 8s;
+  left: 60%; }
+  /* line 187, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-7.swim {
+    left: 100%; }
+  /* line 192, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-7.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 198, animations/fisherman/2-b-bomb.css.scss */
+#a1-fish-8 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish8.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 90%;
+  -webkit-transition: left 8s;
+  left: 40%; }
+  /* line 210, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-8.swim {
+    left: 0%; }
+  /* line 214, animations/fisherman/2-b-bomb.css.scss */
+  #a1-fish-8.die {
+    -webkit-transition: top 1s;
+    top: 20%; }
+
+/* line 220, animations/fisherman/2-b-bomb.css.scss */
+.fisherman #a1-after-fish-1 {
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+  background-image: url(../images/fisherman/animation_bomb/fish8.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 70%;
+  -webkit-transition: left 3s linear 4s;
+  left: 100%; }
+  /* line 232, animations/fisherman/2-b-bomb.css.scss */
+  .fisherman #a1-after-fish-1.swim {
+    left: 0%; }
+
+/* line 5, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .nature.special {
+  background-image: url(../images/fisherman/2-c-selective/nature.png); }
+/* line 9, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .fish-left, .fisherman #animation_2_c .fish-right, .fisherman #animation_2_c .fished-1, .fisherman #animation_2_c .fished-2 {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 19, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .fished-1 {
+  background-image: url(../images/fisherman/2-c-selective/fished-1.png);
+  background-position: top left;
+  bottom: -100%;
+  -webkit-transition-name: bottom, left;
+  -webkit-transition-duration: 2s; }
+  /* line 26, animations/fisherman/2-c-selective.css.scss */
+  .fisherman #animation_2_c .fished-1.fished {
+    bottom: -28%;
+    left: -6%; }
+/* line 33, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .fished-2 {
+  background-image: url(../images/fisherman/2-c-selective/fished-2.png);
+  background-position: top right;
+  bottom: -100%;
+  -webkit-transition-name: bottom, left;
+  -webkit-transition-duration: 2s; }
+  /* line 40, animations/fisherman/2-c-selective.css.scss */
+  .fisherman #animation_2_c .fished-2.fished {
+    bottom: -43%;
+    left: 9%; }
+/* line 46, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .fish-left {
+  background-image: url(../images/fisherman/2-c-selective/fish-left.png); }
+  /* line 49, animations/fisherman/2-c-selective.css.scss */
+  .fisherman #animation_2_c .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 55, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .fish-right {
+  background-image: url(../images/fisherman/2-c-selective/fish-right.png); }
+  /* line 58, animations/fisherman/2-c-selective.css.scss */
+  .fisherman #animation_2_c .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+/* line 65, animations/fisherman/2-c-selective.css.scss */
+.fisherman #animation_2_c .hooks {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -100%;
+  z-index: 1000;
+  background-image: url(../images/fisherman/2-c-selective/hooks.png);
+  -webkit-transition: top 1s; }
+  /* line 77, animations/fisherman/2-c-selective.css.scss */
+  .fisherman #animation_2_c .hooks.show {
+    top: 0; }
+
+/* line 5, animations/fisherman/3-a-breeding-fish.css.scss */
+.fisherman #animation_3_a .nature.special {
+  background-image: url(../images/fisherman/3-a-breeding-fish/nature.png); }
+  /* line 8, animations/fisherman/3-a-breeding-fish.css.scss */
+  .fisherman #animation_3_a .nature.special.future {
+    background-image: url(../images/fisherman/3-a-breeding-fish/nature-future.png); }
+/* line 14, animations/fisherman/3-a-breeding-fish.css.scss */
+.fisherman #animation_3_a .fish {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/3-a-breeding-fish/fish.png); }
+  /* line 24, animations/fisherman/3-a-breeding-fish.css.scss */
+  .fisherman #animation_3_a .fish.future {
+    background-image: url(../images/fisherman/3-a-breeding-fish/fish-future.png); }
+/* line 29, animations/fisherman/3-a-breeding-fish.css.scss */
+.fisherman #animation_3_a .egg {
+  width: 10%;
+  height: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/3-a-breeding-fish/egg.png);
+  top: 65%;
+  left: 40%;
+  opacity: 0;
+  -webkit-transition: top 1s; }
+  /* line 43, animations/fisherman/3-a-breeding-fish.css.scss */
+  .fisherman #animation_3_a .egg.drop {
+    opacity: 1;
+    top: 75%; }
+
+/* line 6, animations/fisherman/3-b-other-time.css.scss */
+.fisherman #animation_3_b .nature.special, .fisherman #animation_3_c .nature.special {
+  background-image: url(../images/fisherman/3-b-other-time/nature.png); }
+/* line 10, animations/fisherman/3-b-other-time.css.scss */
+.fisherman #animation_3_b .calendar, .fisherman #animation_3_c .calendar {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/3-b-other-time/calendar.png);
+  top: -100%;
+  -webkit-transition: top 2s; }
+  /* line 22, animations/fisherman/3-b-other-time.css.scss */
+  .fisherman #animation_3_b .calendar.come, .fisherman #animation_3_c .calendar.come {
+    top: 0; }
+/* line 27, animations/fisherman/3-b-other-time.css.scss */
+.fisherman #animation_3_b .fish-left, .fisherman #animation_3_c .fish-left {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/3-b-other-time/fish-left.png); }
+  /* line 37, animations/fisherman/3-b-other-time.css.scss */
+  .fisherman #animation_3_b .fish-left.future, .fisherman #animation_3_c .fish-left.future {
+    background-image: url(../images/fisherman/3-b-other-time/fish-left-future.png); }
+/* line 42, animations/fisherman/3-b-other-time.css.scss */
+.fisherman #animation_3_b .fish-right, .fisherman #animation_3_c .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute;
+  background-image: url(../images/fisherman/3-b-other-time/fish-right.png); }
+  /* line 52, animations/fisherman/3-b-other-time.css.scss */
+  .fisherman #animation_3_b .fish-right.future, .fisherman #animation_3_c .fish-right.future {
+    background-image: url(../images/fisherman/3-b-other-time/fish-right-future.png); }
+
+/* line 5, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .nature.special, .fisherman #animation_4_b .nature.special {
+  background-image: url(../images/fisherman/4-a-organic-water/nature.png); }
+/* line 9, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .fish-left, .fisherman #animation_4_a .fish-right, .fisherman #animation_4_b .fish-left, .fisherman #animation_4_b .fish-right {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 100;
+  position: absolute; }
+/* line 19, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .fish-left, .fisherman #animation_4_b .fish-left {
+  background-image: url(../images/fisherman/4-a-organic-water/fish-left.png); }
+  /* line 22, animations/fisherman/4-a-organic-water.css.scss */
+  .fisherman #animation_4_a .fish-left.swim, .fisherman #animation_4_b .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 28, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .fish-right, .fisherman #animation_4_b .fish-right {
+  background-image: url(../images/fisherman/4-a-organic-water/fish-right.png); }
+  /* line 31, animations/fisherman/4-a-organic-water.css.scss */
+  .fisherman #animation_4_a .fish-right.swim, .fisherman #animation_4_b .fish-right.swim {
+    right: 20%;
+    -webkit-transition: right 8s; }
+/* line 37, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .birds-left, .fisherman #animation_4_b .birds-left {
+  background-image: url(../images/fisherman/4-a-organic-water/birds-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: top left;
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  -webkit-transition: left 3s; }
+  /* line 50, animations/fisherman/4-a-organic-water.css.scss */
+  .fisherman #animation_4_a .birds-left.come, .fisherman #animation_4_b .birds-left.come {
+    left: 0; }
+/* line 55, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .birds-right, .fisherman #animation_4_b .birds-right {
+  background-image: url(../images/fisherman/4-a-organic-water/birds-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: top right;
+  position: absolute;
+  top: 0%;
+  right: -100%;
+  -webkit-transition: right 3s; }
+  /* line 68, animations/fisherman/4-a-organic-water.css.scss */
+  .fisherman #animation_4_a .birds-right.come, .fisherman #animation_4_b .birds-right.come {
+    right: 0; }
+/* line 73, animations/fisherman/4-a-organic-water.css.scss */
+.fisherman #animation_4_a .organic, .fisherman #animation_4_b .organic {
+  background-image: url(../images/fisherman/4-a-organic-water/organic.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 3s; }
+  /* line 86, animations/fisherman/4-a-organic-water.css.scss */
+  .fisherman #animation_4_a .organic.throw, .fisherman #animation_4_b .organic.throw {
+    top: 0%; }
+
+/* line 5, animations/fisherman/5-a-seal-bomb.css.scss */
+.fisherman #animation_5_a .fish {
+  background-image: url(../images/fisherman/5-a-seal-bomb/fish.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 17, animations/fisherman/5-a-seal-bomb.css.scss */
+  .fisherman #animation_5_a .fish.swim {
+    left: -10%;
+    -webkit-transition: left 8s; }
+/* line 23, animations/fisherman/5-a-seal-bomb.css.scss */
+.fisherman #animation_5_a .monk-seal {
+  background-image: url(../images/fisherman/5-a-seal-bomb/monk-seal.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/fisherman/5-a-seal-bomb.css.scss */
+  .fisherman #animation_5_a .monk-seal.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+  /* line 40, animations/fisherman/5-a-seal-bomb.css.scss */
+  .fisherman #animation_5_a .monk-seal.scared {
+    background-image: url(../images/fisherman/5-a-seal-bomb/monk-seal-scared.png);
+    left: 5%; }
+
+/* line 2, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+.fisherman #animation_5_c .monk-seal {
+  left: -40%; }
+
+/* line 10, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+.fisherman #animation_5_b .monk-seal, .fisherman #animation_5_c .monk-seal {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/monk-seal.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute; }
+/* line 21, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+.fisherman #animation_5_b .net, .fisherman #animation_5_c .net {
+  left: 0%;
+  background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/net-1.png);
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background-repeat: no-repeat; }
+  /* line 29, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .net.throw, .fisherman #animation_5_c .net.throw {
+    top: 0; }
+  /* line 33, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .net.net-2, .fisherman #animation_5_c .net.net-2 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/net-2.png); }
+  /* line 37, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .net.net-3, .fisherman #animation_5_c .net.net-3 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/net-3.png);
+    background-size: contain;
+    background-position: bottom left; }
+/* line 44, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+.fisherman #animation_5_b .fish-group, .fisherman #animation_5_c .fish-group {
+  width: 50%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+  position: absolute;
+  left: 10%;
+  top: 40%; }
+  /* line 54, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group.net-2, .fisherman #animation_5_c .fish-group.net-2 {
+    left: 4%;
+    top: 30%; }
+  /* line 59, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group.net-3, .fisherman #animation_5_c .fish-group.net-3 {
+    top: 10%; }
+  /* line 63, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group *, .fisherman #animation_5_c .fish-group * {
+    width: 10%;
+    height: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; }
+  /* line 71, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group .num1, .fisherman #animation_5_c .fish-group .num1 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/fish-1.png);
+    top: 10%;
+    left: 15%; }
+  /* line 77, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group .num2, .fisherman #animation_5_c .fish-group .num2 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/fish-2.png);
+    top: 0%;
+    left: 25%; }
+  /* line 83, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group .num3, .fisherman #animation_5_c .fish-group .num3 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/fish-3.png);
+    top: 10%;
+    left: 25%; }
+  /* line 89, animations/fisherman/5-b-seal-fish-elsewhere.css.scss */
+  .fisherman #animation_5_b .fish-group .num4, .fisherman #animation_5_c .fish-group .num4 {
+    background-image: url(../images/fisherman/5-b-seal-fish-elsewhere/fish-4.png);
+    top: 0%;
+    left: 15%; }
+
+/* line 5, animations/fisherman/6-a-fish-non-profitable.css.scss */
+.fisherman #animation_6_a .fish-non-profitable {
+  background-image: url(../images/fisherman/6-a-fish-non-profitable/fish-non-profitable.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  -webkit-transition: left 8s; }
+  /* line 18, animations/fisherman/6-a-fish-non-profitable.css.scss */
+  .fisherman #animation_6_a .fish-non-profitable.swim {
+    left: 0%; }
+  /* line 22, animations/fisherman/6-a-fish-non-profitable.css.scss */
+  .fisherman #animation_6_a .fish-non-profitable.future {
+    background-image: url(../images/fisherman/6-a-fish-non-profitable/fish-non-profitable-2.png); }
+/* line 27, animations/fisherman/6-a-fish-non-profitable.css.scss */
+.fisherman #animation_6_a .fish-profitable {
+  background-image: url(../images/fisherman/6-a-fish-non-profitable/fish-profitable.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+/* line 40, animations/fisherman/6-a-fish-non-profitable.css.scss */
+.fisherman #animation_6_a .money {
+  background-image: url(../images/fisherman/6-a-fish-non-profitable/money.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none; }
+  /* line 53, animations/fisherman/6-a-fish-non-profitable.css.scss */
+  .fisherman #animation_6_a .money.show {
+    display: block; }
+  /* line 57, animations/fisherman/6-a-fish-non-profitable.css.scss */
+  .fisherman #animation_6_a .money.less {
+    background-image: url(../images/fisherman/6-a-fish-non-profitable/money-2.png); }
+  /* line 61, animations/fisherman/6-a-fish-non-profitable.css.scss */
+  .fisherman #animation_6_a .money.and-less {
+    background-image: url(../images/fisherman/6-a-fish-non-profitable/money-3.png); }
+
+/* line 5, animations/fisherman/6-b-throw-non-profitable.css.scss */
+.fisherman #animation_6_b .net {
+  left: 0%;
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/net-1.png);
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background-repeat: no-repeat; }
+  /* line 13, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .net.throw {
+    top: 0; }
+  /* line 17, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .net.net-2 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/net-2.png); }
+  /* line 21, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .net.net-3 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/net-3.png);
+    background-size: contain;
+    background-position: bottom left; }
+/* line 28, animations/fisherman/6-b-throw-non-profitable.css.scss */
+.fisherman #animation_6_b .fish-left {
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 40, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+  /* line 45, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-left.future {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-left-future.png); }
+/* line 50, animations/fisherman/6-b-throw-non-profitable.css.scss */
+.fisherman #animation_6_b .fish-right {
+  background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 62, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+  /* line 67, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-right.future {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-right-future.png); }
+/* line 72, animations/fisherman/6-b-throw-non-profitable.css.scss */
+.fisherman #animation_6_b .fish-group {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 100;
+  position: absolute;
+  left: 25%;
+  top: 20%; }
+  /* line 82, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group.net-2 {
+    left: 25%;
+    top: 30%; }
+  /* line 87, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group.net-3 {
+    top: 10%;
+    left: 0; }
+  /* line 92, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group * {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; }
+  /* line 100, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num1 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-1.png); }
+  /* line 104, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num2 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-2.png); }
+  /* line 108, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num3 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-3.png); }
+  /* line 112, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num4 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-4.png); }
+  /* line 116, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num5 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-5.png); }
+  /* line 120, animations/fisherman/6-b-throw-non-profitable.css.scss */
+  .fisherman #animation_6_b .fish-group .num6 {
+    background-image: url(../images/fisherman/6-b-throw-non-profitable/fish-6.png); }
+
+/* line 5, animations/fisherman/7-a-throw-net.css.scss */
+.fisherman #animation_7_a .shredded-net {
+  background-image: url(../images/fisherman/7-a-throw-net/shredded-net.png);
+  display: block;
+  width: 40%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -webkit-transition: top 4s; }
+  /* line 19, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .shredded-net.tangle {
+    top: 0%; }
+/* line 24, animations/fisherman/7-a-throw-net.css.scss */
+.fisherman #animation_7_a .fish-left {
+  background-image: url(../images/fisherman/7-a-throw-net/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 36, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 15s; }
+  /* line 41, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .fish-left.future {
+    background-image: url(../images/fisherman/7-a-throw-net/fish-left-future.png); }
+/* line 46, animations/fisherman/7-a-throw-net.css.scss */
+.fisherman #animation_7_a .fish-right {
+  background-image: url(../images/fisherman/7-a-throw-net/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 58, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 15s; }
+  /* line 63, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .fish-right.future {
+    background-image: url(../images/fisherman/7-a-throw-net/fish-right-future.png); }
+/* line 68, animations/fisherman/7-a-throw-net.css.scss */
+.fisherman #animation_7_a .tangled-fish {
+  background-image: url(../images/fisherman/7-a-throw-net/tangled-fish.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom center;
+  position: absolute;
+  top: 0%;
+  right: -100%;
+  -webkit-transition: right 10s; }
+  /* line 81, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .tangled-fish.pass {
+    right: 100%; }
+/* line 86, animations/fisherman/7-a-throw-net.css.scss */
+.fisherman #animation_7_a .passing-boat {
+  background-image: url(../images/fisherman/7-a-throw-net/passing-boat.png);
+  width: 30%;
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  -webkit-transition: left 5s;
+  left: -100%;
+  z-index: 2000; }
+  /* line 99, animations/fisherman/7-a-throw-net.css.scss */
+  .fisherman #animation_7_a .passing-boat.drive {
+    left: 20%; }
+
+/* line 5, animations/fisherman/7-b-fix-net.css.scss */
+.fisherman #animation_7_b .fish-left {
+  background-image: url(../images/fisherman/7-b-fix-net/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 17, animations/fisherman/7-b-fix-net.css.scss */
+  .fisherman #animation_7_b .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 23, animations/fisherman/7-b-fix-net.css.scss */
+.fisherman #animation_7_b .fish-right {
+  background-image: url(../images/fisherman/7-b-fix-net/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/fisherman/7-b-fix-net.css.scss */
+  .fisherman #animation_7_b .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+/* line 41, animations/fisherman/7-b-fix-net.css.scss */
+.fisherman #animation_7_b .broken-net {
+  background-image: url(../images/fisherman/7-b-fix-net/broken-net.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 54, animations/fisherman/7-b-fix-net.css.scss */
+  .fisherman #animation_7_b .broken-net.show {
+    top: 0; }
+/* line 59, animations/fisherman/7-b-fix-net.css.scss */
+.fisherman #animation_7_b .thought-bubble {
+  background-image: url(../images/fisherman/7-b-fix-net/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 72, animations/fisherman/7-b-fix-net.css.scss */
+  .fisherman #animation_7_b .thought-bubble.show {
+    top: 0; }
+
+/* line 5, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .fish-left {
+  background-image: url(../images/fisherman/7-c-net-trashcan/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 17, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 23, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .fish-right {
+  background-image: url(../images/fisherman/7-c-net-trashcan/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+/* line 41, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .broken-net {
+  background-image: url(../images/fisherman/7-c-net-trashcan/broken-net.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 54, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .broken-net.show {
+    top: 0; }
+/* line 59, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .thought-bubble {
+  background-image: url(../images/fisherman/7-c-net-trashcan/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 72, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .thought-bubble.show {
+    top: 0; }
+/* line 77, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .trashcan {
+  background-image: url(../images/fisherman/7-c-net-trashcan/trashcan.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 90, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .trashcan.show {
+    top: 0; }
+/* line 95, animations/fisherman/7-c-net-trashcan.css.scss */
+.fisherman #animation_7_c .trashcan-lid {
+  background-image: url(../images/fisherman/7-c-net-trashcan/trashcan-lid.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 108, animations/fisherman/7-c-net-trashcan.css.scss */
+  .fisherman #animation_7_c .trashcan-lid.show {
+    top: 0; }
+
+/* line 4, animations/fisherman/8-a-trash-ocean.css.scss */
+.fisherman #animation_8_a .nature.special, .fisherman #animation_8_b .nature.special, .fisherman #animation_8_c .nature.special {
+  background-image: url(../images/fisherman/8-a-trash-ocean/nature.png); }
+
+/* line 12, animations/fisherman/8-a-trash-ocean.css.scss */
+.fisherman #animation_8_a .fish-left {
+  background-image: url(../images/fisherman/8-a-trash-ocean/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 24, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 30, animations/fisherman/8-a-trash-ocean.css.scss */
+.fisherman #animation_8_a .fish-right {
+  background-image: url(../images/fisherman/8-a-trash-ocean/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 42, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+/* line 49, animations/fisherman/8-a-trash-ocean.css.scss */
+.fisherman #animation_8_a .trash {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 61, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.show {
+    top: 0; }
+  /* line 65, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.num1 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-1.png); }
+  /* line 69, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.num2 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-2.png); }
+  /* line 73, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.num3 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-3.png); }
+  /* line 77, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.num4 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-4.png); }
+  /* line 81, animations/fisherman/8-a-trash-ocean.css.scss */
+  .fisherman #animation_8_a .trash.num5 {
+    background-image: url(../images/fisherman/8-a-trash-ocean/trash-5.png); }
+
+/* line 5, animations/fisherman/8-b-trash-recycling.css.scss */
+.fisherman #animation_8_b .fish-left {
+  background-image: url(../images/fisherman/8-b-trash-recycling/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 17, animations/fisherman/8-b-trash-recycling.css.scss */
+  .fisherman #animation_8_b .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 23, animations/fisherman/8-b-trash-recycling.css.scss */
+.fisherman #animation_8_b .fish-right {
+  background-image: url(../images/fisherman/8-b-trash-recycling/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/fisherman/8-b-trash-recycling.css.scss */
+  .fisherman #animation_8_b .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+/* line 41, animations/fisherman/8-b-trash-recycling.css.scss */
+.fisherman #animation_8_b .thought-bubble {
+  background-image: url(../images/fisherman/8-b-trash-recycling/thought-bubble.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 54, animations/fisherman/8-b-trash-recycling.css.scss */
+  .fisherman #animation_8_b .thought-bubble.show {
+    top: 0; }
+
+/* line 5, animations/fisherman/8-c-throw-batteries.css.scss */
+.fisherman #animation_8_c .fish-left {
+  background-image: url(../images/fisherman/8-c-throw-batteries/fish-left.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom left;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 17, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .fish-left.swim {
+    left: 20%;
+    -webkit-transition: left 8s; }
+/* line 23, animations/fisherman/8-c-throw-batteries.css.scss */
+.fisherman #animation_8_c .fish-right {
+  background-image: url(../images/fisherman/8-c-throw-batteries/fish-right.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: bottom right;
+  position: absolute;
+  top: 0%;
+  left: 0%; }
+  /* line 35, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .fish-right.swim {
+    left: -20%;
+    -webkit-transition: left 8s; }
+/* line 41, animations/fisherman/8-c-throw-batteries.css.scss */
+.fisherman #animation_8_c .chemicals {
+  background-image: url(../images/fisherman/8-c-throw-batteries/chemicals.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  background-position: middle center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  -webkit-transition: opacity 1s; }
+  /* line 55, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .chemicals.show {
+    opacity: 1; }
+/* line 61, animations/fisherman/8-c-throw-batteries.css.scss */
+.fisherman #animation_8_c .battery {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1000;
+  background-position: top center;
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  -webkit-transition: top 1s; }
+  /* line 73, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .battery.show {
+    top: 0; }
+  /* line 77, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .battery.num1 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-1.png); }
+  /* line 81, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .battery.num2 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-2.png); }
+  /* line 85, animations/fisherman/8-c-throw-batteries.css.scss */
+  .fisherman #animation_8_c .battery.num3 {
+    background-image: url(../images/fisherman/8-c-throw-batteries/battery-3.png); }
+
+/* line 4, animations/fisherman/0-common.css.scss */
+.fisherman .net {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(../images/fisherman/common/net.png);
+  top: -100%;
+  left: 50%;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: top 1s;
+  z-index: 2000; }
+  /* line 17, animations/fisherman/0-common.css.scss */
+  .fisherman .net.throw {
+    top: 0%;
+    opacity: 1; }
+/* line 23, animations/fisherman/0-common.css.scss */
+.fisherman .nature {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url(../images/fisherman/common/setting.png); }
